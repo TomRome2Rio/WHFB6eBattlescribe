@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="779f-c127-a94a-bf00" name="Warhammer Fantasy 6th Edition" revision="2" battleScribeVersion="2.03" authorName="Tom Clare" authorContact="" authorUrl="" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="779f-c127-a94a-bf00" name="WHFB 6th Edition" revision="3" battleScribeVersion="2.03" authorName="Tom Clare" authorContact="" authorUrl="" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="d9e7-add3-773e-ffab" name="BRB"/>
   </publications>
@@ -28,7 +28,7 @@
     <categoryEntry id="a3af-995e-0cf1-7091" name="Rare" hidden="false"/>
     <categoryEntry id="48f1-4778-a9db-cde7" name="Characters" hidden="false"/>
     <categoryEntry id="5694-61f3-6913-6154" name="Heroes" hidden="false"/>
-    <categoryEntry id="bdfa-6d6e-a1bf-5d03" name="Uncounting" hidden="false"/>
+    <categoryEntry id="bdfa-6d6e-a1bf-5d03" name="Uncategorised" hidden="false"/>
     <categoryEntry id="e6e5-cff5-9987-d563" name="Magic Weapon" hidden="false"/>
     <categoryEntry id="2963-aff1-28ca-7634" name="Magic Armour" hidden="false"/>
     <categoryEntry id="7cfd-b676-48e1-6eec" name="Arcane Item" hidden="false"/>
