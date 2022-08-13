@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d9da-11c6-1a8c-4472" name="Lizardmen" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="779f-c127-a94a-bf00" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d9da-11c6-1a8c-4472" name="Lizardmen" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="779f-c127-a94a-bf00" gameSystemRevision="2" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>WIP Lizardmen. TODO: Add unit profiles &amp; item descriptions</readme>
   <categoryEntries>
     <categoryEntry id="361c-7d6f-fc45-5312" name="Skink" hidden="false"/>
@@ -400,7 +400,11 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc1d-bf2a-f001-dd70" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="d50c-9282-0c76-ffc8" name="Level 1" hidden="false" collective="false" import="true" type="upgrade"/>
+            <selectionEntry id="d50c-9282-0c76-ffc8" name="Level 1" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
             <selectionEntry id="b047-0629-c8c6-b602" name="Level 2" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
@@ -516,6 +520,9 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ea9-f25b-386b-3e6d" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -546,6 +553,9 @@
           </constraints>
         </entryLink>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="c51d-dd73-bce0-8e06" name="Skink Skirmishers" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
@@ -580,6 +590,9 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c044-d77f-403c-9479" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -589,11 +602,22 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="89cb-adc1-3e2c-61a7" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="7710-9699-c4f7-930a" name="Blowpipes" hidden="false" collective="false" import="true" type="upgrade"/>
-            <selectionEntry id="e1de-a6e0-1017-13c3" name="Javelins and Shields" hidden="false" collective="false" import="true" type="upgrade"/>
+            <selectionEntry id="7710-9699-c4f7-930a" name="Blowpipes" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e1de-a6e0-1017-13c3" name="Javelins and Shields" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="8b8b-4671-7167-f700" name="Jungle Swarm" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
@@ -610,6 +634,9 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="5036-323e-17a7-cc0e" name="Temple Guard" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -645,6 +672,9 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6555-eab4-f2a2-2a12" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -691,6 +721,9 @@
           </constraints>
         </entryLink>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="2225-48e5-1cdf-79f2" name="Saurus Cavalry" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
@@ -750,6 +783,9 @@
           </constraints>
         </entryLink>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="036c-ccdf-c273-2264" name="Kroxigor" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
@@ -773,6 +809,9 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="3b83-70e6-5bdb-4733" name="Chameleon Skinks" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -801,6 +840,9 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="3e46-f329-de47-6cee" name="Terradons" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
@@ -826,6 +868,9 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="e8de-7b1d-63bd-1f0f" name="Salamander Hunting Pack" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
@@ -842,6 +887,9 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
