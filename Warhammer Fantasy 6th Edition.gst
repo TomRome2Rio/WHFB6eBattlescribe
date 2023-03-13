@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="4ca8-2035-2f87-1bd7" name="WHFB 6th Edition" revision="4" battleScribeVersion="2.03" authorName="Tom Clare" authorContact="" authorUrl="" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="4ca8-2035-2f87-1bd7" name="WHFB 6th Edition" revision="9" battleScribeVersion="2.03" authorName="Tom Clare" authorContact="" authorUrl="" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="d9e7-add3-773e-ffab" name="BRB"/>
   </publications>
@@ -9,15 +9,15 @@
   <profileTypes>
     <profileType id="0a0f-00cd-0261-c0ea" name="Model">
       <characteristicTypes>
-        <characteristicType id="da3c-fb2b-4c5f-a22b" name="Movement"/>
-        <characteristicType id="d46f-1ae5-387f-4ac3" name="Weapon Skill"/>
-        <characteristicType id="22c7-799b-e07c-f32c" name="Ballistic Skill"/>
-        <characteristicType id="0c58-1252-962d-8fcc" name="Strength"/>
-        <characteristicType id="16d7-9f22-06d8-8427" name="Toughness"/>
-        <characteristicType id="f9d0-a5b0-7e0b-a404" name="Wounds"/>
-        <characteristicType id="b418-0e30-644f-1435" name="Initiative"/>
-        <characteristicType id="fa03-f9a3-8117-98dd" name="Attacks"/>
-        <characteristicType id="bbad-d421-400b-87c1" name="Leadership"/>
+        <characteristicType id="da3c-fb2b-4c5f-a22b" name="M"/>
+        <characteristicType id="d46f-1ae5-387f-4ac3" name="WS"/>
+        <characteristicType id="22c7-799b-e07c-f32c" name="BS"/>
+        <characteristicType id="0c58-1252-962d-8fcc" name="S"/>
+        <characteristicType id="16d7-9f22-06d8-8427" name="T"/>
+        <characteristicType id="f9d0-a5b0-7e0b-a404" name="W"/>
+        <characteristicType id="b418-0e30-644f-1435" name="I"/>
+        <characteristicType id="fa03-f9a3-8117-98dd" name="A"/>
+        <characteristicType id="bbad-d421-400b-87c1" name="Ld"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -42,59 +42,28 @@
   <forceEntries>
     <forceEntry id="5f75-906f-4d23-7a30" name="Warhammer Fantasy 6th Edition" hidden="false">
       <categoryLinks>
-        <categoryLink id="f2d7-f8a2-7e14-ef5e" name="Core" hidden="false" targetId="62d3-efc6-6c2c-634e" primary="false">
-          <modifiers>
-            <modifier type="decrement" field="98ab-f7f1-5fb5-18c3" value="1.0">
-              <conditions>
-                <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="model" type="greaterThan"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" field="98ab-f7f1-5fb5-18c3" value="1.0">
-              <repeats>
-                <repeat field="limit::eaa7-6800-e651-8bea" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions>
-                <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="98ab-f7f1-5fb5-18c3" type="min"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="1821-b8e0-2aa1-b805" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false">
-          <modifiers>
-            <modifier type="set" field="562f-9770-dc82-1b05" value="4.0">
-              <conditionGroups>
-                <conditionGroup type="and">
+        <categoryLink id="8472-9fb7-4f93-8c2b" name="Lords" hidden="false" targetId="623e-5f3d-d939-9b51" primary="false">
+          <modifierGroups>
+            <modifierGroup>
+              <modifiers>
+                <modifier type="set" field="4ca5-3015-2631-2b7d" value="0.0">
                   <conditions>
-                    <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="lessThan"/>
-                    <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                    <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
                   </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="562f-9770-dc82-1b05" value="3.0">
-              <conditions>
-                <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="lessThan"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="562f-9770-dc82-1b05" value="0.0">
-              <conditions>
-                <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="2999.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" field="562f-9770-dc82-1b05" value="2.0">
-              <repeats>
-                <repeat field="limit::eaa7-6800-e651-8bea" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-              <conditions>
-                <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="2999.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+                </modifier>
+                <modifier type="increment" field="4ca5-3015-2631-2b7d" value="1.0">
+                  <repeats>
+                    <repeat field="limit::eaa7-6800-e651-8bea" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
           <constraints>
-            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="562f-9770-dc82-1b05" type="max"/>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4ca5-3015-2631-2b7d" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="67cc-8ba2-0da1-f486" name="Heroes" hidden="false" targetId="5694-61f3-6913-6154" primary="false">
@@ -132,59 +101,24 @@
             <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="75f4-2d2a-d6a1-e901" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="8472-9fb7-4f93-8c2b" name="Lords" hidden="false" targetId="623e-5f3d-d939-9b51" primary="false">
-          <modifierGroups>
-            <modifierGroup>
-              <modifiers>
-                <modifier type="set" field="4ca5-3015-2631-2b7d" value="0.0">
-                  <conditions>
-                    <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
-                  </conditions>
-                </modifier>
-                <modifier type="increment" field="4ca5-3015-2631-2b7d" value="1.0">
-                  <repeats>
-                    <repeat field="limit::eaa7-6800-e651-8bea" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                  <conditions>
-                    <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <constraints>
-            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4ca5-3015-2631-2b7d" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="b6e8-eda4-372a-43dd" name="Rare" hidden="false" targetId="a3af-995e-0cf1-7091" primary="false">
+        <categoryLink id="f2d7-f8a2-7e14-ef5e" name="Core" hidden="false" targetId="62d3-efc6-6c2c-634e" primary="false">
           <modifiers>
-            <modifier type="set" field="abcb-d080-e34a-9d53" value="1.0">
+            <modifier type="decrement" field="98ab-f7f1-5fb5-18c3" value="1.0">
               <conditions>
-                <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+                <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="98ab-f7f1-5fb5-18c3" value="1.0">
+              <repeats>
+                <repeat field="limit::eaa7-6800-e651-8bea" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
               </conditions>
             </modifier>
           </modifiers>
-          <modifierGroups>
-            <modifierGroup>
-              <modifiers>
-                <modifier type="set" field="abcb-d080-e34a-9d53" value="0.0">
-                  <conditions>
-                    <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-                <modifier type="increment" field="abcb-d080-e34a-9d53" value="1.0">
-                  <repeats>
-                    <repeat field="limit::eaa7-6800-e651-8bea" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                  <conditions>
-                    <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
           <constraints>
-            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abcb-d080-e34a-9d53" type="max"/>
+            <constraint field="selections" scope="force" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="98ab-f7f1-5fb5-18c3" type="min"/>
           </constraints>
         </categoryLink>
         <categoryLink id="abaa-abc3-5162-6a22" name="Special" hidden="false" targetId="4a3f-84d1-0495-6ecb" primary="false">
@@ -218,6 +152,72 @@
             <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f140-733f-991c-4d18" type="max"/>
           </constraints>
         </categoryLink>
+        <categoryLink id="b6e8-eda4-372a-43dd" name="Rare" hidden="false" targetId="a3af-995e-0cf1-7091" primary="false">
+          <modifiers>
+            <modifier type="set" field="abcb-d080-e34a-9d53" value="1.0">
+              <conditions>
+                <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <modifierGroups>
+            <modifierGroup>
+              <modifiers>
+                <modifier type="set" field="abcb-d080-e34a-9d53" value="0.0">
+                  <conditions>
+                    <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" field="abcb-d080-e34a-9d53" value="1.0">
+                  <repeats>
+                    <repeat field="limit::eaa7-6800-e651-8bea" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                  <conditions>
+                    <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abcb-d080-e34a-9d53" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="1821-b8e0-2aa1-b805" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false">
+          <modifiers>
+            <modifier type="set" field="562f-9770-dc82-1b05" value="4.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="3000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="lessThan"/>
+                    <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="562f-9770-dc82-1b05" value="3.0">
+              <conditions>
+                <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="lessThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="562f-9770-dc82-1b05" value="0.0">
+              <conditions>
+                <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="2999.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="562f-9770-dc82-1b05" value="2.0">
+              <repeats>
+                <repeat field="limit::eaa7-6800-e651-8bea" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="2999.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="562f-9770-dc82-1b05" type="max"/>
+          </constraints>
+        </categoryLink>
         <categoryLink id="d2a8-1093-ce78-6c29" name="Uncounting" hidden="false" targetId="bdfa-6d6e-a1bf-5d03" primary="false">
           <constraints>
             <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2653-9306-1d8d-449f" type="max"/>
@@ -228,6 +228,11 @@
   </forceEntries>
   <sharedSelectionEntries>
     <selectionEntry id="52c3-25b3-e386-3449" name="Dispel Scroll" publicationId="d9e7-add3-773e-ffab" hidden="false" collective="false" import="true" type="upgrade">
+      <rules>
+        <rule id="5e03-7f49-bf00-ae05" name="Dispel Scroll" hidden="false">
+          <description>One use only. Automatically dispel an enemy spell.</description>
+        </rule>
+      </rules>
       <categoryLinks>
         <categoryLink id="9146-8e81-39ba-680f" name="Scroll" hidden="false" targetId="06f3-5988-1d55-db7c" primary="false"/>
         <categoryLink id="290a-7302-5c44-1f61" name="New CategoryLink" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="true"/>
@@ -237,6 +242,11 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="f775-63f2-a2cf-48c4" name="Power Stone" publicationId="d9e7-add3-773e-ffab" hidden="false" collective="false" import="true" type="upgrade">
+      <rules>
+        <rule id="0765-3612-9dfd-3f96" name="Power Stone" hidden="false">
+          <description>One use only. +2 dice to cast a spell.</description>
+        </rule>
+      </rules>
       <categoryLinks>
         <categoryLink id="cc5a-a200-a9d6-dfc9" name="New CategoryLink" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="true"/>
         <categoryLink id="239b-dc35-9e1e-a60f" name="Scroll" hidden="false" targetId="06f3-5988-1d55-db7c" primary="false"/>
@@ -250,6 +260,11 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8fa7-8516-0b40-fada" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7ff1-f364-267b-bc62" type="max"/>
       </constraints>
+      <rules>
+        <rule id="9fb5-4b85-58e8-39db" name="Staff of Sorcery" hidden="false">
+          <description>+1 to dispel rolls.</description>
+        </rule>
+      </rules>
       <categoryLinks>
         <categoryLink id="b4a3-bb83-6650-8d0e" name="New CategoryLink" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="true"/>
       </categoryLinks>
@@ -262,6 +277,11 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4a1e-0897-cb52-3686" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b573-d1b1-1c2c-7a16" type="max"/>
       </constraints>
+      <rules>
+        <rule id="94bc-dc3b-0290-d0a6" name="Enchanted Shield" hidden="false">
+          <description>Confers a 5+ Armour save</description>
+        </rule>
+      </rules>
       <categoryLinks>
         <categoryLink id="b8de-6516-a581-6c50" name="New CategoryLink" hidden="false" targetId="2963-aff1-28ca-7634" primary="true"/>
       </categoryLinks>
@@ -274,6 +294,11 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ea28-9209-9761-90bc" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eb4c-6af2-f0e2-728e" type="max"/>
       </constraints>
+      <rules>
+        <rule id="9aa2-b4ca-96ef-b222" name="War Banner" hidden="false">
+          <description>+1 Combat Resolution.</description>
+        </rule>
+      </rules>
       <categoryLinks>
         <categoryLink id="15d2-9936-6cb3-6573" name="New CategoryLink" hidden="false" targetId="daeb-6ab0-83b2-8bf3" primary="true"/>
       </categoryLinks>
@@ -286,6 +311,11 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0248-3e59-1759-59f2" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f261-d569-bd3e-2836" type="max"/>
       </constraints>
+      <rules>
+        <rule id="108c-01e7-0f28-a87d" name="Biting Blade" hidden="false">
+          <description>-1 Armour save.</description>
+        </rule>
+      </rules>
       <categoryLinks>
         <categoryLink id="19f0-79c1-9369-db2d" name="New CategoryLink" hidden="false" targetId="e6e5-cff5-9987-d563" primary="true"/>
       </categoryLinks>
@@ -298,6 +328,11 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ba52-7dc8-2711-86ba" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e2c5-fb88-6154-79a6" type="max"/>
       </constraints>
+      <rules>
+        <rule id="df37-0990-29ef-536f" name="Sword of Battle" hidden="false">
+          <description>+1 Attack.</description>
+        </rule>
+      </rules>
       <categoryLinks>
         <categoryLink id="a1f0-39d3-ffb1-ed61" name="New CategoryLink" hidden="false" targetId="e6e5-cff5-9987-d563" primary="true"/>
       </categoryLinks>
@@ -310,6 +345,11 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a8ff-d3d7-e8ac-d158" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c150-abce-90f8-9b59" type="max"/>
       </constraints>
+      <rules>
+        <rule id="5bf0-7276-65a3-5f3d" name="Sword of Might" hidden="false">
+          <description>+1 Strength.</description>
+        </rule>
+      </rules>
       <categoryLinks>
         <categoryLink id="6b72-5104-7421-c01f" name="New CategoryLink" hidden="false" targetId="e6e5-cff5-9987-d563" primary="true"/>
       </categoryLinks>
@@ -322,6 +362,11 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a09b-a6ce-c3b7-9b00" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f186-b47a-6d9f-8ea2" type="max"/>
       </constraints>
+      <rules>
+        <rule id="2ea2-ba4d-9c93-5907" name="Sword of Striking" hidden="false">
+          <description>+1 to hit.</description>
+        </rule>
+      </rules>
       <categoryLinks>
         <categoryLink id="2391-a436-fa7d-de20" name="New CategoryLink" hidden="false" targetId="e6e5-cff5-9987-d563" primary="true"/>
       </categoryLinks>
@@ -334,6 +379,11 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0762-c79c-eb8b-1837" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9734-739d-b49a-9901" type="max"/>
       </constraints>
+      <rules>
+        <rule id="bf5f-24f9-ce07-a325" name="Talisman of Protection" hidden="false">
+          <description>6+ Ward save.</description>
+        </rule>
+      </rules>
       <categoryLinks>
         <categoryLink id="5fdf-1e08-955d-f262" name="New CategoryLink" hidden="false" targetId="d777-f2f1-e0db-8e8e" primary="true"/>
       </categoryLinks>
@@ -422,4 +472,18 @@
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
+  <sharedRules>
+    <rule id="ec06-621f-83ae-fd4c" name="Scouts" hidden="false"/>
+    <rule id="4c3d-1a6a-3977-0b53" name="Skirmishers" hidden="false"/>
+    <rule id="d168-689e-84dd-9b7e" name="Poisoned Attacks" hidden="false"/>
+    <rule id="87db-2d4c-3fa6-6a26" name="Fly" hidden="false"/>
+    <rule id="03be-3e56-1332-bf56" name="Fear" hidden="false"/>
+    <rule id="3767-0d81-4db9-cda7" name="Terror" hidden="false"/>
+    <rule id="6c1b-2f0f-d172-01ca" name="Stupidity" hidden="false"/>
+    <rule id="01c3-c8c6-431f-1c2b" name="Large Target" hidden="false"/>
+    <rule id="f6c9-ac44-1d7c-ed6e" name="Unbreakable" hidden="false"/>
+    <rule id="512a-5ae5-c6cb-b82a" name="Immune to Psychology" hidden="false"/>
+    <rule id="a317-ad28-0409-0c8b" name="Frenzy" hidden="false"/>
+    <rule id="1e41-936a-2bae-76cc" name="Stubborn" hidden="false"/>
+  </sharedRules>
 </gameSystem>
