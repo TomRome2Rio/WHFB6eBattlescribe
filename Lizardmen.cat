@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d9da-11c6-1a8c-4472" name="Lizardmen" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="7" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d9da-11c6-1a8c-4472" name="Lizardmen" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="9" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>WIP Lizardmen. TODO: Add unit profiles &amp; item descriptions</readme>
   <categoryEntries>
     <categoryEntry id="361c-7d6f-fc45-5312" name="Skink" hidden="false"/>
@@ -12,15 +12,15 @@
       <profiles>
         <profile id="e604-8268-fda0-6acb" name="Slaan Mage-Priest" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
-            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
-            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
-            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">5</characteristic>
-            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">6</characteristic>
-            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">2</characteristic>
-            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">9</characteristic>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">5</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">6</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">2</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">9</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -113,15 +113,15 @@
       <profiles>
         <profile id="badf-fbff-6e0a-afa1" name="Saurus Oldblood" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
-            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">6</characteristic>
-            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">0</characteristic>
-            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">5</characteristic>
-            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">5</characteristic>
-            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
-            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
-            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">5</characteristic>
-            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">6</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">5</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">5</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">8</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -191,15 +191,15 @@
               <profiles>
                 <profile id="b872-9d24-a7e0-e133" name="Carnosaur" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
                   <characteristics>
-                    <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">7</characteristic>
-                    <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-                    <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">0</characteristic>
-                    <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">6</characteristic>
-                    <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">5</characteristic>
-                    <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">5</characteristic>
-                    <characteristic name="Initiative" typeId="b418-0e30-644f-1435">2</characteristic>
-                    <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">4</characteristic>
-                    <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">5</characteristic>
+                    <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">7</characteristic>
+                    <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                    <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+                    <characteristic name="S" typeId="0c58-1252-962d-8fcc">6</characteristic>
+                    <characteristic name="T" typeId="16d7-9f22-06d8-8427">5</characteristic>
+                    <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">5</characteristic>
+                    <characteristic name="I" typeId="b418-0e30-644f-1435">2</characteristic>
+                    <characteristic name="A" typeId="fa03-f9a3-8117-98dd">4</characteristic>
+                    <characteristic name="Ld" typeId="bbad-d421-400b-87c1">5</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -253,15 +253,15 @@
       <profiles>
         <profile id="15df-5fd7-c3e1-1385" name="Saurus Scar-Veteran" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
-            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">5</characteristic>
-            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">0</characteristic>
-            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">5</characteristic>
-            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
-            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
-            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
-            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">4</characteristic>
-            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">5</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">4</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">8</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -385,15 +385,15 @@
       <profiles>
         <profile id="f65b-f1fa-ec09-8ce8" name="Skink Chief" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
-            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
-            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
-            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">4</characteristic>
-            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
-            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
-            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
-            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
-            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
-            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">6</characteristic>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">4</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">5</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">3</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">6</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -519,15 +519,15 @@
       <profiles>
         <profile id="261b-b857-f88a-a03b" name="Skink Priest" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
-            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
-            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">2</characteristic>
-            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
-            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">2</characteristic>
-            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
-            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
-            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">5</characteristic>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">2</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">2</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">5</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -670,15 +670,15 @@
       <profiles>
         <profile id="9f7b-86f3-7147-7258" name="Saurus Warriors" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
-            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">0</characteristic>
-            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
-            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
-            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">1</characteristic>
-            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">2</characteristic>
-            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">1</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">2</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">8</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -763,15 +763,15 @@
       <profiles>
         <profile id="ad31-bff0-73f4-25c9" name="Skink Skirmishers" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
-            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
-            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">2</characteristic>
-            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
-            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">2</characteristic>
-            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
-            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">5</characteristic>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">2</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">2</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">5</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -862,15 +862,15 @@
       <profiles>
         <profile id="de7e-e984-4eac-8076" name="Jungle Swarm" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
-            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">5</characteristic>
-            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">0</characteristic>
-            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">2</characteristic>
-            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">2</characteristic>
-            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">5</characteristic>
-            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">1</characteristic>
-            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">5</characteristic>
-            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">10</characteristic>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">5</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">2</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">2</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">5</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">1</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">5</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">10</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -914,15 +914,15 @@
       <profiles>
         <profile id="8279-3259-b121-ebac" name="Temple Guard" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
-            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
-            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">0</characteristic>
-            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
-            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
-            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">2</characteristic>
-            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">2</characteristic>
-            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">2</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">2</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">8</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1025,28 +1025,28 @@
       <profiles>
         <profile id="59d3-8376-6176-4ca3" name="Cold One Rider" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
-            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
-            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">0</characteristic>
-            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
-            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
-            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">1</characteristic>
-            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">2</characteristic>
-            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">1</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">2</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">8</characteristic>
           </characteristics>
         </profile>
         <profile id="ac09-15a5-f205-4fc1" name="Cold One" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
-            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">7</characteristic>
-            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">0</characteristic>
-            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
-            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
-            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">2</characteristic>
-            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">3</characteristic>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">7</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">2</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">3</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1127,15 +1127,15 @@
       <profiles>
         <profile id="da33-fe3c-7248-2cd8" name="Kroxigor" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
-            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
-            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">0</characteristic>
-            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">5</characteristic>
-            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
-            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
-            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">1</characteristic>
-            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
-            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">1</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">3</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1184,15 +1184,15 @@ Enemy units charged by Kroxigor through a skirmish screen may stand &amp; shoot 
       <profiles>
         <profile id="152d-d02a-5ccb-3f81" name="Chameleon Skinks" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
-            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
-            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">2</characteristic>
-            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">4</characteristic>
-            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
-            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">2</characteristic>
-            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
-            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">6</characteristic>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">2</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">4</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">2</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">6</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1243,15 +1243,15 @@ Enemy units charged by Kroxigor through a skirmish screen may stand &amp; shoot 
       <profiles>
         <profile id="bd28-978f-395f-229d" name="Terradon &amp; Rider" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
-            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">2</characteristic>
-            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
-            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
-            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
-            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
-            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
-            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">5</characteristic>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">2</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">3</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">5</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1306,28 +1306,28 @@ If the Terradons win the combat, before the enemy takes their Break test the Ter
       <profiles>
         <profile id="0c7f-b03e-bc0f-b3a1" name="Salamander" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
-            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
-            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">5</characteristic>
-            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
-            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
-            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
-            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">2</characteristic>
-            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">5</characteristic>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">2</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">5</characteristic>
           </characteristics>
         </profile>
         <profile id="8221-f01d-3ea3-7de4" name="Skink Handler" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
-            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
-            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">2</characteristic>
-            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
-            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">2</characteristic>
-            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
-            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">5</characteristic>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">2</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">2</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">5</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1427,15 +1427,15 @@ On the roll of a Misfire, D3 of the Skink Handlers are removed as casualties and
       <profiles>
         <profile id="b151-b871-015a-a14a" name="Cold One" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
-            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">7</characteristic>
-            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">0</characteristic>
-            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
-            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
-            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">2</characteristic>
-            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">3</characteristic>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">7</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">2</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">3</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1450,15 +1450,15 @@ On the roll of a Misfire, D3 of the Skink Handlers are removed as casualties and
       <profiles>
         <profile id="7084-e5cf-1b5a-4aeb" name="Stegadon" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
-            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
-            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">0</characteristic>
-            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">5</characteristic>
-            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">6</characteristic>
-            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">5</characteristic>
-            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">2</characteristic>
-            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">4</characteristic>
-            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">5</characteristic>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">6</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">5</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">2</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">4</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">5</characteristic>
           </characteristics>
         </profile>
         <profile id="60fd-72aa-90e1-f65d" name="Skink Crew (5)" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
@@ -1470,15 +1470,15 @@ On the roll of a Misfire, D3 of the Skink Handlers are removed as casualties and
             </modifier>
           </modifiers>
           <characteristics>
-            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
-            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">2</characteristic>
-            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
-            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">2</characteristic>
-            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
-            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">5</characteristic>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">2</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">2</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">5</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2007,7 +2007,15 @@ Confers +1 to the model&apos;s Armour save, which may be combined with other arm
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="8f28-953b-ae70-b8a7" name="Enchanted Shield" hidden="false" collective="false" import="true" targetId="4a2b-c497-93f2-c804" type="selectionEntry"/>
+        <entryLink id="8f28-953b-ae70-b8a7" name="Enchanted Shield" hidden="false" collective="false" import="true" targetId="4a2b-c497-93f2-c804" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="9fee-b270-03fc-fb7b" name="Enchanted Items" hidden="false" collective="false" import="true">
