@@ -11,6 +11,18 @@
     <selectionEntry id="9151-bd9e-d9ce-0514" name="Slaan Mage-Priest" hidden="false" collective="false" import="true" type="unit">
       <profiles>
         <profile id="e604-8268-fda0-6acb" name="Slaan Mage-Priest" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <modifiers>
+            <modifier type="increment" field="f9d0-a5b0-7e0b-a404" value="1">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7d7a-d92a-2aba-136b" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f9d0-a5b0-7e0b-a404" value="2">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c8f5-6371-bdd2-04b0" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
             <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
@@ -56,28 +68,65 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e0b7-ea67-3a43-e6c1" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="7a8b-390d-aaa9-c14e" name="Fifth Generation" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="7a8b-390d-aaa9-c14e" name="5th Generation" hidden="false" collective="false" import="true" type="upgrade">
+              <rules>
+                <rule id="02ba-fcb6-19ed-f7b3" name="Fifth Generation" hidden="false">
+                  <description>The Slann has +1 to all their attempts to cast and dispel spells.
+
+The Slann may select spells from multiple lores of magic by selecting a lore and then rolling for the spell, one at a time.</description>
+                </rule>
+              </rules>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="7433-1581-1d1f-1bb6" name="Fourth Generation" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="7433-1581-1d1f-1bb6" name="4th Generation" hidden="false" collective="false" import="true" type="upgrade">
+              <rules>
+                <rule id="b98c-7d26-91f6-4ad0" name="Fourth Generation" hidden="false">
+                  <description>Whenever a Miscast is rolled, the spell automatically fails but no roll is made on the miscast table.
+
+The Slann has +1 to all their attempts to cast and dispel spells.
+
+The Slann may select spells from multiple lores of magic by selecting a lore and then rolling for the spell, one at a time.</description>
+                </rule>
+              </rules>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="40.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="d036-1c87-8cbb-ae25" name="Third Generation" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="7d7a-d92a-2aba-136b" name="3rd Generation" hidden="false" collective="false" import="true" type="upgrade">
+              <rules>
+                <rule id="ec33-8eab-222d-0b28" name="Third Generation" hidden="false">
+                  <description>The Slann has +1 Wound (included in profile) and uses an additional Hero choice (so counts as a Lord and a Hero) 
+The Slann knows Dispel Magic in addition to it&apos;s other spells.
+Whenever a Miscast is rolled, the spell automatically fails but no roll is made on the miscast table.
+The Slann has +1 to all their attempts to cast and dispel spells.
+The Slann may select spells from multiple lores of magic by selecting a lore and then rolling for the spell, one at a time.
+If the Slann is slain, the opponent gains an additional 100 victory points.</description>
+                </rule>
+              </rules>
               <categoryLinks>
-                <categoryLink id="f094-75ff-a2d6-b386" name="Heroes" hidden="false" targetId="5694-61f3-6913-6154" primary="false"/>
+                <categoryLink id="b444-9e53-b8ee-f9d2" name="Heroes" hidden="false" targetId="5694-61f3-6913-6154" primary="false"/>
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="85.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="73a3-af03-d9d0-c1cd" name="Second Generation" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="c8f5-6371-bdd2-04b0" name="2nd Generation" hidden="false" collective="false" import="true" type="upgrade">
+              <rules>
+                <rule id="126b-5b5f-e810-53a7" name="Second Generation" hidden="false">
+                  <description>The Slann has +2 Wounds (included in profile) and uses an additional Hero and Rare choice (so counts as a Lord, a Hero and a Rare choice)
+Whenever the Slann casts a spell using at least one power dice, they may add one additional power dice after the initial casting attempt has been made. This dice does not come from the power dice pool and is effectively &quot;free&quot;, and may cause Miscasts and Irresistible Force as normal.
+The Slann knows Dispel Magic in addition to it&apos;s other spells.
+Whenever a Miscast is rolled, the spell automatically fails but no roll is made on the miscast table.
+The Slann has +1 to all their attempts to cast and dispel spells.
+The Slann may select spells from multiple lores of magic by selecting a lore and then rolling for the spell, one at a time.
+If the Slann is slain, the opponent gains an additional 200 victory points.</description>
+                </rule>
+              </rules>
               <categoryLinks>
-                <categoryLink id="6af6-e40c-158c-fc58" name="Rare" hidden="false" targetId="a3af-995e-0cf1-7091" primary="false"/>
-                <categoryLink id="fb96-f33c-4e59-0286" name="Heroes" hidden="false" targetId="5694-61f3-6913-6154" primary="false"/>
+                <categoryLink id="cc4f-feb2-8f9c-7d76" name="Rare" hidden="false" targetId="a3af-995e-0cf1-7091" primary="false"/>
+                <categoryLink id="36cd-24f8-e11c-85f5" name="Heroes" hidden="false" targetId="5694-61f3-6913-6154" primary="false"/>
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="135.0"/>
@@ -94,7 +143,6 @@
         </entryLink>
         <entryLink id="9aee-cb0c-dca6-ee58" name="Battle Standard Bearer" hidden="false" collective="false" import="true" targetId="eca1-46d6-8778-847f" type="selectionEntry"/>
         <entryLink id="cd90-e71c-6d06-e0d1" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry"/>
-        <entryLink id="e75f-552b-f967-d3a1" name="Lore of Magic" hidden="false" collective="false" import="true" targetId="3c79-613e-77df-160c" type="selectionEntryGroup"/>
         <entryLink id="a595-c096-9f48-5b6f" name="Magic Banners" hidden="true" collective="false" import="true" targetId="3bb4-18fb-e523-2a43" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
@@ -136,6 +184,13 @@
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="f4ef-bf18-d39b-5caf" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ceb-6cc2-e4ae-28f8" type="max"/>
           </constraints>
@@ -356,6 +411,9 @@
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c77-3c23-59b8-a9a5" type="max"/>
+          </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="37.0"/>
           </costs>

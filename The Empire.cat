@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f49f-f614-5cfb-004a" name="The Empire" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="f49f-f614-5cfb-004a" name="The Empire" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="9" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>WIP Empire roster builder
 TODO: Unit profiles, item descriptions, enforce maximum detachment unit sizes</readme>
   <categoryEntries>
@@ -19,15 +19,15 @@ TODO: Unit profiles, item descriptions, enforce maximum detachment unit sizes</r
       <profiles>
         <profile id="f546-33cb-f3c3-a7da" name="Elector Count" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
-            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">5</characteristic>
-            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">5</characteristic>
-            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
-            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
-            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
-            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
-            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
-            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">9</characteristic>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">5</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">5</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">5</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">3</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">9</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -271,6 +271,13 @@ TODO: Unit profiles, item descriptions, enforce maximum detachment unit sizes</r
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="d3cb-63bc-200d-6660" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6dac-0cdb-e96a-2be5" type="max"/>
           </constraints>
@@ -303,6 +310,13 @@ TODO: Unit profiles, item descriptions, enforce maximum detachment unit sizes</r
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="54d9-7bad-75a4-50a2" name="Melee Weapon" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e56-43b0-2359-a714" type="max"/>
           </constraints>
@@ -357,6 +371,13 @@ TODO: Unit profiles, item descriptions, enforce maximum detachment unit sizes</r
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup id="a720-5c7b-1e1d-a2d1" name="Ranged Weapon" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b025-5153-6a08-6451" type="max"/>
           </constraints>
@@ -377,11 +398,6 @@ TODO: Unit profiles, item descriptions, enforce maximum detachment unit sizes</r
       <entryLinks>
         <entryLink id="1d5e-b88b-90e5-f895" name="Magic Items" hidden="false" collective="false" import="true" targetId="a8c4-4109-52d4-c8aa" type="selectionEntryGroup">
           <modifiers>
-            <modifier type="set" field="b33c-abdd-e29f-271f" value="0.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca1-46d6-8778-847f" type="atLeast"/>
-              </conditions>
-            </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
                 <conditionGroup type="and">
@@ -1885,133 +1901,172 @@ TODO: Unit profiles, item descriptions, enforce maximum detachment unit sizes</r
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="9d49-069e-8fe0-f75a" name="Magic Armour" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8eab-c7ab-8c18-3b90" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="e2fa-a016-cdcf-c680" name="The Gilded Armour" hidden="false" collective="false" import="true" type="upgrade">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="98e5-433b-ba7f-3632" name="Magic Armour" hidden="false" collective="false" import="true">
           <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
-              </conditions>
+            <modifier type="set" field="fc3f-ea8c-7843-fd22" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="348d-8177-78a4-50d3" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4a2b-c497-93f2-c804" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="9466-ea21-f72e-47a5" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc3f-ea8c-7843-fd22" type="max"/>
           </constraints>
-          <categoryLinks>
-            <categoryLink id="a49f-47cc-9738-dbad" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="0d0f-9532-f3c6-d6dc" name="Dawn Armour" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+          <selectionEntries>
+            <selectionEntry id="f7d0-4a28-893b-3194" name="Armour of Meteoric Iron" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="d22d-fdbf-99cd-6662" type="max"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink id="3777-6677-843a-002f" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2d49-63b0-6eaa-b519" name="Armour of Tarnus" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="d0c8-3172-8051-9fee" type="max"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink id="2700-97ea-50df-1c40" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="23b0-61ab-16c9-7c39" name="Dawn Armour" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="70c2-1b39-9642-997e" type="max"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink id="994f-79fd-0111-9445" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="40.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="904e-4fdb-add8-4e13" name="The Gilded Armour" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="7907-fe34-b920-d4a1" type="max"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink id="ec29-acc6-c4c7-8d8f" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6780-0e41-0775-6019" name="Helm of the Skavenslayer" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="fb1f-f7cf-819c-5e71" type="max"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink id="d1c4-a945-360f-58f9" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="348d-8177-78a4-50d3" name="Magic Shield" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="0cad-7fb6-87b8-ec50" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="019a-c581-c09c-4507" type="max"/>
           </constraints>
-          <categoryLinks>
-            <categoryLink id="f13c-a9c6-f3f3-0456" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="40.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a1aa-033e-d395-d2e9" name="Armour of Tarnus" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="97cf-4186-7b17-3ae4" type="max"/>
-          </constraints>
-          <categoryLinks>
-            <categoryLink id="8055-1e45-f1b7-293b" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="c867-210d-62c9-6d3e" name="Shield of the Gorgon" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="3fc2-7bdb-bbe6-c223" type="max"/>
-          </constraints>
-          <categoryLinks>
-            <categoryLink id="f2f7-0495-0bd8-42cf" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a1c6-2b99-6f66-2423" name="Armour of Meteoric Iron" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="4c64-8671-ed3c-be6a" type="max"/>
-          </constraints>
-          <categoryLinks>
-            <categoryLink id="1069-c3d2-ad79-aeb5" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="5155-4fdd-fec7-a30a" name="Bronze Shield" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="1749-78aa-445e-eab4" type="max"/>
-          </constraints>
-          <categoryLinks>
-            <categoryLink id="a792-a20e-18f3-ca30" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="fb1d-a8bc-45b3-f22b" name="Helm of the Skavenslayer" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="8061-5594-988c-d71d" type="max"/>
-          </constraints>
-          <categoryLinks>
-            <categoryLink id="1610-2fa2-82bf-08a8" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink id="192a-704f-4d08-c7e7" name="Enchanted Shield" hidden="false" collective="false" import="true" targetId="4a2b-c497-93f2-c804" type="selectionEntry"/>
-      </entryLinks>
+          <selectionEntries>
+            <selectionEntry id="a02c-fb3f-8a5a-0ec9" name="Shield of the Gorgon" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="499b-d845-4d18-443c" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="98e5-433b-ba7f-3632" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="b0fb-cf15-a7ef-3361" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="499b-d845-4d18-443c" type="max"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink id="d4bd-0773-f9cd-ca8e" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="48db-4b28-81e3-5593" name="Bronze Shield" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="918b-8ded-a22c-2e4a" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="98e5-433b-ba7f-3632" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="9a4a-f987-ca89-4995" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="918b-8ded-a22c-2e4a" type="max"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink id="b205-88d6-769b-63ce" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink id="25fa-2099-32e9-d70b" name="Enchanted Shield" hidden="false" collective="false" import="true" targetId="4a2b-c497-93f2-c804" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a6e-c32d-89a0-33fb" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup id="1c4b-f20d-898c-33e4" name="Arcane Items" hidden="false" collective="false" import="true">
       <modifiers>

@@ -38,6 +38,7 @@
     <categoryEntry id="d8eb-f296-d241-3c6d" name="Enchanted Item" hidden="false"/>
     <categoryEntry id="eb46-88d4-eb41-2549" name="Wizard" hidden="false"/>
     <categoryEntry id="1a61-9b9e-0b56-e6ce" name="General" hidden="false"/>
+    <categoryEntry id="4c58-0153-f37e-9905" name="Shield" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="5f75-906f-4d23-7a30" name="Warhammer Fantasy 6th Edition" hidden="false">
@@ -283,7 +284,7 @@
         </rule>
       </rules>
       <categoryLinks>
-        <categoryLink id="b8de-6516-a581-6c50" name="New CategoryLink" hidden="false" targetId="2963-aff1-28ca-7634" primary="true"/>
+        <categoryLink id="752f-8c3e-3908-833b" name="Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
