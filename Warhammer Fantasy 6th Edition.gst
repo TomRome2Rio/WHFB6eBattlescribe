@@ -39,6 +39,7 @@
     <categoryEntry id="eb46-88d4-eb41-2549" name="Wizard" hidden="false"/>
     <categoryEntry id="1a61-9b9e-0b56-e6ce" name="General" hidden="false"/>
     <categoryEntry id="4c58-0153-f37e-9905" name="Shield" hidden="false"/>
+    <categoryEntry id="4e99-ada4-8f3b-ed30" name="Additional Hero Choice" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="5f75-906f-4d23-7a30" name="Warhammer Fantasy 6th Edition" hidden="false">
@@ -96,6 +97,11 @@
               <conditions>
                 <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="2999.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
               </conditions>
+            </modifier>
+            <modifier type="decrement" field="75f4-2d2a-d6a1-e901" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="4e99-ada4-8f3b-ed30" repeats="1" roundUp="false"/>
+              </repeats>
             </modifier>
           </modifiers>
           <constraints>
@@ -471,6 +477,40 @@
         <entryLink id="48b7-af3c-59f4-cde2" name="Lore of Shadows" hidden="false" collective="false" import="true" targetId="8704-072d-b3dd-84f5" type="selectionEntry"/>
         <entryLink id="422f-2e3a-6860-98b2" name="Lore of Light" hidden="false" collective="false" import="true" targetId="e33d-6dcc-3793-da4a" type="selectionEntry"/>
       </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="ed43-1e9a-5409-abc6" name="Wizard Level (Hero)" hidden="false" collective="false" import="true" defaultSelectionEntryId="ade6-41fa-be3c-63f3">
+      <modifiers>
+        <modifier type="set" field="name" value="Wizard Level"/>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry id="ade6-41fa-be3c-63f3" name="Level 1" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="19e9-4c56-fe42-fbff" name="Level 2" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="afae-7702-64a2-3f42" name="Wizard Level (Lord)" hidden="false" collective="false" import="true" defaultSelectionEntryId="9000-07c6-76b9-495c">
+      <modifiers>
+        <modifier type="set" field="name" value="Wizard Level"/>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry id="9000-07c6-76b9-495c" name="Level 3" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2143-da8f-19dd-194f" name="Level 4" hidden="false" collective="false" import="true" type="upgrade">
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
