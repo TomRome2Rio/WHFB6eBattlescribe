@@ -989,6 +989,9 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3413-2dd6-6139-a51b" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1546,10 +1549,10 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="5.0"/>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="2.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="4ca5-becf-2f41-39a5" name="Lighrt Armour" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="4ca5-becf-2f41-39a5" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
               <repeats>

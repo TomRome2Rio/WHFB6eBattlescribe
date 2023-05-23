@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="4ca8-2035-2f87-1bd7" name="WHFB 6th Edition" revision="10" battleScribeVersion="2.03" authorName="Tom Clare" authorContact="" authorUrl="" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="4ca8-2035-2f87-1bd7" name="WHFB 6th Edition" revision="11" battleScribeVersion="2.03" authorName="Tom Clare" authorContact="" authorUrl="" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="d9e7-add3-773e-ffab" name="BRB"/>
   </publications>
@@ -38,8 +38,13 @@
     <categoryEntry id="d8eb-f296-d241-3c6d" name="Enchanted Item" hidden="false"/>
     <categoryEntry id="eb46-88d4-eb41-2549" name="Wizard" hidden="false"/>
     <categoryEntry id="1a61-9b9e-0b56-e6ce" name="General" hidden="false"/>
-    <categoryEntry id="4c58-0153-f37e-9905" name="Shield" hidden="false"/>
+    <categoryEntry id="4c58-0153-f37e-9905" name="Magic Shield" hidden="false"/>
     <categoryEntry id="4e99-ada4-8f3b-ed30" name="Additional Hero Choice" hidden="false"/>
+    <categoryEntry id="fcd6-2f77-ca6e-7b24" name="Chariot" hidden="false">
+      <infoLinks>
+        <infoLink id="be5e-b2e5-9cda-69f1" name="Chariot" hidden="false" targetId="4bb1-dfab-2824-bad1" type="rule"/>
+      </infoLinks>
+    </categoryEntry>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="5f75-906f-4d23-7a30" name="Warhammer Fantasy 6th Edition" hidden="false">
@@ -526,5 +531,11 @@
     <rule id="512a-5ae5-c6cb-b82a" name="Immune to Psychology" hidden="false"/>
     <rule id="a317-ad28-0409-0c8b" name="Frenzy" hidden="false"/>
     <rule id="1e41-936a-2bae-76cc" name="Stubborn" hidden="false"/>
+    <rule id="2db9-4b87-800e-ed58" name="Hatred" hidden="false"/>
+    <rule id="ab75-c6ec-0411-c924" name="Fast Cavalry" hidden="false"/>
+    <rule id="4bb1-dfab-2824-bad1" name="Chariot" hidden="false"/>
+    <rule id="7c7c-8683-ae17-d576" name="Regenerate" hidden="false"/>
+    <rule id="773c-6c86-ae53-1cee" name="Killing Blow" hidden="false"/>
+    <rule id="6e0c-4c98-a2c2-af0d" name="Magic Resistance" hidden="false"/>
   </sharedRules>
 </gameSystem>
