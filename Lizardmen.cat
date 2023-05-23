@@ -2313,7 +2313,6 @@ This may be used with the exact same effects as a Dispel Scroll. In addition, al
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="e57c-97e3-bad2-7b6c" name="Dispel Scroll" hidden="false" collective="false" import="true" targetId="52c3-25b3-e386-3449" type="selectionEntry"/>
         <entryLink id="e610-49a6-7d2c-5072" name="Power Stone" hidden="false" collective="false" import="true" targetId="f775-63f2-a2cf-48c4" type="selectionEntry"/>
         <entryLink id="7308-8b91-9003-9f6b" name="Staff of Sorcery" hidden="false" collective="false" import="true" targetId="0871-b449-88b1-0a33" type="selectionEntry"/>
       </entryLinks>
@@ -2466,6 +2465,15 @@ The unit may use this banner once per game, at the start of any Lizardmen Magic 
         <entryLink id="4ade-95ea-c54a-a521" name="Magic Weapons" hidden="false" collective="false" import="true" targetId="3ceb-16ce-00a0-1c1f" type="selectionEntryGroup"/>
         <entryLink id="9df4-dbd8-7522-0583" name="Sacred Plaques" hidden="false" collective="false" import="true" targetId="4b7e-be62-7b7d-66fb" type="selectionEntryGroup"/>
         <entryLink id="226b-960c-05b1-eef0" name="Talismans" hidden="false" collective="false" import="true" targetId="b880-f2e9-a373-f5f8" type="selectionEntryGroup"/>
+        <entryLink id="0b05-eac8-7e14-3894" name="Dispel Scroll" hidden="false" collective="false" import="true" targetId="52c3-25b3-e386-3449" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>

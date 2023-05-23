@@ -1688,6 +1688,15 @@ TODO: Unit profiles, item descriptions, enforce maximum detachment unit sizes</r
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink id="8445-01a2-7f8f-2cf1" name="Dispel Scroll" hidden="false" collective="false" import="true" targetId="52c3-25b3-e386-3449" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="ffb1-73c6-3c61-1f2a" name="Magic Weapons" hidden="false" collective="false" import="true">
@@ -2148,11 +2157,6 @@ TODO: Unit profiles, item descriptions, enforce maximum detachment unit sizes</r
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="7433-6caa-dcf4-97ee" name="Dispel Scroll" hidden="false" collective="false" import="true" targetId="52c3-25b3-e386-3449" type="selectionEntry">
-          <categoryLinks>
-            <categoryLink id="e439-1ebd-5142-1f11" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
-          </categoryLinks>
-        </entryLink>
         <entryLink id="87bf-098d-35f4-c222" name="Power Stone" hidden="false" collective="false" import="true" targetId="f775-63f2-a2cf-48c4" type="selectionEntry">
           <categoryLinks>
             <categoryLink id="1045-9934-add7-47a0" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>

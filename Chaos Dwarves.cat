@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7236-6609-8f2a-760a" name="Chaos Dwarves" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="9" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7236-6609-8f2a-760a" name="Chaos Dwarves" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="d1fa-39bb-985e-3662" name="Bull Centaur Lord" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -500,18 +500,18 @@
         <categoryLink id="f5d4-e90a-02b4-1f83" name="Wizard" hidden="false" targetId="eb46-88d4-eb41-2549" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="7380-9a4b-f2ab-8b6f" name="Wizard Level" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="7380-9a4b-f2ab-8b6f" name="Wizard Level" hidden="false" collective="false" import="true" defaultSelectionEntryId="677a-cb4e-351d-e8c9">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7dc2-f528-7a44-f941" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f8c5-904b-16a9-7602" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="677a-cb4e-351d-e8c9" name="Level 2" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="677a-cb4e-351d-e8c9" name="Level 1" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="429f-ad1f-2288-c8a7" name="Level 3" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="429f-ad1f-2288-c8a7" name="Level 2" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
               </costs>
@@ -840,12 +840,12 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c69-c1ba-a44d-9ac6" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="e509-cc1c-6ee5-9908" name="Heavy Armour, Hand Weapons and Shields" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="e509-cc1c-6ee5-9908" name="Hand Weapons and Shields" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="b1e6-27ac-e21e-16fd" name="Heavy Armour, Great Weapons and Shields" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="b1e6-27ac-e21e-16fd" name="Great Weapons and Shields" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="eaa7-6800-e651-8bea" value="2.0">
                   <repeats>
@@ -857,7 +857,7 @@
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="4e70-83d3-e51b-c360" name="Heavy Armour and Blunderbusses" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="4e70-83d3-e51b-c360" name="Blunderbusses" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="eaa7-6800-e651-8bea" value="3.0">
                   <repeats>
@@ -947,9 +947,6 @@
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="dab1-5ad7-774b-bc70" name="Equipment" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="986c-4430-c64a-09e7" type="max"/>
-          </constraints>
           <selectionEntries>
             <selectionEntry id="b07b-999a-f1c1-df29" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -1266,6 +1263,9 @@
           </characteristics>
         </profile>
       </profiles>
+      <categoryLinks>
+        <categoryLink id="c64b-3bb0-6422-27b8" name="New CategoryLink" hidden="false" targetId="a3af-995e-0cf1-7091" primary="true"/>
+      </categoryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="110.0"/>
       </costs>
@@ -1418,6 +1418,9 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="51ce-87a7-c021-fd9c" name="Orc Arrer Boyz" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
@@ -1508,6 +1511,9 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="d598-ade6-1dca-2824" name="Goblins" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
@@ -1620,6 +1626,9 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="3c76-2ff6-7e13-d84a" name="Black Orcs" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -1758,6 +1767,9 @@
           </constraints>
         </entryLink>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntryGroups>
@@ -2033,40 +2045,52 @@
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="69c7-c0c4-cc09-76d5" name="Arcane Items" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="26ed-0902-79a1-d323" value="0.0">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="daeb-6ab0-83b2-8bf3" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="26ed-0902-79a1-d323" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="14a9-f4b4-2c0c-c4d2" name="Chalice of Darkness" hidden="false" collective="false" import="true" type="upgrade">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="2287-f139-2188-0f62" name="Non-Unique Items" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="4586-e8f1-2479-fe33" name="Dispel Scroll" hidden="false" collective="false" import="true" targetId="52c3-25b3-e386-3449" type="selectionEntry"/>
+            <entryLink id="2cec-f061-f7ff-4ef1" name="Power Stone" hidden="false" collective="false" import="true" targetId="f775-63f2-a2cf-48c4" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="507b-4206-dd16-23d8" name="Unique Items" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="96a1-f893-f313-2b96" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2cec-f061-f7ff-4ef1" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="07a6-4b40-a294-e016" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="042d-5473-5ffd-598f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="96a1-f893-f313-2b96" type="max"/>
           </constraints>
-          <rules>
-            <rule id="6864-88a8-4789-4fb0" name="Chalice of Darkness" hidden="false">
-              <description>You may choose to roll a D3 at the start of either player&apos;s Magic phase. Remove this many dice from both player&apos;s magic pools.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="8d1f-3329-8885-f561" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink id="6112-cb96-a2d0-9068" name="Dispel Scroll" hidden="false" collective="false" import="true" targetId="52c3-25b3-e386-3449" type="selectionEntry"/>
-        <entryLink id="fdc1-f34f-17ae-1edb" name="Staff of Sorcery" hidden="false" collective="false" import="true" targetId="0871-b449-88b1-0a33" type="selectionEntry"/>
-        <entryLink id="89b1-306b-4313-0e89" name="Power Stone" hidden="false" collective="false" import="true" targetId="f775-63f2-a2cf-48c4" type="selectionEntry"/>
-      </entryLinks>
+          <selectionEntries>
+            <selectionEntry id="6e84-63f5-d041-754b" name="Chalice of Darkness" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3044-eb62-2187-5b95" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fbc7-d0f3-dbe6-d25b" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="4a4b-bcdc-4599-01d5" name="Chalice of Darkness" hidden="false">
+                  <description>You may choose to roll a D3 at the start of either player&apos;s Magic phase. Remove this many dice from both player&apos;s magic pools.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="0601-7cd3-7d7e-425f" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink id="076f-4053-cc92-7efe" name="Staff of Sorcery" hidden="false" collective="false" import="true" targetId="0871-b449-88b1-0a33" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ddc2-e40b-17ba-3b5a" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup id="2a69-3432-96ec-bae9" name="Command" hidden="false" collective="false" import="true">
       <selectionEntries>

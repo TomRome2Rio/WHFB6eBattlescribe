@@ -3,7 +3,7 @@
   <dataIndexEntries>
     <dataIndexEntry filePath="Warhammer Fantasy 6th Edition.gstz" dataType="gamesystem" dataId="4ca8-2035-2f87-1bd7" dataName="WHFB 6th Edition" dataBattleScribeVersion="2.03" dataRevision="10"/>
     <dataIndexEntry filePath="Lizardmen.catz" dataType="catalogue" dataId="d9da-11c6-1a8c-4472" dataName="Lizardmen" dataBattleScribeVersion="2.03" dataRevision="6"/>
-    <dataIndexEntry filePath="Chaos Dwarves.catz" dataType="catalogue" dataId="7236-6609-8f2a-760a" dataName="Chaos Dwarves" dataBattleScribeVersion="2.03" dataRevision="2"/>
+    <dataIndexEntry filePath="Chaos Dwarves.catz" dataType="catalogue" dataId="7236-6609-8f2a-760a" dataName="Chaos Dwarves" dataBattleScribeVersion="2.03" dataRevision="3"/>
     <dataIndexEntry filePath="The Empire.catz" dataType="catalogue" dataId="f49f-f614-5cfb-004a" dataName="The Empire" dataBattleScribeVersion="2.03" dataRevision="4"/>
   </dataIndexEntries>
 </dataIndex>
