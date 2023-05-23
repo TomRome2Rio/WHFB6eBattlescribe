@@ -956,6 +956,9 @@
                   </repeats>
                 </modifier>
               </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="500a-aa88-3150-ea1c" type="max"/>
+              </constraints>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
               </costs>
@@ -968,6 +971,9 @@
                   </repeats>
                 </modifier>
               </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1fea-82c7-3506-2c28" type="max"/>
+              </constraints>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
               </costs>
@@ -980,9 +986,9 @@
                   </repeats>
                 </modifier>
               </modifiers>
-              <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="3.0"/>
-              </costs>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3413-2dd6-6139-a51b" type="max"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
