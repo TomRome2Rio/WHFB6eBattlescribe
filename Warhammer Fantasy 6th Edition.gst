@@ -537,5 +537,20 @@
     <rule id="7c7c-8683-ae17-d576" name="Regenerate" hidden="false"/>
     <rule id="773c-6c86-ae53-1cee" name="Killing Blow" hidden="false"/>
     <rule id="6e0c-4c98-a2c2-af0d" name="Magic Resistance" hidden="false"/>
+    <rule id="1a01-bd8c-93eb-8de9" name="Flammable" hidden="false"/>
+    <rule id="ea74-4e81-f844-d146" name="Stone Thrower" hidden="false"/>
+    <rule id="95df-6c33-fb3e-c966" name="Cannon" hidden="false"/>
+    <rule id="3702-c42a-047c-af5f" name="Bolt Thrower" hidden="false"/>
   </sharedRules>
+  <sharedInfoGroups>
+    <infoGroup id="d686-d7e2-d7a4-fc6c" name="Undead" hidden="false">
+      <rules>
+        <rule id="a353-f74d-4ba0-ddf4" name="Undead" hidden="false"/>
+      </rules>
+      <infoLinks>
+        <infoLink id="01d9-f99c-8b82-897a" name="Fear" hidden="false" targetId="03be-3e56-1332-bf56" type="rule"/>
+        <infoLink id="4a19-8c47-1dd9-359f" name="Immune to Psychology" hidden="false" targetId="512a-5ae5-c6cb-b82a" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+  </sharedInfoGroups>
 </gameSystem>
