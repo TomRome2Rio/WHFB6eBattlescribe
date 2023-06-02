@@ -45,6 +45,7 @@
         <infoLink id="be5e-b2e5-9cda-69f1" name="Chariot" hidden="false" targetId="4bb1-dfab-2824-bad1" type="rule"/>
       </infoLinks>
     </categoryEntry>
+    <categoryEntry id="8a03-13c0-ea45-1732" name="Ignored for min Core" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="5f75-906f-4d23-7a30" name="Warhammer Fantasy 6th Edition" hidden="false">
@@ -127,6 +128,11 @@
               <conditions>
                 <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" type="greaterThan"/>
               </conditions>
+            </modifier>
+            <modifier type="increment" field="98ab-f7f1-5fb5-18c3" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8a03-13c0-ea45-1732" repeats="1" roundUp="false"/>
+              </repeats>
             </modifier>
           </modifiers>
           <constraints>
@@ -404,6 +410,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="eca1-46d6-8778-847f" name="Battle Standard Bearer" publicationId="d9e7-add3-773e-ffab" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cf7b-798c-9b94-df74" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6dd5-067c-7aff-21f2" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3c37-54f3-956f-05ce" type="max"/>
@@ -487,6 +500,10 @@
       <modifiers>
         <modifier type="set" field="name" value="Wizard Level"/>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="beb4-282a-e68f-2a41" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="65d6-eea6-c7ff-79ad" type="min"/>
+      </constraints>
       <selectionEntries>
         <selectionEntry id="ade6-41fa-be3c-63f3" name="Level 1" hidden="false" collective="false" import="true" type="upgrade">
           <costs>
@@ -504,6 +521,10 @@
       <modifiers>
         <modifier type="set" field="name" value="Wizard Level"/>
       </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b51-14fa-5a5e-9edd" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4614-7ac7-c5e4-487f" type="min"/>
+      </constraints>
       <selectionEntries>
         <selectionEntry id="9000-07c6-76b9-495c" name="Level 3" hidden="false" collective="false" import="true" type="upgrade">
           <costs>
@@ -541,6 +562,7 @@
     <rule id="ea74-4e81-f844-d146" name="Stone Thrower" hidden="false"/>
     <rule id="95df-6c33-fb3e-c966" name="Cannon" hidden="false"/>
     <rule id="3702-c42a-047c-af5f" name="Bolt Thrower" hidden="false"/>
+    <rule id="2381-ed16-2a32-cd12" name="Breath Weapon" hidden="false"/>
   </sharedRules>
   <sharedInfoGroups>
     <infoGroup id="d686-d7e2-d7a4-fc6c" name="Undead" hidden="false">
