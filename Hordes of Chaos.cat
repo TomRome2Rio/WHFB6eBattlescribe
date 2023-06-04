@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue id="5fc4-e0c2-d490-de22" name="Hordes of Chaos" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <publications>
+    <publication id="e8a8-d83e-c60c-3ad0" name="Hordes of Chaos"/>
+    <publication id="dc3a-2511-d23a-deb3" name="Beasts of Chaos"/>
+  </publications>
   <categoryEntries>
     <categoryEntry id="e96f-4863-8bc0-0266" name="Beast" hidden="false"/>
     <categoryEntry id="c2a4-c683-aba9-9f52" name="Daemon" hidden="false"/>
@@ -100,14 +104,15 @@
     <categoryEntry id="dc3c-fead-57b7-2bc1" name="Mark of Nurgle (Non-character)" hidden="false"/>
     <categoryEntry id="3996-4d51-b06b-4308" name="Mark of Slaanesh (Non-character)" hidden="false"/>
     <categoryEntry id="e74f-760c-fc02-a491" name="Mark of Tzeentch (Non-character)" hidden="false"/>
-    <categoryEntry id="8eaa-8905-a633-ccca" name="Chaos Undivided" hidden="false"/>
-    <categoryEntry id="8f40-e218-6ea5-92fe" name="Khorne" hidden="false"/>
-    <categoryEntry id="bc0b-2e69-bd4f-0fd9" name="Slaanesh" hidden="false"/>
-    <categoryEntry id="fc82-26f4-b405-5429" name="Tzeentch" hidden="false"/>
+    <categoryEntry id="8eaa-8905-a633-ccca" name="Chaos Undivided" hidden="true"/>
+    <categoryEntry id="8f40-e218-6ea5-92fe" name="Khorne" hidden="true"/>
+    <categoryEntry id="bc0b-2e69-bd4f-0fd9" name="Slaanesh" hidden="true"/>
+    <categoryEntry id="fc82-26f4-b405-5429" name="Tzeentch" hidden="true"/>
     <categoryEntry id="e686-4643-9a30-7951" name="Nurgle" hidden="false"/>
     <categoryEntry id="0892-e336-b753-9d89" name="Hide Beasts" hidden="false"/>
     <categoryEntry id="90af-588e-073c-cec9" name="Hide Daemons" hidden="false"/>
     <categoryEntry id="a1ef-6866-5c70-daa1" name="Hide Mortals" hidden="false"/>
+    <categoryEntry id="13a7-254f-3909-eab2" name="Shield" hidden="true"/>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="b5b7-0447-4117-ed00" name="Beastlord" hidden="false" collective="false" import="true" type="model">
@@ -209,6 +214,9 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5065-1661-1928-994e" type="max"/>
           </constraints>
+          <categoryLinks>
+            <categoryLink id="4426-97a0-6cbe-081e" name="Shield" hidden="false" targetId="13a7-254f-3909-eab2" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="3.0"/>
           </costs>
@@ -360,6 +368,7 @@
         <categoryLink id="e2fd-0c48-cc22-6690" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false"/>
         <categoryLink id="e8d2-6e1c-25e1-eb18" name="New CategoryLink" hidden="false" targetId="5694-61f3-6913-6154" primary="true"/>
         <categoryLink id="8498-35ca-2d22-f7b1" name="Beast" hidden="false" targetId="e96f-4863-8bc0-0266" primary="false"/>
+        <categoryLink id="ef24-e456-d045-3ee5" name="Shield" hidden="false" targetId="13a7-254f-3909-eab2" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="7a9c-738a-2e55-49a5" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
@@ -984,6 +993,9 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a796-0eb4-e183-3714" type="max"/>
           </constraints>
+          <categoryLinks>
+            <categoryLink id="1a4a-c9a2-d513-6ab7" name="Shield" hidden="false" targetId="13a7-254f-3909-eab2" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="3.0"/>
           </costs>
@@ -1184,6 +1196,9 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6366-4d4d-2ca8-3333" type="max"/>
           </constraints>
+          <categoryLinks>
+            <categoryLink id="653b-8b36-ae59-cae7" name="Shield" hidden="false" targetId="13a7-254f-3909-eab2" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="3.0"/>
           </costs>
@@ -1955,6 +1970,9 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="886c-0306-86b5-e0bf" type="max"/>
           </constraints>
+          <categoryLinks>
+            <categoryLink id="1bf8-9252-574d-7fff" name="Shield" hidden="false" targetId="13a7-254f-3909-eab2" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="2.0"/>
           </costs>
@@ -2309,6 +2327,9 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d63e-4a9a-8d2a-5305" type="max"/>
           </constraints>
+          <categoryLinks>
+            <categoryLink id="bd96-f93e-af52-a071" name="Shield" hidden="false" targetId="13a7-254f-3909-eab2" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="2.0"/>
           </costs>
@@ -3794,8 +3815,13 @@
           </profiles>
           <rules>
             <rule id="c44b-c698-e44c-9ed6" name="Unit Strength 3" hidden="false"/>
-            <rule id="fe2d-8f26-87fc-2622" name="Special Movement" hidden="false"/>
-            <rule id="bbfa-c6d3-a35f-f740" name="Special Attacks" hidden="false"/>
+            <rule id="fe2d-8f26-87fc-2622" name="Special Movement" hidden="false">
+              <description>Spawn are moved in the Compulsory Movement part of the Movement phase, moving 2D6&quot; each turn. Nominate the direction the Spawn will move before rolling the dice, and the Spawn will move in a straight line. 
+If the Spawn&apos;s movement is sufficient to take it into an enemy unit then it counts as charging, following all the normal rules. The target may make a charge response as normal, counting the Movement value rolled as the Spawn&apos;s maximum charge distance (for the purposes of fleeing, standing and shooting, etc).</description>
+            </rule>
+            <rule id="bbfa-c6d3-a35f-f740" name="Special Attacks" hidden="false">
+              <description>Chaos Spawn have a random number of attacks. This is rolled at the start of every Close Combat phase.</description>
+            </rule>
           </rules>
           <infoLinks>
             <infoLink id="2694-8c38-9fc4-bfde" name="Unbreakable" hidden="false" targetId="f6c9-ac44-1d7c-ed6e" type="rule"/>
@@ -4475,9 +4501,21 @@
         </modifier>
       </modifiers>
       <rules>
-        <rule id="ba89-6828-b6a9-4738" name="Drunken" hidden="false"/>
-        <rule id="5234-5b77-80a2-b23f" name="Trample" hidden="false"/>
-        <rule id="0771-abc3-8a0a-2eae" name="Move Through Woods" hidden="false"/>
+        <rule id="ba89-6828-b6a9-4738" name="Drunken" hidden="false">
+          <description>Roll a D6 for each centigor unit at the start of their turns, before charges are declared. On a roll of a 1, they must test for Stupidity that turn. On a 6 they become subject to Frenzy that turn, even if they have previously lost a round of combat. Remember that while subject to Stupidity or Frenzy they are immune to all other forms of psychology.</description>
+        </rule>
+        <rule id="5234-5b77-80a2-b23f" name="Trample" hidden="false">
+          <description>Centigors have an additional Attack, which does not benefit from weapon penalties or bonuses.</description>
+        </rule>
+        <rule id="0771-abc3-8a0a-2eae" name="Move Through Woods" hidden="false">
+          <description>Units of Centigors suffer no movement penalties for moving through wooded terrain.</description>
+        </rule>
+        <rule id="67ee-c014-3149-ac2e" name="Centigors" hidden="false">
+          <description>Centigors are mounted on a cavalry base and are treated as cavalry in all respects except for the following:
+They do not gain +1 Armour save.
+They may benefit from using two hand weapons or a hand weapon and shield as if on foot.
+They use cavalry rules for spears.</description>
+        </rule>
       </rules>
       <categoryLinks>
         <categoryLink id="c370-aacd-ec27-f981" name="New CategoryLink" hidden="false" targetId="4a3f-84d1-0495-6ecb" primary="true"/>
@@ -4701,6 +4739,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="dce3-c3e0-abd1-79d2" name="Dragon Ogres" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0892-e336-b753-9d89" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <rules>
         <rule id="6621-1ce6-16f9-1abd" name="Scaly Skin (5+)" hidden="false"/>
       </rules>
@@ -4710,6 +4755,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="cc7a-0a08-68bf-fa7a" name="New CategoryLink" hidden="false" targetId="a3af-995e-0cf1-7091" primary="true"/>
+        <categoryLink id="3de7-5190-0e4c-4241" name="Beast" hidden="false" targetId="e96f-4863-8bc0-0266" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="fe7f-723e-5c5e-2562" name="Dragon Ogres" hidden="false" collective="false" import="true" type="model">
@@ -4792,6 +4838,66 @@
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="10a2-db75-efdb-8057" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="add" field="category" value="77f5-bf3c-4f19-0269">
+          <conditions>
+            <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a61-9b9e-0b56-e6ce" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="b3d3-6fdf-9ce5-a52f">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a61-9b9e-0b56-e6ce" type="equalTo"/>
+                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b901-28a6-ed61-a2be" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" field="category" value="61c2-2ac6-3e32-d264">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a61-9b9e-0b56-e6ce" type="equalTo"/>
+                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="19d9-f7ab-4148-310e" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" field="category" value="95e9-cc71-bb44-5b45">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a61-9b9e-0b56-e6ce" type="equalTo"/>
+                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c83-a348-a664-eebe" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" field="category" value="3363-3219-a7df-7d95">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a61-9b9e-0b56-e6ce" type="equalTo"/>
+                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f06a-aa77-bbc7-43ca" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" field="category" value="6cd1-d9fd-b2d0-e341">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a61-9b9e-0b56-e6ce" type="equalTo"/>
+                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="58f1-832c-9935-797b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0892-e336-b753-9d89" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <modifierGroups>
         <modifierGroup>
@@ -4802,6 +4908,9 @@
             <modifier type="remove" field="category" value="4a3f-84d1-0495-6ecb"/>
             <modifier type="add" field="category" value="623e-5f3d-d939-9b51"/>
             <modifier type="set" field="name" value="Shaggoth Champion"/>
+            <modifier type="add" field="category" value="48f1-4778-a9db-cde7"/>
+            <modifier type="set-primary" field="category" value="623e-5f3d-d939-9b51"/>
+            <modifier type="set" field="name" value="Dragon Ogre Shaggoth Champion"/>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -4822,6 +4931,9 @@
       </profiles>
       <rules>
         <rule id="43a6-cc8d-4a84-7f41" name="Scaly Skin (4+)" hidden="false"/>
+        <rule id="adc4-6556-82f5-3dc4" name="Unit Strength 6" hidden="false">
+          <description>A Dragon Ogre Shaggoth has a unit strength of 6 (this is not increased by the Mark of Nurgle)</description>
+        </rule>
       </rules>
       <infoLinks>
         <infoLink id="dee1-ce5e-c627-2c9f" name="Terror" hidden="false" targetId="3767-0d81-4db9-cda7" type="rule"/>
@@ -4832,6 +4944,7 @@
       <categoryLinks>
         <categoryLink id="70a4-648c-6948-4ed3" name="New CategoryLink" hidden="false" targetId="a3af-995e-0cf1-7091" primary="true"/>
         <categoryLink id="03c4-53b4-2e49-75a4" name="Special" hidden="false" targetId="4a3f-84d1-0495-6ecb" primary="false"/>
+        <categoryLink id="d267-ad14-5eab-8d6f" name="Beast" hidden="false" targetId="e96f-4863-8bc0-0266" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="cafa-6f2c-896a-e209" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
@@ -4847,6 +4960,11 @@
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4575-fe40-7853-9be2" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="32f9-dd8e-0be0-093f" type="max"/>
           </constraints>
+          <rules>
+            <rule id="cf6c-791f-c68f-5cc9" name="Shaggoth Champion" hidden="false">
+              <description>A Shaggoth Champion is treated exactly like a Lord character (may be the army General, may issue challenges, etc.) and may be given Marks of Chaos.</description>
+            </rule>
+          </rules>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -4880,6 +4998,15 @@
             <modifier type="set" field="hidden" value="false">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="be58-ca05-e39f-56b2" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="1937-6fb7-9b2c-cb0f" name="General" hidden="true" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="be58-ca05-e39f-56b2" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5017,10 +5144,36 @@
         </profile>
       </profiles>
       <rules>
-        <rule id="fce6-5f3b-5791-ad2e" name="Ignore Little &apos;Un Panic" hidden="false"/>
-        <rule id="88e5-b5f3-29b4-92d9" name="Fall Over" hidden="false"/>
-        <rule id="4af9-4858-7637-79bf" name="Giant Attacks" hidden="false"/>
-        <rule id="0f34-db8d-cd45-9071" name="Move Over Obstacles" hidden="false"/>
+        <rule id="fce6-5f3b-5791-ad2e" name="Ignore Little &apos;Un Panic" hidden="false">
+          <description>Giants ignore any unit of Cavalry-sized or smaller models for the purposes of Panic.</description>
+        </rule>
+        <rule id="88e5-b5f3-29b4-92d9" name="Fall Over" hidden="false">
+          <description>A giant must test to see whether it falls over whenever:
+- It is beaten in close combat, before taking Break or Panic tests.
+- At the start of the Movement phase, if it is fleeing.
+- When it tries to cross an obstacle, test when the obstacle is reached.
+- If the Giant decides to Jump Up and Down on an enemy. Test immediately beforehand.
+
+To see if the Giant falls over, roll a D6. On a 1, the Giant falls over. If a Giant is slain, it falls over automatically.
+
+The Giant falls in the direction determined by the Scatter dice - the arrow indicates the direction the Giant falls. Place the Falling Giant template with its feet at the model&apos;s base and it&apos;s head in the direction of the fall. Any models completely under the template are automatically hit, and models partly covered are hit on a 4+.
+
+Any model hit take an automatic Strength 6 hit which causes D3 wounds. If the unit is in combat and the Giant has fallen over as a result of Jump Up and Down or Mutant Monstrosity, then the wounds inflicted count towards the combat result.
+
+A Giant that falls over suffers 1 automatic wound to itself with no save. If the Giant is in combat then this wound counts towards the combat result.
+
+Once on the gound, a Giant may get up in his following movement phase, but may not otherwise move that turn. Whilst on the gound, a Giant may not attack, but he can still defend himself after a fashion - so the enemy must still roll to score hits on him.
+
+If forced to flee whilst on the ground, the Giant is slain.
+If a Giant gets the opporunity to pursue his foes whilst he&apos;s on the gounnd, he stands up instead. 
+A Giant may attack the turn it stands up.</description>
+        </rule>
+        <rule id="4af9-4858-7637-79bf" name="Giant Attacks" hidden="false">
+          <description></description>
+        </rule>
+        <rule id="0f34-db8d-cd45-9071" name="Move Over Obstacles" hidden="false">
+          <description>Giants treat obstacles such as walls and fences as open ground when moving. However, when crossing such obstacles Giants must test to see if they Fall Over.</description>
+        </rule>
       </rules>
       <infoLinks>
         <infoLink id="fd29-cc4f-342c-d481" name="Terror" hidden="false" targetId="3767-0d81-4db9-cda7" type="rule"/>
@@ -5035,6 +5188,12 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d4fc-f56d-71ca-abf8" type="max"/>
           </constraints>
+          <rules>
+            <rule id="cc4e-1848-4904-264f" name="Mutant Monstrosity" hidden="false">
+              <description>A Mutant Monstrosity gains a Scaly Skin save of 5+.
+In addition, whenever the Giant attacks roll a D6. If this roll matches the special attack roll, the Giant recklessly falls onto the enemy! Treat this as Falling Down in all respects, except that the playerr controlling the Giant may choose the direction in which it falls.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
           </costs>
@@ -5134,6 +5293,11 @@
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule id="672e-a7a2-8756-d2e3" name="Tuskgor Charge" hidden="false">
+          <description>A charging Tuskgor receives a Strength bonus of +2.</description>
+        </rule>
+      </rules>
       <infoLinks>
         <infoLink id="2c0a-822e-f1c9-d82b" name="Chariot" hidden="false" targetId="4bb1-dfab-2824-bad1" type="rule"/>
       </infoLinks>
@@ -5392,6 +5556,14 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="edf8-3686-69ec-cd33" name="Mark of Khorne" hidden="false">
+              <description>The Lord is subject to Frenzy. In addition, his presence on the battlefield adds one dice to the player&apos;s Dispel Dice pool.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="15da-b33b-1352-1407" name="Frenzy" hidden="false" targetId="a317-ad28-0409-0c8b" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="dbf3-8e6d-bfee-3628" name="Mark of Khorne" hidden="false" targetId="b901-28a6-ed61-a2be" primary="false"/>
           </categoryLinks>
@@ -5430,6 +5602,11 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="d92a-4887-5e1f-3c1d" name="Mark of Tzeentch" hidden="false">
+              <description>The Lord is a Level 4 Sorcerer and can cast spells whilst wearing mundane and/or magic armour.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="960e-e97e-71d1-6020" name="Mark of Tzeentch" hidden="false" targetId="19d9-f7ab-4148-310e" primary="false"/>
           </categoryLinks>
@@ -5458,6 +5635,14 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="bf16-672c-7cc2-2b2e" name="Mark of Nurgle" hidden="false">
+              <description>The Hero causes Fear and has +1 Wound</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="1723-c087-914b-dcf8" name="Fear" hidden="false" targetId="03be-3e56-1332-bf56" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="f628-8b20-cc04-f197" name="Mark of Nurgle" hidden="false" targetId="8c83-a348-a664-eebe" primary="false"/>
           </categoryLinks>
@@ -5486,6 +5671,14 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="7149-4c47-4167-fac2" name="Mark of Slaanesh" hidden="false">
+              <description>The Lord is Immune to Psychology.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="64f9-c3a8-8fcc-fb84" name="Immune to Psychology" hidden="false" targetId="512a-5ae5-c6cb-b82a" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="8207-e9c5-418f-813c" name="Mark of Slaanesh" hidden="false" targetId="58f1-832c-9935-797b" primary="false"/>
           </categoryLinks>
@@ -5494,6 +5687,9 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="3f81-f407-53d5-9060" name="Mark of Chaos Undivided" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="728d-816f-044d-13f3" name="Mark of Chaos Undivided" hidden="false" targetId="b849-ce16-a6e5-4088" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="5bb6-4499-6cff-1fe1" name="Mark of Chaos Undivided" hidden="false" targetId="f06a-aa77-bbc7-43ca" primary="false"/>
           </categoryLinks>
@@ -5516,16 +5712,42 @@
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd1-d9fd-b2d0-e341" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="61c2-2ac6-3e32-d264" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="95e9-cc71-bb44-5b45" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a61-9b9e-0b56-e6ce" type="equalTo"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd1-d9fd-b2d0-e341" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="61c2-2ac6-3e32-d264" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="95e9-cc71-bb44-5b45" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="48f1-4778-a9db-cde7" type="instanceOf"/>
+              </conditions>
+              <modifiers>
+                <modifier type="add" field="category" value="b901-28a6-ed61-a2be"/>
+                <modifier type="remove" field="category" value="d0f7-4607-fd1d-43bb"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <rules>
+            <rule id="7c3b-0d1f-d5d8-2a9f" name="Mark of Khorne" hidden="false">
+              <description>The Shaggoth is subject to Frenzy. In addition, his presence on the battlefield adds one dice to the player&apos;s Dispel Dice pool.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="c234-5dca-6498-9348" name="Frenzy" hidden="false" targetId="a317-ad28-0409-0c8b" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="37f6-2543-cfa9-8c67" name="Mark of Khorne (Non-character)" hidden="false" targetId="d0f7-4607-fd1d-43bb" primary="false"/>
           </categoryLinks>
@@ -5537,16 +5759,39 @@
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd1-d9fd-b2d0-e341" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b3d3-6fdf-9ce5-a52f" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="95e9-cc71-bb44-5b45" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a61-9b9e-0b56-e6ce" type="equalTo"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd1-d9fd-b2d0-e341" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b3d3-6fdf-9ce5-a52f" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="95e9-cc71-bb44-5b45" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="48f1-4778-a9db-cde7" type="instanceOf"/>
+              </conditions>
+              <modifiers>
+                <modifier type="add" field="category" value="19d9-f7ab-4148-310e"/>
+                <modifier type="remove" field="category" value="e74f-760c-fc02-a491"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <rules>
+            <rule id="1f7c-04ae-d9e8-f7df" name="Mark of Tzeentch" hidden="false">
+              <description>The Shaggoth is a Level 2 Sorcerer and can cast spells whilst wearing mundane and/or magic armour.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="8c79-3afa-a736-0166" name="Mark of Tzeentch (Non-character)" hidden="false" targetId="e74f-760c-fc02-a491" primary="false"/>
           </categoryLinks>
@@ -5558,16 +5803,39 @@
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd1-d9fd-b2d0-e341" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="61c2-2ac6-3e32-d264" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b3d3-6fdf-9ce5-a52f" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a61-9b9e-0b56-e6ce" type="equalTo"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd1-d9fd-b2d0-e341" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="61c2-2ac6-3e32-d264" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b3d3-6fdf-9ce5-a52f" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="48f1-4778-a9db-cde7" type="instanceOf"/>
+              </conditions>
+              <modifiers>
+                <modifier type="add" field="category" value="8c83-a348-a664-eebe"/>
+                <modifier type="remove" field="category" value="dc3c-fead-57b7-2bc1"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <rules>
+            <rule id="964d-a94d-9f90-1ef4" name="Mark of Nurgle" hidden="false">
+              <description>The Shaggoth has +1 Wound</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="7647-94ac-beb1-4cda" name="Mark of Nurgle (Non-character)" hidden="false" targetId="dc3c-fead-57b7-2bc1" primary="false"/>
           </categoryLinks>
@@ -5579,16 +5847,39 @@
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b3d3-6fdf-9ce5-a52f" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="61c2-2ac6-3e32-d264" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="95e9-cc71-bb44-5b45" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1a61-9b9e-0b56-e6ce" type="equalTo"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b3d3-6fdf-9ce5-a52f" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="61c2-2ac6-3e32-d264" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="95e9-cc71-bb44-5b45" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
+          <modifierGroups>
+            <modifierGroup>
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="48f1-4778-a9db-cde7" type="instanceOf"/>
+              </conditions>
+              <modifiers>
+                <modifier type="add" field="category" value="58f1-832c-9935-797b"/>
+                <modifier type="remove" field="category" value="3996-4d51-b06b-4308"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <rules>
+            <rule id="85a1-0a31-cb73-c5b8" name="Mark of Slaanesh" hidden="false">
+              <description>The Daemon Prince always strikes first in close combat. If its opponent also has the ability to always strike then resolve their attacks in normal Initiative order.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="987a-f194-4e17-8187" name="Mark of Slaanesh (Non-character)" hidden="false" targetId="3996-4d51-b06b-4308" primary="false"/>
           </categoryLinks>
@@ -5597,6 +5888,9 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="e491-0967-c8ef-1310" name="Mark of Chaos Undivided" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="d1c7-7117-8fa7-f908" name="Mark of Chaos Undivided" hidden="false" targetId="b849-ce16-a6e5-4088" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="1e2a-d910-6805-8aff" name="Mark of Chaos Undivided" hidden="false" targetId="f06a-aa77-bbc7-43ca" primary="false"/>
           </categoryLinks>
@@ -5636,6 +5930,14 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="c939-5be9-42e8-6c5e" name="Mark of Khorne" hidden="false">
+              <description>The Exalted Daemon is subject to Frenzy. In addition, his presence on the battlefield adds one dice to the player&apos;s Dispel Dice pool.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="8cb8-94af-4a7c-ce78" name="Frenzy" hidden="false" targetId="a317-ad28-0409-0c8b" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="1fbc-bd17-7840-35f3" name="Mark of Khorne" hidden="false" targetId="b901-28a6-ed61-a2be" primary="false"/>
           </categoryLinks>
@@ -5664,6 +5966,11 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="cac3-4455-0519-d30c" name="Mark of Tzeentch" hidden="false">
+              <description>The Exalted Daemon is a Level 2 Sorcerer.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="4620-d0f7-ed93-bcab" name="Mark of Tzeentch" hidden="false" targetId="19d9-f7ab-4148-310e" primary="false"/>
           </categoryLinks>
@@ -5692,6 +5999,11 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="3de4-6ba6-e451-fa7d" name="Mark of Nurgle" hidden="false">
+              <description>The Exalted Daemon has +1 Wound</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="f55b-3f4b-4455-445d" name="Mark of Nurgle" hidden="false" targetId="8c83-a348-a664-eebe" primary="false"/>
           </categoryLinks>
@@ -5720,6 +6032,11 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="6e9e-f8fe-7338-52ba" name="Mark of Slaanesh" hidden="false">
+              <description>The Exalted Daemon always strikes first in close combat. If its opponent also has the ability to always strike then resolve their attacks in normal Initiative order.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="b103-feb4-547f-1fc0" name="Mark of Slaanesh" hidden="false" targetId="58f1-832c-9935-797b" primary="false"/>
           </categoryLinks>
@@ -5728,6 +6045,9 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="289e-a91c-bb11-68d0" name="Mark of Chaos Undivided" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="214b-2dd2-769b-d68a" name="Mark of Chaos Undivided" hidden="false" targetId="b849-ce16-a6e5-4088" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="1a55-d8e1-0d47-f9d1" name="Mark of Chaos Undivided" hidden="false" targetId="f06a-aa77-bbc7-43ca" primary="false"/>
           </categoryLinks>
@@ -5777,6 +6097,14 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="4e67-14f2-420c-22a7" name="Mark of Khorne" hidden="false">
+              <description>The Hero is subject to Frenzy. In addition, his presence on the battlefield adds one dice to the player&apos;s Dispel Dice pool.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="3d83-9b4b-c967-7063" name="Frenzy" hidden="false" targetId="a317-ad28-0409-0c8b" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="2d75-cc46-6976-66cd" name="Mark of Khorne" hidden="false" targetId="b901-28a6-ed61-a2be" primary="false"/>
           </categoryLinks>
@@ -5815,6 +6143,11 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="5b42-dca4-9739-c5d2" name="Mark of Tzeentch" hidden="false">
+              <description>The Hero is a Level 2 Sorcerer and can cast spells whilst wearing mundane and/or magic armour.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="88c3-4c49-2802-5e70" name="Mark of Tzeentch" hidden="false" targetId="19d9-f7ab-4148-310e" primary="false"/>
           </categoryLinks>
@@ -5843,6 +6176,14 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="a02a-43e5-bfbf-10d9" name="Mark of Nurgle" hidden="false">
+              <description>The Hero causes Fear and has +1 Wound</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="e044-9ff1-7cf5-ee2a" name="Fear" hidden="false" targetId="03be-3e56-1332-bf56" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="7c82-9f52-efa8-4592" name="Mark of Nurgle" hidden="false" targetId="8c83-a348-a664-eebe" primary="false"/>
           </categoryLinks>
@@ -5871,6 +6212,14 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="ea15-36dd-70b7-3580" name="Mark of Slaanesh" hidden="false">
+              <description>The Hero is Immune to Psychology.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="63a6-ffa3-931a-77d6" name="Immune to Psychology" hidden="false" targetId="512a-5ae5-c6cb-b82a" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="d9f2-9858-89a2-36a9" name="Mark of Slaanesh" hidden="false" targetId="58f1-832c-9935-797b" primary="false"/>
           </categoryLinks>
@@ -5879,6 +6228,9 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="0c2d-1f6d-437b-440b" name="Mark of Chaos Undivided" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="ea26-fd46-a2c4-3dac" name="Mark of Chaos Undivided" hidden="false" targetId="b849-ce16-a6e5-4088" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="65b7-533d-2c73-f075" name="Mark of Chaos Undivided" hidden="false" targetId="f06a-aa77-bbc7-43ca" primary="false"/>
           </categoryLinks>
@@ -5911,6 +6263,14 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="fe3a-eb4d-dc50-bde5" name="Mark of Khorne" hidden="false">
+              <description>The unit is subject to Frenzy. In addition, their presence on the battlefield adds one dice to the player&apos;s Dispel Dice pool.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="e6fe-7429-843e-8753" name="Frenzy" hidden="false" targetId="a317-ad28-0409-0c8b" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="bf43-1571-95e3-b760" name="Mark of Khorne (Regiment/Chariot)" hidden="false" targetId="d0f7-4607-fd1d-43bb" primary="false"/>
           </categoryLinks>
@@ -5932,6 +6292,11 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="30fc-17d0-9874-b3a2" name="Mark of Tzeentch" hidden="false">
+              <description>In each Chaos Magic phase, the unit generates an extra Power dice. No dice are generated if the unit is fleeing.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="1316-d061-b751-7fb6" name="Mark of Tzeentch (Regiment/Chariot)" hidden="false" targetId="e74f-760c-fc02-a491" primary="false"/>
           </categoryLinks>
@@ -5953,6 +6318,14 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="9aa2-e61a-989f-c55b" name="Mark of Nurgle" hidden="false">
+              <description>The unit causes Fear</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="8ba8-8f32-913b-e2c8" name="Fear" hidden="false" targetId="03be-3e56-1332-bf56" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="3367-d28d-4b17-c3f2" name="Mark of Nurgle (Regiment/Chariot)" hidden="false" targetId="dc3c-fead-57b7-2bc1" primary="false"/>
           </categoryLinks>
@@ -5974,6 +6347,14 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="ddf3-3ce8-74f0-7107" name="Mark of Slaanesh" hidden="false">
+              <description>The unit is Immune to Psychology.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="b15b-aebf-2960-170d" name="Immune to Psychology" hidden="false" targetId="512a-5ae5-c6cb-b82a" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="1c4d-6b6b-f9e6-6f26" name="Mark of Slaanesh (Regiment/Chariot)" hidden="false" targetId="3996-4d51-b06b-4308" primary="false"/>
           </categoryLinks>
@@ -5982,6 +6363,9 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="5bba-ef1b-a020-981a" name="Mark of Chaos Undivided" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="e8e2-863b-f01f-ee4a" name="Mark of Chaos Undivided" hidden="false" targetId="b849-ce16-a6e5-4088" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="3902-8d88-8b8f-bdf3" name="Mark of Chaos Undivided" hidden="false" targetId="f06a-aa77-bbc7-43ca" primary="false"/>
           </categoryLinks>
@@ -6014,6 +6398,14 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="d006-6356-878c-8a93" name="Mark of Khorne" hidden="false">
+              <description>The unit is subject to Frenzy. In addition, their presence on the battlefield adds one dice to the player&apos;s Dispel Dice pool.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="0cef-7288-ada5-59c3" name="Frenzy" hidden="false" targetId="a317-ad28-0409-0c8b" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="de00-c70e-73d0-ad20" name="Mark of Khorne (Non-character)" hidden="false" targetId="d0f7-4607-fd1d-43bb" primary="false"/>
           </categoryLinks>
@@ -6035,6 +6427,11 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="d714-215e-3d58-0ddb" name="Mark of Tzeentch" hidden="false">
+              <description>In each Chaos Magic phase, the unit generates an extra Power dice. No dice are generated if the unit is fleeing.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="db79-8b6a-eda0-6079" name="Mark of Tzeentch (Non-character)" hidden="false" targetId="e74f-760c-fc02-a491" primary="false"/>
           </categoryLinks>
@@ -6056,6 +6453,12 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="d872-532b-f1d4-eed7" name="Mark of Nurgle" hidden="false">
+              <description>The unit has a 5+ Scaly Skin save.</description>
+            </rule>
+            <rule id="135a-1285-5d32-b32e" name="Scaly Skin (5+)" hidden="false"/>
+          </rules>
           <categoryLinks>
             <categoryLink id="7611-be2b-38dc-70e3" name="Mark of Nurgle (Non-character)" hidden="false" targetId="dc3c-fead-57b7-2bc1" primary="false"/>
           </categoryLinks>
@@ -6077,6 +6480,14 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="f4db-ca22-ca11-d539" name="Mark of Slaanesh" hidden="false">
+              <description>The unit is Immune to Psychology.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="e7a2-fd2c-ce5c-5a2c" name="Immune to Psychology" hidden="false" targetId="512a-5ae5-c6cb-b82a" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="f228-7636-248e-382f" name="Mark of Slaanesh (Non-character)" hidden="false" targetId="3996-4d51-b06b-4308" primary="false"/>
           </categoryLinks>
@@ -6085,6 +6496,9 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="3707-7d6a-bbb7-2f42" name="Mark of Chaos Undivided" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="ef97-adad-ef3e-d988" name="Mark of Chaos Undivided" hidden="false" targetId="b849-ce16-a6e5-4088" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="94e2-da3f-39e7-fc54" name="Mark of Chaos Undivided" hidden="false" targetId="f06a-aa77-bbc7-43ca" primary="false"/>
           </categoryLinks>
@@ -6099,7 +6513,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e14-1b2f-b232-7ba9" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="7991-09a9-d18f-2580" name="Axes of Khorgor" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7991-09a9-d18f-2580" name="Axes of Khorgor" publicationId="dc3a-2511-d23a-deb3" page="62" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="6bd9-c470-7d3d-5967" value="0.0">
               <conditions>
@@ -6121,6 +6535,11 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6bd9-c470-7d3d-5967" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21d5-1a70-9e06-22e7" type="max"/>
           </constraints>
+          <rules>
+            <rule id="5825-6a0d-0db3-ba61" name="Axes of Khorgor" publicationId="dc3a-2511-d23a-deb3" page="62" hidden="false">
+              <description>This pair of axes requires two hands to use. The bearer gains +1 Attack and may re-roll any missed hit rolls in close combat.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="4b75-1e4a-cc5b-9ed6" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -6140,6 +6559,14 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df5c-eb83-c6a3-74b5" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a83c-4e97-e23a-ac31" type="max"/>
           </constraints>
+          <rules>
+            <rule id="60f8-f2f9-b9e4-36d0" name="Sword of Change" publicationId="e8a8-d83e-c60c-3ad0" page="50" hidden="false">
+              <description>Roll a D6 every time an enemy character or monster is slain by the Sword of Change. On a 4+ the model is turned into a Chaos Spawn controlled by the Chaos player!
+Replace the model with a Chaos Spawn model. If the enemy is in a unit then the Spawn model is placed in contact with the unit on one of it&apos;s free sides (bearer&apos;s choice) and will fight as ormal in subsequent rounds. The Spawn starts with only D3 wounds.
+
+If you do not have a spare Chaos Spawn model the model is slain but the sword has no additional effect.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="5a9d-b47f-67e5-e369" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -6154,16 +6581,18 @@
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="623e-5f3d-d939-9b51" type="notInstanceOf"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="623e-5f3d-d939-9b51" type="notInstanceOf"/>
-              </conditions>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="041f-23df-5c22-5171" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d04c-1fb0-9c09-b9b2" type="max"/>
           </constraints>
+          <rules>
+            <rule id="3997-184b-ae87-d4ea" name="The Bonecrusher Mace" publicationId="dc3a-2511-d23a-deb3" page="62" hidden="false">
+              <description>The Mace always wounds on a 2+. Armour saves are taken using the wielder&apos;s normal Strength.
+
+Against Castles, Empire Steam Tanks and in other situations where a wound roll is not taken, the wielder counts as having double its Strength characteristic (to a maximum of 10).</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="534c-3a8b-bc81-2762" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -6183,6 +6612,11 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cdfb-138e-c456-7afc" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0eac-5cc1-2b7c-c3e4" type="max"/>
           </constraints>
+          <rules>
+            <rule id="281f-48ba-a8b5-241b" name="Slaughterer&apos;s Blade" publicationId="dc3a-2511-d23a-deb3" page="63" hidden="false">
+              <description>The Slaughterer&apos;s Blade counts as a Great Weapon in all respects. In addition, for each wound inflicted with the Slaughterer&apos;s Blade roll a D6. Each roll of a 4+ heals one lost Wound to the bearer (up to their starting Wounds total). Wounds regained this way do not count towards combat resolution.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="1878-5f28-6f5b-5029" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -6195,6 +6629,11 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f3f2-eb4e-d1f6-679f" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ebc2-6b4e-8fd2-0201" type="max"/>
           </constraints>
+          <rules>
+            <rule id="88f9-25e4-2269-91f5" name="Scimitar of Skultar" publicationId="dc3a-2511-d23a-deb3" page="63" hidden="false">
+              <description>Rolls of 6 to wound with this weapon allow no Armour saves.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="0ce0-70b9-6473-df82" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -6209,16 +6648,19 @@
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="623e-5f3d-d939-9b51" type="notInstanceOf"/>
               </conditions>
             </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="623e-5f3d-d939-9b51" type="notInstanceOf"/>
-              </conditions>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b2f-d6ee-f456-7765" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc25-38fd-5356-519f" type="max"/>
           </constraints>
+          <rules>
+            <rule id="fc39-ff2a-09bf-ca5b" name="The Black Maul" publicationId="dc3a-2511-d23a-deb3" page="62" hidden="false">
+              <description>Adds +2 to the bearer&apos;s Strength, and the bearer is subject to Frenzy.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="0a8d-90b5-e889-4082" name="Frenzy" hidden="false" targetId="a317-ad28-0409-0c8b" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="7e4c-44f4-7131-3e6d" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -6226,16 +6668,16 @@
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="60.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8e22-bf68-0d56-d02b" name="Chaos Daemon Sword" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="8e22-bf68-0d56-d02b" name="Chaos Daemon Sword" publicationId="e8a8-d83e-c60c-3ad0" page="50" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b901-28a6-ed61-a2be" type="equalTo"/>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8c83-a348-a664-eebe" type="equalTo"/>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="58f1-832c-9935-797b" type="equalTo"/>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="19d9-f7ab-4148-310e" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b901-28a6-ed61-a2be" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c83-a348-a664-eebe" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="58f1-832c-9935-797b" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="19d9-f7ab-4148-310e" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -6250,6 +6692,33 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="28bd-728a-0c4d-3f0e" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="30e6-c2fb-813a-eac6" type="max"/>
           </constraints>
+          <rules>
+            <rule id="b688-d9bf-fa47-52ec" name="Chaos Daemon Sword" publicationId="e8a8-d83e-c60c-3ad0" page="50" hidden="false">
+              <modifiers>
+                <modifier type="append" field="description" value=" (Keeper of Secrets) WS9 S6 I10 A6">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="58f1-832c-9935-797b" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="append" field="description" value=" (Bloodthirster) WS10 S7 I10 A7">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b901-28a6-ed61-a2be" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="append" field="description" value=" (Lord of Change) WS6 S6 I10 A5">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="19d9-f7ab-4148-310e" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="append" field="description" value=" (Great Unclean One) WS8 S6 I4 A6">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c83-a348-a664-eebe" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <description>A character with a Daemon Sword has the same WS, S, I and A as the Greater Daemon of their patron god. However, every roll of a 1 to hit in close combat means that the attack is resolved against the character instead of the enemy. Furthermore, the character can never re-roll unmodified 1 to hit in close combat, regardless of the source of the re-roll.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="7024-9993-660d-ac98" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -6269,6 +6738,11 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="08db-e145-6b41-9688" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c13-d0f0-3d23-b6dd" type="max"/>
           </constraints>
+          <rules>
+            <rule id="c2a3-1b2e-069f-bed7" name="Hellfire Sword" publicationId="e8a8-d83e-c60c-3ad0" page="50" hidden="false">
+              <description>Any model wounded by the Hellfire Sword (after saves, etc.) bursts into flames and suffers an additional D6 wounds with no armour saves allowed. Attacks from the Hellfire Sword count as flaming.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="2612-5452-2c1e-68a7" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -6288,6 +6762,11 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d8ef-b8db-6b27-ed34" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e481-7efd-5ba4-9db2" type="max"/>
           </constraints>
+          <rules>
+            <rule id="624c-e487-b4fd-e295" name="Chaos Runesword" publicationId="e8a8-d83e-c60c-3ad0" page="50" hidden="false">
+              <description>The wielder gains +1 Weapon Skill, Strength and Attack.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="a9bd-7519-a5df-8660" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -6302,11 +6781,27 @@
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="58f1-832c-9935-797b" type="equalTo"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="6dbb-e018-ea1d-b13e" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4c58-0153-f37e-9905" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="13a7-254f-3909-eab2" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6dbb-e018-ea1d-b13e" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="91fe-be55-22a6-2550" type="max"/>
           </constraints>
+          <rules>
+            <rule id="91df-1a8c-de3a-a95b" name="Whip of Pleasure" publicationId="e8a8-d83e-c60c-3ad0" page="50" hidden="false">
+              <description>The wielder gains +1 Attack but cannot carry a shield or banner. In addition, the wielder always strikes first in close combat. If any of the wielder&apos;s opponents also always strike first, revert to normal initiative order.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="ff4b-1f55-d835-1a88" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -6314,11 +6809,16 @@
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d513-ca5c-119e-4881" name="Berserker Sword" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d513-ca5c-119e-4881" name="Berserker Sword" publicationId="e8a8-d83e-c60c-3ad0" page="50" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="148f-e896-b5cc-7c67" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="638e-1c4d-823d-cdbd" type="max"/>
           </constraints>
+          <rules>
+            <rule id="382d-9baa-b78e-5eee" name="Berserker Sword" publicationId="e8a8-d83e-c60c-3ad0" page="50" hidden="false">
+              <description>The wielder of the Berserker Sword may make additional attacks in every Close Combat phase equal to half the Unit Strength of all enemy models in base contact (rounding up). If the bearer is in a challenge, only the Unit Strength of the opponent is counted.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="0817-6924-0c2a-a380" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -6331,6 +6831,11 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8764-cece-0735-c6b4" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ceef-03db-49ed-f0b3" type="max"/>
           </constraints>
+          <rules>
+            <rule id="1e88-797a-3be7-d4ca" name="Rending Sword" publicationId="e8a8-d83e-c60c-3ad0" page="51" hidden="false">
+              <description>A model wounded by the Rending Sword (after saves, etc.) loses not one but D3 wounds.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="0352-5269-8c7b-9252" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -6338,11 +6843,16 @@
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="40.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="420d-e171-7b79-bf5c" name="Blade of Blood" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="420d-e171-7b79-bf5c" name="Blade of Blood" publicationId="e8a8-d83e-c60c-3ad0" page="51" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ec9-2ea6-cbdf-e4b7" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8058-ad84-f9dc-8e58" type="max"/>
           </constraints>
+          <rules>
+            <rule id="ae7b-8808-7436-45c2" name="Blade of Blood" publicationId="e8a8-d83e-c60c-3ad0" page="51" hidden="false">
+              <description>For each unsaved wound caused by the Blade of Blood, the wielder may take a Strength test. If the test is passed the wielder gains +1 Wound. This may not increase his Wounds value above double its normal number of Wounds. If the test is failed, the wielder loses one Wound.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="502f-a179-dddc-3f97" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -6362,6 +6872,14 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a8a-f171-dd71-5e62" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f93e-2c01-84a9-e7bb" type="max"/>
           </constraints>
+          <rules>
+            <rule id="96b7-a4c5-1ce4-6f7f" name="Filth Mace" publicationId="e8a8-d83e-c60c-3ad0" page="51" hidden="false">
+              <description>All attacks with the Filth Mace count as Poisoned Attacks. In addition, if the bearer of the mace kills an enemy character in close combat, he will cause Terror for the rest of the game.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="93f2-97c9-9754-ce74" name="Poisoned Attacks" hidden="false" targetId="d168-689e-84dd-9b7e" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="4b4b-73ae-ce20-3781" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -6374,6 +6892,11 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da20-ba61-88a5-eb73" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a71b-2a96-72e4-0431" type="max"/>
           </constraints>
+          <rules>
+            <rule id="933b-f107-7a5b-f502" name="Soul Cleaver" publicationId="e8a8-d83e-c60c-3ad0" page="51" hidden="false">
+              <description>Any model wounded by the Soul Cleaver (after saves, etc.) must pass a Toughness test or suffer an additional wound (with no saves allowed)</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="a061-66f8-db3f-c9e9" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -6381,7 +6904,7 @@
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="5607-bf07-5f9b-91fb" name="Axe of Khorne" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="5607-bf07-5f9b-91fb" name="Axe of Khorne" publicationId="e8a8-d83e-c60c-3ad0" page="51" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -6393,6 +6916,14 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dde2-966f-04ad-a277" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b37-3224-192d-7e84" type="max"/>
           </constraints>
+          <rules>
+            <rule id="ec78-6a10-ec1e-8f9a" name="Axe of Khorne" publicationId="e8a8-d83e-c60c-3ad0" page="51" hidden="false">
+              <description>The bearer has the Killing Blow ability.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="a0fe-66a3-df23-29e4" name="Killing Blow" hidden="false" targetId="773c-6c86-ae53-1cee" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="a940-815d-b34b-0b7f" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -6405,6 +6936,11 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="49ff-b4b7-bbeb-275c" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c7e-89e1-d1f9-36ed" type="max"/>
           </constraints>
+          <rules>
+            <rule id="a3ff-9d81-3634-06c0" name="Great Fang" publicationId="dc3a-2511-d23a-deb3" page="61" hidden="false">
+              <description>No Armour saves are allowed against wounds caused by the Great Fang.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="b300-3b6d-ce41-b504" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -6746,6 +7282,9 @@
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1724-4b24-e391-9707" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2178-516f-f1a8-b7ba" type="max"/>
               </constraints>
+              <infoLinks>
+                <infoLink id="34a6-ddfa-7729-370b" name="Mark of Chaos Undivided" hidden="false" targetId="b849-ce16-a6e5-4088" type="rule"/>
+              </infoLinks>
               <categoryLinks>
                 <categoryLink id="322f-af50-b5ec-eace" name="Mark of Chaos Undivided" hidden="false" targetId="f06a-aa77-bbc7-43ca" primary="false"/>
               </categoryLinks>
@@ -6769,6 +7308,14 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5dcc-a7b1-e333-a592" type="max"/>
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd1f-7621-f880-ee4c" type="min"/>
               </constraints>
+              <rules>
+                <rule id="3aed-a6ee-2df2-7a14" name="Mark of Khorne" hidden="false">
+                  <description>The Chariot&apos;s crew are subject to Frenzy. In addition, their presence on the battlefield adds one dice to the player&apos;s Dispel Dice pool.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="7723-db69-7100-265b" name="Frenzy" hidden="false" targetId="a317-ad28-0409-0c8b" type="rule"/>
+              </infoLinks>
               <categoryLinks>
                 <categoryLink id="3119-d685-ba30-3e94" name="Mark of Khorne (Non-character)" hidden="false" targetId="d0f7-4607-fd1d-43bb" primary="false"/>
               </categoryLinks>
@@ -6792,6 +7339,14 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5504-7066-23ad-52a8" type="max"/>
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b173-d4bb-f1f4-b97d" type="min"/>
               </constraints>
+              <rules>
+                <rule id="09f4-c121-739b-2708" name="Mark of Nurgle" hidden="false">
+                  <description>The unit causes Fear</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="e26a-57b3-7537-eb5c" name="Fear" hidden="false" targetId="03be-3e56-1332-bf56" type="rule"/>
+              </infoLinks>
               <categoryLinks>
                 <categoryLink id="bf82-fb76-f4c7-b22c" name="Mark of Nurgle (Non-character)" hidden="false" targetId="dc3c-fead-57b7-2bc1" primary="false"/>
               </categoryLinks>
@@ -6815,6 +7370,14 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f7eb-ae76-f1d8-afc1" type="max"/>
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ddf-3cfc-43f8-ebeb" type="min"/>
               </constraints>
+              <rules>
+                <rule id="1e05-7ffa-cd2d-a82f" name="Mark of Slaanesh" hidden="false">
+                  <description>The unit is Immune to Psychology.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="9dfc-a00e-8531-ff06" name="Immune to Psychology" hidden="false" targetId="512a-5ae5-c6cb-b82a" type="rule"/>
+              </infoLinks>
               <categoryLinks>
                 <categoryLink id="fa19-e0a2-6f82-4f21" name="Mark of Slaanesh (Non-character)" hidden="false" targetId="3996-4d51-b06b-4308" primary="false"/>
               </categoryLinks>
@@ -6838,6 +7401,11 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="459a-351b-f1fb-bb73" type="max"/>
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="025f-5753-d5e9-2339" type="min"/>
               </constraints>
+              <rules>
+                <rule id="7373-abb4-c72a-3ba0" name="Mark of Tzeentch" hidden="false">
+                  <description>In each Chaos Magic phase, the unit generates an extra Power dice. No dice are generated if the unit is fleeing.</description>
+                </rule>
+              </rules>
               <categoryLinks>
                 <categoryLink id="8b6c-ba2d-5897-ddc9" name="Mark of Tzeentch (Non-character)" hidden="false" targetId="e74f-760c-fc02-a491" primary="false"/>
               </categoryLinks>
@@ -7692,6 +8260,14 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7dbb-9343-bcc5-3ab0" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a03f-4d4a-1dd1-e2c6" type="max"/>
           </constraints>
+          <rules>
+            <rule id="6484-f6e4-69d7-4ce6" name="Trollhide Armour" publicationId="dc3a-2511-d23a-deb3" page="63" hidden="false">
+              <description>Trollhide Armour counts as a suit of heavy armour. The wearer may also Regenerate except that lost wounds are only regained on a 6, rather than a 4+.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="77d8-1fe9-99cb-2fe6" name="Regenerate" hidden="false" targetId="7c7c-8683-ae17-d576" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="e1e7-7b64-0c16-ff4e" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
           </categoryLinks>
@@ -7721,9 +8297,14 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4694-142e-2c56-4c09" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d0f-b0b6-3db7-a6da" type="max"/>
           </constraints>
-          <categoryLinks>
-            <categoryLink id="641e-899a-32d5-b641" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
+          <rules>
+            <rule id="da4a-0ddd-1b0e-72be" name="The Fur of Sharrgu" publicationId="dc3a-2511-d23a-deb3" page="63" hidden="false">
+              <description>The pelt confers a 6+ Scaly Skin save that can be combined with normal armour. It also gives the bearer and any unit he joins Magic Resistance (1).</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="c5a4-35f8-9843-ab0c" name="Magic Resistance" hidden="false" targetId="6e0c-4c98-a2c2-af0d" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="15.0"/>
           </costs>
@@ -7733,6 +8314,12 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e143-5c39-d312-6b95" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="63ce-f5e4-74c5-5aae" type="max"/>
           </constraints>
+          <rules>
+            <rule id="d579-fca3-64ab-bcea" name="Chaos Armour" publicationId="dc3a-2511-d23a-deb3" page="63" hidden="false">
+              <description>Chaos Armour gives a 4+ Armour save that may be combined with other equipment as normal (aside from light or heavy armour).
+A model may wear Chaos Armour and still cast spells.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="cd50-d6e2-8499-7a61" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
           </categoryLinks>
@@ -7769,6 +8356,15 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8433-2c45-871d-e698" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c4b-08d2-6bf4-c6ef" type="max"/>
           </constraints>
+          <rules>
+            <rule id="bbbd-2114-f5d7-d9de" name="Spelleater Shield" publicationId="e8a8-d83e-c60c-3ad0" page="51" hidden="false">
+              <description>The bearer and any unit he is with has Magic Resistance (2).
+Roll a D6 every time a spell is cast at the bearer of the Spelleater Shield and is dispelled. On a 4+ the spell is destroyed and the enemy wizard may not cast it for the rest of the battle.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="87b5-d183-6fab-a1c8" name="Magic Resistance" hidden="false" targetId="6e0c-4c98-a2c2-af0d" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="d439-9393-c5e6-d2ec" name="Magic Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
           </categoryLinks>
@@ -7800,6 +8396,11 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="854b-145b-3be4-a9e5" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1748-6cf1-3e0a-d3ff" type="max"/>
           </constraints>
+          <rules>
+            <rule id="6e42-0433-e2f0-5de9" name="Chaos Runeshield" publicationId="e8a8-d83e-c60c-3ad0" page="51" hidden="false">
+              <description>The Chaos Runeshield negates the power of any magic weapons carried by models in base contact - treat them as ordinary non-magical weapons of their type.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="b931-b75f-27d1-7e8f" name="Magic Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
           </categoryLinks>
@@ -7824,6 +8425,11 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7765-7426-2fae-1393" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b43-0d0c-921c-9dfd" type="max"/>
           </constraints>
+          <rules>
+            <rule id="8c58-2531-8168-cee7" name="Armour of Tortured Souls" publicationId="e8a8-d83e-c60c-3ad0" page="51" hidden="false">
+              <description>Chaos Armour. The wearer has +1 Toughness against mundane attacks.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="bae2-b5c0-0c6c-2414" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
           </categoryLinks>
@@ -7848,6 +8454,11 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a9f6-ceea-900e-cd69" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb12-fa51-574b-6687" type="max"/>
           </constraints>
+          <rules>
+            <rule id="a335-0f4a-a6b2-a00b" name="Armour of Damnation" publicationId="e8a8-d83e-c60c-3ad0" page="51" hidden="false">
+              <description>The Armour of Damnation is a suit of Chaos Armour. In addition, any model attacking the wearer in close combat must re-roll successful rolls to hit.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="d67f-ce6f-aeea-5429" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
           </categoryLinks>
@@ -7879,6 +8490,11 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d497-51a4-b169-781e" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1972-e696-4cf1-8e21" type="max"/>
           </constraints>
+          <rules>
+            <rule id="efb1-f6c9-566d-664e" name="Bane Shield" publicationId="e8a8-d83e-c60c-3ad0" page="51" hidden="false">
+              <description>For each successful armour save in close combat, the shield inflicts a Strength 4 hit on the model that struck the blow.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="56e6-553c-ee68-e6a6" name="Magic Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
           </categoryLinks>
@@ -7903,6 +8519,11 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e192-e719-b514-a866" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73f4-644f-173b-8429" type="max"/>
           </constraints>
+          <rules>
+            <rule id="76ca-5324-23a0-d737" name="Crimson Armour of Dargan" hidden="false">
+              <description>Chaos Armour. Any model wishing to attack the wearer in close combat must first pass a Leadership test or they may not attack that combat round.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="662f-08e1-8ae2-e116" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
           </categoryLinks>
@@ -8229,15 +8850,41 @@
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e96f-4863-8bc0-0266" type="notInstanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f06a-aa77-bbc7-43ca" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="4c70-95bb-e677-9069" name="Lore of Death" hidden="false" collective="false" import="true" targetId="adb8-37e0-7609-365b" type="selectionEntry"/>
-        <entryLink id="48ff-4f93-6875-c89e" name="Lore of Shadow" hidden="false" collective="false" import="true" targetId="8704-072d-b3dd-84f5" type="selectionEntry"/>
+        <entryLink id="4c70-95bb-e677-9069" name="Lore of Death" hidden="false" collective="false" import="true" targetId="adb8-37e0-7609-365b" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f06a-aa77-bbc7-43ca" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink id="48ff-4f93-6875-c89e" name="Lore of Shadow" hidden="false" collective="false" import="true" targetId="8704-072d-b3dd-84f5" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f06a-aa77-bbc7-43ca" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
         <entryLink id="6d6f-669b-a871-638b" name="Lore of Fire" hidden="false" collective="false" import="true" targetId="aa12-5ee9-b575-c4a6" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="a72e-11bf-6b23-95a6" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e96f-4863-8bc0-0266" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f06a-aa77-bbc7-43ca" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -8274,6 +8921,14 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="c11b-db4d-6911-ecfc" name="Mark of Khorne" hidden="false">
+              <description>The Daemon Prince is subject to Frenzy. In addition, his presence on the battlefield adds one dice to the player&apos;s Dispel Dice pool.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="07d0-1b23-736a-7e25" name="Frenzy" hidden="false" targetId="a317-ad28-0409-0c8b" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="c57c-361a-6019-4dee" name="Mark of Khorne" hidden="false" targetId="b901-28a6-ed61-a2be" primary="false"/>
           </categoryLinks>
@@ -8302,6 +8957,11 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="91fc-4b03-3ae9-2aeb" name="Mark of Tzeentch" hidden="false">
+              <description>The Daemon Prince is a Level 4 Sorcerer.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="7696-8cc3-b761-7656" name="Mark of Tzeentch" hidden="false" targetId="19d9-f7ab-4148-310e" primary="false"/>
           </categoryLinks>
@@ -8330,6 +8990,11 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="3fb3-6e0a-b7c0-35ac" name="Mark of Nurgle" hidden="false">
+              <description>The Daemon Prince has +1 Wound</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="0169-8d0a-51c1-234e" name="Mark of Nurgle" hidden="false" targetId="8c83-a348-a664-eebe" primary="false"/>
           </categoryLinks>
@@ -8358,6 +9023,11 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="f7c9-dc56-ee7f-2241" name="Mark of Slaanesh" hidden="false">
+              <description>The Daemon Prince always strikes first in close combat. If its opponent also has the ability to always strike then resolve their attacks in normal Initiative order.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="c3ad-213a-16a5-297c" name="Mark of Slaanesh" hidden="false" targetId="58f1-832c-9935-797b" primary="false"/>
           </categoryLinks>
@@ -8366,6 +9036,9 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="5b9d-a185-9d31-e633" name="Mark of Chaos Undivided" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="3f69-581f-c937-776f" name="Mark of Chaos Undivided" hidden="false" targetId="b849-ce16-a6e5-4088" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="cda2-db70-f68a-785e" name="Mark of Chaos Undivided" hidden="false" targetId="f06a-aa77-bbc7-43ca" primary="false"/>
           </categoryLinks>
@@ -8405,6 +9078,14 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="4a1e-b50d-273c-0d21" name="Mark of Khorne" hidden="false">
+              <description>The Doombull is subject to Frenzy. In addition, his presence on the battlefield adds one dice to the player&apos;s Dispel Dice pool.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="7ea3-6adc-e8c1-4336" name="Frenzy" hidden="false" targetId="a317-ad28-0409-0c8b" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="5908-acfd-c60d-8602" name="Mark of Khorne" hidden="false" targetId="b901-28a6-ed61-a2be" primary="false"/>
           </categoryLinks>
@@ -8433,6 +9114,11 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="743b-5379-c560-bc5f" name="Mark of Tzeentch" hidden="false">
+              <description>The Doombull is a Level 2 Sorcerer and can cast spells whilst wearing mundane and/or magic armour.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="7eb6-73a1-06b8-54c3" name="Mark of Tzeentch" hidden="false" targetId="19d9-f7ab-4148-310e" primary="false"/>
           </categoryLinks>
@@ -8461,6 +9147,11 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="a70a-255d-63a1-a483" name="Mark of Nurgle" hidden="false">
+              <description>The Doombull has +1 Wound</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="7246-dff7-3c60-b05e" name="Mark of Nurgle" hidden="false" targetId="8c83-a348-a664-eebe" primary="false"/>
           </categoryLinks>
@@ -8489,6 +9180,14 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="1df7-0152-bb7a-fc24" name="Mark of Slaanesh" hidden="false">
+              <description>The Doombull is Immune to Psychology.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="80a8-749d-a296-c37d" name="Immune to Psychology" hidden="false" targetId="512a-5ae5-c6cb-b82a" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="3aba-2fc5-9afe-f85f" name="Mark of Slaanesh" hidden="false" targetId="58f1-832c-9935-797b" primary="false"/>
           </categoryLinks>
@@ -8497,6 +9196,9 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="ea65-4bcc-ef5c-1aa9" name="Mark of Chaos Undivided" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="4b2a-6e44-0ac0-0299" name="Mark of Chaos Undivided" hidden="false" targetId="b849-ce16-a6e5-4088" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="0a13-52b7-c177-103e" name="Mark of Chaos Undivided" hidden="false" targetId="f06a-aa77-bbc7-43ca" primary="false"/>
           </categoryLinks>
@@ -8529,6 +9231,14 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="5726-ffeb-8e59-6406" name="Mark of Khorne" hidden="false">
+              <description>The Chariot&apos;s crew are subject to Frenzy. In addition, their presence on the battlefield adds one dice to the player&apos;s Dispel Dice pool.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="ea41-741e-2b02-e4a9" name="Frenzy" hidden="false" targetId="a317-ad28-0409-0c8b" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="cfbb-0210-c08d-5461" name="Mark of Khorne (Non-character)" hidden="false" targetId="d0f7-4607-fd1d-43bb" primary="false"/>
           </categoryLinks>
@@ -8550,6 +9260,11 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="ed35-aa44-23dc-2fa1" name="Mark of Tzeentch" hidden="false">
+              <description>In each Chaos Magic phase, the unit generates an extra Power dice. No dice are generated if the unit is fleeing.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="6899-b245-71d4-eed1" name="Mark of Tzeentch (Non-character)" hidden="false" targetId="e74f-760c-fc02-a491" primary="false"/>
           </categoryLinks>
@@ -8571,6 +9286,14 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="78c6-9db6-5c2a-fa3c" name="Mark of Nurgle" hidden="false">
+              <description>The unit causes Fear</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="b5e5-a041-77f1-57ac" name="Fear" hidden="false" targetId="03be-3e56-1332-bf56" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="af3e-7c80-3b11-43c5" name="Mark of Nurgle (Non-character)" hidden="false" targetId="dc3c-fead-57b7-2bc1" primary="false"/>
           </categoryLinks>
@@ -8592,6 +9315,14 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="3798-2f67-297c-9160" name="Mark of Slaanesh" hidden="false">
+              <description>The unit is Immune to Psychology.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="e362-a683-a35e-10fe" name="Immune to Psychology" hidden="false" targetId="512a-5ae5-c6cb-b82a" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="cd50-9d8f-f32a-d135" name="Mark of Slaanesh (Non-character)" hidden="false" targetId="3996-4d51-b06b-4308" primary="false"/>
           </categoryLinks>
@@ -8600,6 +9331,9 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="9177-3459-0e53-0683" name="Mark of Chaos Undivided" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="424c-31c0-dad6-369d" name="Mark of Chaos Undivided" hidden="false" targetId="b849-ce16-a6e5-4088" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="4418-8839-0cfc-1220" name="Mark of Chaos Undivided" hidden="false" targetId="f06a-aa77-bbc7-43ca" primary="false"/>
           </categoryLinks>
@@ -8631,6 +9365,14 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="bcf9-37e8-6dc9-a7bf" name="Mark of Khorne" hidden="false">
+              <description>The unit is subject to Frenzy. In addition, their presence on the battlefield adds one dice to the player&apos;s Dispel Dice pool.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="bd44-ebda-ece5-c8c7" name="Frenzy" hidden="false" targetId="a317-ad28-0409-0c8b" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="88d8-a362-1b33-6e48" name="Mark of Khorne (Non-character)" hidden="false" targetId="d0f7-4607-fd1d-43bb" primary="false"/>
           </categoryLinks>
@@ -8652,6 +9394,11 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="afd9-c521-15b7-752e" name="Mark of Tzeentch" hidden="false">
+              <description>In each Chaos Magic phase, the unit generates an extra Power dice. No dice are generated if the unit is fleeing.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="a5cb-f02e-df9c-c709" name="Mark of Tzeentch (Non-character)" hidden="false" targetId="e74f-760c-fc02-a491" primary="false"/>
           </categoryLinks>
@@ -8673,6 +9420,14 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="6888-f96d-142e-4957" name="Mark of Nurgle" hidden="false">
+              <description>The unit causes Fear</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="e9c8-d8de-03cf-0d3a" name="Fear" hidden="false" targetId="03be-3e56-1332-bf56" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="f775-64e1-b67f-cd35" name="Mark of Nurgle (Non-character)" hidden="false" targetId="dc3c-fead-57b7-2bc1" primary="false"/>
           </categoryLinks>
@@ -8694,6 +9449,14 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule id="eb75-e79a-bca0-4bb6" name="Mark of Slaanesh" hidden="false">
+              <description>The unit is Immune to Psychology.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="c01f-7b92-86e5-2770" name="Immune to Psychology" hidden="false" targetId="512a-5ae5-c6cb-b82a" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="d453-5146-3840-0494" name="Mark of Slaanesh (Non-character)" hidden="false" targetId="3996-4d51-b06b-4308" primary="false"/>
           </categoryLinks>
@@ -8702,6 +9465,9 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="20e3-5ca0-bfbd-5345" name="Mark of Chaos Undivided" hidden="false" collective="false" import="true" type="upgrade">
+          <infoLinks>
+            <infoLink id="7220-f527-51fa-837c" name="Mark of Chaos Undivided" hidden="false" targetId="b849-ce16-a6e5-4088" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="13ee-df36-ee42-ba35" name="Mark of Chaos Undivided" hidden="false" targetId="f06a-aa77-bbc7-43ca" primary="false"/>
           </categoryLinks>
@@ -8714,13 +9480,24 @@
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="ca5f-978e-65f9-0564" name="Raiders" hidden="false"/>
-    <rule id="042e-ac58-600d-b7f6" name="Ambush" hidden="false"/>
-    <rule id="cee3-197c-c24e-627e" name="Bloodgreed" hidden="false"/>
+    <rule id="042e-ac58-600d-b7f6" name="Ambush" hidden="false">
+      <description></description>
+    </rule>
+    <rule id="cee3-197c-c24e-627e" name="Bloodgreed" hidden="false">
+      <description>Minotaurs can never make an Overrun move, even if normally forced to do so by psychology or some other effect. However, Minotaurs pursue 3D6&quot; rather than 2D6&quot;.
+
+If a Doombull is with a non-Minotaur unit, then it&apos;s norrmal pursuit rate is used.</description>
+    </rule>
     <rule id="2a7e-10b0-12b7-51aa" name="Cloud of Flies" hidden="false"/>
     <rule id="e22b-b02b-ee07-a116" name="Stream of Corruption" hidden="false"/>
     <rule id="1998-c72e-fcd7-7491" name="Aura of Slaanesh" hidden="false"/>
     <rule id="da38-af45-b624-b4e8" name="Unruly" hidden="false"/>
-    <rule id="efd7-e2f9-b9e4-0323" name="Storm Rage" hidden="false"/>
+    <rule id="efd7-e2f9-b9e4-0323" name="Storm Rage" hidden="false">
+      <description>Dragon Ogres are immune to all lightning-based attacks and spells. If for whatever reason, they are targeted by a lightning-based attack they suffer no effects and become Frenzied.</description>
+    </rule>
+    <rule id="b849-ce16-a6e5-4088" name="Mark of Chaos Undivided" hidden="false">
+      <description>The character, unit or chariot may re-roll failed Psychology tests.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="69fe-4096-0edf-9a4a" name="Barded Chaos Steed" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
