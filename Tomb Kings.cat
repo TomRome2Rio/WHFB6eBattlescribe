@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4b41-6842-9db5-f563" name="Tomb Kings" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4b41-6842-9db5-f563" name="Tomb Kings" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7d0c-5562-269f-0795" name="Tomb King General" hidden="false"/>
   </categoryEntries>
@@ -494,7 +494,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="d3fa-4428-13dc-4f94" name="Magic Banner" hidden="true" collective="false" import="true" targetId="5c6e-35c1-f4d0-3dd6" type="selectionEntryGroup">
+        <entryLink id="d3fa-4428-13dc-4f94" name="Magic Banner" hidden="true" collective="false" import="true" targetId="f610-d7db-712c-6046" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditionGroups>
@@ -655,7 +655,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="6e18-a56f-8359-7246" name="Magic Banner" hidden="true" collective="false" import="true" targetId="5c6e-35c1-f4d0-3dd6" type="selectionEntryGroup">
+        <entryLink id="6e18-a56f-8359-7246" name="Magic Banner" hidden="true" collective="false" import="true" targetId="f610-d7db-712c-6046" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -802,7 +802,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="a021-9108-3e4f-9300" name="Magic Banner" hidden="true" collective="false" import="true" targetId="5c6e-35c1-f4d0-3dd6" type="selectionEntryGroup">
+        <entryLink id="a021-9108-3e4f-9300" name="Magic Banner" hidden="true" collective="false" import="true" targetId="f610-d7db-712c-6046" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -898,7 +898,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dbaa-b246-59f0-2369" type="max"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="12.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="3da6-8211-bb56-7e4c" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
@@ -906,7 +906,7 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff17-1502-1fa2-4d65" type="max"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="34c8-1576-60d2-86ba" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
@@ -914,14 +914,14 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="de67-4799-9ab4-ee8c" type="max"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="12.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="69da-21a3-2fe2-9028" name="Magic Banner" hidden="true" collective="false" import="true" targetId="5c6e-35c1-f4d0-3dd6" type="selectionEntryGroup">
+        <entryLink id="69da-21a3-2fe2-9028" name="Magic Banner" hidden="true" collective="false" import="true" targetId="f610-d7db-712c-6046" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
