@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <dataIndex battleScribeVersion="2.03" name="WHFB6eBattlescribe" indexUrl="https://raw.githubusercontent.com/TomRome2Rio/WHFB6eBattlescribe/main/Deploy/index.bsi" xmlns="http://www.battlescribe.net/schema/dataIndexSchema">
   <dataIndexEntries>
-    <dataIndexEntry filePath="Warhammer Fantasy 6th Edition.gstz" dataType="gamesystem" dataId="4ca8-2035-2f87-1bd7" dataName="WHFB 6th Edition" dataBattleScribeVersion="2.03" dataRevision="11"/>
+    <dataIndexEntry filePath="Warhammer Fantasy 6th Edition.gstz" dataType="gamesystem" dataId="4ca8-2035-2f87-1bd7" dataName="WHFB 6th Edition" dataBattleScribeVersion="2.03" dataRevision="12"/>
     <dataIndexEntry filePath="Lizardmen.catz" dataType="catalogue" dataId="d9da-11c6-1a8c-4472" dataName="Lizardmen" dataBattleScribeVersion="2.03" dataRevision="6"/>
     <dataIndexEntry filePath="Hordes of Chaos.catz" dataType="catalogue" dataId="5fc4-e0c2-d490-de22" dataName="Hordes of Chaos" dataBattleScribeVersion="2.03" dataRevision="1"/>
+    <dataIndexEntry filePath="Bretonnians.catz" dataType="catalogue" dataId="05b9-5022-67cd-4fd3" dataName="Bretonnians" dataBattleScribeVersion="2.03" dataRevision="1"/>
     <dataIndexEntry filePath="Tomb Kings.catz" dataType="catalogue" dataId="4b41-6842-9db5-f563" dataName="Tomb Kings" dataBattleScribeVersion="2.03" dataRevision="2"/>
     <dataIndexEntry filePath="Chaos Dwarves.catz" dataType="catalogue" dataId="7236-6609-8f2a-760a" dataName="Chaos Dwarves" dataBattleScribeVersion="2.03" dataRevision="3"/>
     <dataIndexEntry filePath="The Empire.catz" dataType="catalogue" dataId="f49f-f614-5cfb-004a" dataName="The Empire" dataBattleScribeVersion="2.03" dataRevision="4"/>
