@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="5fc4-e0c2-d490-de22" name="Forces of Chaos" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fd0d-5697-0f21-8aac" name="Forces of Chaos" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="e8a8-d83e-c60c-3ad0" name="Hordes of Chaos"/>
     <publication id="dc3a-2511-d23a-deb3" name="Beasts of Chaos"/>
