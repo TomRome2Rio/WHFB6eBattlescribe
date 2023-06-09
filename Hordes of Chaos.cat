@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="5fc4-e0c2-d490-de22" name="Hordes of Chaos" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="5fc4-e0c2-d490-de22" name="Forces of Chaos" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="e8a8-d83e-c60c-3ad0" name="Hordes of Chaos"/>
     <publication id="dc3a-2511-d23a-deb3" name="Beasts of Chaos"/>
@@ -533,6 +533,7 @@
         <categoryLink id="33a4-c20a-e755-b985" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false"/>
         <categoryLink id="a7e7-90ce-90dc-254b" name="New CategoryLink" hidden="false" targetId="5694-61f3-6913-6154" primary="true"/>
         <categoryLink id="e6b0-00cf-91fb-70aa" name="Wizard" hidden="false" targetId="eb46-88d4-eb41-2549" primary="false"/>
+        <categoryLink id="2d03-a81e-931b-e3dd" name="Beast" hidden="false" targetId="e96f-4863-8bc0-0266" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="a8ca-21f4-25b0-e05c" name="Weapon" hidden="false" collective="false" import="true">
@@ -2608,7 +2609,7 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="81d5-b4b2-6b80-338e" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="81d5-b4b2-6b80-338e" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c231-bbea-0648-c9e9" type="max"/>
             <constraint field="eaa7-6800-e651-8bea" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d6b0-f73f-0218-4d9f" type="max"/>
           </constraints>
@@ -3085,7 +3086,7 @@
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="adbb-2035-06ca-0575" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="adbb-2035-06ca-0575" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5200-4b8d-0e03-08b6" type="max"/>
             <constraint field="eaa7-6800-e651-8bea" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0fb2-137b-38c1-4780" type="max"/>
           </constraints>
@@ -4265,7 +4266,7 @@ If the Spawn&apos;s movement is sufficient to take it into an enemy unit then it
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5916-223e-1cd7-7d64" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="5916-223e-1cd7-7d64" type="max"/>
             <constraint field="eaa7-6800-e651-8bea" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="919d-c3f5-04eb-6070" type="max"/>
           </constraints>
         </entryLink>
@@ -4413,6 +4414,9 @@ If the Spawn&apos;s movement is sufficient to take it into an enemy unit then it
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f394-da91-df8b-1824" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -4457,6 +4461,9 @@ If the Spawn&apos;s movement is sufficient to take it into an enemy unit then it
                   </repeats>
                 </modifier>
               </modifiers>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="ccc0-1282-5dd9-2e29" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -4466,6 +4473,9 @@ If the Spawn&apos;s movement is sufficient to take it into an enemy unit then it
                   </repeats>
                 </modifier>
               </modifiers>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -4475,7 +4485,11 @@ If the Spawn&apos;s movement is sufficient to take it into an enemy unit then it
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5616-fb29-7158-5435" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="48a8-775d-cefc-ee8c" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade"/>
+            <selectionEntry id="48a8-775d-cefc-ee8c" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
             <selectionEntry id="28ed-4395-0a92-b7e7" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="eaa7-6800-e651-8bea" value="3.0">
@@ -4484,6 +4498,9 @@ If the Spawn&apos;s movement is sufficient to take it into an enemy unit then it
                   </repeats>
                 </modifier>
               </modifiers>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -4555,12 +4572,18 @@ They use cavalry rules for spears.</description>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3fd5-c52e-8b7f-c3e6" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="e791-3c22-cf20-2157" name="Spear" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f72b-52b9-d784-415e" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="89e9-9943-ebdc-8e5d" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="b122-7828-f85a-0894" name="Throwing Axes" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -4573,12 +4596,18 @@ They use cavalry rules for spears.</description>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c47-2fcb-57e4-c238" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="f947-e4ff-950f-9aa0" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1adb-ac5e-a48d-617a" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1352-c8e9-7d70-d0c0" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -4676,6 +4705,9 @@ They use cavalry rules for spears.</description>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ef9c-112b-8b13-8721" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -4715,6 +4747,9 @@ They use cavalry rules for spears.</description>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ded2-d1b8-91b8-14fc" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="acd1-36d1-84bd-26a5" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -4727,6 +4762,9 @@ They use cavalry rules for spears.</description>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf93-c834-3412-06ce" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -4792,6 +4830,9 @@ They use cavalry rules for spears.</description>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="49d1-f077-1c5d-577a" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -4811,6 +4852,9 @@ They use cavalry rules for spears.</description>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a7d5-91df-5891-f800" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="0f47-5363-9cfe-9019" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -4823,6 +4867,9 @@ They use cavalry rules for spears.</description>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="01a3-d649-4a69-6306" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -4965,6 +5012,9 @@ They use cavalry rules for spears.</description>
               <description>A Shaggoth Champion is treated exactly like a Lord character (may be the army General, may issue challenges, etc.) and may be given Marks of Chaos.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -5106,6 +5156,9 @@ They use cavalry rules for spears.</description>
             <categoryLink id="25c6-6761-2745-f4fb" name="Filter" hidden="false" targetId="ef67-38cf-70b1-8a05" primary="false"/>
             <categoryLink id="1371-d039-41fb-e2f9" name="Hide Beasts" hidden="false" targetId="0892-e336-b753-9d89" primary="false"/>
           </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="0b99-f6ec-55a8-7956" name="Hide Daemons of Chaos" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -5115,6 +5168,9 @@ They use cavalry rules for spears.</description>
             <categoryLink id="5b60-0aa7-3c18-e557" name="Hide Daemons" hidden="false" targetId="90af-588e-073c-cec9" primary="false"/>
             <categoryLink id="c3c7-d23f-746c-0876" name="Filter" hidden="false" targetId="ef67-38cf-70b1-8a05" primary="false"/>
           </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="c977-e979-4db8-eda3" name="Hide Mortal Worshippers of Chaos" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -5124,8 +5180,14 @@ They use cavalry rules for spears.</description>
             <categoryLink id="e8cb-3bba-29c3-1d28" name="Hide Mortals" hidden="false" targetId="a1ef-6866-5c70-daa1" primary="false"/>
             <categoryLink id="2757-7d6e-4c37-c41f" name="Filter" hidden="false" targetId="ef67-38cf-70b1-8a05" primary="false"/>
           </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="9bd9-5690-7018-6a34" name="Chaos Giant" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -5168,9 +5230,7 @@ If forced to flee whilst on the ground, the Giant is slain.
 If a Giant gets the opporunity to pursue his foes whilst he&apos;s on the gounnd, he stands up instead. 
 A Giant may attack the turn it stands up.</description>
         </rule>
-        <rule id="4af9-4858-7637-79bf" name="Giant Attacks" hidden="false">
-          <description></description>
-        </rule>
+        <rule id="4af9-4858-7637-79bf" name="Giant Attacks" hidden="false"/>
         <rule id="0f34-db8d-cd45-9071" name="Move Over Obstacles" hidden="false">
           <description>Giants treat obstacles such as walls and fences as open ground when moving. However, when crossing such obstacles Giants must test to see if they Fall Over.</description>
         </rule>
@@ -7990,9 +8050,6 @@ Against Castles, Empire Steam Tanks and in other situations where a wound roll i
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="ab32-5c68-ca03-d323" name="Magic Banners" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a848-32df-434c-aac8" type="max"/>
-      </constraints>
       <selectionEntries>
         <selectionEntry id="c481-f002-9b28-3831" name="The Beast Banner" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -8004,7 +8061,7 @@ Against Castles, Empire Steam Tanks and in other situations where a wound roll i
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b2af-2b40-e3bd-4703" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1685-66a2-373e-b986" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1685-66a2-373e-b986" type="max"/>
           </constraints>
           <categoryLinks>
             <categoryLink id="0350-ba22-938d-15ff" name="Magic Banner" hidden="false" targetId="daeb-6ab0-83b2-8bf3" primary="false"/>
@@ -9485,9 +9542,7 @@ Roll a D6 every time a spell is cast at the bearer of the Spelleater Shield and 
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="ca5f-978e-65f9-0564" name="Raiders" hidden="false"/>
-    <rule id="042e-ac58-600d-b7f6" name="Ambush" hidden="false">
-      <description></description>
-    </rule>
+    <rule id="042e-ac58-600d-b7f6" name="Ambush" hidden="false"/>
     <rule id="cee3-197c-c24e-627e" name="Bloodgreed" hidden="false">
       <description>Minotaurs can never make an Overrun move, even if normally forced to do so by psychology or some other effect. However, Minotaurs pursue 3D6&quot; rather than 2D6&quot;.
 
