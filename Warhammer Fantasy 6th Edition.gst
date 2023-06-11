@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="4ca8-2035-2f87-1bd7" name="WHFB 6th Edition" revision="13" battleScribeVersion="2.03" authorName="Tom Clare" authorContact="" authorUrl="" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="4ca8-2035-2f87-1bd7" name="WHFB 6th Edition" revision="14" battleScribeVersion="2.03" authorName="Tom Clare" authorContact="" authorUrl="" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="d9e7-add3-773e-ffab" name="BRB"/>
   </publications>
@@ -48,6 +48,11 @@
     <categoryEntry id="8a03-13c0-ea45-1732" name="Ignored for min Core" hidden="false"/>
     <categoryEntry id="de79-e832-4f30-ac18" name="Mount" hidden="false"/>
     <categoryEntry id="b91d-d3b1-8b46-6d52" name="Special Character" hidden="false"/>
+    <categoryEntry id="fedc-da5a-410d-84bd" name="Bound Spell Item" hidden="false">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bf1d-6d71-81aa-e3ca" type="max"/>
+      </constraints>
+    </categoryEntry>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="5f75-906f-4d23-7a30" name="Warhammer Fantasy 6th Edition" hidden="false">
@@ -581,6 +586,12 @@
     <rule id="95df-6c33-fb3e-c966" name="Cannon" hidden="false"/>
     <rule id="3702-c42a-047c-af5f" name="Bolt Thrower" hidden="false"/>
     <rule id="2381-ed16-2a32-cd12" name="Breath Weapon" hidden="false"/>
+    <rule id="3783-e8d5-f94a-7b2c" name="Small" hidden="false">
+      <description>Units with this special rule do not block the line of sight of other units. Note that this does not, however, allow other skirmishers to move through their formation.</description>
+    </rule>
+    <rule id="21d5-5848-02a7-f995" name="Swarm" hidden="false">
+      <description>Swarms represent many creatures on a single 40mm × 40mm base. This base is treated as a single model with several Wounds and Attacks. A Swarm base fights at full effect until it has taken all it&apos;s wounds then it is removed. Swarms are Unbreakable and cannot be joined by characters.</description>
+    </rule>
   </sharedRules>
   <sharedInfoGroups>
     <infoGroup id="d686-d7e2-d7a4-fc6c" name="Undead" hidden="false">
@@ -590,6 +601,13 @@
       <infoLinks>
         <infoLink id="01d9-f99c-8b82-897a" name="Fear" hidden="false" targetId="03be-3e56-1332-bf56" type="rule"/>
         <infoLink id="4a19-8c47-1dd9-359f" name="Immune to Psychology" hidden="false" targetId="512a-5ae5-c6cb-b82a" type="rule"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup id="3e93-6230-180b-9a1c" name="Swarm" hidden="false">
+      <infoLinks>
+        <infoLink id="c71f-2aa1-9f76-3b73" name="Unbreakable" hidden="false" targetId="f6c9-ac44-1d7c-ed6e" type="rule"/>
+        <infoLink id="394a-fe0e-9c27-e1f9" name="Small" hidden="false" targetId="3783-e8d5-f94a-7b2c" type="rule"/>
+        <infoLink id="7f72-3e5f-e5f6-c7e3" name="Swarm" hidden="false" targetId="21d5-5848-02a7-f995" type="rule"/>
       </infoLinks>
     </infoGroup>
   </sharedInfoGroups>
