@@ -47,6 +47,7 @@
     </categoryEntry>
     <categoryEntry id="8a03-13c0-ea45-1732" name="Ignored for min Core" hidden="false"/>
     <categoryEntry id="de79-e832-4f30-ac18" name="Mount" hidden="false"/>
+    <categoryEntry id="b91d-d3b1-8b46-6d52" name="Special Character" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="5f75-906f-4d23-7a30" name="Warhammer Fantasy 6th Edition" hidden="false">

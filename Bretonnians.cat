@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="05b9-5022-67cd-4fd3" name="Bretonnians" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="05b9-5022-67cd-4fd3" name="Bretonnians" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="ff93-67ff-9b17-d51d" name="Grail Vow" hidden="false">
       <rules>
@@ -83,6 +83,9 @@ Characters with the Questing Vow cannot use a mundane or magical lance.</descrip
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da34-a60a-5a53-59f6" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="203e-ac55-1b18-fbbd" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -186,6 +189,9 @@ Characters with the Questing Vow cannot use a mundane or magical lance.</descrip
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2429-c93c-84b9-74fa" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d769-7403-386b-9f3e" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -328,18 +334,27 @@ Characters with the Questing Vow cannot use a mundane or magical lance.</descrip
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2866-ed9e-4bec-2592" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="668b-c26b-5704-9838" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="ecec-6241-89c7-078a" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7aa0-9869-9c54-ac89" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d240-1423-e0b1-c546" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="9b3a-11b4-c115-ecce" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d479-24c4-c23f-4630" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0263-8d72-c077-79cf" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -381,6 +396,9 @@ Characters with the Questing Vow cannot use a mundane or magical lance.</descrip
                   </characteristics>
                 </profile>
               </profiles>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -398,6 +416,7 @@ Characters with the Questing Vow cannot use a mundane or magical lance.</descrip
         <entryLink id="9e97-a286-fbbd-0ea3" name="Knight&apos;s Vow" hidden="false" collective="false" import="true" targetId="8d7d-6103-347e-6aa7" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c75-67f5-c487-53de" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4183-290f-c003-6a91" type="max"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -505,18 +524,27 @@ Characters with the Questing Vow cannot use a mundane or magical lance.</descrip
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4fe0-e993-418b-9290" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a99-ef34-a6b7-4530" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="fe3d-3101-415b-c586" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="36cd-c6ae-c3fa-c382" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="62e6-aff1-a561-f898" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="a2d7-895e-0ec1-b292" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="911d-1609-ae1d-413d" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d9c-7f57-0189-ab4e" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -558,6 +586,9 @@ Characters with the Questing Vow cannot use a mundane or magical lance.</descrip
                   </characteristics>
                 </profile>
               </profiles>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -637,12 +668,18 @@ Characters with the Questing Vow cannot use a mundane or magical lance.</descrip
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="05d2-d2b0-5ff1-5c78" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="3433-9ca6-313b-e719" name="Longbows" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ad7d-879a-3d24-5197" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4cb7-ad25-a169-4a0b" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -699,6 +736,9 @@ Characters with the Questing Vow cannot use a mundane or magical lance.</descrip
               <rules>
                 <rule id="8dea-01c2-dce4-18fc" name="Defensive Stakes" hidden="false"/>
               </rules>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="0367-4877-758b-5681" name="Skirmishers" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -711,6 +751,9 @@ Characters with the Questing Vow cannot use a mundane or magical lance.</descrip
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4f84-554e-8521-e6e2" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -755,12 +798,18 @@ Characters with the Questing Vow cannot use a mundane or magical lance.</descrip
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e30a-4e27-73f4-aadc" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="04a3-a00a-d791-6748" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="a0a0-bb1e-3215-f767" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d1e-2e19-63de-f9a9" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3542-f8db-5c1f-1b83" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -813,8 +862,16 @@ Characters with the Questing Vow cannot use a mundane or magical lance.</descrip
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0652-a5e6-a169-8e4a" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="0867-687e-0119-46fc" name="Spears" hidden="false" collective="false" import="true" type="upgrade"/>
-            <selectionEntry id="dee9-ba6c-c504-e64e" name="Halberds" hidden="false" collective="false" import="true" type="upgrade"/>
+            <selectionEntry id="0867-687e-0119-46fc" name="Spears" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="dee9-ba6c-c504-e64e" name="Halberds" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -861,18 +918,27 @@ Characters with the Questing Vow cannot use a mundane or magical lance.</descrip
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c0e-b861-e169-cc11" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e5c0-3f36-7d91-be80" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="6dd2-ead1-3be3-28d8" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ecc-fe29-0198-30f1" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f564-57c4-4973-9e73" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="934c-883d-ca55-03cb" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f13c-f186-c077-0970" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="446e-b52d-6101-91ae" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -914,6 +980,9 @@ Characters with the Questing Vow cannot use a mundane or magical lance.</descrip
                   </characteristics>
                 </profile>
               </profiles>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -931,6 +1000,7 @@ Characters with the Questing Vow cannot use a mundane or magical lance.</descrip
         <entryLink id="896e-4f5e-a909-9de3" name="Questing Vow" hidden="false" collective="false" import="true" targetId="2343-57a3-e533-4181" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed4e-3108-3ce2-34f2" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b6ac-4d75-47b7-991a" type="max"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -965,8 +1035,8 @@ They have a Unit Strength of 2 each, they get +1 Armour save for being mounted, 
       <selectionEntries>
         <selectionEntry id="a171-0fef-5ea8-5c59" name="Pegasus Knight" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="15.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6331-df8d-aee9-2320" type="max"/>
-            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ffac-98a1-2661-4ab4" type="min"/>
+            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6331-df8d-aee9-2320" type="max"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ffac-98a1-2661-4ab4" type="min"/>
           </constraints>
           <profiles>
             <profile id="9aed-77e4-4cd2-30e4" name="Pegasus Knight" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
@@ -1005,18 +1075,27 @@ They have a Unit Strength of 2 each, they get +1 Armour save for being mounted, 
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1acb-a701-9886-83f8" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6173-00f2-2770-04cf" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="6581-2dde-141c-7a0a" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3156-bba9-077b-aa2d" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="57f2-71e7-e058-6dcf" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="dba2-7d43-86f1-6aac" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6002-4e30-bce2-5790" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f846-c152-a8a7-c83c" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1131,14 +1210,23 @@ They have a Unit Strength of 2 each, they get +1 Armour save for being mounted, 
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4413-27f3-6238-0dba" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd35-393b-85c1-cc0a" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="e055-23bf-0a88-8a5c" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c1c-ad72-ab03-9fb2" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7c02-0a8b-efd0-af5a" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="e63c-594a-56ab-ee27" name="Mounted Yeomen" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
@@ -1177,12 +1265,18 @@ They have a Unit Strength of 2 each, they get +1 Armour save for being mounted, 
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="773a-01f9-3fc5-c528" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5226-2bb9-1235-f8ba" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="2c13-3e9a-d48c-ead3" name="Bows" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0cd8-46b9-353d-635c" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa90-93ea-c420-e58f" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="a1c3-e628-56fc-227e" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -1195,6 +1289,9 @@ They have a Unit Strength of 2 each, they get +1 Armour save for being mounted, 
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cc72-c188-c4f2-bb80" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1243,11 +1340,17 @@ They have a Unit Strength of 2 each, they get +1 Armour save for being mounted, 
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="136a-58b9-c81b-168e" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="8b6e-cb21-f034-41cb" name="Fast Cavalry" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
                 <infoLink id="0485-c6bb-4293-e32f" name="Fast Cavalry" hidden="false" targetId="ab75-c6ec-0411-c924" type="rule"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1303,18 +1406,27 @@ They have a Unit Strength of 2 each, they get +1 Armour save for being mounted, 
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="30bb-847e-562d-0ba3" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd90-1a2b-3428-9ae9" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="13cb-7b4f-cb02-a225" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c88d-e0ff-a9e0-47af" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a001-c4e4-f5fb-3d0b" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="2f3b-9e8c-0375-171e" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee8c-7ec9-c9f0-e1d0" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d4e0-983f-0497-1956" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1352,6 +1464,7 @@ They have a Unit Strength of 2 each, they get +1 Armour save for being mounted, 
         <entryLink id="9fff-b4b4-ac40-9972" name="Grail Vow" hidden="false" collective="false" import="true" targetId="0c79-bdc0-d461-b918" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2241-df39-de6e-1518" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6fa2-452e-d586-15d0" type="max"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -1398,6 +1511,9 @@ It can never be moved during the game after it has been deployed, although it ma
           <infoLinks>
             <infoLink id="9a34-05b9-900b-24ff" name="Stone Thrower" hidden="false" targetId="ea74-4e81-f844-d146" type="rule"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="9a44-54e7-15f4-39ed" name="Yeoman Craftsman" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1445,10 +1561,337 @@ It can never be moved during the game after it has been deployed, although it ma
           <infoLinks>
             <infoLink id="eeaf-bc84-cd5e-1879" name="Stone Thrower" hidden="false" targetId="ea74-4e81-f844-d146" type="rule"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="90.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="afb4-4a24-531c-ca0b" name="The Green Knight" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="c081-8b4e-ff1e-5bc3" name="The Green Knight" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">7</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">6</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">4</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">9</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="cabd-49c8-aff2-aae7" name="Shadow Steed" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">8</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">5</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="fbb3-93c4-bf03-063c" name="Spirit Form" hidden="false">
+          <description>The Green Knight cannot be broken, but if he is ever beaten in combat, he will lose one wound (with no saves of any kind allowed) for every point that he lost the combat by. If the Green Knight is destroyed by combat resolution in the first round of combat, the enemy may overrun as normal.</description>
+        </rule>
+        <rule id="2c9d-a817-a2f5-6f8e" name="The Shadow Steed" hidden="false">
+          <description>The Steed of the Green Knight is not slowed by its barding, and so its Movement is 8″.</description>
+        </rule>
+        <rule id="5f86-62ff-ae28-db92" name="Ethereal" hidden="false">
+          <description>The Green Knight is an insubstantial, ghostly being that can pass through barriers as if they were not there at all. He suffers no movement penalties for moving over or through any kind of terrain. He never suffers any movement penalties, even f om such things as magical effects. He can even move through impassable terrain, so long as he does not encl his move within impassable terrain. He may not, however, move through other units. Nevertheless, the Green Knight does block line of sight (no one can see through him), and cannot see through anything himself that would normally block line of sight.
+
+Because he is insubstantial, he can&apos;t be harmed except by magical attacks, Daemons or other ethereal creatures, though he may be affected by spells as normal.
+
+He also cannot join or be joined by units or characters.</description>
+        </rule>
+        <rule id="1d27-6b13-c9c9-0618" name="Aura of the Fey" hidden="false">
+          <description>A being of supernatural power, the Green Knight can never truly be slain.
+
+If his Wounds are ever reduced to zero, he will instantly disappear into thin air. However, in the Remaining Moves part of the following Bretonnian Movement phase, the Bretonnian player may attempt to reawaken the Green Knight as described in Guardian of the Sacred Sites above, following all the same rules. However, each time the Green Knight is slain, a -1 is suffered on the next dice roll made to awaken him (eg, after he is slain the first time, he will awaken the following turn on a 4+ rather than a 3+. After the second time, he awakens on a 5+, etc). If he does not appear, a test may be taken during each following Bretonnian Remaining Moves phase to see if he returns.
+
+For calculating Victory Points, the enemy only gets full Victory Points for the Green Knight if he is not on the table at the end of the game.</description>
+        </rule>
+        <rule id="91b2-7c76-6010-0f3a" name="Guardian of Sacred Sites" hidden="false">
+          <description>The Green Knight is not placed on the board during deployment. In the Remaining Moves phase of any Bretonnian Movement phase, the Bretonnian player may attempt to awaken the Green Knight. Roll a dice – he will awaken on the dice roll of a 3 or more. If he does not awaken that turn, then the player may try again the following turn, and so on.
+
+When the Green Knight is awoken, he may be placed within any &apos;natural&apos; terrain piece on the table that is difficult ground or very difficult ground (including forests, rivers, marshes, rocky outcrops but not constructed things like buildings, etc). What is &apos;natural&apos; terrain should be decided before the game starts, and at least one suitable piece should be placed on the table. The Green Knight may move normally on the turn he appears.
+
+During the game, the Green Knight may disappear at will and reappear in another location completely. If the Green Knight is within (or moves into) a &apos;natural&apos; piece of scenery during the Remaining Moves phase, then he may instantly be removed from the table and replaced anywhere on the table within another &apos;natural&apos; piece of terrain, facing in any direction. He may not move any further that turn. Note that he still may not end his move within impassable terrain.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="e6f4-1234-5d61-373b" name="Immune to Psychology" hidden="false" targetId="512a-5ae5-c6cb-b82a" type="rule"/>
+        <infoLink id="2f5b-06a6-9834-7fa8" name="Terror" hidden="false" targetId="3767-0d81-4db9-cda7" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="2851-c52d-076b-f3fc" name="Lords" hidden="false" targetId="623e-5f3d-d939-9b51" primary="true"/>
+        <categoryLink id="847d-961b-15c5-ff17" name="Special Character" hidden="false" targetId="b91d-d3b1-8b46-6d52" primary="false"/>
+        <categoryLink id="056e-a773-4433-ebf6" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="61e7-cc96-c8cf-9da9" name="Barding" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="39b4-e2ee-8321-32db" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a0fb-fc4f-55c0-a05a" type="max"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry id="ccd6-2e50-3bf8-8556" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f3a2-e1e3-b9e1-8975" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b69-6aa7-dc71-6a5a" type="max"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry id="f9a2-601d-ec17-e5ea" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="230c-6f44-812d-45a6" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="22cf-dc3d-361a-415d" type="max"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry id="2535-aaaa-5a35-12f5" name="The Dolorous Blade" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed9f-812a-062b-a4f9" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7dff-bccf-7577-dfa6" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="0939-b4ea-f45b-ff24" name="The Dolorous Blade" hidden="false">
+              <description>The Dolorous Blade may be used in one of two ways. Either the Green Knight can use the Blade to gain +D6 Attacks, or it can be used to add +2 to his Strength. The Green Knight may change which method he is using to attack with in each Close Combat phase if he wishes to.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="275.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="dd76-599d-7fdb-d160" name="The Fay Enchantress" hidden="false" collective="false" import="true" type="model">
+      <rules>
+        <rule id="a7f1-3734-3e49-51ad" name="The Fay Enchantress" hidden="false">
+          <description>The Fay Enchantress is a Level 4 Wizard who uses spells from any of the eight Lores of Magic in the Warhammer rulebook. She gets a +2 bonus to cast Lore of Life spells.</description>
+        </rule>
+        <rule id="2502-049b-bd7e-b109" name="Supreme Aura of the Lady" hidden="false">
+          <description>The Fay Enchantress has Magic Resistance (3). In addition, she causes fear. Against Skaven, Orcs &amp; Goblins and all creatures from the Beasts of Chaos Armies book, she causes terror.</description>
+        </rule>
+        <rule id="1c87-e8d6-3f2e-c323" name="Spiteful Glance" hidden="false">
+          <description>All enemy models in base contact at the start of each Close Combat phase must pass an lnitiative test (remember a 6 is always a failure) or take 1 wound, with no Armour or Ward save allowed. These tests must be made before anything has occurred in that round of combat, even coming before chariot impact hits. Any wounds and casualties are treated as normal close combat casualties.</description>
+        </rule>
+        <rule id="0736-0cf9-3875-65f7" name="Favour of the Fay" hidden="false">
+          <description>One model in the Bretonnian army (which must be the Champion of any unit of Knights) may be given the Favour of the Fay. Nominate which model is given the Favour before the game starts but after deployment is finished. This model may add +1 to all rolls To Hit in close combat. However, if the model loses The Blessing of the Lady, then both the Favoured model and the Fay Enchantress take a wound that cannot be saved by Armour saves or Ward saves.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="3f7d-3906-7a42-f146" name="Fear" hidden="false" targetId="03be-3e56-1332-bf56" type="rule"/>
+        <infoLink id="5a5d-97a5-66db-1673" name="Magic Resistance" hidden="false" targetId="6e0c-4c98-a2c2-af0d" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (3)"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="fbb1-03ff-2a44-bf31" name="Lords" hidden="false" targetId="623e-5f3d-d939-9b51" primary="true"/>
+        <categoryLink id="e485-9755-425a-143a" name="Special Character" hidden="false" targetId="b91d-d3b1-8b46-6d52" primary="false"/>
+        <categoryLink id="56f5-3c5d-d000-530d" name="Heroes" hidden="false" targetId="5694-61f3-6913-6154" primary="false"/>
+        <categoryLink id="aa40-0093-6597-183f" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="6107-a36d-0ef8-a9cb" name="Silvaron" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7a2-4032-42ae-3464" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="60fe-9d09-1a47-ae3e" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="938c-1067-f362-a960" name="Silvaron" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">10</characteristic>
+                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">5</characteristic>
+                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+                <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+                <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+                <characteristic name="I" typeId="b418-0e30-644f-1435">5</characteristic>
+                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">2</characteristic>
+                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">8</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="4f3a-50d9-78c1-402d" name="Silvaron" hidden="false">
+              <description>Silvaron has +2 Strength when he charges. In addition he has a 5+ Ward save and Magic Resistance (2). Remember than even though both Silvaron and the Enchantress have Magic Resistance, only one of them may add their dice into dispellnig a spell affecting them.
+
+All attacks made by Silvaron count as magical, and he causes Fear.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="9206-0458-2218-e000" name="Fear" hidden="false" targetId="03be-3e56-1332-bf56" type="rule"/>
+            <infoLink id="427b-a2e6-964f-7b6f" name="Magic Resistance" hidden="false" targetId="6e0c-4c98-a2c2-af0d" type="rule">
+              <modifiers>
+                <modifier type="append" field="name" value=" (2)"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink id="c4c2-7c83-163f-04fd" name="Mount" hidden="false" targetId="de79-e832-4f30-ac18" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="65.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2c89-ddbc-c54e-aca1" name="The Chalice of Potions" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2190-b4fd-d438-ff0a" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="17b1-3862-9cbc-82a7" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="b4a2-4302-3a82-436b" name="The Chalice of Potions" hidden="false">
+              <description>At any point during each Bretonnian Magic phase, the Fay Enchantress may peer into the Chalice and stir up magical power to use against her foes. Roll a D6 each time the Chalice is used. The number refers to which spell is automatically cast from the Lore of Heavens as a Bound Spell (at the Power Level equal to the minimum casting level for the spell). However, if a 6 is rolled and the Comet of Casandora is cast (even if it is dispelled), the Chalice temporarily runs out of power, and cannot be used for the remainder of the battle.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry id="fdbd-0dda-0bff-d0b3" name="Power Familiar (Toad)" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b0a2-9f64-ba67-6051" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3dc7-3b1b-2e8c-faa3" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="b52e-9163-6ffb-1c80" name="Power Familiar (Toad)" hidden="false">
+              <description>The Toad Familiar adds one dice to both the Power dice and the Dispel dice pool of the Fay Enchantress’ side.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry id="d753-6286-e3a8-7431" name="Girdle of Gold" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2970-446d-84fd-a940" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4603-aaa5-6a51-be48" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="5ddb-df96-03ef-b61b" name="Girdle of Gold" hidden="false">
+              <description>The Girdle gives the Fay Enchantress a 4+ Ward save.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry id="c8db-dc64-182a-0d0f" name="Grail Guardians" hidden="false" collective="false" import="true" type="unit">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d40-3f95-001f-eb9d" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="3548-43a0-4de5-c568" name="Grail Guardians" hidden="false">
+              <description>The Fay Enchantress may be accompanied by 2-8 Grail Guardians. These Grail Guardians cost 38 points each. One may be upgraded to be a Musician for + 10 points, and another may be upgraded to a Standard Bearer for +20 points. They follow all the rules for Grail Knights. They are placed on the table when the Fay Enchantress is set up, and must form up as a unit with her. The Fay Enchantress can never choose to leave this unit. These Knights are not chosen from the army list, and may be taken in addition to a 0-1 unit of Grail Knights.</description>
+            </rule>
+            <rule id="b548-aca4-deb2-001f" name="Living Saints" hidden="false">
+              <description>Each model in a unit of Grail Knights can issue and accept challenges as if they were a Champion.</description>
+            </rule>
+          </rules>
+          <selectionEntries>
+            <selectionEntry id="37c9-74be-ed43-b824" name="Grail Guardian" hidden="false" collective="false" import="true" type="model">
+              <constraints>
+                <constraint field="selections" scope="parent" value="8.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a5f-c83d-0278-7420" type="max"/>
+                <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9568-f05b-7572-a2f2" type="min"/>
+              </constraints>
+              <profiles>
+                <profile id="c56e-b888-238d-e067" name="Grail Knight" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                  <characteristics>
+                    <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                    <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">5</characteristic>
+                    <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                    <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+                    <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                    <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                    <characteristic name="I" typeId="b418-0e30-644f-1435">5</characteristic>
+                    <characteristic name="A" typeId="fa03-f9a3-8117-98dd">2</characteristic>
+                    <characteristic name="Ld" typeId="bbad-d421-400b-87c1">8</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink id="94d4-9aa3-90c1-da44" name="Barded Warhorse" hidden="false" targetId="bffa-4d7e-07b6-a234" type="profile"/>
+                <infoLink id="8a21-81b3-191e-62bd" name="Purebreed Warhorse" hidden="false" targetId="3a4d-edcf-ab86-a4b9" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="38.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="989e-4f8e-5dfe-417d" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="86cc-8ada-d994-2bac" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c16-0932-b367-e3df" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a917-f1c8-2f30-687e" name="Lances" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c104-9e43-52fd-9943" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6342-96af-6c29-9913" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="524b-d73e-072f-1e05" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a29-b3d2-3f21-61d0" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b90-65d5-443e-c6ac" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup id="6dbf-bce6-07c6-e396" name="Command" hidden="false" collective="false" import="true">
+              <selectionEntries>
+                <selectionEntry id="d793-6720-4432-f632" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb2c-89b3-21b6-2133" type="max"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="ea3c-666e-8030-e4d9" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0682-3ce4-c133-ac3e" type="max"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks>
+            <entryLink id="cab7-6b1e-fd8a-9548" name="Magic Banners" hidden="true" collective="false" import="true" targetId="f9f4-2454-df98-6ca9" type="selectionEntryGroup">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ea3c-666e-8030-e4d9" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="bd7c-46e9-57d5-a42c" name="Grail Vow" hidden="false" collective="false" import="true" targetId="0c79-bdc0-d461-b918" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f026-873e-926b-fe97" type="min"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="582d-8c8a-1869-0706" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="bb36-95ee-0f4a-e6c7" name="Lore of Magic" hidden="false" collective="false" import="true" targetId="3c79-613e-77df-160c" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="480.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -1562,6 +2005,9 @@ Characters and units can lose the Blessing, and once lost it cannot be regained.
       <categoryLinks>
         <categoryLink id="5425-8229-a008-2fed" name="Grail Vow" hidden="false" targetId="ff93-67ff-9b17-d51d" primary="false"/>
       </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="2343-57a3-e533-4181" name="Questing Vow" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
@@ -1582,6 +2028,9 @@ Characters and units can lose the Blessing, and once lost it cannot be regained.
       <categoryLinks>
         <categoryLink id="4bd3-f09d-2c56-c954" name="Questing Vow" hidden="false" targetId="8544-7483-7784-ffda" primary="false"/>
       </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
