@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="dfb1-1789-5d68-be54" name="Skaven" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="dfb1-1789-5d68-be54" name="Skaven" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="4f5c-498c-bd84-7e28" name="Clan Eshin" hidden="false"/>
     <categoryEntry id="befb-92ec-0667-152b" name="Clan Pestilens" hidden="false"/>
@@ -1093,6 +1093,9 @@ Hidden Assassins may be revealed at the beginning of any of your turns or at the
           <infoLinks>
             <infoLink id="86ad-0e47-a3a4-83f2" name="Poisoned Attacks" hidden="false" targetId="d168-689e-84dd-9b7e" type="rule"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -1476,6 +1479,9 @@ If a Globadier rolls a 1 on his dice to hit, he has dropped the globe or the fra
 Poisoned Wind Globes are Warpstone Weapons.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -1663,6 +1669,9 @@ D6		Result
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="f1ad-140c-8693-25da" name="Warplock Jezzails" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -1742,6 +1751,9 @@ Jezzails are the most reliable weapons developed by Clan Skryre (they&apos;re al
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="1744-e035-0f33-bfb9" name="Plague Monks" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -1842,6 +1854,9 @@ Jezzails are the most reliable weapons developed by Clan Skryre (they&apos;re al
           </modifiers>
         </entryLink>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="4ac1-1d51-f321-6886" name="Rat Ogres" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -1941,6 +1956,9 @@ When manoeuvring, consider only the Rat Ogres and then place the Packmasters at 
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="164c-f69d-6228-fecc" name="Plague Censer Bearers" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -2005,6 +2023,9 @@ When manoeuvring, consider only the Rat Ogres and then place the Packmasters at 
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="1718-9b26-b9ea-28bb" name="Warp-Lightning Cannon" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -2067,6 +2088,169 @@ If the Cannon and its targets are on a different level, for example if the targe
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="100.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d68d-3678-445b-2c07" name="Vermin Lord" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="0157-7816-dff8-824d" name="Vermin Lord" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">8</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">8</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">6</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">6</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">6</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">10</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">6</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">9</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="d582-c423-f91b-5b11" name="Daemonic Aura" hidden="false">
+          <description>The Horned Rat is not of mortal flesh and has some immunity to mortal weapons. He gets a 5+ Ward save, however this save cannot be used against magical attacks.</description>
+        </rule>
+        <rule id="5d99-9419-95d5-2e97" name="Stands Alone" hidden="false">
+          <description>A Vermin Lord may never join units.</description>
+        </rule>
+        <rule id="5956-9e7b-37f2-d6de" name="Horned Rat Incarnate" hidden="false">
+          <description>All friendly Skaven units with at least one unit within 6&quot; of the Vermin Lord are Immune to Psychology.</description>
+        </rule>
+        <rule id="52ab-5e71-3e8b-a721" name="Doom Glaive" hidden="false">
+          <description>The Glaives wielded by Vermin Lords are heavily ensorcelled with death magic. A hit from a Doom Glaive allows no armour saves.</description>
+        </rule>
+        <rule id="d1d7-0510-7c90-4983" name="Spellcaster" hidden="false">
+          <description>Vermin Lords are Level 4 Wizards that take their spells from the Skaven Magic list.</description>
+        </rule>
+        <rule id="6fd6-a071-542d-8223" name="Daemonic Instability" hidden="false">
+          <description>When a Vermin Lord loses a round of combat it must take a special Daemonic Instability test instead of a Break test. Use the following procedure to take a Daemonic Instability test:
+
+1. Calculate combat resolution as normal.
+
+2. Roll 2D6 and compare this to the Vermin Lord&apos;s Leadership value with no combat resolution modifiers. If the roll is higher, the Vermin Lord loses its grip on the mortal world and disappears from the battlefield. It counts as destroyed.
+
+3. If the Vermin Lord does not instantly disappear, compare the dice roll to its Leadership value modified by combat resolution. For each point the Vermin Lord fails by, it suffers one automatic wound with no saves of any kind allowed (including Ward saves, regeneration, etc.)
+
+If the Vermin Lord is wiped out by Instability in the first round of combat, the enemy may overrun as normal.</description>
+        </rule>
+        <rule id="0d45-04c0-4fda-04ea" name="Vermin Lord" hidden="false">
+          <description>Vermin Lords count as a Lord, a Hero and a Rare choice, and must be the army General.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="9e70-7815-b3e6-5aee" name="Immune to Psychology" hidden="false" targetId="512a-5ae5-c6cb-b82a" type="rule"/>
+        <infoLink id="5402-a4eb-3a7b-b7e5" name="Terror" hidden="false" targetId="3767-0d81-4db9-cda7" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="17ef-ad4e-90c2-915a" name="Heroes" hidden="false" targetId="5694-61f3-6913-6154" primary="false"/>
+        <categoryLink id="11ca-9e84-3484-9b7d" name="New CategoryLink" hidden="false" targetId="623e-5f3d-d939-9b51" primary="true"/>
+        <categoryLink id="b00c-e1d6-c4de-cb6e" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false"/>
+        <categoryLink id="1212-b091-baf2-1b66" name="Rare" hidden="false" targetId="a3af-995e-0cf1-7091" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="650.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ec05-9f17-161e-c9eb" name="Doomwheel" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="263d-6bad-4698-e636" name="Giant Rats" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">-</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">-</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">-</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">5</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="3ead-0728-786b-6d17" name="Skaven Driver" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">-</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">-</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">-</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">8</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="250d-6a4e-1bab-b931" name="Doomwheel" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">3D6</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">-</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">-</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">5</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">4</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">-</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">-</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="b33f-7605-6ab7-a929" name="Doomwheel" hidden="false">
+          <description>The Doomwheel is crewed by a single Skaven Driver and drawn by Giant Rats.
+
+It has a 5+ armour save and is treated as a Chariot with exceptions noted:</description>
+        </rule>
+        <rule id="7014-c6e9-8d31-8693" name="Movement" hidden="false">
+          <description>The Doomwheel moves 3D6&quot; during the compulsory movement step of the movement phase. The player can control the direction the Doomwheel moves in, but must decide which direction to move the Doomwheel before the dice are rolled for distance.
+
+If the Doomwheel&apos;s movement is sufficient to move into contact wiht an enemy unit it is considered to have charged. No formal declaration of a charge is necessary. The target can make the usual response just as if it had been charged in the normal manner. These rules apply even if the Doomwheel hits a friendly unit by accident!</description>
+        </rule>
+        <rule id="aa80-d640-91e1-099d" name="Impact Hits (D6+2)" hidden="false">
+          <description>The Doomwheel deals D6+2 impact hits at Strength 5 when it charges into a combat.</description>
+        </rule>
+        <rule id="45af-4321-9847-79e6" name="Warp Lightning" hidden="false">
+          <description>In each Skaven shooting phase the Doomwheel can unleash D3 bolts of warp-lightning (roll in each Shooting phase). The Skaven player can choose not to release the warp-lightning.
+
+The power of the warp-lightning can be very unpredictable - each time roll an Artillery dice. If you roll a number then that is the Strength of all the lightning bolts this turn. Each of the bolts has a range of 3D6&quot; and will strike the nearest model in any direction - friend or foe! 
+The bolts of warp-lightning arc wildly so they ignore any terrain between them and the nearest target.
+If the Doomwheel is in contact with a unit or model don&apos;t bother rolling for range - the bolts will automatically hit the target in contact.
+
+If several targets are the same distance away the bolt will be attracted to the target with the best saving throw (since they have more metal armour on them).
+
+Each Bolt will only damage a single model, but the model struck suffers not one but D6 wounds. Against war engines, ridden monsters and the like the hit scored is randomized between the machine/creature and its crew.
+
+If you roll a misfire something has gone awry with the warpstone generator. The Doomwheel will fire three shots at full range and full power (so 18&quot; at Strength 10). After this te Doomwheel itself is destroyed and removed from play.</description>
+        </rule>
+        <rule id="77ed-8cd8-003d-e77b" name="Crew Attacks" hidden="false">
+          <description>In the close combat phase the rats and the Skaven driver will fight enemy models in contact with the Doomwheel.</description>
+        </rule>
+        <rule id="f6b5-f23b-f7a9-f19e" name="Unit Strength 4" hidden="false">
+          <description>The Doomwheel has a Unit Strength of 4.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="8a39-8e22-c4b5-3117" name="Magic Resistance" hidden="false" targetId="6e0c-4c98-a2c2-af0d" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (2)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="3b7c-307c-13bf-c8b0" name="Immune to Psychology" hidden="false" targetId="512a-5ae5-c6cb-b82a" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="cc3f-989e-5c97-e3ba" name="New CategoryLink" hidden="false" targetId="a3af-995e-0cf1-7091" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="b268-55c8-fdee-5c9f" name="Warplock Pistol (Driver)" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="772b-0da2-852b-65d3" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c524-5e96-372d-2c58" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="69da-0503-8be5-441d" name="Warplock Pistol" hidden="false" targetId="93bd-451c-66d5-2ded" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="150.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
