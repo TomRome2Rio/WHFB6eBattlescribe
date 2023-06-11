@@ -1643,18 +1643,27 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="39b4-e2ee-8321-32db" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a0fb-fc4f-55c0-a05a" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="ccd6-2e50-3bf8-8556" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f3a2-e1e3-b9e1-8975" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b69-6aa7-dc71-6a5a" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="f9a2-601d-ec17-e5ea" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="230c-6f44-812d-45a6" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="22cf-dc3d-361a-415d" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="2535-aaaa-5a35-12f5" name="The Dolorous Blade" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1666,6 +1675,9 @@ During the game, the Green Knight may disappear at will and reappear in another 
               <description>The Dolorous Blade may be used in one of two ways. Either the Green Knight can use the Blade to gain +D6 Attacks, or it can be used to add +2 to his Strength. The Green Knight may change which method he is using to attack with in each Close Combat phase if he wishes to.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -1673,6 +1685,21 @@ During the game, the Green Knight may disappear at will and reappear in another 
       </costs>
     </selectionEntry>
     <selectionEntry id="dd76-599d-7fdb-d160" name="The Fay Enchantress" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="d316-c9c6-7b52-8e6a" name="The Fay Enchantress" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">5</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">4</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">5</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">9</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <rules>
         <rule id="a7f1-3734-3e49-51ad" name="The Fay Enchantress" hidden="false">
           <description>The Fay Enchantress is a Level 4 Wizard who uses spells from any of the eight Lores of Magic in the Warhammer rulebook. She gets a +2 bonus to cast Lore of Life spells.</description>
@@ -1754,6 +1781,9 @@ All attacks made by Silvaron count as magical, and he causes Fear.</description>
               <description>At any point during each Bretonnian Magic phase, the Fay Enchantress may peer into the Chalice and stir up magical power to use against her foes. Roll a D6 each time the Chalice is used. The number refers to which spell is automatically cast from the Lore of Heavens as a Bound Spell (at the Power Level equal to the minimum casting level for the spell). However, if a 6 is rolled and the Comet of Casandora is cast (even if it is dispelled), the Chalice temporarily runs out of power, and cannot be used for the remainder of the battle.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="fdbd-0dda-0bff-d0b3" name="Power Familiar (Toad)" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1765,6 +1795,9 @@ All attacks made by Silvaron count as magical, and he causes Fear.</description>
               <description>The Toad Familiar adds one dice to both the Power dice and the Dispel dice pool of the Fay Enchantress’ side.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="d753-6286-e3a8-7431" name="Girdle of Gold" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1776,6 +1809,9 @@ All attacks made by Silvaron count as magical, and he causes Fear.</description>
               <description>The Girdle gives the Fay Enchantress a 4+ Ward save.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="c8db-dc64-182a-0d0f" name="Grail Guardians" hidden="false" collective="false" import="true" type="unit">
           <constraints>
@@ -1885,6 +1921,9 @@ All attacks made by Silvaron count as magical, and he causes Fear.</description>
               </constraints>
             </entryLink>
           </entryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
