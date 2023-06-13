@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4b41-6842-9db5-f563" name="Tomb Kings" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="11" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4b41-6842-9db5-f563" name="Tomb Kings" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7d0c-5562-269f-0795" name="Tomb King General" hidden="false"/>
+    <categoryEntry id="80b7-5608-88c2-552c" name="Settra&apos;s Army" hidden="false">
+      <modifiers>
+        <modifier type="set" field="5547-8588-b85a-301f" value="-1.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="84d6-5fca-750f-ccc4" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="limit::eaa7-6800-e651-8bea" scope="roster" value="50.0" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="true" id="5547-8588-b85a-301f" type="min"/>
+      </constraints>
+    </categoryEntry>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="f50a-fa2b-8398-afac" name="Tomb King" hidden="false" collective="false" import="true" type="model">
@@ -117,6 +129,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="a93e-a200-8df3-db90" name="Liche High Priest" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="84d6-5fca-750f-ccc4" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="4486-256b-9513-56e0" name="Liche High Priest" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
@@ -265,6 +284,13 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="c323-2660-630f-496b" name="Liche Priest" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="84d6-5fca-750f-ccc4" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="1906-eb53-6067-6122" name="Liche Priest" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
@@ -432,6 +458,31 @@
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="b2f1-b393-4c9b-2584" name="Blessing of the Asp" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="eaa7-6800-e651-8bea" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a87b-62f5-ca8a-0637" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a03-affe-6bdc-183e" type="atLeast"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c6c8-3c84-88c7-7dec" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="8d79-2741-70cc-14ea" name="Weapons" hidden="false" collective="false" import="true" defaultSelectionEntryId="a87b-62f5-ca8a-0637">
@@ -441,6 +492,16 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="a87b-62f5-ca8a-0637" name="Bows" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="5ee1-5c3c-dc65-9c86" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a03-affe-6bdc-183e" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="5ee1-5c3c-dc65-9c86" type="min"/>
+              </constraints>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
               </costs>
@@ -553,6 +614,26 @@
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="14.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="80a3-a703-2344-d2e4" name="Blessing of the Asp" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="eaa7-6800-e651-8bea" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a03-affe-6bdc-183e" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="00fe-2c20-aa57-300c" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="73a3-8528-45f4-6e6a" name="Command" hidden="false" collective="false" import="true">
@@ -594,6 +675,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="50f7-fed8-5536-8d48" name="Core" hidden="false" targetId="62d3-efc6-6c2c-634e" primary="true"/>
+        <categoryLink id="d77e-09f5-cf16-bcfb" name="Settra&apos;s Army" hidden="false" targetId="80b7-5608-88c2-552c" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="0c35-80aa-0ff1-9acf" name="Skeleton Horseman" hidden="false" collective="false" import="true" type="model">
@@ -739,6 +821,7 @@
       <categoryLinks>
         <categoryLink id="56e0-8e13-81a5-b694" name="Chariot" hidden="false" targetId="fcd6-2f77-ca6e-7b24" primary="false"/>
         <categoryLink id="c560-fe3e-768e-0535" name="New CategoryLink" hidden="false" targetId="4a3f-84d1-0495-6ecb" primary="true"/>
+        <categoryLink id="c6e9-2447-9739-e380" name="Settra&apos;s Army" hidden="false" targetId="80b7-5608-88c2-552c" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="b103-0637-0e8d-7e29" name="Chariot" hidden="false" collective="false" import="true" type="model">
@@ -768,6 +851,26 @@
           </infoLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="40.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="93fc-48f8-cfeb-f178" name="Blessing of the Asp" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="eaa7-6800-e651-8bea" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7a03-affe-6bdc-183e" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1634-df4f-6400-a515" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -863,6 +966,7 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="488b-4847-f4c0-a951" name="New CategoryLink" hidden="false" targetId="4a3f-84d1-0495-6ecb" primary="true"/>
+        <categoryLink id="8072-c61f-19cb-5bc6" name="Settra&apos;s Army" hidden="false" targetId="80b7-5608-88c2-552c" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="4865-c201-174c-e366" name="Tomb Guard" hidden="false" collective="false" import="true" type="model">
@@ -1097,6 +1201,192 @@
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="220.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="84d6-5fca-750f-ccc4" name="Settra the Imperishable" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="9319-db8e-c6e5-ca08" name="Settra the Imperishable" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">7</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">4</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">5</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">4</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">5</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">10</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="20c3-d96c-8027-850f" name="Chariot of the Gods" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">-</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">-</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">-</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">5</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">5</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">-</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">-</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="a221-8abd-6374-37c1" name="Unit Strength 8" hidden="false">
+          <description>Settra has a Unit Strength of 2. His Chariot has a Unit Strength of 6. This means that in total Settra and his chariot have a Unit Strength of 8!</description>
+        </rule>
+        <rule id="8ef3-6414-000b-3d57" name="Settra the Great" hidden="false">
+          <description>The greatest Tomb king in Nehekhara, a powerful Priest King in life and founder of the Mortuary Cult, Settra alone amongst the Tomb Kings knows the secrets of the Liche Priests and understands their language and incantations. As well as being general of the army Settra is also the Hierophant, and can use incantations in the same manner as a Liche High Priest.</description>
+        </rule>
+        <rule id="d143-c132-bae6-26ec" name="Settra&apos;s Army" hidden="false">
+          <description>Settra&apos;s army represents his personal guard, and half the points of the army must be spent on the following unit types Chariots, Heavy Cavalry and Tomb Guard. It may not contain any Liche Priests.</description>
+        </rule>
+        <rule id="7cbd-fa20-2d08-0a09" name="The Curse of Settra" hidden="false">
+          <description>Should Settra&apos;s mortal vessel be destroyed, it explodes into a ravening swarm of flesh-eating khepra beetles which bite and sting the enemy before flying back to his pyramid to slowly regain his immortal form. In addition to the normal Tomb King&apos;s Curse, if Settra is killed by any means, then every enemy unit within 2D6&quot; suffers 2D6 Strength 2 hits (distributed as shooting hits).</description>
+        </rule>
+        <rule id="9875-b0a6-ac9a-5286" name="The Will of Settra" hidden="false">
+          <description>In addition to his Incantations, Settra also has a special version of &quot;My Will Be Done!&quot;, which affects all Chariot, Heavy Cavalry and Tomb Guard units in his army. He may use &quot;My Will Be Done!&quot; once on each one of the listed units per Magic phase, regardless of range or number of such units. He must do this before using any Incantations and remember that Smiting and Urgency may only be used successfully once on a unit per Magic phase.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="d9af-44b5-8411-cbcf" name="Skeletal Steed" hidden="false" targetId="7096-48c1-2e2f-a55e" type="profile"/>
+        <infoLink id="fc91-ad7f-c00c-8843" name="Terror" hidden="false" targetId="3767-0d81-4db9-cda7" type="rule"/>
+        <infoLink id="6c3a-ab19-6135-92eb" name="Flammable" hidden="false" targetId="1a01-bd8c-93eb-8de9" type="rule"/>
+        <infoLink id="1f3c-f5e0-4f0c-5566" name="Undead" hidden="false" targetId="d686-d7e2-d7a4-fc6c" type="infoGroup"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="ad19-87a7-7a2f-9f41" name="Additional Lord Choice" hidden="false" targetId="0daf-8d53-eadf-d10f" primary="false"/>
+        <categoryLink id="bf5e-74f6-87c0-0a6a" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false"/>
+        <categoryLink id="e1d9-c983-4f23-5b6e" name="New CategoryLink" hidden="false" targetId="623e-5f3d-d939-9b51" primary="true"/>
+        <categoryLink id="b5a0-f536-3fd4-0475" name="Special Character" hidden="false" targetId="b91d-d3b1-8b46-6d52" primary="false"/>
+        <categoryLink id="70d1-3bfd-dda1-646b" name="Wizard" hidden="false" targetId="eb46-88d4-eb41-2549" primary="false"/>
+        <categoryLink id="af03-6c50-1b7c-80ca" name="Tomb King General" hidden="false" targetId="7d0c-5562-269f-0795" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="ff65-5b9c-fa47-0525" name="The Blessed Blade of Ptra" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa49-664f-8fce-082e" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dbe9-2a6f-981b-3fa9" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="a27d-5554-e90f-ea2c" name="The Blessed Blade of Ptra" hidden="false">
+              <description>Settra always strikes first in close combat, even if charged. If an enemy also has the ability to strikes first, then they strike in normal Initiative order. If this is also equal, roll a dice to see who strikes first (re-roll ties). Keep track of the number of hits Settra scores with his weapon. After his attacks have been resolved, any enemy unit in base contact with Settra must take a Leadership test, with a negative modifier equal to the number of hits caused by Settra. If the test is passed. the enemy avert their gaze and suffer no ill effects. If the enemy fail the test then they are reduced to Weapon Skill 1 for the remainder of that combat round. If they roll double or more than their modified Leadership value then in addition to being reduced to Weapon Skill 1, the unit suffers D6 Strength 4 hits (distributed as shooting hits). For example, if Settra hits a unit with Leadership 7 three times, a Leadership test of 4 or less is no effect, a roll of 5 to 7 reduces them to Weapon Skill 1, and a roll of 8 or more means they also suffer hits.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry id="c8ba-a6e0-99b9-3f9d" name="The Chariot of the Gods" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a8bf-5632-af30-0b6b" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e7c-9b35-2f9e-f4a6" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="12ea-c969-5116-6693" name="The Chariot of the Gods" hidden="false">
+              <description>Settra&apos;s chariot follows all of the rules for normal scythed chariots (ie, it is not a light chariot), and so does D6+1 impact hits. Settra may only join a chariot unit whilst mounted, and if he does so, the unit no longer counts as fast cavalry.</description>
+            </rule>
+          </rules>
+          <categoryLinks>
+            <categoryLink id="8cd9-6165-6e3f-ca14" name="Chariot" hidden="false" targetId="fcd6-2f77-ca6e-7b24" primary="false"/>
+            <categoryLink id="ea37-c771-08ba-aae7" name="Mount" hidden="false" targetId="de79-e832-4f30-ac18" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+        <selectionEntry id="0d36-22f2-2920-24de" name="The Armour of Golden Magnificence" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="edd4-892d-9c1f-6d6e" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="150b-9a00-7c96-44e3" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="b5a1-96e2-18df-a8ff" name="The Armour of Golden Magnificence" hidden="false">
+              <description>Settra has a 2+ Armour saving throw. This saving throw is never modified to worse than a 4+, even if hit by an attack that normally allows no Armour save (such as a cannonball).</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry id="95e6-f84a-aa80-8be1" name="The Crown of Nehekhara" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="97af-313c-25aa-25d6" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8cf2-79f6-81e5-5b6a" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="5b4e-c552-023b-26d8" name="The Crown of Nehekhara" hidden="false">
+              <description>This crown carries with it the blessing of all the gods and goddesses of Nehekhara, and is topped with a golden cobra that rears and spits whenever enemies are near. Settra and his chariot benefit from a 4+ Ward save. In addition, Settra causes terror.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="6b72-8781-7785-8923" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d1c5-dc19-41cd-b886" type="min"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="b687-d293-0b9b-8205" name="Heirophant" hidden="false" collective="false" import="true" targetId="fead-7c29-bea4-3b9a" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d476-49b9-7f1c-55a1" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="625.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7a03-affe-6bdc-183e" name="High Queen Khalida" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="add" field="category" value="7d0c-5562-269f-0795">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cf7b-798c-9b94-df74" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <rules>
+        <rule id="c188-ce8c-eb2e-aa27" name="The Queen&apos;s Command" hidden="false">
+          <description>Khalid may cast Horekhah&apos;s Incantation of Righteous Smiting once per Magic phase. It is automatically cast, and cannot be dispelled.</description>
+        </rule>
+        <rule id="9536-7927-894a-f75a" name="Incarnation of the Asp Goddess" hidden="false">
+          <description>All attacks made by Queen Khalida count as magical attacks and Poisoned Attacks, and she herself is immune to poison. In addition to this, any of her attacks that count as poisoned (so any 6s to hit), will inflict D3 wounds rather than 1 as well as wounding automatically.
+
+The Queen moves with the swiftness of a striking asp, and will always strikes first in combat, even if she was charged. If her opponent also has this ability, resolve their attacks in Initiative order.</description>
+        </rule>
+        <rule id="6ccd-f038-f00f-fba7" name="The Curse of Queen Khalida" hidden="false">
+          <description>Any model or unit responsible for the death of Queen Khalida (see the Tomb Kings&apos; Curse) is affected by her curse on the dice roll of 4+. If affected, then roll a D6 for each model/unit, and on the dice roll of a 6, the model loses a wound that cannot be saved in any way (including Ward saves) nor Regenerated. Roll again at the start of each of your opponent&apos;s turns for the rest of the game, and they take a further wound on a roll of 6.</description>
+        </rule>
+        <rule id="789a-c405-4098-a514" name="Blessing of the Asp" hidden="false">
+          <description>Units of Skeletal Bowmen, Skeletal Light Horsemen and Chariots in an army that includes Queen Khalida may be given the Blessing of the Asp at the cost of +2 points per model. All shooting by these units count as Poisoned Attacks.</description>
+        </rule>
+        <rule id="0c4d-b0cb-8e78-9992" name="Army of the Queen" hidden="false">
+          <description>During her life, Queen Khalida&apos;s army relied heavily on her well-trained bowmen. An army that includes Khalida must contain at least one unit of Skeleton Warriors armed with bows.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="99f6-ef6b-502d-9852" name="Flammable" hidden="false" targetId="1a01-bd8c-93eb-8de9" type="rule"/>
+        <infoLink id="bb2e-b40a-9cbb-ef3b" name="The Curse" hidden="false" targetId="4416-ae17-ed00-346a" type="rule"/>
+        <infoLink id="2ca2-6ad8-210b-d26c" name="Undead" hidden="false" targetId="d686-d7e2-d7a4-fc6c" type="infoGroup"/>
+        <infoLink id="42ac-2556-8e8c-95fd" name="Regenerate" hidden="false" targetId="7c7c-8683-ae17-d576" type="rule"/>
+        <infoLink id="a15d-59a5-6695-aeab" name="Terror" hidden="false" targetId="3767-0d81-4db9-cda7" type="rule"/>
+        <infoLink id="170a-d37c-5f84-fa3d" name="Poisoned Attacks" hidden="false" targetId="d168-689e-84dd-9b7e" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="25b3-c91f-4961-57fa" name="New CategoryLink" hidden="false" targetId="623e-5f3d-d939-9b51" primary="true"/>
+        <categoryLink id="428a-d5fa-bf9e-c9f7" name="Special Character" hidden="false" targetId="b91d-d3b1-8b46-6d52" primary="false"/>
+        <categoryLink id="ee4e-462c-38b3-88ab" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="7349-6c9e-c4f1-2f53" name="Venom Staff" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7772-7474-2b80-1141" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f6b0-618e-ef03-9f00" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="d41e-dc6a-b472-6fe5" name="Venom Staff" hidden="false">
+              <description>Bound Spell, Power Level 5. The staff contains a Bound magic missile with a range of 24&quot;, causing 2D6 Strength 4 hits. If a unit takes any wounds from the staff, it may not move in its next Movement phase.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="ee69-fa2f-8024-fac4" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="420.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>

@@ -53,11 +53,22 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bf1d-6d71-81aa-e3ca" type="max"/>
       </constraints>
     </categoryEntry>
+    <categoryEntry id="0daf-8d53-eadf-d10f" name="Additional Lord Choice" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="5f75-906f-4d23-7a30" name="Warhammer Fantasy 6th Edition" hidden="false">
       <categoryLinks>
         <categoryLink id="8472-9fb7-4f93-8c2b" name="Lords" hidden="false" targetId="623e-5f3d-d939-9b51" primary="false">
+          <modifiers>
+            <modifier type="decrement" field="4ca5-3015-2631-2b7d" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0daf-8d53-eadf-d10f" repeats="1" roundUp="false"/>
+              </repeats>
+              <conditions>
+                <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0daf-8d53-eadf-d10f" type="greaterThan"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <modifierGroups>
             <modifierGroup>
               <modifiers>
