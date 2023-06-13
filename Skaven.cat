@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="dfb1-1789-5d68-be54" name="Skaven" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="dfb1-1789-5d68-be54" name="Skaven" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="4f5c-498c-bd84-7e28" name="Clan Eshin" hidden="false"/>
     <categoryEntry id="befb-92ec-0667-152b" name="Clan Pestilens" hidden="false"/>
@@ -10,13 +10,37 @@
     <categoryEntry id="bf09-3558-8963-50e3" name="Mainstay Unit" hidden="false">
       <rules>
         <rule id="be95-5fc7-ac39-8d2c" name="Mainstay Unit" hidden="false">
-          <description>The number of Clanrat units in the army restricts the maximum number of multiples of any other unit that can be included in the army. For example, if you have one unit of Clanrats, you can include one unit of Globadiers, one of Stormvermin, one of Gutter Runners, etc. If you have two units of Clanrats then you can include up to two units of Globadiers, up to two units of Gutter Runners, up to two Warp-lightning Cannons, etc. All normal restrictions still apply on top of this.</description>
+          <description>The number of Clanrat units in the army restricts the maximum number of multiples of any other unit that can be included in the army. For example, if you have one unit of Clanrats, you can include one unit of Globadiers, one of Stormvermin, one of Gutter Runners, etc. If you have two units of Clanrats then you can include up to two units of Globadiers, up to two units of Gutter Runners, up to two Warp-lightning Cannons, etc. All normal restrictions still apply on top of this.
+
+In a Clan Eshin Army, Night Runners are your Mainstay Unit instead of Clanrats.
+In a Clan Pestilens Army, Plague Monks are your Mainstay Unit instead of Clanrats.
+In a Clan Moulder Army, Giant Rat Packs are your Mainstay Unit instead of Clanrats.</description>
         </rule>
       </rules>
     </categoryEntry>
+    <categoryEntry id="83a6-ad30-93a8-77de" name="Clan Army" hidden="false"/>
+    <categoryEntry id="9b61-a7a1-8761-c9e9" name="Grey Seer" hidden="false"/>
+    <categoryEntry id="14af-7635-4d72-436a" name="Clan Eshin Army" hidden="false"/>
+    <categoryEntry id="b952-4dd2-bd93-a3b8" name="Clan Skyre Army" hidden="false"/>
+    <categoryEntry id="3490-18aa-b4bf-e44b" name="Clan Moulder Army" hidden="false"/>
+    <categoryEntry id="0dad-5154-d71e-e498" name="Clan Pestilens Army" hidden="false"/>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="d22e-1a74-aeb8-776f" name="Warlord" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b952-4dd2-bd93-a3b8" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="14af-7635-4d72-436a" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0dad-5154-d71e-e498" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3490-18aa-b4bf-e44b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="ff2a-ad4d-c9f5-e2a5" name="Warlord" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
@@ -185,98 +209,9 @@
         <categoryLink id="2bfb-db0a-2609-6a5a" name="New CategoryLink" hidden="false" targetId="623e-5f3d-d939-9b51" primary="true"/>
         <categoryLink id="f304-a450-1bf0-6bd9" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false"/>
         <categoryLink id="a11d-15ec-726b-1cb4" name="Wizard" hidden="false" targetId="eb46-88d4-eb41-2549" primary="false"/>
+        <categoryLink id="7efd-0d9a-8ee6-1318" name="Grey Seer" hidden="false" targetId="9b61-a7a1-8761-c9e9" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="eecd-a004-6476-9fd5" name="Screaming Bell" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c2b2-9d5d-8f58-1a5e" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="14aa-9729-6557-bda7" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="fd5f-f085-07d1-97ea" name="Screaming Bell" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
-              <characteristics>
-                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">-</characteristic>
-                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">0</characteristic>
-                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">-</characteristic>
-                <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
-                <characteristic name="T" typeId="16d7-9f22-06d8-8427">6</characteristic>
-                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">6</characteristic>
-                <characteristic name="I" typeId="b418-0e30-644f-1435">0</characteristic>
-                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">-</characteristic>
-                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">-</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <rules>
-            <rule id="8c59-2783-0755-7ffa" name="Unit Strength 5" hidden="false">
-              <description>The Screaming Bell has a Unit Strength of 4 (5 including the Grey Seer riding it)</description>
-            </rule>
-            <rule id="6bf5-23b2-3ac7-3d2e" name="Moving the Screaming Bell" hidden="false">
-              <description>The Screaming Bell is a special chariot ridden by a Grey Seer and must be fielded in a unit of Clanrats or Stormvermin. It cannot move on its own, but depends on the unit of Skaven surrounding it for movement. If the Bell&apos;s unit is ten or more models strong, it can move at its normal speed. If the unit suffers casualties and is reduced below the minimum of ten models, the unit loses 1&quot; from its Movement value for every model under ten. So, if there were nine Skaven pushing it, they&apos;d have, a Movement of 4, eight would have a Movement of 3, etc. If the unit is reduced to five or less models, it cannot move any more. The Grey Seer can never voluntarily leave the Bell, nor can the unit pushing it.
-
-The Bell&apos;s unit moves as normal, marching, charging and pursuing at normal speed, etc. The Bell must be placed at the front of its unit, and it must be placed as centrally as possible in the unit. The unit&apos;s rank bonus is calculated normally, treating the bell as an equivalent number of models (see the diagrams on the right). The Bell&apos;s unit cannot move through obstacles and any terrain that is not open terrain.
-
-The Bell&apos;s unit is reassured by the presence of the holy artefact and is therefore Immune to Psychology. If the Bell&apos;s unit is broken in combat and flees, they abandon the Bell. If this happens, the Bell itself and the striker are automatically destroyed by the enemy, while the Grey Seer abandons the Bell and flees on foot together with the unit that was pushing it. The enemy can pursue the fleeing Skaven unit as normal. Victory points for the Bell are awarded separately from those for the Grey Seer, in the same way as for a ridden monster/chariot.
-
-When casting spells from the Bell, the Grey Seer can measure a spell&apos;s range from any point of the Screaming Bell&apos;s carriage.</description>
-            </rule>
-            <rule id="e27b-da1c-3be7-f426" name="Screaming Bell" hidden="false">
-              <description>The Screaming Bell is a large target and has a Unit Strength of 4 (5 with the Grey Seer).
-
-The Screaming Bell has a Ward save of 3+ representing hits that bounce off the indestructible Bell of the Horned One itself. The Grey Seer does not benefit from this save, but gets the normal 5+ armour save from being on a chariot, representing the shelter he gets from the Bell&apos;s carriage.
-
-Unsaved wounds caused by a hit with a Strength of 7 or more destroy the Screaming Bell automatically. On the other hand, every time one such wound is saved by the Bell&apos;s Ward save, the Screaming Bell will immediately ring with three dice as described below. Any new effects generated in this way replace effects that were lasting from a previous ringing of the Bell.
-
-The Screaming Bell and the unit pushing it have Magic Resistance (2).
-
-The Screaming Bell adds two dice to the Skaven pool of Power dice in the Skaven Magic phase. These dice can be used only by the Grey Seer.
-
-The Grey Seer can take advantage of his high position, drawing line of sight for his spells over the heads of the Bell&apos;s unit (remember, the Bell is a large target). In addition, he is free to cast spells all around, not only in the unit&apos;s line of sight.</description>
-            </rule>
-            <rule id="36e6-4621-65b3-6569" name="Missile Fire Against The Bell" hidden="false">
-              <description>Enemies with a line of sight to the Screaming Bell may choose whether to target the Bell or its unit with their missile fire.
-
-Missile hits (normal and magical) against the Bell are randomised as normal for characters riding chariots, so a result of 6 would hit the Grey Seer, and any other result hits the Screaming Bell.</description>
-            </rule>
-            <rule id="d923-de70-2807-6ae2" name="Close Combat Against The Bell" hidden="false">
-              <description>If the Bell&apos;s unit charges in close combat, the Bell causes D6 Impact Hits on the unit charged. In close combat, enemies in base contact with the Screaming Bell can choose to attack either the Screaming Bell or the Grey Seer, in the same way as with a character riding in a chariot. Since the Bell has a Weapon Skill of 0, all attacks directed against it will hit automatically. The Grey Seer can fight against enemies all around the Screaming Bell. The striker is too busy ringing the Bell and can&apos;t fight.
-
-If the Grey Seer refuses a challenge, he can declare that he&apos;s hiding behind the Bell for protection. The Grey Seer is not moved from the Bell, but he cannot fight and cannot be attacked for the duration of that combat engagement. The challenger is free to attack any other model he&apos;s in base contact with, including the Bell itself (if he&apos;s in base contact with it).</description>
-            </rule>
-            <rule id="0339-2412-8200-603c" name="Ringing The Bell" hidden="false">
-              <description>In the Skaven Shooting phase, the striker can ring the Bell, even when it is engaged in close combat. First declare if you are going to roll one, two or three dice (ie, decide how much effort the striker is putting into hitting the Bell). Then roll them, add their results together and consult the chart below.
-
-Score	Result
-1-3	No effect.
-4-5	The Bell and its unit cause fear until the next Skaven Shooting phase.
-6-7	The Bell and its unit are stubborn (despite being immune to Psychology) until the next Skaven Shooting phase.
-8	All cavalry units and ridden monsters on the battlefield must take a Panic test. Undead cavalry and ridden monsters must take a Leadership test as if their General had been destroyed they can use the General&apos;s Leadership if within 12&quot; of him).
-9-10	All models with Toughness 7 or more on the battlefield suffer D3 wounds. Armour saves apply as normal. Empire Steam Tanks and all buildings suffer D6 points of structural damage. Roll 4D6 on the appropriate damage chart for each section of a castle on the table.
-11-12	All Skaven units on the battlefield (even Clan Moulder beasts and units that are normally immune to psychology!) are subject to hatred against all enemies until the next Skaven Shooting phase.
-13!	All enemy units must take a Panic test. Undead units must take a Leadership test as if their General had been destroyed (they can use the General&apos;s Leadership if within 12&quot; of him).
-14-15	The Bell and its unit cause terror until the next Skaven Shooting phase.
-16-17	All Skaven units on the battlefield (even Clan Moulder beasts and units that are normally immune to psychology!) are subject to frenzy until defeated in combat.
-If the dice rolled include a double or a treble result (two fours, or two fives, or three sixes, etc), something has gone wrong:
-
-Double	The effect rolled on the chart still applies as normal. In addition, the distorted resonance of the Bell causes both the Grey Seer and the unit pushing the bell to suffer D3 Strength 2 hits each, with no armour saves allowed.
-Treble	The effect rolled on the chart does not apply and the Bell itself is destroyed! Remove the Screaming Bell model and place the Grey Seer on foot inside the unit. Both the Grey Seer and the unit pushing the Bell suffer D6 Strength 4 hits each, with no armour save allowed. Note that the Grey Seer also suffers the normal Strength 5 hit due to his &apos;chariot&apos; being destroyed.</description>
-            </rule>
-          </rules>
-          <infoLinks>
-            <infoLink id="0db3-a822-bee9-06e6" name="Magic Resistance" hidden="false" targetId="6e0c-4c98-a2c2-af0d" type="rule">
-              <modifiers>
-                <modifier type="append" field="name" value=" (2)"/>
-              </modifiers>
-            </infoLink>
-            <infoLink id="9036-0b96-b1e5-c0c8" name="Large Target" hidden="false" targetId="01c3-c8c6-431f-1c2b" type="rule"/>
-          </infoLinks>
-          <categoryLinks>
-            <categoryLink id="d694-938d-ac77-1c88" name="Mount" hidden="false" targetId="de79-e832-4f30-ac18" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="200.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="1797-4b30-84a5-f69a" name="Level 4 Wizard" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb68-300a-0505-702e" type="min"/>
@@ -308,8 +243,8 @@ Treble	The effect rolled on the chart does not apply and the Bell itself is dest
                 <conditionGroup type="and">
                   <conditions>
                     <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0abd-6fed-cbeb-7c38" type="equalTo"/>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5f7a-5a32-d633-54a4" type="greaterThan"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a61-9b9e-0b56-e6ce" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9b61-a7a1-8761-c9e9" type="greaterThan"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -319,6 +254,7 @@ Treble	The effect rolled on the chart does not apply and the Bell itself is dest
             <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f64-cbe4-f7f8-b70d" type="min"/>
           </constraints>
         </entryLink>
+        <entryLink id="3f1f-c10c-45e5-6a2f" name="Screaming Bell" hidden="false" collective="false" import="true" targetId="e1ef-2121-15d2-a3d5" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="235.0"/>
@@ -454,6 +390,17 @@ Treble	The effect rolled on the chart does not apply and the Bell itself is dest
             <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="78ec-4925-dfd7-2194" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b952-4dd2-bd93-a3b8" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="14af-7635-4d72-436a" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3490-18aa-b4bf-e44b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <profiles>
         <profile id="bcd4-ffaa-2b1a-d95d" name="Plague Priest" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
@@ -522,6 +469,19 @@ Treble	The effect rolled on the chart does not apply and the Bell itself is dest
       </costs>
     </selectionEntry>
     <selectionEntry id="cae1-14e8-6bef-41dc" name="Warlock Engineer" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="14af-7635-4d72-436a" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0dad-5154-d71e-e498" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3490-18aa-b4bf-e44b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="6fdc-0bd1-8c2e-bf3b" name="Warlock Engineer" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
@@ -632,10 +592,23 @@ Warp-blades are Warpstone Weapons.</description>
       </costs>
     </selectionEntry>
     <selectionEntry id="9f9a-159a-5a6a-2123" name="Master Moulder" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="14af-7635-4d72-436a" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b952-4dd2-bd93-a3b8" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0dad-5154-d71e-e498" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="6ed7-39ba-15c8-03c2" name="Master Moulder" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
-            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">5</characteristic>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
             <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">5</characteristic>
             <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
             <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
@@ -715,6 +688,19 @@ Warp-blades are Warpstone Weapons.</description>
       </costs>
     </selectionEntry>
     <selectionEntry id="500f-6e1c-5f11-cdc8" name="Assassin" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b952-4dd2-bd93-a3b8" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0dad-5154-d71e-e498" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3490-18aa-b4bf-e44b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="0423-4f06-7ca3-529b" name="Assassin" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
@@ -762,19 +748,6 @@ Hidden Assassins may be revealed at the beginning of any of your turns or at the
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="805b-56c7-fda1-fbf3" name="Smoke Bombs" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7493-e61a-5f00-d950" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="ad13-e2da-9f94-6603" name="Smoke Bombs" hidden="false">
-              <description>If the Assassin is fighting on his own (ie, he is not inside a unit and not part of a multiple combat) and has to flee from a close combat, enemy units have to roll 4+ on a D6 to be able to pursue him. Note that the Assassin cannot choose not to use the bombs.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="ed7b-1cf9-2844-b247" name="Throwing Stars" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d000-49c5-e6f1-3b7d" type="min"/>
@@ -787,12 +760,26 @@ Hidden Assassins may be revealed at the beginning of any of your turns or at the
       </selectionEntries>
       <entryLinks>
         <entryLink id="0824-3c0a-e388-4fe7" name="Magic Items" hidden="false" collective="false" import="true" targetId="39f8-58d6-e9e1-383b" type="selectionEntryGroup"/>
+        <entryLink id="6890-09b4-0ef9-4a8b" name="Smoke Bombs" hidden="false" collective="false" import="true" targetId="ef50-b4b3-3245-e1be" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="105.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="73a0-731f-737f-0252" name="Clanrats" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="remove" field="category" value="bf09-3558-8963-50e3">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="14af-7635-4d72-436a" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0dad-5154-d71e-e498" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3490-18aa-b4bf-e44b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
       <categoryLinks>
         <categoryLink id="c9b6-e8b7-f602-0fca" name="New CategoryLink" hidden="false" targetId="62d3-efc6-6c2c-634e" primary="true"/>
         <categoryLink id="9ca3-dad3-2c1a-2c23" name="Mainstay Unit" hidden="false" targetId="bf09-3558-8963-50e3" primary="false"/>
@@ -896,7 +883,7 @@ Hidden Assassins may be revealed at the beginning of any of your turns or at the
       <modifiers>
         <modifier type="set" field="f0d5-17ed-2eb7-9a01" value="0.0">
           <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="73a0-731f-737f-0252" type="equalTo"/>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf09-3558-8963-50e3" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -1023,8 +1010,18 @@ Hidden Assassins may be revealed at the beginning of any of your turns or at the
       <modifiers>
         <modifier type="set" field="ac66-6fc0-9d81-9099" value="0.0">
           <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="73a0-731f-737f-0252" type="equalTo"/>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf09-3558-8963-50e3" type="equalTo"/>
           </conditions>
+        </modifier>
+        <modifier type="set" field="ac66-6fc0-9d81-9099" value="2.0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="bf09-3558-8963-50e3" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3490-18aa-b4bf-e44b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <modifierGroups>
@@ -1035,6 +1032,29 @@ Hidden Assassins may be revealed at the beginning of any of your turns or at the
           <modifiers>
             <modifier type="add" field="category" value="befb-92ec-0667-152b"/>
             <modifier type="set" field="name" value="Plague Rats"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c60-ce09-87b3-1123" type="equalTo"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="14af-7635-4d72-436a" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b952-4dd2-bd93-a3b8" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3490-18aa-b4bf-e44b" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="add" field="category" value="4a3f-84d1-0495-6ecb"/>
+            <modifier type="set-primary" field="category" value="4a3f-84d1-0495-6ecb"/>
+            <modifier type="remove" field="category" value="62d3-efc6-6c2c-634e"/>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
@@ -1074,16 +1094,22 @@ Hidden Assassins may be revealed at the beginning of any of your turns or at the
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="45.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8c60-ce09-87b3-1123" name="Clan Pestilens Plague Rats" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="8c60-ce09-87b3-1123" name="Plague Rats" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="increment" field="eaa7-6800-e651-8bea" value="20.0">
               <repeats>
                 <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
+            <modifier type="set" field="c2d4-c264-e2bd-038d" value="1.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0dad-5154-d71e-e498" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="acbe-af99-3ed1-3f4f" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c2d4-c264-e2bd-038d" type="min"/>
           </constraints>
           <rules>
             <rule id="7a1b-38e7-7e37-39e8" name="Plague Rats" hidden="false">
@@ -1106,10 +1132,33 @@ Hidden Assassins may be revealed at the beginning of any of your turns or at the
       <modifiers>
         <modifier type="increment" field="a74b-ea1b-c589-134a" value="1.0">
           <repeats>
-            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="73a0-731f-737f-0252" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf09-3558-8963-50e3" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
+        <modifier type="add" field="category" value="bf09-3558-8963-50e3">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3490-18aa-b4bf-e44b" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="14af-7635-4d72-436a" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b952-4dd2-bd93-a3b8" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0dad-5154-d71e-e498" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="add" field="category" value="4a3f-84d1-0495-6ecb"/>
+            <modifier type="set-primary" field="category" value="4a3f-84d1-0495-6ecb"/>
+            <modifier type="remove" field="category" value="62d3-efc6-6c2c-634e"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a74b-ea1b-c589-134a" type="max"/>
       </constraints>
@@ -1203,10 +1252,33 @@ Remember that you use the best Leadership in the unit to take Leadership tests, 
       <modifiers>
         <modifier type="increment" field="d445-9b32-63bc-a299" value="1.0">
           <repeats>
-            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="73a0-731f-737f-0252" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf09-3558-8963-50e3" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
+        <modifier type="add" field="category" value="bf09-3558-8963-50e3">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="14af-7635-4d72-436a" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b952-4dd2-bd93-a3b8" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0dad-5154-d71e-e498" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3490-18aa-b4bf-e44b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="add" field="category" value="4a3f-84d1-0495-6ecb"/>
+            <modifier type="set-primary" field="category" value="4a3f-84d1-0495-6ecb"/>
+            <modifier type="remove" field="category" value="62d3-efc6-6c2c-634e"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d445-9b32-63bc-a299" type="max"/>
       </constraints>
@@ -1310,7 +1382,7 @@ Remember that you use the best Leadership in the unit to take Leadership tests, 
       <modifiers>
         <modifier type="increment" field="d3db-00f6-3722-7970" value="1.0">
           <repeats>
-            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="73a0-731f-737f-0252" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf09-3558-8963-50e3" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
       </modifiers>
@@ -1427,10 +1499,36 @@ Remember that you use the best Leadership in the unit to take Leadership tests, 
       <modifiers>
         <modifier type="increment" field="1e95-8f85-b267-6a1c" value="1.0">
           <repeats>
-            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="73a0-731f-737f-0252" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf09-3558-8963-50e3" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
+        <modifier type="increment" field="1e95-8f85-b267-6a1c" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf09-3558-8963-50e3" repeats="1" roundUp="false"/>
+          </repeats>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b952-4dd2-bd93-a3b8" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0dad-5154-d71e-e498" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="14af-7635-4d72-436a" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3490-18aa-b4bf-e44b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="add" field="category" value="a3af-995e-0cf1-7091"/>
+            <modifier type="set-primary" field="category" value="a3af-995e-0cf1-7091"/>
+            <modifier type="remove" field="category" value="62d3-efc6-6c2c-634e"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1e95-8f85-b267-6a1c" type="max"/>
       </constraints>
@@ -1492,10 +1590,28 @@ Poisoned Wind Globes are Warpstone Weapons.</description>
       <modifiers>
         <modifier type="increment" field="d3e8-3bf1-bccc-2e94" value="1.0">
           <repeats>
-            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="73a0-731f-737f-0252" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf09-3558-8963-50e3" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b952-4dd2-bd93-a3b8" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0dad-5154-d71e-e498" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3490-18aa-b4bf-e44b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="add" field="category" value="a3af-995e-0cf1-7091"/>
+            <modifier type="set-primary" field="category" value="a3af-995e-0cf1-7091"/>
+            <modifier type="remove" field="category" value="4a3f-84d1-0495-6ecb"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d3e8-3bf1-bccc-2e94" type="max"/>
       </constraints>
@@ -1677,10 +1793,38 @@ D6		Result
       <modifiers>
         <modifier type="increment" field="56d9-5ce3-ca70-2a04" value="1.0">
           <repeats>
-            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="73a0-731f-737f-0252" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf09-3558-8963-50e3" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0dad-5154-d71e-e498" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="14af-7635-4d72-436a" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3490-18aa-b4bf-e44b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="add" field="category" value="a3af-995e-0cf1-7091"/>
+            <modifier type="set-primary" field="category" value="a3af-995e-0cf1-7091"/>
+            <modifier type="remove" field="category" value="4a3f-84d1-0495-6ecb"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b952-4dd2-bd93-a3b8" type="equalTo"/>
+          </conditions>
+          <modifiers>
+            <modifier type="add" field="category" value="62d3-efc6-6c2c-634e"/>
+            <modifier type="set-primary" field="category" value="62d3-efc6-6c2c-634e"/>
+            <modifier type="remove" field="category" value="4a3f-84d1-0495-6ecb"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="56d9-5ce3-ca70-2a04" type="max"/>
       </constraints>
@@ -1759,10 +1903,48 @@ Jezzails are the most reliable weapons developed by Clan Skryre (they&apos;re al
       <modifiers>
         <modifier type="increment" field="946c-bf09-7ba1-0cfc" value="1.0">
           <repeats>
-            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="73a0-731f-737f-0252" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf09-3558-8963-50e3" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
+        <modifier type="add" field="category" value="bf09-3558-8963-50e3">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0dad-5154-d71e-e498" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b952-4dd2-bd93-a3b8" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="14af-7635-4d72-436a" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3490-18aa-b4bf-e44b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="add" field="category" value="a3af-995e-0cf1-7091"/>
+            <modifier type="set-primary" field="category" value="a3af-995e-0cf1-7091"/>
+            <modifier type="remove" field="category" value="62d3-efc6-6c2c-634e"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="14af-7635-4d72-436a" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b952-4dd2-bd93-a3b8" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0dad-5154-d71e-e498" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="62d3-efc6-6c2c-634e"/>
+            <modifier type="remove" field="category" value="4a3f-84d1-0495-6ecb"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="946c-bf09-7ba1-0cfc" type="max"/>
       </constraints>
@@ -1862,10 +2044,28 @@ Jezzails are the most reliable weapons developed by Clan Skryre (they&apos;re al
       <modifiers>
         <modifier type="increment" field="be00-9af2-3c9d-d80b" value="1.0">
           <repeats>
-            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="73a0-731f-737f-0252" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf09-3558-8963-50e3" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="14af-7635-4d72-436a" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b952-4dd2-bd93-a3b8" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0dad-5154-d71e-e498" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="add" field="category" value="a3af-995e-0cf1-7091"/>
+            <modifier type="set-primary" field="category" value="a3af-995e-0cf1-7091"/>
+            <modifier type="remove" field="category" value="62d3-efc6-6c2c-634e"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="be00-9af2-3c9d-d80b" type="max"/>
       </constraints>
@@ -1968,6 +2168,24 @@ When manoeuvring, consider only the Rat Ogres and then place the Packmasters at 
           </repeats>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b952-4dd2-bd93-a3b8" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="14af-7635-4d72-436a" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3490-18aa-b4bf-e44b" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="add" field="category" value="a3af-995e-0cf1-7091"/>
+            <modifier type="set-primary" field="category" value="a3af-995e-0cf1-7091"/>
+            <modifier type="remove" field="category" value="62d3-efc6-6c2c-634e"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a110-b3df-6740-8b34" type="max"/>
       </constraints>
@@ -2031,10 +2249,26 @@ When manoeuvring, consider only the Rat Ogres and then place the Packmasters at 
       <modifiers>
         <modifier type="increment" field="d68d-e5cc-1ad6-4fda" value="1.0">
           <repeats>
-            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="73a0-731f-737f-0252" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="bf09-3558-8963-50e3" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b952-4dd2-bd93-a3b8" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="add" field="category" value="4a3f-84d1-0495-6ecb"/>
+            <modifier type="set-primary" field="category" value="4a3f-84d1-0495-6ecb"/>
+            <modifier type="remove" field="category" value="a3af-995e-0cf1-7091"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d68d-e5cc-1ad6-4fda" type="max"/>
       </constraints>
@@ -2091,6 +2325,13 @@ If the Cannon and its targets are on a different level, for example if the targe
       </costs>
     </selectionEntry>
     <selectionEntry id="d68d-3678-445b-2c07" name="Vermin Lord" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="83a6-ad30-93a8-77de" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="0157-7816-dff8-824d" name="Vermin Lord" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
@@ -2152,6 +2393,13 @@ If the Vermin Lord is wiped out by Instability in the first round of combat, the
       </costs>
     </selectionEntry>
     <selectionEntry id="ec05-9f17-161e-c9eb" name="Doomwheel" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cb58-9bc5-a593-3444" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="263d-6bad-4698-e636" name="Giant Rats" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
@@ -2247,10 +2495,880 @@ If you roll a misfire something has gone awry with the warpstone generator. The 
           <infoLinks>
             <infoLink id="69da-0503-8be5-441d" name="Warplock Pistol" hidden="false" targetId="93bd-451c-66d5-2ded" type="rule"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="150.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3b69-6afa-949c-8cdd" name="Grey Seer Thanquol &amp; Boneripper" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="9e5e-f835-bdf9-e38d" name="Thanquol" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">5</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">6</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="0088-50bd-8498-8a52" name="Boneripper" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">5</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">-</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">5</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">2</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">3</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">10</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="d035-9ebc-d9e9-0a12" name="Blessed by the Horned Rat" hidden="false">
+          <description>Thanquol has a 4+ Ward Save. In addition, while Thanquol is inside a unit, for every wound saved by his Ward save one skaven in base contact with the Grey Seer will be wounded in his place. Resolve the effects of the wound as normal against the unfortunate Skaven, including normal armour saves, etc.</description>
+        </rule>
+        <rule id="f780-eec0-14d3-137a" name="Warpstone Addiction" hidden="false">
+          <description>Thanquol is an extremely addicted Warpstone user, but this problem also has a positive side in that he is now able to consume huge quantities of the dangerous substance without suffering its harmful effects. When Thanquol rolls a 1 to cast a spell with any power dice generated by a Warpstone Token, he can re-roll the dice but the second result stands.</description>
+        </rule>
+        <rule id="3275-8fce-261f-699e" name="Arch-rivals" hidden="false">
+          <description>Thanquol Hates and Fears Gotrek Gurnisson and Felix Jaeger.</description>
+        </rule>
+        <rule id="7682-aa3e-5783-1674" name="Pawn" hidden="false">
+          <description>oneripper must be deployed within 6&quot; of Thanquol at the beginning of the game. After that, Boneripper is free to move independently (in reality he is telepathically controlled by Thanquol) and will count as a separate unit of a single Rat Ogre for the rest of the game (he is worth 75 Victory points). Boneripper can never join units. If Thanquol is killed or flees off the table, Boneripper switches off and is immediately removed from the table, counting as a casualty. At the beginning of each of his turns in which the Skaven player wants to do anything with Boneripper (move, shoot, fight in close combat) the player must roll a D6 to activate the automaton. On a roll of 2-6 everything is well and Boneripper acts as normal. On the roll of a 1, Boneripper suffers a malfunction - roll another dice and refer to the Malfunction chart to find out what&apos;s gone wrong.
+
+D6	Result
+1-3	Boneripper does nothing this turn and is hit automatically if engaged in close combat. The opponent can control Boneripper in his next turn, exactly as if it was one of his models. At the beginning of the next Skaven turn, control reverts to the Skaven player.
+4-6	Boneripper does nothing this turn and is hit automatically if engaged in close combat.</description>
+        </rule>
+        <rule id="b545-2463-4886-7993" name="Safety Valve" hidden="false">
+          <description>Before giving Boneripper to Thanquol as a gift, the Warlock Engineers made sure that their creation couldn&apos;t be turned against them in the future. Boneripper cannot charge/overrun if the charge/overrun would take him into base contact with a Skaven belonging to Clan Skryre. He can never pursue a unit containing one or more members of Clan Skryre. He can never direct any of his close combat attacks against members of Clan Skryre. Also, the template of his warpfire thrower cannot be placed so that it could hit a member of Clan Skryre.</description>
+        </rule>
+        <rule id="023c-b22c-d29e-5234" name="Automaton" hidden="false">
+          <description>Boneripper is Unbreakable and immune to the effects of poison.</description>
+        </rule>
+        <rule id="82f2-cb5d-82c7-4e90" name="Boneripper" hidden="false">
+          <description>Boneripper is armed with razor sharp talons (a hand weapon) and has a 4+ armour save.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="d50d-3eff-dfd5-478a" name="Fear" hidden="false" targetId="03be-3e56-1332-bf56" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (Boneripper)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="d1aa-a78f-1339-a586" name="Lead from the Back" hidden="false" targetId="7f59-cae6-4425-1e0f" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="24d2-3db1-75ee-3e51" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false"/>
+        <categoryLink id="e51b-8e90-de0d-9fda" name="Heroes" hidden="false" targetId="5694-61f3-6913-6154" primary="false"/>
+        <categoryLink id="1633-01b0-c72b-6fa3" name="New CategoryLink" hidden="false" targetId="623e-5f3d-d939-9b51" primary="true"/>
+        <categoryLink id="28ae-4e5d-ada5-771c" name="Special Character" hidden="false" targetId="b91d-d3b1-8b46-6d52" primary="false"/>
+        <categoryLink id="9e9d-0774-6d1b-a56f" name="Grey Seer" hidden="false" targetId="9b61-a7a1-8761-c9e9" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="1f95-316c-7a2f-8003" name="Warpstone Tokens (13)" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f52-6b2a-1fda-4c30" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f917-4a62-9c49-ea88" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="5ccc-f950-5a1e-935e" name="Warpstone Tokens" hidden="false" targetId="936c-575c-87e5-8df3" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="237a-0dd4-1449-0d1c" name="Staff of the Horned One" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f9bd-52e8-68cc-4f80" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6896-6ca4-7abb-e06b" type="min"/>
+          </constraints>
+          <rules>
+            <rule id="1520-e674-c6ba-56f8" name="Staff of the Horned One" hidden="false">
+              <description>Thanquol&apos;s staff marks him out as one who speaks for the Horned Rat and also gives him one extra spell (so he knows five spells in total)</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f542-b689-2536-3865" name="Amulet of the Horned One" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1034-1912-7b1e-8acf" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="57ec-0ce8-2bef-e84e" type="min"/>
+          </constraints>
+          <rules>
+            <rule id="bd04-28c7-ea3c-bdb7" name="Amulet of the Horned One" hidden="false">
+              <description>The pure warpstone talisman worn by Thanquol is a powerful defensive item as well as a badge of office. At the beginning of each of his turns the player controlling Thanquol must roll a dice. On a 1 nothing happens, on a 2-6 Thanquol recovers one of the wounds he has previously lost during the game.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="87b2-e675-0702-b6cd" name="Warpfire Thrower" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d86b-345f-dcee-d62e" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="759c-fb01-9b3a-f046" type="min"/>
+          </constraints>
+          <rules>
+            <rule id="b44d-34fb-cc20-6096" name="Warpfire Thrower" hidden="false">
+              <description>A small version of the dreaded warpfire thrower has been built in place of one of Boneripper&apos;s arms. Ths is treated as a Strength 4 breath weapon in all respects. When firing place the narrow end of the flame template in contact with the weapon&apos;s muzzle. Units suffering any casualties must take a Panic test.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="cfc8-f9a2-753a-5990" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="c636-da3c-d971-660e" value="1.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0abd-6fed-cbeb-7c38" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a61-9b9e-0b56-e6ce" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9b61-a7a1-8761-c9e9" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c636-da3c-d971-660e" type="min"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="c4c7-cf52-8419-f04d" name="Screaming Bell" hidden="false" collective="false" import="true" targetId="e1ef-2121-15d2-a3d5" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="560.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c6bd-6e19-0ea5-b443" name="Throt the Unclean" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="14af-7635-4d72-436a" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b952-4dd2-bd93-a3b8" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0dad-5154-d71e-e498" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="74a4-5cfd-9f5c-5eeb" name="Throt the Unclean" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">6</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">5</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">7</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">4</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="3659-2b28-2e47-dcc5" name="Dominator" hidden="false">
+          <description>When Throt is in the rear ranks of a unit of Giant Rats or Rat Ogres, he can make four Strength 4 Attacks with his whip instead of the one normal Strength 5 Attack. Note that attacks with the whip do NOT benefit from the Killing Blow ability.</description>
+        </rule>
+        <rule id="2d1c-a802-400d-6065" name="Master Controller" hidden="false">
+          <description>Any Clan Moulder unit within 6&quot; of Throt may re-roll any failed Psychology test. In addition to this, if Throt is not your army&apos;s General, any Clan Moulder unit (Rat Ogres and Giant Rats) within 6&quot; of him may use his Leadership for any Leadership test they take.</description>
+        </rule>
+        <rule id="be1c-e2ca-1b0e-4e3c" name="Ravening Hunger" hidden="false">
+          <description>Throt and any unit he has joined may never pursue a fleeing enemy they have broken in combat, as Throt stops to feed on the corpses of the fallen.</description>
+        </rule>
+        <rule id="e0ce-31d4-cfa3-0df1" name="Warpstone-Fuelled Constitution" hidden="false">
+          <description>Throt can Regenerate</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="b9f4-edc5-4b32-659c" name="Regenerate" hidden="false" targetId="7c7c-8683-ae17-d576" type="rule"/>
+        <infoLink id="90ab-7a65-fa20-ac5e" name="Lead from the Back" hidden="false" targetId="7f59-cae6-4425-1e0f" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="991b-a325-4276-fcdb" name="New CategoryLink" hidden="false" targetId="623e-5f3d-d939-9b51" primary="true"/>
+        <categoryLink id="0410-b795-17bc-0912" name="Special Character" hidden="false" targetId="b91d-d3b1-8b46-6d52" primary="false"/>
+        <categoryLink id="7a0f-470c-2809-d74b" name="Heroes" hidden="false" targetId="5694-61f3-6913-6154" primary="false"/>
+        <categoryLink id="085f-8b67-c5b1-3abb" name="Clan Pestilens" hidden="false" targetId="befb-92ec-0667-152b" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="cc17-76cc-6794-e57c" name="Creature-Killer" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="53ad-53c1-2e78-bced" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d468-1814-59d7-f5c0" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="548c-86f9-027c-1f7d" name="Creature-Killer" hidden="false">
+              <description>The Creature-killer gives Throt the Killing Blow special ability, as detailed on page 112 of the Warhammer rulebook. However, this magical weapon may also be used to deliver a Killing Blow to creatures the size of an Ogre, such as Minotaurs, Trolls and Kroxigors. It may not be used on monsters larger than Ogres, such as Dragons, or against Swarms. The Creature-killer requires two hands to use, but as Throt has three hands, he may still use the weapon and his hand weapon or whip to gain one extra Attack. This gives him four Attacks with the Creature-killer and one normal Attack which does not have the Killing Blow ability.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="64fc-4839-1af7-3ae5" name="Killing Blow" hidden="false" targetId="773c-6c86-ae53-1cee" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="55e6-f926-aacb-d51a" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="285.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c85f-0696-1b6f-6e16" name="Eshin Sorcerer" hidden="true" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="14af-7635-4d72-436a" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="eebc-ec91-e1ad-0163" name="Eshin Sorcerer" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">4</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">5</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="fe12-5a68-93c2-4360" name="Eshin Sorcerer" hidden="false">
+          <description>An Eshin Sorceror is a Level 1 Wizard. He always knows the Skitterleap spell.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="d8a6-5ae6-dafd-f227" name="Poisoned Attacks" hidden="false" targetId="d168-689e-84dd-9b7e" type="rule"/>
+        <infoLink id="b2ea-042c-aa4a-b37d" name="Scouts" hidden="false" targetId="ec06-621f-83ae-fd4c" type="rule"/>
+        <infoLink id="c644-ef87-dcc3-4c57" name="Lead from the Back" hidden="false" targetId="7f59-cae6-4425-1e0f" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="6b6d-cf50-c7cb-4547" name="Clan Eshin" hidden="false" targetId="4f5c-498c-bd84-7e28" primary="false"/>
+        <categoryLink id="6275-9aa3-2e50-4a79" name="New CategoryLink" hidden="false" targetId="5694-61f3-6913-6154" primary="true"/>
+        <categoryLink id="f30e-1c69-277d-ba1f" name="Wizard" hidden="false" targetId="eb46-88d4-eb41-2549" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="f01e-310a-e836-6fa9" name="Throwing Stars" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc3d-f215-a6ca-8fab" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a8f-a7a4-3f34-145d" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2faf-6789-7691-ef2f" name="Two Hand Weapons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a71e-4027-fd36-caae" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba68-d42e-137f-66b5" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1352-daba-12da-4823" name="Warpstone Tokens (1)" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f432-b896-6d6a-9686" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4812-7660-b841-1fed" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="14e5-b472-d322-86c9" name="Warpstone Tokens" hidden="false" targetId="936c-575c-87e5-8df3" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="0fdf-7073-1495-87e2" name="Magic Items" hidden="false" collective="false" import="true" targetId="39f8-58d6-e9e1-383b" type="selectionEntryGroup"/>
+        <entryLink id="7e1c-bee6-ee58-182c" name="Smoke Bombs" hidden="false" collective="false" import="true" targetId="ef50-b4b3-3245-e1be" type="selectionEntry"/>
+        <entryLink id="eb27-df26-ee5c-be88" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="75.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="bd6c-f165-431e-1aff" name="Greater Clan Army" hidden="false" collective="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="f47c-d223-03a8-bbed" name="New CategoryLink" hidden="false" targetId="bdfa-6d6e-a1bf-5d03" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="cb58-9bc5-a593-3444" name="Greater Clan" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3e2-c01a-0420-e84b" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="5b8c-1f42-1834-0497" name="Clan Army" hidden="false" targetId="83a6-ad30-93a8-77de" primary="false"/>
+          </categoryLinks>
+          <selectionEntries>
+            <selectionEntry id="9a19-0ee6-59e3-900d" name="Clan Eshin" hidden="false" collective="false" import="true" type="upgrade">
+              <categoryLinks>
+                <categoryLink id="b0d8-36c4-95f9-4352" name="Clan Army" hidden="false" targetId="83a6-ad30-93a8-77de" primary="false"/>
+                <categoryLink id="4c75-8722-c9e8-d226" name="Clan Eshin Army" hidden="false" targetId="14af-7635-4d72-436a" primary="false"/>
+              </categoryLinks>
+            </selectionEntry>
+            <selectionEntry id="ef32-43fe-3714-ef3e" name="Clan Moulder" hidden="false" collective="false" import="true" type="upgrade">
+              <categoryLinks>
+                <categoryLink id="207b-876b-89c8-a087" name="Clan Army" hidden="false" targetId="83a6-ad30-93a8-77de" primary="false"/>
+                <categoryLink id="b426-3fd3-f03b-ff6d" name="Clan Moulder Army" hidden="false" targetId="3490-18aa-b4bf-e44b" primary="false"/>
+              </categoryLinks>
+            </selectionEntry>
+            <selectionEntry id="db15-6e5b-d5b8-0d0c" name="Clan Pestilens" hidden="false" collective="false" import="true" type="upgrade">
+              <categoryLinks>
+                <categoryLink id="e26f-c15b-4e4c-0835" name="Clan Army" hidden="false" targetId="83a6-ad30-93a8-77de" primary="false"/>
+                <categoryLink id="ac8c-70d5-88c9-1cc4" name="Clan Pestilens Army" hidden="false" targetId="0dad-5154-d71e-e498" primary="false"/>
+              </categoryLinks>
+            </selectionEntry>
+            <selectionEntry id="c664-4de9-6323-2fdc" name="Clan Skyre" hidden="false" collective="false" import="true" type="upgrade">
+              <categoryLinks>
+                <categoryLink id="30d5-0250-e9a4-e2b2" name="Clan Army" hidden="false" targetId="83a6-ad30-93a8-77de" primary="false"/>
+                <categoryLink id="038c-89d7-7cee-78dc" name="Clan Skyre Army" hidden="false" targetId="b952-4dd2-bd93-a3b8" primary="false"/>
+              </categoryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry id="3b12-e5cb-04a8-3a4b" name="Master Assassin" hidden="true" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="14af-7635-4d72-436a" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="f9cd-805e-a4df-cd4e" name="Master Assassin" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">7</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">8</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">6</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">10</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">4</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">8</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="809a-66fb-118a-8ec5" name="Hidden" hidden="false">
+          <description>If you wish, any Assassin in your army may start the game hidden in one of the following units: Clanrats, Stormvermin, Night Runners and Gutter Runners (not in Tunnelling Teams - too dangerous!).
+
+Hidden Assassins are not placed on the table but are assumed to move with the unit they accompany. At the start of the game, note down which unit they are hidden in. If the unit is wiped out or flees off the table before the Assassin is revealed then the Assassin is lost and Victory points are scored as normal. Before he&apos;s revealed there is no other way he can be harmed.
+
+Hidden Assassins may be revealed at the beginning of any of your turns or at the start of any Close Combat phase. The player declares that his unit contains an Assassin and places the model amongst the ranks where it can fight, displacing a normal rank-and-file model (not a character, champion, musician or standard bearer) to the rearmost rank. If there are no such models in the front rank, the Assassin is placed in the second rank until there is enough room for him in the first rank. Assassins always strikes first in the round of close combat they are revealed, even against chargers. If an enemy model is also entitled to always strike first, the model with higher Initiative strikes first (roll a D6 if they have equal Initiative).</description>
+        </rule>
+        <rule id="d10a-d615-396e-d576" name="Leadership" hidden="false">
+          <description>The Master Assassin can always pass his Leadership value to all units of Night Runners and Gutter Runners within 12&quot; (ask your opponent to look away if you have to measure range when he is hidden, then measure range to the unit he is hidden in)
+
+Other units can only use his Leadership if he is not hidden.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="7919-88bb-d1f5-4815" name="Poisoned Attacks" hidden="false" targetId="d168-689e-84dd-9b7e" type="rule"/>
+        <infoLink id="25e6-24ac-6e83-1da5" name="Scouts" hidden="false" targetId="ec06-621f-83ae-fd4c" type="rule"/>
+        <infoLink id="b657-46c0-f7a2-deb6" name="Lead from the Back" hidden="false" targetId="7f59-cae6-4425-1e0f" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="97e0-6980-8866-7e2c" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false"/>
+        <categoryLink id="f885-0bb6-0299-bd14" name="Clan Eshin" hidden="false" targetId="4f5c-498c-bd84-7e28" primary="false"/>
+        <categoryLink id="9116-111c-556f-0898" name="New CategoryLink" hidden="false" targetId="623e-5f3d-d939-9b51" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="cd90-253d-bd55-3f63" name="Two Hand Weapons" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ef5-9b6c-7e55-47c9" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8fd9-e857-b43a-0941" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f2f2-078d-61b4-1613" name="Throwing Stars" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7506-1324-eb56-44ed" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d9a-fac7-e782-dc75" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="1a75-da05-a153-ae68" name="Magic Items" hidden="false" collective="false" import="true" targetId="39f8-58d6-e9e1-383b" type="selectionEntryGroup"/>
+        <entryLink id="b03c-e55d-abde-ab3a" name="Smoke Bombs" hidden="false" collective="false" import="true" targetId="ef50-b4b3-3245-e1be" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="215.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2f0e-0939-0fe8-db61" name="Warlock Master" hidden="true" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b952-4dd2-bd93-a3b8" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="3fa7-60c6-2560-f4b3" name="Warlock Engineer" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">5</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">5</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">2</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="5399-43d6-196a-bd15" name="Warlock Engineer" hidden="false">
+          <description>Warlock Masters are Level 3 Wizards, that only know the Warp Lightning spell. In addition they can cast Warp Lightning on an 11+. If cast, the spell causes 3D6 Strength 5 hits (see rules on page 35 of the Skaven army book)</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="74b3-2928-fef1-fd4e" name="Lead from the Back" hidden="false" targetId="7f59-cae6-4425-1e0f" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="5630-d1c0-750b-5f92" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false"/>
+        <categoryLink id="e17f-e716-c8e0-ca9f" name="Clan Skyre" hidden="false" targetId="337c-8199-1cfc-493f" primary="false"/>
+        <categoryLink id="1758-1387-2664-4f48" name="Wizard" hidden="false" targetId="eb46-88d4-eb41-2549" primary="false"/>
+        <categoryLink id="2367-6988-2bb3-c9a6" name="New CategoryLink" hidden="false" targetId="623e-5f3d-d939-9b51" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="dcfe-b433-267e-d8ed" name="Warpstone Token (3)" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2091-07cc-bcee-dfb7" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9ff2-ca4b-12cf-f1cd" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="b760-3693-c77e-5e8c" name="Warpstone Tokens" hidden="false" targetId="936c-575c-87e5-8df3" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3cbd-0d4c-7c6d-4683" name="Warplock Pistol" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9351-b7a5-fc43-6623" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b8eb-14c7-20c2-33ca" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="ffe4-d0da-568f-9827" name="Warplock Pistol" hidden="false" targetId="93bd-451c-66d5-2ded" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry id="864d-47d1-b3d8-2a9f" name="Supercharged Warp-Power Accumulator" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e562-406c-c23d-57a3" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f05f-acee-33b3-f438" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="a621-8bbf-cb06-9134" name="Supercharged Warp-Power Accumulator" hidden="false">
+              <description>This improved generator creates one extra Power dice in each Magic phase of the controlling player. The dice is added to the player&apos;s pool.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry id="4869-c7ef-f996-5fdb" name="Upgraded Warp-Energy Condenser" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf6c-55d3-020c-8366" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ac6-1034-9f25-b6a9" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="8837-77a3-8e90-e633" name="Upgraded Warp-Energy Condenser" hidden="false">
+              <description>This allows the bearer to cast the Warp Lightning spell with one dice more than he is normally allowed.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry id="d71d-2530-0672-e481" name="Warp-blades" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e367-d4c2-20eb-8328" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="de52-876d-07b9-e7de" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="749e-9c01-03a9-e295" name="Warp-blades" hidden="false">
+              <description>The warp-blades give the bearer +1 Strength and allow him to cast the Warp Lightning spell through them. Note that this only provides the bearer with the knowledge of the spell, but the player must spend Power dice to cast the spell as normal.
+
+Warp-blades are Warpstone Weapons.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="d253-0b05-e28e-bdeb" name="Magic Items" hidden="false" collective="false" import="true" targetId="39f8-58d6-e9e1-383b" type="selectionEntryGroup"/>
+        <entryLink id="db42-14a3-8454-7f01" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="180.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6ea4-61da-05b7-b53a" name="Plague Lord" hidden="true" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="add" field="category" value="eb46-88d4-eb41-2549">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="78ec-4925-dfd7-2194" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0dad-5154-d71e-e498" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="6a99-e70f-f153-2ed7" name="Plague Lord" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">5</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">6</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">5</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">6</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">5</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="9ca7-62da-3519-c85d" name="Frenzy" hidden="false" targetId="a317-ad28-0409-0c8b" type="rule"/>
+        <infoLink id="7680-aea9-3e7e-b368" name="Lead from the Back" hidden="false" targetId="7f59-cae6-4425-1e0f" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="4549-6554-d175-d9a7" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false"/>
+        <categoryLink id="906f-9d11-09e4-c39c" name="Clan Pestilens" hidden="false" targetId="befb-92ec-0667-152b" primary="false"/>
+        <categoryLink id="4c20-c828-e8da-a1dd" name="New CategoryLink" hidden="false" targetId="623e-5f3d-d939-9b51" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="57f9-48e6-a9db-aac7" name="Weapon" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="9128-e58d-0b3c-b9b4" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6e5-cff5-9987-d563" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9128-e58d-0b3c-b9b4" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="eb61-e36b-823d-9405" name="Plague Censer" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="69c5-51c9-d5db-cbcf" name="Plague Censer" hidden="false" targetId="a4cb-c68f-7b4b-a34f" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="24.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b5e8-6994-d938-a091" name="Flail" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6dc6-6f67-87ac-03ec" name="Additional Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="d033-127b-d02a-e599" name="Magic Items" hidden="false" collective="false" import="true" targetId="39f8-58d6-e9e1-383b" type="selectionEntryGroup"/>
+        <entryLink id="70ba-da91-c352-792a" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="130.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="737c-355e-49b1-4a58" name="Festering Chantor" hidden="true" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0dad-5154-d71e-e498" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="33a1-93db-ecaa-b319" name="Festering Chantor" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">5</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">5</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="c9a0-a5b4-ab29-33a5" name="Festering Chantor" hidden="false">
+          <description>A Festering Chantor is a Level 1 Wizard. He always knows the Pestilent Breath spell.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="eb6b-72bc-8f43-b1a6" name="Frenzy" hidden="false" targetId="a317-ad28-0409-0c8b" type="rule"/>
+        <infoLink id="dbae-773f-c460-278b" name="Lead from the Back" hidden="false" targetId="7f59-cae6-4425-1e0f" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="f183-aa04-12f1-4a3b" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false"/>
+        <categoryLink id="9562-c165-6f65-86fa" name="New CategoryLink" hidden="false" targetId="5694-61f3-6913-6154" primary="true"/>
+        <categoryLink id="c16a-55cc-8059-2fb8" name="Clan Pestilens" hidden="false" targetId="befb-92ec-0667-152b" primary="false"/>
+        <categoryLink id="937f-4690-ad40-30f3" name="Wizard" hidden="false" targetId="eb46-88d4-eb41-2549" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="76d0-c8d8-a3d0-5b9c" name="Warpstone Tokens (1)" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1dbd-f732-b41a-b7bc" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f979-483e-28b7-2c5c" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="8b77-3593-051f-f1d2" name="Warpstone Tokens" hidden="false" targetId="936c-575c-87e5-8df3" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="4582-2fb2-9183-b1ee" name="Weapon" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="12f0-f596-33bf-d6ff" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6e5-cff5-9987-d563" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="12f0-f596-33bf-d6ff" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="70ec-53f9-1e80-a0ff" name="Plague Censer" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="0283-876e-8a0c-5eb6" name="Plague Censer" hidden="false" targetId="a4cb-c68f-7b4b-a34f" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="16.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6f90-33a0-839b-9d5b" name="Additional Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="4.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="e6f5-c3b2-4b24-6736" name="Magic Items" hidden="false" collective="false" import="true" targetId="39f8-58d6-e9e1-383b" type="selectionEntryGroup"/>
+        <entryLink id="f1eb-d207-a4bc-61f6" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="60.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ef5b-46f9-ceb6-f623" name="Master Mutator" hidden="true" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3490-18aa-b4bf-e44b" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="b969-89ec-07f9-e29c" name="Master Mutator" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">6</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">5</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">7</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">4</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="3cb3-0f90-2266-af31" name="Beastmaster" hidden="false">
+          <description>All Clan Moulder units within 6&quot; of a Master Moulder can re-roll any failed Psychology test.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="60c2-e14f-efdb-4d58" name="Lead from the Back" hidden="false" targetId="7f59-cae6-4425-1e0f" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="88fd-169f-9b92-f1dc" name="Clan Moulder" hidden="false" targetId="376f-0de8-1573-e553" primary="false"/>
+        <categoryLink id="d70a-33b6-7c09-96d0" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false"/>
+        <categoryLink id="72d7-b0c2-93b2-2f1d" name="New CategoryLink" hidden="false" targetId="623e-5f3d-d939-9b51" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="78ac-5228-aa44-e01a" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="0b04-4330-b076-5893" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2963-aff1-28ca-7634" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b04-4330-b076-5893" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="3.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="5145-0e3e-36af-b2d3" name="Weapon" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="96fb-519d-c172-f639" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6e5-cff5-9987-d563" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="96fb-519d-c172-f639" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="a0cf-bfda-68e9-f1d5" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="03cc-866b-f916-5876" name="Whip" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="b738-d8c9-a937-c88d" name="Whip" hidden="false" targetId="c33f-ee01-c434-89b1" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="9.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="0b76-0256-42d7-1571" name="Magic Items" hidden="false" collective="false" import="true" targetId="39f8-58d6-e9e1-383b" type="selectionEntryGroup"/>
+        <entryLink id="bff8-4e25-30d0-b200" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="130.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d167-c335-c138-bb01" name="Harbinger of Mutation" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3490-18aa-b4bf-e44b" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="dfdb-20d3-f958-9a46" name="Harbiner of Mutation" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">6</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="b619-b4f2-03e9-3c75" name="Beastmaster" hidden="false">
+          <description>All Clan Moulder units within 6&quot; of a Master Moulder can re-roll any failed Psychology test.</description>
+        </rule>
+        <rule id="5a09-6efd-bfa2-7495" name="Harbinger of Mutation" hidden="false">
+          <description>A Harbinger of Mutation is a Level 1 Wizard who always knows the Vermintide spell.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="1dc6-0d83-9f83-1860" name="Lead from the Back" hidden="false" targetId="7f59-cae6-4425-1e0f" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="77b5-c06d-c51a-59c5" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false"/>
+        <categoryLink id="6cb9-4e79-b672-a6f0" name="New CategoryLink" hidden="false" targetId="5694-61f3-6913-6154" primary="true"/>
+        <categoryLink id="c7a0-12ce-490d-ecd6" name="Clan Moulder" hidden="false" targetId="376f-0de8-1573-e553" primary="false"/>
+        <categoryLink id="997d-cc2d-229a-4311" name="Wizard" hidden="false" targetId="eb46-88d4-eb41-2549" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="b6e2-d742-00d7-569b" name="Whip" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="5824-f6a4-c92a-2c20" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6e5-cff5-9987-d563" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5824-f6a4-c92a-2c20" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="1096-68e2-8e8b-1af6" name="Whip" hidden="false" targetId="c33f-ee01-c434-89b1" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="5cd1-47ad-7eb5-4f26" name="Warpstone Tokens (1)" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9db6-ebcc-e487-82b6" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a88f-caf9-20f8-9d37" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="138a-bf11-922a-da6c" name="Warpstone Tokens" hidden="false" targetId="936c-575c-87e5-8df3" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="6adc-75f9-24e5-2041" name="Magic Items" hidden="false" collective="false" import="true" targetId="39f8-58d6-e9e1-383b" type="selectionEntryGroup"/>
+        <entryLink id="8969-6e70-4660-3c8c" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="65.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -2277,6 +3395,111 @@ Assassins&apos; and Gutter Runners&apos; poisoned weapons, plague censers&apos; 
 Warpfire Throwers and Warp-lightning Cannons.</description>
     </rule>
   </rules>
+  <sharedSelectionEntries>
+    <selectionEntry id="e1ef-2121-15d2-a3d5" name="Screaming Bell" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a75f-0a42-67d1-967e" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="61c1-2b92-a10a-e98d" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="e58d-c25e-85d9-8f2a" name="Screaming Bell" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">-</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">0</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">-</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">6</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">6</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">0</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">-</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="9cb7-c19b-27e7-fe97" name="Unit Strength 5" hidden="false">
+          <description>The Screaming Bell has a Unit Strength of 4 (5 including the Grey Seer riding it)</description>
+        </rule>
+        <rule id="cdd5-2dd2-4156-9edc" name="Moving the Screaming Bell" hidden="false">
+          <description>The Screaming Bell is a special chariot ridden by a Grey Seer and must be fielded in a unit of Clanrats or Stormvermin. It cannot move on its own, but depends on the unit of Skaven surrounding it for movement. If the Bell&apos;s unit is ten or more models strong, it can move at its normal speed. If the unit suffers casualties and is reduced below the minimum of ten models, the unit loses 1&quot; from its Movement value for every model under ten. So, if there were nine Skaven pushing it, they&apos;d have, a Movement of 4, eight would have a Movement of 3, etc. If the unit is reduced to five or less models, it cannot move any more. The Grey Seer can never voluntarily leave the Bell, nor can the unit pushing it.
+
+The Bell&apos;s unit moves as normal, marching, charging and pursuing at normal speed, etc. The Bell must be placed at the front of its unit, and it must be placed as centrally as possible in the unit. The unit&apos;s rank bonus is calculated normally, treating the bell as an equivalent number of models (see the diagrams on the right). The Bell&apos;s unit cannot move through obstacles and any terrain that is not open terrain.
+
+The Bell&apos;s unit is reassured by the presence of the holy artefact and is therefore Immune to Psychology. If the Bell&apos;s unit is broken in combat and flees, they abandon the Bell. If this happens, the Bell itself and the striker are automatically destroyed by the enemy, while the Grey Seer abandons the Bell and flees on foot together with the unit that was pushing it. The enemy can pursue the fleeing Skaven unit as normal. Victory points for the Bell are awarded separately from those for the Grey Seer, in the same way as for a ridden monster/chariot.
+
+When casting spells from the Bell, the Grey Seer can measure a spell&apos;s range from any point of the Screaming Bell&apos;s carriage.</description>
+        </rule>
+        <rule id="a398-26ae-6288-980f" name="Screaming Bell" hidden="false">
+          <description>The Screaming Bell is a large target and has a Unit Strength of 4 (5 with the Grey Seer).
+
+The Screaming Bell has a Ward save of 3+ representing hits that bounce off the indestructible Bell of the Horned One itself. The Grey Seer does not benefit from this save, but gets the normal 5+ armour save from being on a chariot, representing the shelter he gets from the Bell&apos;s carriage.
+
+Unsaved wounds caused by a hit with a Strength of 7 or more destroy the Screaming Bell automatically. On the other hand, every time one such wound is saved by the Bell&apos;s Ward save, the Screaming Bell will immediately ring with three dice as described below. Any new effects generated in this way replace effects that were lasting from a previous ringing of the Bell.
+
+The Screaming Bell and the unit pushing it have Magic Resistance (2).
+
+The Screaming Bell adds two dice to the Skaven pool of Power dice in the Skaven Magic phase. These dice can be used only by the Grey Seer.
+
+The Grey Seer can take advantage of his high position, drawing line of sight for his spells over the heads of the Bell&apos;s unit (remember, the Bell is a large target). In addition, he is free to cast spells all around, not only in the unit&apos;s line of sight.</description>
+        </rule>
+        <rule id="5504-15d8-c299-99fe" name="Missile Fire Against The Bell" hidden="false">
+          <description>Enemies with a line of sight to the Screaming Bell may choose whether to target the Bell or its unit with their missile fire.
+
+Missile hits (normal and magical) against the Bell are randomised as normal for characters riding chariots, so a result of 6 would hit the Grey Seer, and any other result hits the Screaming Bell.</description>
+        </rule>
+        <rule id="3376-cd2c-0eef-b301" name="Close Combat Against The Bell" hidden="false">
+          <description>If the Bell&apos;s unit charges in close combat, the Bell causes D6 Impact Hits on the unit charged. In close combat, enemies in base contact with the Screaming Bell can choose to attack either the Screaming Bell or the Grey Seer, in the same way as with a character riding in a chariot. Since the Bell has a Weapon Skill of 0, all attacks directed against it will hit automatically. The Grey Seer can fight against enemies all around the Screaming Bell. The striker is too busy ringing the Bell and can&apos;t fight.
+
+If the Grey Seer refuses a challenge, he can declare that he&apos;s hiding behind the Bell for protection. The Grey Seer is not moved from the Bell, but he cannot fight and cannot be attacked for the duration of that combat engagement. The challenger is free to attack any other model he&apos;s in base contact with, including the Bell itself (if he&apos;s in base contact with it).</description>
+        </rule>
+        <rule id="d2a9-8e91-a757-7b12" name="Ringing The Bell" hidden="false">
+          <description>In the Skaven Shooting phase, the striker can ring the Bell, even when it is engaged in close combat. First declare if you are going to roll one, two or three dice (ie, decide how much effort the striker is putting into hitting the Bell). Then roll them, add their results together and consult the chart below.
+
+Score	Result
+1-3	No effect.
+4-5	The Bell and its unit cause fear until the next Skaven Shooting phase.
+6-7	The Bell and its unit are stubborn (despite being immune to Psychology) until the next Skaven Shooting phase.
+8	All cavalry units and ridden monsters on the battlefield must take a Panic test. Undead cavalry and ridden monsters must take a Leadership test as if their General had been destroyed they can use the General&apos;s Leadership if within 12&quot; of him).
+9-10	All models with Toughness 7 or more on the battlefield suffer D3 wounds. Armour saves apply as normal. Empire Steam Tanks and all buildings suffer D6 points of structural damage. Roll 4D6 on the appropriate damage chart for each section of a castle on the table.
+11-12	All Skaven units on the battlefield (even Clan Moulder beasts and units that are normally immune to psychology!) are subject to hatred against all enemies until the next Skaven Shooting phase.
+13!	All enemy units must take a Panic test. Undead units must take a Leadership test as if their General had been destroyed (they can use the General&apos;s Leadership if within 12&quot; of him).
+14-15	The Bell and its unit cause terror until the next Skaven Shooting phase.
+16-17	All Skaven units on the battlefield (even Clan Moulder beasts and units that are normally immune to psychology!) are subject to frenzy until defeated in combat.
+If the dice rolled include a double or a treble result (two fours, or two fives, or three sixes, etc), something has gone wrong:
+
+Double	The effect rolled on the chart still applies as normal. In addition, the distorted resonance of the Bell causes both the Grey Seer and the unit pushing the bell to suffer D3 Strength 2 hits each, with no armour saves allowed.
+Treble	The effect rolled on the chart does not apply and the Bell itself is destroyed! Remove the Screaming Bell model and place the Grey Seer on foot inside the unit. Both the Grey Seer and the unit pushing the Bell suffer D6 Strength 4 hits each, with no armour save allowed. Note that the Grey Seer also suffers the normal Strength 5 hit due to his &apos;chariot&apos; being destroyed.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="c97c-9dc1-9cb7-9041" name="Magic Resistance" hidden="false" targetId="6e0c-4c98-a2c2-af0d" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (2)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="55bb-f4d6-cffd-809b" name="Large Target" hidden="false" targetId="01c3-c8c6-431f-1c2b" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="32b0-5f50-30b2-bc8a" name="Mount" hidden="false" targetId="de79-e832-4f30-ac18" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="200.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ef50-b4b3-3245-e1be" name="Smoke Bombs" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="44e6-8b76-bf0f-d0d2" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="35e0-e2e5-95a0-696f" name="Smoke Bombs" hidden="false">
+          <description>If the Assassin is fighting on his own (ie, he is not inside a unit and not part of a multiple combat) and has to flee from a close combat, enemy units have to roll 4+ on a D6 to be able to pursue him. Note that the Assassin cannot choose not to use the bombs.</description>
+        </rule>
+      </rules>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
+      </costs>
+    </selectionEntry>
+  </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="ddf2-a5e6-5e3e-4091" name="Magic Weapons" hidden="false" collective="false" import="true">
       <constraints>
@@ -2820,6 +4043,11 @@ D6	Result
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="befb-92ec-0667-152b" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="737c-355e-49b1-4a58" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
