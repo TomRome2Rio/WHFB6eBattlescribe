@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9534-aec7-1922-76f2" name="Orcs and Goblins" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="9534-aec7-1922-76f2" name="Orcs and Goblins" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="5b0c-07f2-6b72-7aa8" name="Orc" hidden="false"/>
     <categoryEntry id="2c47-226a-5465-6c16" name="Common Orc" hidden="false"/>
@@ -4285,9 +4285,6 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="902f-550b-084a-9fa7" type="max"/>
       </constraints>
-      <categoryLinks>
-        <categoryLink id="8442-098a-0f8b-5c46" name="Uncategorised" hidden="false" targetId="bdfa-6d6e-a1bf-5d03" primary="true"/>
-      </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="325e-3d78-1f4c-d7c2" name="Non-Standard Army" hidden="false" collective="false" import="true">
           <constraints>
@@ -4912,6 +4909,9 @@
               <description>The axe Gitsnik gives Grimgor +2 Strength. In addition, Grimgor always strikes first.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="1f08-968b-6c1c-9b44" name="Blood-forged Armour" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -4923,6 +4923,9 @@
               <description>Gives Grimgor a 1+ Armour save and a 5+ Ward save.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="c499-f822-dac1-6c28" name="Mork&apos;s All-Seeing Eye" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -4937,6 +4940,9 @@
           <infoLinks>
             <infoLink id="146a-4276-fb6e-0f11" name="Magic Resistance" hidden="false" targetId="6e0c-4c98-a2c2-af0d" type="rule"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="9405-47f8-c82e-6b4d" name="Bodyguard" hidden="false" collective="false" import="true" type="unit">
           <constraints>
@@ -4990,6 +4996,9 @@ When setting up a game, Grimgor and his Bodyguard deploy at the same time as oth
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="853c-267c-de93-3f1b" type="max"/>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="38d6-bccd-b5ac-1b17" type="min"/>
                   </constraints>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                  </costs>
                 </selectionEntry>
                 <selectionEntry id="72cc-5d4a-620a-cc22" name="The Blasted Banner" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
@@ -5004,12 +5013,18 @@ When setting up a game, Grimgor and his Bodyguard deploy at the same time as oth
                   <infoLinks>
                     <infoLink id="c42c-684d-8ddb-2363" name="Stubborn" hidden="false" targetId="1e41-936a-2bae-76cc" type="rule"/>
                   </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                  </costs>
                 </selectionEntry>
                 <selectionEntry id="e40f-1d36-77be-2178" name="Additional Hand Weapons" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e861-6188-7760-0fbb" type="max"/>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5afc-a0eb-fd4f-bdbe" type="min"/>
                   </constraints>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                  </costs>
                 </selectionEntry>
                 <selectionEntry id="415d-3a4f-e27d-56c4" name="Additional Black Orcs" hidden="false" collective="false" import="true" type="model">
                   <constraints>
@@ -5024,12 +5039,18 @@ When setting up a game, Grimgor and his Bodyguard deploy at the same time as oth
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8833-96f7-d723-c070" type="max"/>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d662-2883-726b-c652" type="min"/>
                   </constraints>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                  </costs>
                 </selectionEntry>
                 <selectionEntry id="f871-c191-f987-7ae1" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4063-42cf-5be3-b3cd" type="max"/>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="02f9-80a3-802b-0b2a" type="min"/>
                   </constraints>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                  </costs>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
@@ -5138,6 +5159,9 @@ A whirling green mist surrounds one enemy model who is in base contact (obviousl
 Wurrzag spent far too much time alone in the jungle to be very tolerant of others, especially other Shamans. Before the armies are deployed, roll 1D6 for each Shaman in the army apart from Wurrzag. On the roll of a 2-6 they are fine and take part as normal. On the roll of a 1 that Shaman has annoyed Wurrzag and been turned into a Squig. The Shaman is lost along with any magic items he was carrying. However, if you have a Night Goblin Squig Herd in your army you may add +1 extra free Cave Squig to the unit for each Shaman that gets on the wrong end of Wurrzag&apos;s temper.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="4291-d9fd-74c8-03fd" name="Baleful Mask" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -5149,6 +5173,9 @@ Wurrzag spent far too much time alone in the jungle to be very tolerant of other
               <description>Bound Spell. Power Level 3. The Mask contains a Gaze of Mork spell which works exactly as described in the Waaagh! Magic section. This may be cast once per Magic phase like an ordinary spell. The spell requires no Power dice to cast, all the power required is provided by the Mask itself.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="536f-04a5-607a-b0d8" name="Wizzbang the Power Squig" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -5160,6 +5187,9 @@ Wurrzag spent far too much time alone in the jungle to be very tolerant of other
               <description>At the end of either player&apos;s Magic phase, Wurrzag may store up to two unused dice from his pool in the Power Squig. In the next Magic phase these are released and added to the pool in addition to those he would normally have.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -6806,9 +6836,7 @@ At the beginning of your first turn the character and the unit he is with drinks
     <rule id="a1c8-a5c5-644b-848b" name="Tusker Charge" hidden="false">
       <description>A charging boar is a bad-tempered mount of bloody-minded muscle and bone with pointy tusks, sharp teeth and appalling breath. The impact of this slavering beast is just as impressive as a fully armoured knight with a lance. A charging Boar therefore receives a Strength bonus, of +2, giving it a Strength value of 5 during the turn in which it charges. Obviously this bonus applies to the Boar and not to its rider.</description>
     </rule>
-    <rule id="4ede-d695-8f38-4b1e" name="Thick Skinned" hidden="false">
-      <description></description>
-    </rule>
+    <rule id="4ede-d695-8f38-4b1e" name="Thick Skinned" hidden="false"/>
   </sharedRules>
   <sharedProfiles>
     <profile id="c448-20ab-59a1-3761" name="Wolf" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
