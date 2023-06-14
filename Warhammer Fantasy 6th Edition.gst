@@ -28,7 +28,6 @@
     <categoryEntry id="a3af-995e-0cf1-7091" name="Rare" hidden="false"/>
     <categoryEntry id="48f1-4778-a9db-cde7" name="Characters" hidden="false"/>
     <categoryEntry id="5694-61f3-6913-6154" name="Heroes" hidden="false"/>
-    <categoryEntry id="bdfa-6d6e-a1bf-5d03" name="Uncategorised" hidden="false"/>
     <categoryEntry id="e6e5-cff5-9987-d563" name="Magic Weapon" hidden="false"/>
     <categoryEntry id="2963-aff1-28ca-7634" name="Magic Armour" hidden="false"/>
     <categoryEntry id="7cfd-b676-48e1-6eec" name="Arcane Item" hidden="false"/>
@@ -262,11 +261,6 @@
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="562f-9770-dc82-1b05" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="d2a8-1093-ce78-6c29" name="Uncounting" hidden="false" targetId="bdfa-6d6e-a1bf-5d03" primary="false">
-          <constraints>
-            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2653-9306-1d8d-449f" type="max"/>
           </constraints>
         </categoryLink>
       </categoryLinks>
