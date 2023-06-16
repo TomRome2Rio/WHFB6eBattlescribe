@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="4ca8-2035-2f87-1bd7" name="WHFB 6th Edition" revision="16" battleScribeVersion="2.03" authorName="Tom Clare" authorContact="" authorUrl="" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="4ca8-2035-2f87-1bd7" name="WHFB 6th Edition" revision="17" battleScribeVersion="2.03" authorName="Tom Clare" authorContact="" authorUrl="" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="d9e7-add3-773e-ffab" name="BRB"/>
   </publications>
@@ -568,34 +568,169 @@
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
-    <rule id="ec06-621f-83ae-fd4c" name="Scouts" hidden="false"/>
+    <rule id="ec06-621f-83ae-fd4c" name="Scouts" hidden="false">
+      <description>These troops are skilled at sneaking forwards to scout our the enemy before the main force arrives. By making the best use of cover, advancing at night, or with other troops providing a diversion, they are able to deploy ahead of the rest of the army.
+
+Scouts are set up after both armies have been deployed. They can be set up anywhere on the cable, at least 10&quot; away from the enemy and must be out of the sight of any enemy troops and in or behind interposing terrain (not out in the open!). If both armies contain troops with this ability, each player should roll a D6, with the player scoring the highest choosing whether be deploys before or after the enemy&apos;s Scouts. Two opposing groups of Scouts cannot be set up within 10&quot; of each other.
+
+Alternatively, Scouts can be placed on the controlling player&apos;s deployment zone like any other troops, after deployment of both main armies is finished.</description>
+    </rule>
     <rule id="4c3d-1a6a-3977-0b53" name="Skirmishers" hidden="false"/>
-    <rule id="d168-689e-84dd-9b7e" name="Poisoned Attacks" hidden="false"/>
-    <rule id="87db-2d4c-3fa6-6a26" name="Fly" hidden="false"/>
-    <rule id="03be-3e56-1332-bf56" name="Fear" hidden="false"/>
-    <rule id="3767-0d81-4db9-cda7" name="Terror" hidden="false"/>
-    <rule id="6c1b-2f0f-d172-01ca" name="Stupidity" hidden="false"/>
-    <rule id="01c3-c8c6-431f-1c2b" name="Large Target" hidden="false"/>
-    <rule id="f6c9-ac44-1d7c-ed6e" name="Unbreakable" hidden="false"/>
-    <rule id="512a-5ae5-c6cb-b82a" name="Immune to Psychology" hidden="false"/>
-    <rule id="a317-ad28-0409-0c8b" name="Frenzy" hidden="false"/>
-    <rule id="1e41-936a-2bae-76cc" name="Stubborn" hidden="false"/>
-    <rule id="2db9-4b87-800e-ed58" name="Hatred" hidden="false"/>
+    <rule id="d168-689e-84dd-9b7e" name="Poisoned Attacks" hidden="false">
+      <description>Some warriors of the Warhammer world use lethal toxins to envenom their weaponry. The Dark Elf Adepts of Khaine and the Skinks of the steaming jungles of Lustria are the most noted exponents in the use of poisoned weapons.
+
+A warrior with poisoned attacks will wound his target automatically if he scores a 6 when determining whether he hits his opponent in the Shooting or Close Combat phases. Armour saves are taken as normal. Unliving targets (such as war machines) are immune to poison as are some troop types. These are clearly defined in their description.</description>
+    </rule>
+    <rule id="87db-2d4c-3fa6-6a26" name="Fly" hidden="false">
+      <description>In Warhammer, flight is represented by a &apos;long swoop&apos; or &apos;glide&apos; of up to 20&quot;. The flyer starts off on the ground, takes off, flies to where it wishes to go, and then lands. Flyers, therefore, begin and end their movement on the ground. Flyers never need to wheel or turn, but can always make their move in a direct line. Of course, they still need to see any target they want to charge or shoot at and have a 90° arc of sight to their front, as normal.
+
+Flyers do not benefit from the extra Move distance conferred on ground moving models for charging or marching. The flying move is never doubled and flyers charge at normal speed as explained later.
+
+A flyer may charge an enemy within its 20&quot; flight move. The charge must be declared in the normal way and the enemy has the usual response options. The flying move is not doubled Like a ground charge is. Note that a flyer must be able to see its intended target when charges are declared as normal, and can fly over models and scenery which would stop the charge of a normal model. Flyers that charge their enemy are placed into base contact with the enemy unit in a normal manner (ie, flyers are positioned to the sides if the attack comes from the flank, to the rear if it comes from behind, etc).
+
+Flyers suffer no movement penalties for changing direction, overflying scenery, or crossing obstacles. They may overfly other models, including enemy troops, without penalty. Flyers may not move, land in or take off from within a wood. If flyers wish to enter a wood, they must land outside it and walk inside using their ground movement in the next turn. Note that this applies to any terrain that both players consider would prohibit flying.
+Flyers may not land on top of enemy formations - if they wish to attack an enemy they must engage in combat as described above.
+
+The distance flyers flee is usually based on their flying Move rather than their ground Move. The normal flee distance for flyers is therefore 3D6&quot; in common with all models whose move is more than 6&quot;. If flyers must flee along me ground due to some constraint which prevents them from flying, for example, if they are in me middle of a wood, then they flee 2D6&quot; or 3D6&quot; depending on their Movement characteristic, just like other troops.
+
+Flyers pursue fleeing enemy in exactly the same way as ordinary troops. Their normal pursuit rate is therefore 3D6&quot; and the same comments apply as for fleeing.
+
+Most flyers are monsters, but some units of troops can fly too. Such units are clearly identified in their army lists. They follow all the normal rules for flyers given above, apart from the exceptions noted below.
+- Flying units always operate as skirmishers.
+- Characters can never join units of flyers, even if they ride flying creatures. This is because characters ride large flying monsters, which are nowhere near as manoeuvrable as me light, fast creatures of flying units and will slow them down considerably.</description>
+    </rule>
+    <rule id="03be-3e56-1332-bf56" name="Fear" hidden="false">
+      <description>Fear is a natural reaction to huge or especially ugly and unnerving monsters. Some creatures inspire fear as is indicated in their relevant Army book and these include large and disturbing monsters such as Troll; as well as supernatural horrors such as Skeletons.
+
+A unit must take a Fear test if it is faced by one of the the following situations:
+
+If Charged by a Fear-causing Enemy
+If a unit is charged by an enemy that it fears then it must take a test to see if can overcome that fear and carry on fighting. Test when the charge is declared and the unit is determined to be within its charge range.
+
+If the test is passed, the unit can fight on as normal. If the unit fails its test and its Unit Strength happens to be lower than the charging enemy, it will flee.
+
+If the unit fails its test but its Unit Strength is equal to or higher than the charging enemy&apos;s, it will fight on as normal but must roll 6s to score hits in the first turn of close combat.
+
+If a Unit Wishes to Charge a Feared Enemy
+If a unit wishes to charge an enemy that causes fear then it must cake a test to overcome its fear first. If the unit is unfortunate and the test is failed, it may not charge or shoot and must remain stationary in their Movement phase.</description>
+    </rule>
+    <rule id="3767-0d81-4db9-cda7" name="Terror" hidden="false">
+      <description>Some monsters are so huge and threatening that they are considered to be even more frightening than those described by the Fear rules. Such creatures cause terror.
+
+Troops who arc confronted by monsters or situations that cause terror must test to see whether they overcome their terror. If they fail, they are completely terrified and are reduced to gibbering wrecks. Troops only ever test for terror once in a battle. Once they&apos;ve overcome their terror they are not affected again.
+
+If a creature causes terror then it automatically causes fear as well, and all the rules described for fear apply. However, you never have to take a Terror and a Fear test from the same enemy or situation - just take a Terror test: if you pass the Terror test then you automatically pass the Fear test, too. As any unit of Troops only ever takes one Terror rest in a battle, any subsequent encounters with terrifying monsters or situations will simply count as fear.
+
+A unit must make a Terror test if charged by or wishing to charge an enemy d1at causes terror.
+
+A unit must make a Terror test at the start of its rum if there is an enemy which causes terror within 6&quot;.</description>
+    </rule>
+    <rule id="6c1b-2f0f-d172-01ca" name="Stupidity" hidden="false">
+      <description>Many large and powerful creatures are unfortunately rather stupid. Even some otherwise quite intelligent creatures act stupidly now and again because they are readily confused or distracted, or perhaps because they are drugged or have been knocked insensible. The Stupidity rules represent the sort of slow wittedness or dumb behaviour which some especially stolid or stubborn beasts are prone to. Creatures that, are stupid are indicated in the Army books and include such monstrous creatures as Trolls.
+
+Stupid creatures must make a test at the start of their turn to see whether they overcome their stupidity. Make a test for each unit of stupid troops. If they pass the test by rolling their Leadership value or less on 2D6 then all is well and good - the creatures behave reasonably intelligently and can move and fight as normal. Nothing untoward has occurred beyond a bit of drooling and the odd spontaneous cackle.
+
+If the test is failed then all is not well. The following rules apply until the creatures&apos; following turn when they must test once more to see whether they are overcome by stupidity. In addition, a Wizard subject to being stupid cannot cast spells if he fails the test.
+
+If already in close combat, half of the stupid creatures in base contact with the enemy suddenly stop fighting. They stare around blankly and wonder where they are. If the unit has an odd number of models or if a stupid creature is fighting on its own then roll a D6. If the result is 4 or more, the odd model fights; if not, it stands around vacantly. Note that only stupid creatures are affected. If a unit contains stupid creatures and other creatures (a unit of Trolls led by a Goblin Chieftain, for example) then the other creatures are not affected. The controlling player decides which individual creatures in combat cannot fight.
+
+If not in close combat, the unit momentarily forgets what it is doing. Move the unit directly forwards at half normal speed (for example, Trolls with Movement 6 would move 3&quot; forward). Any enemy troops encountered are automatically charged. If there are friends in the way, both units blunder into each ocher and their ranks become confused, in which case both units are pinned in place for the rest of the turn and neither may move further. This counts as compulsory movement and so occurs before other movement, but after charges have been declared (see the Movement section). Creatures within the unit that do not suffer from being stupid must also move as described - they are carried along by the movement of the rest of the unit and risk being trampled if they attempt to do otherwise.</description>
+    </rule>
+    <rule id="01c3-c8c6-431f-1c2b" name="Large Target" hidden="false">
+      <description>A large target is anything which in real life would be massively tall or which is especially bulky. Giants are large targets, for example, while Men, Orcs, Elves, Ogres, Cannons and the vast majority of troops are not. In every case, a creature&apos;s description in the relevant Army book will inform you whether it is a large target or not. Cavalry riders are not considered to be large targets if they are riding horses, wolves, boars or comparable beasts. Dragons, Greater Daemons and certain war machines are large targets. The following rules apply to large targets:
+
+Units which are shooting at a large target get a +1 to hit bonus.
+
+Large targets can see and shoot at targets over interposing models normal-sized models (and vice versa).
+
+Large targets moving along the ground cannot charge through any interposing models.</description>
+    </rule>
+    <rule id="f6c9-ac44-1d7c-ed6e" name="Unbreakable" hidden="false">
+      <description>Some creatures are utterly fearless and will never give up a battle, no matter how hopeless the situation might be. This could be because of the troops&apos; extreme bravery, or because the creatures fighting are not truly alive.
+
+These troops never break in close combat, and they are also immune to panic, terror and fear or any other Psychology rules. If defeated in close combat (even by fear-causing creatures that outnumber them) unbreakable troops continue to fight on regardless of results. They may never, however, declare that they are fleeing as a charge reaction, as they will literally die fighting under any circumstances.</description>
+    </rule>
+    <rule id="512a-5ae5-c6cb-b82a" name="Immune to Psychology" hidden="false">
+      <description>Some warriors and creatures in the Warhammer world are almost completely fearless, or such grizzled veterans chat scenes which would make lesser troops panic have no effect on chem.
+
+Troops that are immune to psychology are never affected by fear, terror, frenzy or any other Psychology rules. Troops immune to Psychology may never flee as a charge reaction - they are far too proud and brave to do this! These troops still have to take Break tests as normal.</description>
+    </rule>
+    <rule id="a317-ad28-0409-0c8b" name="Frenzy" hidden="false">
+      <description>Certain warriors can work themselves into a fighting frenzy, a whirlwind of destruction in which all concern for personal safety is ignored in favour of mindless violence. Many of these frenzied warriors are drugged or tranced, and have driven themselves into a psychotic frenzy with chancing, singing, yelling and screaming. These troops are described as frenzied. In the case of mounted troops, frenzy only affects the riders. No Psychology test is required for frenzy, and the following rules apply automatically:
+
+After charges have been declared, measure to see if any enemies are within charge reach of any frenzied troops (ie, within the unit&apos;s charge move and in their normal charge arc). If so, the frenzied unit must charge that enemy. The player has no choice in the matter; the unit will automatically make its charge move. This automatic charge is done after charges have been declared, but you may declare normal charges with your frenzied troops if you wish. If there are several eligible units within the charge reach of the frenzied unit, the controlling player may decide which unit to charge.
+
+Frenzied troops and characters fight with + 1 extra Attack during close combat. Models that have 1 Attack on their profile therefore have 2, troops with 2 Attacks have 3, and so on. If models have an extra weapon then they will receive +1 extra Attack for this as normal, so if they have 1 Attack on their profile, they would receive 2 + 1 = 3 Attacks in total.
+
+Frenzied troops and characters must pursue fleeing enemy whether the player wants them to or not. They even pursue if they are defending an obstacle. Unlike other troops, they may not attempt to hold back as they are far too crazed with battle lust. If they wipe their enemy out in the first Close Combat phase, they will always overrun their opponent. Frenzied troops may not elect to flee if they are charged - their bloodlust overcomes their concerns for safety.</description>
+    </rule>
+    <rule id="1e41-936a-2bae-76cc" name="Stubborn" hidden="false">
+      <description>Some troops will fight on in close combat almost regardless of casualties. This can be because they consider themselves to be elite, have taken severe vows to hold their ground in combat or are simply too dumb to flee when defeated by superior troops! Sometimes troops will fight stubbornly against certain enemies because of honour, vows or racial animosity, and fight normally against other enemies. These troops are referred as being stubborn.
+
+The following rules apply:
+
+Stubborn troops take all Break tests on their unmodified Leadership value. They do not reduce this value regardless of any combat results, how many casualties they have suffered or ocher combat bonuses. This means, for example, that stubborn troops with a Leadership value of 9 will only ever break on the roll of 10 or more when making a Break test. If a stubborn unit contains characters with higher Leadership values than the rank-and-file troops who are not themselves stubborn, the character&apos;s Leadership value can be used to take the test, but it is still subject to the normal modifiers for a Break test. Use either the Leadership value of the character leading the unit or the unit&apos;s own Leadership value, depending on which results in the higher value for passing a Break test.
+
+Characters that are part of a stubborn unit but are not stubborn themselves will not have to cake a separate Break test - they benefit and gain from the determination of the troops around them! Stubborn units led by stubborn characters can use the character&apos;s unmodified Leadership value for Break tests. Note that any troops who are not stubborn but are led by a stubborn character may use his Leadership value for Break tests, but the roll is modified as normal.</description>
+    </rule>
+    <rule id="2db9-4b87-800e-ed58" name="Hatred" hidden="false">
+      <description>Hatred is a powerful emotion and instances of hatred and rivalry are commonplace in the Warhammer world. There are grudges borne over centuries, racial animosity bordering on madness, and irreconcilable feuds that have left generations of dead in their wake. Some races hate other races with such bitter conviction that they will fight with astounding fury. Like frenzy, no Psychology test is taken for hatred.
+
+Troops fighting in close combat with a hated foe may re-roll any misses When they attack in the first turn of any combat. This bonus only applies in the first turn of a combat and represents the unit venting its pent up hatred on the foe. After the initial round of blood mad hacking they lose some impetus and subsequently fight as normal for the rest of the combat.
+
+Troops who hate their enemy must always pursue them if they flee. They cannot attempt to avoid pursuit by testing their Leadership as other troops can. They muse even pursue if behind a defended obstacle.</description>
+    </rule>
     <rule id="ab75-c6ec-0411-c924" name="Fast Cavalry" hidden="false"/>
     <rule id="4bb1-dfab-2824-bad1" name="Chariot" hidden="false"/>
-    <rule id="7c7c-8683-ae17-d576" name="Regenerate" hidden="false"/>
-    <rule id="773c-6c86-ae53-1cee" name="Killing Blow" hidden="false"/>
-    <rule id="6e0c-4c98-a2c2-af0d" name="Magic Resistance" hidden="false"/>
-    <rule id="1a01-bd8c-93eb-8de9" name="Flammable" hidden="false"/>
+    <rule id="7c7c-8683-ae17-d576" name="Regeneration" hidden="false">
+      <description>A creature with this ability may try to regenerate any wound on a D6 roll of 4+. Only one attempt may be made on each wound to regenerate it.
+
+Troops that are able to can regenerate damage if not too badly hurt. Work this out as follows. When attacked in close combat, shot at, or the target of spells, calculate the number of wounds suffered as normal. Once all attacks for the phase have been made, the creature may try to regenerate. Roll a D6 for each wound suffered during that phase. If a 4 or more is rolled, that wound has regenerated. You may only try to regenerate any single wound once. Any regenerated wounds are reinstated, and models removed as casualties are replaced if enough wounds are regenerated.
+
+The results of combat, panic, etc are worked our after creatures have regenerated (the number of wounds inflicted does not include any that are regenerated).
+
+*For example, three Trolls (which can regenerate) are fighting five Empire Knights. The Knights strike first and inflict 5 wounds, enough to kill one Troll and cause 2 further wounds. The remaining tow Trolls inflict 3 wounds on the Knights. The Trolls now test to regenerate and successfully regenerate 3 wounds. The 3 wounds are reinstated, the &apos;killed&apos; Troll is replaced, and the 2 wounds suffered are noted down. The Knights have scored only 2 wounds in the end while the Trolls have inflicted 3. Assuming no other combat bonuses apply, the Trolls have won.
+
+Fire
+The flesh of a regenerating creature cannot regenerate if it has been burnt. If a regenerating creature or unit sustains one or more wounds from a flame attack it cannot regenerate any wounds during the remainder of the battle, not even those inflicted by ordinary weapons.
+
+Note: From Warhammer Annual 2002, Gav Thorpe clarified Regeneration has no effect on successful Killing Blows.</description>
+    </rule>
+    <rule id="773c-6c86-ae53-1cee" name="Killing Blow" hidden="false">
+      <description>Some warriors have honed the craft of killing into an art. Tales are told of the master swordsman of the White Tower who can decapitate a man with one stroke of their blade - their victims barely registering the sword leaving its scabbard.
+
+If a model with the Killing Blow special ability rolls a 6 when rolling to wound, he automatically slays his opponent without recourse to a saving throw, apart from Ward saves.
+
+This attack is only effective against roughly man-sized opponents such as Men, Orcs, Elves, Beastmen, etc. It has no effect on big creatures such as Ogres or Dragons, or things like swarms which consist of several creatures. It can be used against models mounted on steeds or monsters as long as the riders themselves are roughly man-sized.
+
+Note: From Warhammer Annual 2002, Gav Thorpe clarified Regeneration has no effect on successful Killing Blows.</description>
+    </rule>
+    <rule id="6e0c-4c98-a2c2-af0d" name="Magic Resistance" hidden="false">
+      <description>Some supernatural creatures are resistant to magic, or are protected by divine mystic powers or mighty sorcerers.
+
+A creature with magic resistance will be difficult to harm with magic. The number in the brackets indicates the maximum number of extra dice that may be rolled when trying to dispel each spell that affects the magically resistant creature. For details of dispelling see the Magic section.</description>
+    </rule>
+    <rule id="1a01-bd8c-93eb-8de9" name="Flammable" hidden="false">
+      <description>Some creatures, such as Undead Mummies and Treemen, burn easily. A flammable creature hit by a flaming weapon or fiery spell will take double wounds, so every wound suffered by a flammable creature will be doubled to 2 wounds. Take any saves before multiplying the wounds.</description>
+    </rule>
     <rule id="ea74-4e81-f844-d146" name="Stone Thrower" hidden="false"/>
     <rule id="95df-6c33-fb3e-c966" name="Cannon" hidden="false"/>
     <rule id="3702-c42a-047c-af5f" name="Bolt Thrower" hidden="false"/>
-    <rule id="2381-ed16-2a32-cd12" name="Breath Weapon" hidden="false"/>
+    <rule id="2381-ed16-2a32-cd12" name="Breath Weapon" hidden="false">
+      <description>Fiery Dragons and the dreaded Hydras and Chimeras of the Chaos Wastes, as well as some even more bizarre creatures, have the ability to breathe fire, noxious gas, lightning or even stranger breath weapons.
+
+A model with a breath weapon may use it in the Shooting phase. Use the Flame template, placing the broad end over your intended target as you wish and the narrow end next to the creature&apos;s head. Any model that lies completely under the template is hit automatically - models whose bases lie partially under the template are hit on a 4+. The strength and any special effects of the breath weapon will be detailed in the entry for each individual creature. Characters under the template are eligible for &apos;Look out, Sir!&apos; rolls if they are in a unit.
+
+Breath weapons may not be used as a stand &amp; shoot charge reaction, and neither can they be used in close combat. A creature with a breath weapon needs time to belch forth its flames!</description>
+    </rule>
     <rule id="3783-e8d5-f94a-7b2c" name="Small" hidden="false">
       <description>Units with this special rule do not block the line of sight of other units. Note that this does not, however, allow other skirmishers to move through their formation.</description>
     </rule>
     <rule id="21d5-5848-02a7-f995" name="Swarm" hidden="false">
       <description>Swarms represent many creatures on a single 40mm × 40mm base. This base is treated as a single model with several Wounds and Attacks. A Swarm base fights at full effect until it has taken all it&apos;s wounds then it is removed. Swarms are Unbreakable and cannot be joined by characters.</description>
+    </rule>
+    <rule id="7eca-56b9-d1c7-c7c8" name="Scaly Skin" hidden="false">
+      <description>Some creatures, the reptilian Lizardmen in particular, have tough, scaly skin which acts exactly like armour. This save can be variable. Lizardmen Skinks, for example, have a scaly skin save of 6+, while mighty Dragons could have a save of 3+ or more! The effectiveness of the scaly skin can be combined with armour, so a model with a 5+ scaly skin save and a shield would have a 4+ save. Note that scaly skin is an armour save for all intents and purposes, and may be modified by high Strength, etc.</description>
     </rule>
   </sharedRules>
   <sharedInfoGroups>
