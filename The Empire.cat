@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f49f-f614-5cfb-004a" name="The Empire" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="16" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="f49f-f614-5cfb-004a" name="The Empire" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>TODO: enforce maximum detachment unit sizes</readme>
+  <costTypes>
+    <costType id="fada-3781-5bbe-4625" name=" Hull Points" defaultCostLimit="-1.0" hidden="false"/>
+  </costTypes>
   <categoryEntries>
     <categoryEntry id="e124-0a35-c769-457f" name="Parent Unit" hidden="false"/>
     <categoryEntry id="b085-c03b-b9e3-0b6a" name="Support Unit" hidden="false"/>
@@ -86,6 +89,7 @@
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="3.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -98,21 +102,25 @@
             <selectionEntry id="ef35-bfea-0d5c-91f7" name="Pistol" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="f8cf-aab9-0477-50c2" name="Lance" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="2eaf-5137-2ff1-590b" name="Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="5bcf-43ed-afca-44f3" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -125,11 +133,13 @@
             <selectionEntry id="d2cb-bd4a-1553-f7da" name="Handgun" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="15.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="9f97-b916-2b7d-e4aa" name="Longbow" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="15.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -145,6 +155,7 @@
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="15.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="83e4-a2a5-00a4-f43e" name="Barded Warhorse" hidden="false" collective="false" import="true" type="upgrade">
@@ -153,6 +164,7 @@
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="21.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -169,16 +181,19 @@
             <selectionEntry id="1bf0-d889-a6c6-9dec" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="3.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="ccbe-e707-391f-fecc" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="f373-2a02-25c1-1091" name="Plate Armour" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="12.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -194,6 +209,7 @@
       </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="80.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="68aa-d0c6-f931-e08d" name="Templar Grand Master" hidden="false" collective="false" import="true" type="unit">
@@ -260,11 +276,13 @@ In addition, as long as a Templar Grand Master is with a unit of Knights of his 
             <selectionEntry id="83cf-b226-d1c0-c1d1" name="Cavalry Hammer" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="6f05-10c6-1874-2c52" name="Lance &amp; Shield" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -292,6 +310,7 @@ In addition, as long as a Templar Grand Master is with a unit of Knights of his 
       </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="160.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8b27-246c-8dbc-2284" name="Wizard Lord" hidden="false" collective="false" import="true" type="unit">
@@ -332,11 +351,13 @@ In addition, as long as a Templar Grand Master is with a unit of Knights of his 
             <selectionEntry id="58ab-97be-195c-5143" name="Level 4" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="47ce-8326-d366-8ed3" name="Level 3" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -352,6 +373,7 @@ In addition, as long as a Templar Grand Master is with a unit of Knights of his 
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="15.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="a910-70ab-51ad-e69c" name="Barded Warhorse" hidden="false" collective="false" import="true" type="upgrade">
@@ -360,6 +382,7 @@ In addition, as long as a Templar Grand Master is with a unit of Knights of his 
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="21.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -379,6 +402,7 @@ In addition, as long as a Templar Grand Master is with a unit of Knights of his 
       </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="175.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="940f-0d21-026d-d7a2" name="Captain" hidden="false" collective="false" import="true" type="unit">
@@ -415,6 +439,7 @@ In addition, as long as a Templar Grand Master is with a unit of Knights of his 
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="2.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -427,16 +452,19 @@ In addition, as long as a Templar Grand Master is with a unit of Knights of his 
             <selectionEntry id="34e7-f74d-85a5-a34b" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="2.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="8b96-afb2-4a5e-5991" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="4.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="89d9-4957-68cb-3251" name="Plate Armour" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -456,26 +484,31 @@ In addition, as long as a Templar Grand Master is with a unit of Knights of his 
             <selectionEntry id="5c17-0948-2991-7767" name="Pistol" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="7.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="abe8-af37-f4ba-57da" name="Lance" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="4.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="49f9-60f9-fc6a-e683" name="Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="53ee-a6a5-9aab-a123" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="4.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="95ae-765b-71be-c2b5" name="Halberd" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="4.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -491,6 +524,7 @@ In addition, as long as a Templar Grand Master is with a unit of Knights of his 
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="1630-8ac4-75be-15b5" name="Barded Warhorse" hidden="false" collective="false" import="true" type="upgrade">
@@ -499,6 +533,7 @@ In addition, as long as a Templar Grand Master is with a unit of Knights of his 
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="14.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -521,11 +556,13 @@ In addition, as long as a Templar Grand Master is with a unit of Knights of his 
             <selectionEntry id="050b-1d8e-db22-5fe8" name="Handgun" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="8c75-da1d-e2eb-d830" name="Longbow" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -584,6 +621,7 @@ In addition, as long as a Templar Grand Master is with a unit of Knights of his 
       </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="078c-f7fc-f4ae-18b4" name="Warrior Priest" hidden="false" collective="false" import="true" type="unit">
@@ -647,6 +685,7 @@ Note that this power does not affect other characters (they are more difficult t
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="2.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -659,11 +698,13 @@ Note that this power does not affect other characters (they are more difficult t
             <selectionEntry id="1130-f934-e13e-e9db" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="2.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="a139-4c41-7093-f56f" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="4.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -676,16 +717,19 @@ Note that this power does not affect other characters (they are more difficult t
             <selectionEntry id="a64e-cc24-d514-bb21" name="Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="c059-c7ab-e2c8-9890" name="Second Warhammer" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="4.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="4a03-4dd5-f03b-cf1c" name="Two Handed Warhammer (Great Weapon)" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="4.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -701,6 +745,7 @@ Note that this power does not affect other characters (they are more difficult t
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="df38-7fd5-687d-5224" name="Barded Warhorse" hidden="false" collective="false" import="true" type="upgrade">
@@ -709,6 +754,7 @@ Note that this power does not affect other characters (they are more difficult t
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="14.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -732,6 +778,7 @@ Note that this power does not affect other characters (they are more difficult t
       </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="95.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9477-0e53-6501-0200" name="Master Engineer" hidden="false" collective="false" import="true" type="unit">
@@ -785,6 +832,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="2.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -800,6 +848,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="94dc-d9fc-da9d-f5ec" name="Barded Warhorse" hidden="false" collective="false" import="true" type="upgrade">
@@ -808,6 +857,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="14.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -820,16 +870,19 @@ When firing his own missile weapon, an Engineer can always choose a different ta
             <selectionEntry id="c51e-348a-1ddb-fe07" name="Repeater Handgun" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="15.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="4fa0-b13d-df03-7b30" name="Repeater Pistol" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="8883-6545-f644-f94a" name="Hochland Long Rifle" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -853,6 +906,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
       </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="55.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="eb7b-e398-538c-e8c2" name="Battle Wizard" hidden="false" collective="false" import="true" type="unit">
@@ -886,11 +940,13 @@ When firing his own missile weapon, an Engineer can always choose a different ta
             <selectionEntry id="583f-77ad-fdea-d4cb" name="Level 2" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="e752-d0fa-8b51-3d8f" name="Level 1" hidden="false" collective="false" import="true" type="upgrade">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -906,6 +962,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="adbe-eb8f-77d7-e75c" name="Barded Warhorse" hidden="false" collective="false" import="true" type="upgrade">
@@ -914,6 +971,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="14.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -938,6 +996,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
       </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="60.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="be62-d153-b72e-c1e8" name="Crossbowmen" hidden="false" collective="false" import="true" type="unit">
@@ -985,6 +1044,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           </profiles>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -997,6 +1057,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </constraints>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="5.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="7f5c-c54a-40e9-927e" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
@@ -1005,6 +1066,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </constraints>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="8b44-34fb-c46e-0dbd" name="Marksman" hidden="false" collective="false" import="true" type="upgrade">
@@ -1028,6 +1090,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </profiles>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="5.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1035,6 +1098,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="22dd-81d6-9828-d7ce" name="Archers" hidden="false" collective="false" import="true" type="unit">
@@ -1116,6 +1180,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           </profiles>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="9682-5e4a-5464-560c" name="Huntsmen" hidden="false" collective="false" import="true" type="upgrade">
@@ -1132,6 +1197,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1166,6 +1232,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </profiles>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="5.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1173,6 +1240,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="00f6-ec8a-6b55-0133" name="Free Company" hidden="false" collective="false" import="true" type="unit">
@@ -1218,6 +1286,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           </profiles>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="5.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="fdff-9e37-de28-5f3b" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
@@ -1233,6 +1302,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1245,6 +1315,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </constraints>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="5.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="12c3-f578-c123-d90f" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
@@ -1253,6 +1324,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </constraints>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="114f-7275-974f-db20" name="Sergeant" hidden="false" collective="false" import="true" type="upgrade">
@@ -1276,6 +1348,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </profiles>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1283,6 +1356,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="451a-81e4-648e-29ae" name="Handgunners" hidden="false" collective="false" import="true" type="unit">
@@ -1345,6 +1419,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           </profiles>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1357,6 +1432,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </constraints>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="5.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="c6ab-7e3f-e675-1cc5" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
@@ -1365,6 +1441,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </constraints>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="4f00-9c93-3faf-5305" name="Marksman" hidden="false" collective="false" import="true" type="upgrade">
@@ -1395,21 +1472,25 @@ When firing his own missile weapon, an Engineer can always choose a different ta
                     <selectionEntry id="147c-322c-51c6-686a" name="Hochland Long Rifle" hidden="false" collective="false" import="true" type="upgrade">
                       <costs>
                         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
+                        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
                       </costs>
                     </selectionEntry>
                     <selectionEntry id="78c7-e37d-fa26-8f17" name="Repeater Handgun" hidden="false" collective="false" import="true" type="upgrade">
                       <costs>
                         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="15.0"/>
+                        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
                       </costs>
                     </selectionEntry>
                     <selectionEntry id="e937-9a16-ff71-81b8" name="Handgun" hidden="false" collective="false" import="true" type="upgrade">
                       <costs>
                         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
                       </costs>
                     </selectionEntry>
                     <selectionEntry id="a415-2f82-1760-2541" name="Hochland Long Rifle" hidden="false" collective="false" import="true" type="upgrade">
                       <costs>
                         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
+                        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
                       </costs>
                     </selectionEntry>
                   </selectionEntries>
@@ -1417,6 +1498,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </selectionEntryGroups>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="5.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1451,6 +1533,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
       </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="44ca-62b2-5cee-273b" name="Swordsmen" hidden="false" collective="false" import="true" type="unit">
@@ -1502,6 +1585,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           </profiles>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="7.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1514,6 +1598,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </constraints>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="5.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="9d45-b21c-58c8-4153" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
@@ -1522,6 +1607,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </constraints>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="9ae6-6b7f-9db1-968a" name="Duellist" hidden="false" collective="false" import="true" type="upgrade">
@@ -1545,6 +1631,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </profiles>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1579,6 +1666,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
       </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="74cf-603b-5092-6d06" name="Spearmen" hidden="false" collective="false" import="true" type="unit">
@@ -1630,6 +1718,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           </profiles>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="9668-97d0-70a1-1917" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
@@ -1645,6 +1734,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1657,6 +1747,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </constraints>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="5.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="cfdc-3a94-08be-9ebe" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
@@ -1665,6 +1756,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </constraints>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="9647-14ca-f06e-62df" name="Sergeant" hidden="false" collective="false" import="true" type="upgrade">
@@ -1688,6 +1780,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </profiles>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1722,6 +1815,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
       </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c9c6-a136-b075-ccc5" name="Halberdiers" hidden="false" collective="false" import="true" type="unit">
@@ -1773,6 +1867,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           </profiles>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="819f-d741-9782-3170" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
@@ -1788,6 +1883,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1800,6 +1896,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </constraints>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="5.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="18a0-ac74-89d3-9819" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
@@ -1808,6 +1905,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </constraints>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="76b2-0cc1-4eec-eb33" name="Sergeant" hidden="false" collective="false" import="true" type="upgrade">
@@ -1831,6 +1929,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </profiles>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1865,6 +1964,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
       </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6f2a-3fc2-6a0a-d560" name="Knights of the White Wolf" hidden="false" collective="false" import="true" type="unit">
@@ -1969,6 +2069,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           </infoLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="ca85-d74c-89d6-8ca5" name="Knights of the Inner Circle" hidden="false" collective="false" import="true" type="upgrade">
@@ -1985,6 +2086,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1997,6 +2099,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </constraints>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="b99d-f7f5-48c1-76b5" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
@@ -2012,6 +2115,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="16.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="8537-2ed8-28b4-c191" name="First Knight" hidden="false" collective="false" import="true" type="upgrade">
@@ -2045,6 +2149,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </profiles>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="16.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -2052,6 +2157,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="39fb-eb3d-e072-bc83" name="Knightly Orders" hidden="false" collective="false" import="true" type="unit">
@@ -2132,6 +2238,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           </infoLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="23.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="c232-8146-d1fe-16e8" name="Knights of the Inner Circle" hidden="false" collective="false" import="true" type="upgrade">
@@ -2142,12 +2249,33 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </repeats>
             </modifier>
           </modifiers>
+          <modifierGroups>
+            <modifierGroup>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="39fb-eb3d-e072-bc83" type="greaterThan"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0b46-be2c-f32a-b8d0" type="atLeast"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <modifiers>
+                <modifier type="increment" field="d947-0542-eb53-a994" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="39fb-eb3d-e072-bc83" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="decrement" field="e365-e5da-11dc-1892" value="1.0"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e365-e5da-11dc-1892" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d947-0542-eb53-a994" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2160,6 +2288,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </constraints>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="cf08-c95a-c00e-d862" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
@@ -2175,6 +2304,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="16.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="d480-9681-0df1-3ad9" name="First Knight" hidden="false" collective="false" import="true" type="upgrade">
@@ -2208,6 +2338,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </profiles>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="16.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -2215,6 +2346,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cb6f-6324-38cd-2f80" name="Greatswords" hidden="false" collective="false" import="true" type="unit">
@@ -2243,9 +2375,14 @@ When firing his own missile weapon, an Engineer can always choose a different ta
       </modifiers>
       <modifierGroups>
         <modifierGroup>
-          <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="04a4-f65b-23e0-5227" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="04a4-f65b-23e0-5227" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0b46-be2c-f32a-b8d0" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
           <modifiers>
             <modifier type="remove" field="category" value="4a3f-84d1-0495-6ecb"/>
             <modifier type="set-primary" field="category" value="62d3-efc6-6c2c-634e"/>
@@ -2299,6 +2436,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           </profiles>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="12.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2311,6 +2449,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </constraints>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="661d-8d8d-76e5-b8a5" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
@@ -2326,6 +2465,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="12.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="f45b-5bca-bd7c-12d5" name="Count&apos;s Champion" hidden="false" collective="false" import="true" type="upgrade">
@@ -2349,6 +2489,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </profiles>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="12.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -2359,6 +2500,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
       </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="93b1-30ec-6efa-a961" name="Pistoliers" hidden="false" collective="false" import="true" type="unit">
@@ -2422,6 +2564,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           </infoLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="19.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2456,16 +2599,19 @@ When firing his own missile weapon, an Engineer can always choose a different ta
                     <selectionEntry id="af1b-3f5f-daf2-8596" name="Repeater Handgun" hidden="false" collective="false" import="true" type="upgrade">
                       <costs>
                         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="15.0"/>
+                        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
                       </costs>
                     </selectionEntry>
                     <selectionEntry id="beae-63e1-683e-9b54" name="Repeater Pistol" hidden="false" collective="false" import="true" type="upgrade">
                       <costs>
                         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
+                        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
                       </costs>
                     </selectionEntry>
                     <selectionEntry id="d1e9-b563-f208-dd1f" name="Two Pistols" hidden="false" collective="false" import="true" type="upgrade">
                       <costs>
                         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
                       </costs>
                     </selectionEntry>
                   </selectionEntries>
@@ -2473,6 +2619,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </selectionEntryGroups>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="7.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -2480,6 +2627,7 @@ When firing his own missile weapon, an Engineer can always choose a different ta
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="9ad9-d652-6a21-6d95" name="Mortar" hidden="false" collective="false" import="true" type="unit">
@@ -2598,6 +2746,7 @@ A Mortar requires a crew of three to work it properly. Two crewmen can just abou
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="75.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5b2c-d98c-1043-a338" name="Helblaster Volley Gun" hidden="false" collective="false" import="true" type="unit">
@@ -2696,6 +2845,7 @@ A Helblaster Volley Gun requires a full crew of three crewmen to work properly. 
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="125.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="0ac4-ba42-6cd5-970f" name="Great Cannon" hidden="false" collective="false" import="true" type="unit">
@@ -2777,6 +2927,7 @@ A Helblaster Volley Gun requires a full crew of three crewmen to work properly. 
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="100.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="5688-2bc6-4448-40d2" name="Flagellants" hidden="false" collective="false" import="true" type="unit">
@@ -2838,6 +2989,7 @@ Flagellants may never be joined by any characters.</description>
           </profiles>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="11.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -2865,6 +3017,7 @@ Flagellants may never be joined by any characters.</description>
               </profiles>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="12.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -2872,6 +3025,7 @@ Flagellants may never be joined by any characters.</description>
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="b98b-e1ef-e8ae-b1f0" name="Luthor Huss, Prophet of Sigmar" hidden="false" collective="false" import="true" type="model">
@@ -2936,12 +3090,20 @@ Still, Luthor would never join units of warriors who are not devout to Sigmar, s
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6f1a-1160-63e7-96af" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b37-4a5d-9436-1dd5" type="min"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="3b7d-8a18-b31f-91b8" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="72c6-2ae1-0119-1f27" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4ebf-0dbb-516e-553c" type="min"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="128e-1059-18e7-b41c" name="Barded Warhorse" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -2951,6 +3113,10 @@ Still, Luthor would never join units of warriors who are not devout to Sigmar, s
           <infoLinks>
             <infoLink id="1c3d-0060-c551-a2f8" name="Barded Warhorse" hidden="false" targetId="1a67-3f36-dfae-aba2" type="profile"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -2966,6 +3132,7 @@ Still, Luthor would never join units of warriors who are not devout to Sigmar, s
       </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="300.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="32a2-44e6-4f55-5ff4" name="Balthasar Gelt, The Surpreme Patriarch" hidden="false" collective="false" import="true" type="model">
@@ -3019,6 +3186,10 @@ Still, Luthor would never join units of warriors who are not devout to Sigmar, s
               <description>The robe gives a 3+ Ward save against any missile attack (including template weapons and missile spells) directed towards Balthasar and or his mount. The robe has no effect against close combat attacks and spells that are not magic missiles.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="fff7-11ac-e271-1b0f" name="Staff of Volans" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -3032,6 +3203,10 @@ Still, Luthor would never join units of warriors who are not devout to Sigmar, s
 Only then is the total score and its effects worked out. Including Miscasts and Irresistible Force. This is especially useful because the Staff will make Miscasts and failed Dispels rarer (you need to roll at least three 1s) and will make spells cast with Irresistible Force more common (if you roll a 5 and a 6. you can transform the 5 into a 6).</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="8184-59ac-60f2-dd4b" name="Amulet of Sea Gold" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -3043,6 +3218,10 @@ Only then is the total score and its effects worked out. Including Miscasts and 
               <description>The amulet adds one dice to any attempt to dispel an enemy spell targeted at the wearer and/or his mount or otherwise affecting them.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -3064,6 +3243,7 @@ Only then is the total score and its effects worked out. Including Miscasts and 
       </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="450.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="1c0e-02ec-3e44-ac33" name="Hosts of Men" hidden="false" collective="false" import="true" type="upgrade">
@@ -3076,11 +3256,36 @@ Only then is the total score and its effects worked out. Including Miscasts and 
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d48-62d0-92d2-dc69" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="e551-c238-2583-53ac" name="Sigmarite Army" hidden="false" collective="false" import="true" type="upgrade"/>
-            <selectionEntry id="f928-7dcf-c911-3210" name="The Artillery Train of Nuln" hidden="false" collective="false" import="true" type="upgrade"/>
-            <selectionEntry id="a3b2-3d62-07be-b454" name="Marienburger Mercenary Army" hidden="false" collective="false" import="true" type="upgrade"/>
-            <selectionEntry id="8e37-4029-e429-208a" name="The Cult of Ulric" hidden="false" collective="false" import="true" type="upgrade"/>
-            <selectionEntry id="5e8a-c4db-d78d-07d4" name="Crusader Army (Knights of the White Wolf)" hidden="false" collective="false" import="true" type="upgrade"/>
+            <selectionEntry id="e551-c238-2583-53ac" name="Sigmarite Army" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f928-7dcf-c911-3210" name="The Artillery Train of Nuln" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a3b2-3d62-07be-b454" name="Marienburger Mercenary Army" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8e37-4029-e429-208a" name="The Cult of Ulric" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5e8a-c4db-d78d-07d4" name="Crusader Army (Knights of the White Wolf)" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
             <selectionEntry id="04a4-f65b-23e0-5227" name="The Emperor&apos;s Guard" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
@@ -3089,11 +3294,602 @@ Only then is the total score and its effects worked out. Including Miscasts and 
                   </conditions>
                 </modifier>
               </modifiers>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
             </selectionEntry>
-            <selectionEntry id="09b9-a93e-d500-281f" name="Crusader Army" hidden="false" collective="false" import="true" type="upgrade"/>
+            <selectionEntry id="09b9-a93e-d500-281f" name="Crusader Army" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6c73-ad04-be48-3098" name="Steam Tank" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="increment" field="9eb5-1891-06a6-a5e0" value="1.0">
+          <repeats>
+            <repeat field="limit::eaa7-6800-e651-8bea" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="model" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9eb5-1891-06a6-a5e0" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="287d-c353-2247-b623" name="Steam Tank" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">-</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">1</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">4</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">6</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">-</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">-</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">0</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">0</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">10</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="f2bb-2eae-5ff8-a911" name="Trainee Engineer" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">4</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="5b1b-57a3-26bf-19b8" name="Unit Strength 10" hidden="false"/>
+      </rules>
+      <infoGroups>
+        <infoGroup id="24ef-564b-cac1-e92b" name="Steam Tank" hidden="false">
+          <rules>
+            <rule id="550e-2077-3f1e-352e" name="Steam Points" hidden="false">
+              <description>At the start of each of his turns, before doing anything else, the controlling player must declare how many Steam Points (SP) his Steam Tank is trying to build up (ie, how much pressure he&apos;s going to create in the boiler). You can declare anything between 0 and 5 SP.
+
+Roll a dice for each Steam Point you are building up and total up the results of the dice rolled. If the total is equal to or less than the Steam Tank&apos;s current Hull Points, all is fine and you generate the SP you wanted. If you roll above the current Hull Points, the SP are generated but something has gone wrong and you have to roll a dice on the Malfunction chart and apply the result immediately.
+
+It is a good idea to place a dice on top or near the Tank to record how many SP it has available. As you use them throughout the turn, deduct the number of SP available by turning the dice so that it shows the SP remaining.
+
+Steam Points can be used during the Movement phase to move the Tank or during the Shooting phase to fire the Tank&apos;s gun (or guns!). All unused SP are lost at the end of the turn in which they are generated, so use them all if you can!
+
+Each action has a cost in Steam Points, as shown on the chart below:
+
+Action	SP
+Move forward (up to 3&quot;)	1
+Move backward (up to 2&quot;)	1
+Pivot on the spot (up to 90°)	1
+Grinding (once per turn)	1
+Fire hull weapon (once per turn)	2
+Fire turret weapon (once per turn)	1
+</description>
+            </rule>
+            <rule id="817b-182c-af94-da06" name="Shooting with the Steam Tank" hidden="false">
+              <description>Once per turn, the Steam Tank can fire its hull-mounted weapon against targets in its 45° frontal arc (see diagram 1). This costs 2 SP and can be done even if the Tank has moved, as long as there are enough SP left.
+
+Rotate the turret so that its gun is pointing towards the intended target. This is important if you are firing a gun that makes use of the Flame template, because it will determine the point where the template is positioned. If the turret is glued in place, just measure the distance of the barrel away from the turret in the intended direction and place the template there (basically, imagine that the turret has turned towards the target). The Steam Tank can fire both guns in the same turn, as long as there are enough SP left.
+
+The Steam Tank can fire its hull- mounted gun and turret gun even when engaged in close combat. It can even fire them against the units engaged in combat with the Tank, provided that there are no chances of hitting friendly models, or enemy models that are in base contact with friendly models other than the Tank.
+
+Remember that the Tank is a large target, so it can see over enemy troops and target enemies far away even when it is engaged in close combat.
+
+If the Steam Tank is not engaged in close combat, the Tank commander can pop up from his hatch and fire his repeater pistol at the enemy (he has a 360° arc of sight and can see over intervening troops). When the Tank is in close combat the commander will not risk coming out and therefore cannot shoot, but he is allowed to stand &amp; shoot with his pistol when charged. This is the only kind of charge reaction allowed to the Steam Tank other than holding its ground.</description>
+            </rule>
+            <rule id="f4f2-1043-f3ac-8290" name="Charging with the Steam Tank" hidden="false">
+              <description>The Steam Tank commander can see all around and over friendly troops, so he can declare a charge against any enemy unit in sight within a 360° arc at the beginning of its move. A charge is a move towards the intended target, and the Tank must charge the side of the enemy it mostly starts the charge in (see the normal rules for charges on page 46 of the Warhammer rulebook). The Tank can charge by pivoting on the spot or even by reversing into an enemy unit if needed. Before moving towards its intended target, the Tank can pivot on the spot to line up with the target and can even move backward before surging forward for the charge to gain more momentum and deal more damage (see diagrams 2a, b and c).
+
+Eg, the Tank charges a unit 2&quot; away on its left flank. It spends one SP to turn towards it, one SP to move backwards and then two SPs to charge 4&quot; forward.
+
+The Tank causes D3 impact hits (in the same way as for a chariot), plus D3 for each full 3&quot; moved straight towards its intended target during its charge move.
+
+The Steam Tank can freely move out of close combat. It can do this in order to charge another unit or even the very same unit it was engaged with (a classic being spending 3 SP to move backwards 6&quot; and then charging 6&quot; forwards with the 2 remaining SP!).
+
+A Steam Tank already engaged in combat from a previous turn can also declare that its only movement in that turn will be to make a Grind action against one of the units it&apos;s in contact with. This costs one Steam Point. The Tank is not moved but the nominated enemy unit suffers D3 impact hits as normal. This simulates the Tank moving around inside the unit, squashing enemies as it does so. Note you can only spend 1 Steam Point to Grind and that you cannot execute any other movement in the turn you Grind. Other Steam Points can be spent normally in that turn&apos;s Shooting phase
+
+Enemies who are lapping round a Steam Tank that moves out of combat or Grinds any unit are immediately moved back into their ranks. If the Tank has declared a charge and then fails to reach its intended target, it must still move its entire movement towards the intended target. Its movement is not halved.
+
+Normally a charging unit is aligned to the charged enemy after it has made contact, however the Steam Tank does not line up to the unit it has charged (see Diagrams 3a, b and c).
+
+Units of skirmishers and characters with a Unit Strength of 1 or 2 cannot be charged by the Steam Tank, as they simply step out of the way of such a lumbering machine. If the Tank moves through one such unit/character, move the models aside the minimum distance necessary to let the Tank through. A unit of skirmishers that is split in two parts as a result of this must go back in a legal formation in its next Movement phase.</description>
+            </rule>
+            <rule id="2596-d1e1-9cb8-a48c" name="Damaging the Steam Tank" hidden="false">
+              <description>A Steam Tank starts the game with a number of Hull Points. When its Hull points are brought down to 0, the Tank has been knocked out and counts as a casualty. The model is removed from the table and the enemy scores an amount of Victory points equal to its full points value. If, at the end of the game, the Tank has less than half of its Original Hull Points, the enemy scores an amount of Victory points equal to half of its points value.</description>
+            </rule>
+            <rule id="f0ba-0bdf-4b41-c575" name="Shooting at the Steam Tank" hidden="false">
+              <description>When shooting at the Tank, roll to hit normally (the Steam Tank is a Large Target), then determine if you have hit a &apos;Soft&apos; part (the boiler, an open hatch...) or a &apos;Hard&apos; part (armour plating).
+
+To do this, roll a dice for each hit on the following table:
+Location		Hard Hit		Soft Hit
+Front		1-5			6
+Side			1-4			5-6
+Rear		1-2			3-6
+
+Note: The top of the Steam Tank is considerably less armoured, so all attacks, including magical attacks, that hit from above will automatically hit Soft. If the central hole of a template weapon is entirely on the Tank it will also automatically hit Soft. Otherwise, they will cause a normal hit that has to be rolled on the Location table. The direction of the hit is the facing closest to the centre of the template. Determine the damage (ie, Hull Points loss) caused by the hit by adding the following set of factors:
+The score of a D6.
+The Strength of the hit.
+The result of the dice for any multiple wounds it causes (if the attack does not cause multiple wounds, nothing is added).
+
+If you have hit Soft, subtract 8 from the total you obtained.
+If you have hit Hard, subtract 10 from the total you obtained.
+
+That is:
+
+Soft hit damage = D6 + S + * - 8
+
+Hard hit damage = D6 + S + * - 10
+
+Eg: An arrow shot by a bow hits Soft. It will cause D6 + 3 + 0 - 8 points of damage (the O is because the arrow does not cause multiple wounds). You will need to roll a 6 to score a single point of damage on the Tank.
+
+A cannon ball shot by a Great Cannon hits Hard and causes D6 + 10 + D6 - 10 points of damage. It can cause from 2 to 12 points of damage on the Tank. Note that Steam Tanks are immune to the effects of poison, so treat poisoned attacks as normal attacks.</description>
+            </rule>
+            <rule id="a7b0-326d-31a2-32d9" name="Special Attacks against the Steam Tank" hidden="false">
+              <description>Attacks that hit automatically must still roll to determine if they hit Soft or Hard. Hits that wound automatically must still roll to damage the Tank as normal using the Strength of the creature delivering the hits.
+
+For example, let&apos;s consider the Thump with Club attack of a Giant. The attack hits automatically (the Tank failing its Initiative test automatically), but the Giant still has to roll to see if it hits Soft or Hard. Let&apos;s imagine it hits Soft. The Giant&apos;s club will therefore cause: D6 + 6 (his Strength) + 2D6 (the multiple wounds it causes) - 8 points of structural damage against the Tank An &apos;Eadbutt attack (one automatic wound) hitting Hard on the other hand would cause D6 + 6 - 10 points of structural damage. No secondary effects, such as the &apos;Eadbutt&apos;s stunning, apply against the Tank.</description>
+            </rule>
+            <rule id="f273-e3c2-1a3c-ae2a" name="Magic against the Steam Tank" hidden="false">
+              <description>The Steam Tank&apos;s huge metal mass is enough to scramble and block most magical energies. However, less subtle spells, those that deal physical attacks to their target, have a chance of inflicting damage to it.
+
+No spells or magic items which attack or otherwise target the Steam Tank, friend&apos;s or enemy&apos;s, have any effect against it, except those that cause hits with a known Strength (all magic missiles and a few others such as the Comet of Casandora). These spells are treated as normal shooting, with the ones hitting from above automatically hitting Soft. Spells that deliver a hit with a known Strength and have a secondary effect as well (such as the Pit of Shades) work partially on the Tank. Apply only the hits caused and disregard the secondary effects.</description>
+            </rule>
+            <rule id="1771-18cf-4cea-00fb" name="Close Combat against the Steam Tank" hidden="false">
+              <description>In close combat, enemies have the chance to concentrate their attacks on vulnerable parts of the Tank. The Steam Tank is considered to have a Weapon Skill of 1. All enemy models that are in base contact with the Steam Tank, or would be in contact by projecting their bases forward as shown on Diagram 5, can roll to hit against the Tank as normal. Remember to deduct the attacks of the models that have been killed by its impact hits if the Tank has charged in. If the enemies roll a hit, they hit Soft. If they miss, they hit Hard instead. Work out the damage they cause as per shooting hits.
+
+Combat resolution is worked out as normal, counting each point of damage caused on the Steam Tank as a wound.
+
+If the Tank loses the combat, enemies can lap around it as normal. Steam Tanks cannot make pursue moves, nor can they capture banners.</description>
+            </rule>
+            <rule id="dd64-9ada-97a9-591d" name="Characteristic Tests and the Steam Tank" hidden="false">
+              <description>The Steam Tank automatically passes all characteristic tests it has to take, with the exception of Initiative tests, which it always fails (not being too good at dodging).</description>
+            </rule>
+            <rule id="1a0a-dc33-0937-59ba" name="Impact Hits against the Steam Tank" hidden="false">
+              <description>Impact hits against the Steam Tank are randomised using the Shooting chart. Models causing impact hits against the Steam Tank suffer D6 S6 hits themselves.</description>
+            </rule>
+            <rule id="b510-b605-34f0-38ec" name="Night Goblin Fanatics against the Steam Tank" hidden="false">
+              <description>The Steam Tank does not stop moving when Fanatics are released. Move the Fanatics and then finish the Tank&apos;s movement as normal. If the Fanatics and the Tank come into contact, resolve the hits against the Tank as per shooting hits and then remove the Fanatic (squash!).</description>
+            </rule>
+            <rule id="1611-c490-b417-441a" name="Steam Tank Malfunction Chart" hidden="false">
+              <description>Dice Roll		Damage			Steam Points
+6			None			+1
+4-5			-D6 HP			-1
+2-3			-2D6 HP			-2
+1			-4D6 HP			-4</description>
+            </rule>
+          </rules>
+        </infoGroup>
+      </infoGroups>
+      <infoLinks>
+        <infoLink id="22ab-610e-6183-7ab2" name="Terror" hidden="false" targetId="3767-0d81-4db9-cda7" type="rule"/>
+        <infoLink id="f3cf-f535-36f9-cc8a" name="Large Target" hidden="false" targetId="01c3-c8c6-431f-1c2b" type="rule"/>
+        <infoLink id="9afd-ac1d-e330-0f4d" name="Unbreakable" hidden="false" targetId="f6c9-ac44-1d7c-ed6e" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="5eb8-7479-7205-a6b5" name="New CategoryLink" hidden="false" targetId="a3af-995e-0cf1-7091" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="6046-8df2-8766-563f" name="Hull Upgrade" hidden="false" collective="false" import="true" defaultSelectionEntryId="5b65-e643-7d44-c838">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b58b-be91-6028-51ef" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc08-9325-a705-59fa" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="134d-a704-2cb5-6991" name="Volley Gun" hidden="false" collective="false" import="true" type="upgrade">
+              <rules>
+                <rule id="6cd4-86d7-6baf-9ded" name="Volley Gun" hidden="false">
+                  <description>This works as a normal volley gun (see page 15 of the Empire book), with the following exceptions.
+
+Hits from the gun are:
+Strength 3, -1 save at long range;
+Strength 4, -2 save at short range.
+
+If you roll a Misfire on any Artillery dice, roll a dice on the Helblaster Misfire chart and one dice on the Steam Tank Malfunction chart. Apply all results immediately. Note that if you get a &apos;Destroyed!&apos; result on the Helblaster chart, it applies only to the gun itself, not to the entire Tank.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="-2.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5b65-e643-7d44-c838" name="Main Cannon" hidden="false" collective="false" import="true" type="upgrade">
+              <rules>
+                <rule id="bd39-233b-9863-ec0e" name="Main Cannon" hidden="false">
+                  <description>This works as a normal cannon, with the following exceptions:
+
+Range	Strength	Damage	Saves
+16&quot;	8	D3	no saves
+If you roll a Misfire on the first Artillery dice, the cannon does not fire and you must roll on the Steam Tank Malfunction chart. Apply any result immediately. In addition to the effects listed, if you roll a 1 on the chart the cannon is destroyed, and if you roll a 2-3 on the chart, the cannon cannot shoot in the following turn.
+
+The Steam Tank&apos;s main guns cannot fire grapeshot, but any enemy unit in base contact with the front of the steam Tank when the main cannon is fired (ie, standing in front of the muzzle!) suffers D6 Strength 3 hits with a -3 Armour save modifier from the overheated steam released.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="-2.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6443-e3e1-948c-632c" name="Mortar &amp; Swivel Guns" hidden="false" collective="false" import="true" type="upgrade">
+              <rules>
+                <rule id="23fe-fe3d-5785-f7f3" name="Mortar" hidden="false">
+                  <description>This works as a normal mortar (see page 13 of the Empire book), except that the Steam Tank&apos;s mortar has a range of 6&quot;-24&quot;.
+
+If you roll a Misfire on the Artillery dice, the mortar does not fire and you must roll on the Steam Tank Malfunction chart. Apply all results immediately. In addition to the effects listed, if you roll a 1 on the chart the mortar is destroyed and if you roll a 2-3 on the chart the mortar cannot shoot in the following turn.
+
+In addition, the Tank is equipped with two swivel guns. When the Tank is not engaged in close combat, the crew can decide not to fire the mortar and fire the two swivel guns instead (this does not cost any Steam Points). Treat the guns as handguns with a Strength of 6 that always count as stationary, even if the Tank has moved. They can be fired at targets in the Tank&apos;s flank and front arcs. Remember that the crew has a Ballistic Skill of 4.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="-50.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="-10.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3a4e-3470-a4ce-2068" name="(None)" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="aa5b-a496-041c-9856" name="Turret Upgrade" hidden="false" collective="false" import="true" defaultSelectionEntryId="2f9a-064f-1674-a890">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5095-8032-18d2-e536" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d815-baf9-818f-3ece" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="2f9a-064f-1674-a890" name="Steam Gun" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="d791-6145-95bf-be0b" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6443-e3e1-948c-632c" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d791-6145-95bf-be0b" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="8673-03d4-28ca-e788" name="Steam Gun" hidden="false">
+                  <description>This gun releases a cloud of steam on the enemy, searing flesh and boiling warriors alive in their suits of armour. The steam gun uses the Flame template and has the following profile:
+
+Range	Strength	Damage	Saves
+Template	3	1	-3
+</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="-2.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8f2a-279b-d91c-4fd9" name="Fighting Platform" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="f289-eed8-839f-7c9f" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6443-e3e1-948c-632c" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f289-eed8-839f-7c9f" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="9d4c-c18f-de90-2ecf" name="Engineer&apos;s Fighting Platform" hidden="false">
+                  <description>Engineers are equipped with a series of different experimental weapons:
+
+A Hochland long rifle (see page 19 of the Empire book).
+
+A repeater handgun (see page 19 of the Empire book)
+
+A blunderbuss (move-or-fire, Flame template, S3, armour piercing).
+
+A hook halberd (requires two hands, +1 Strength, +2 Strength against cavalry models).
+
+A man-catcher (requires two hands, confers the Killing Blow ability to the wielder).
+
+A ball and chain (requires two hands, +3 Strength on the first turn of any combat).
+
+The Engineers ride in the Steam Tank in the same way as a character would ride in a chariot. Follow the rules on page 127 for Characters in Chariots, summarised below:
+
+The Engineers have a +2 bonus to their Armour save, giving them a 4+ Armour save.
+
+When shooting at the Tank, roll a dice for each successful hit: a 6 hits the Engineers, otherwise continue with the normal procedure for a hit against the Steam Tank.
+
+In close combat the enemy can choose to attack either the Engineers or the Tank.
+
+The Engineers can fight normally against enemies in base contact with the Tank&apos;s front and flanks, but they cannot fight against enemies at the Tank&apos;s rear. Engineers armed with missile weapons must use their hand weapons when in base contact with the enemy, they cannot shoot in close combat. As long as the Steam Tank is operative, they count as Unbreakable, but if the Tank is destroyed, they scatter and flee (remove them). They always count as stationary and can therefore fire move-or-fire weapons even if the Tank has moved. Every time an Engineer is killed, the Empire player decides which one to remove as a casualty.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="120.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b1c1-1a4a-3bc4-2d05" name="(None)" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="250.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="29.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="99ae-40ac-02ca-ec85" name="Valten, Exalted of Sigmar" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="model" type="lessThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="9cd2-c591-ee79-7003" name="Valten, Exalted of Sigmar" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">7</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">5</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">5</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">4</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">9</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="4048-2040-a6fa-992b" name="Against the Odds" hidden="false">
+          <description>Enemy units can never gain the combat resolution bonus points for flank or rear attacks, or for outnumbering, in a combat involving Valten. In addition, Valten and any unit he leads is Immune to Psychology. The only exception is that they always count as being stubborn.</description>
+        </rule>
+        <rule id="0693-9fc5-a17d-058b" name="Awesome Presence" hidden="false">
+          <description>Wounds inflicted by Valten in close combat are counted towards the Empire combat resolution score of any combat within 12&quot; of him, not just the one he is taking part in.
+
+When wielding Ghal Maraz, the number of wounds passed on to other combats within 12&quot; is the number inflicted before multiplying the effects of the hammer. The total number of wounds caused still count for the combat Valten is fighting in. For example, Valten is fighting a unit of Minotaurs. He inflicts 3 wounds, which cause 2, 3 and 3 wounds respectively. For his combat, he adds 8 to the Combat Resolution total. For other combats within 12&quot; he only adds 3 to the Combat Resolution total.
+
+Valten may not be your army General unless he has the highest Leadership value in the army; if there are characters in the army with the same Leadership as Valten, one of those characters will always be the General instead. Even if Valten is the General, units within 12&quot; of him may not use his Leadership as they would normally be able to - the Awesome Presence rule replaces this.</description>
+        </rule>
+        <rule id="d823-69a4-8baf-7fda" name="Iron Resolve" hidden="false">
+          <description>Valten has a 5+ Ward save.
+
+In addition, if Valten is killed, take a Leadership test for him at the end of that phase. If he passes, his astounding strength of will allows him to ignore the wound and continue fighting. He remains alive on 1 Wound, and the wounds that killed him are discounted.
+
+Note that the effects of combat resolution, panic and so on are worked out after determining whether Valten recovers. This rule does not apply if he is fleeing and is run down by chargers or pursuers, or hit with a Killing Blow.</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="22c6-54cb-86e1-e9b3" name="New CategoryLink" hidden="false" targetId="623e-5f3d-d939-9b51" primary="true"/>
+        <categoryLink id="2073-7780-c923-8e23" name="Special Character" hidden="false" targetId="b91d-d3b1-8b46-6d52" primary="false"/>
+        <categoryLink id="85c7-ecf9-6f3d-eaf2" name="Additional Lord Choice" hidden="false" targetId="0daf-8d53-eadf-d10f" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="acf4-c665-c423-ba9b" name="Armour of the Heldenhammer" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a99-964b-c053-0c3e" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1007-2f5a-dfdd-1bbd" type="min"/>
+          </constraints>
+          <rules>
+            <rule id="7690-4e82-0cf2-f9ba" name="Armour of the Heldenhammer" hidden="false">
+              <description>The Armour of the Heldenhammer provides a 2 + Armour saving throw, and Magic Resistance (2). No model in base contact may cast spells (including friendly models) or use Bound Items.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d2af-9385-8a37-074b" name="Ghal Maraz" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="238a-9039-0a30-8c78" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ffe1-6cf9-2d57-e69c" type="min"/>
+          </constraints>
+          <rules>
+            <rule id="a83d-2c5e-48ef-5527" name="Ghal Maraz" hidden="false">
+              <description>The Hammer of Sigmar grants its wielder + 2 Attacks. Any hits wound automatically and no Armour saves are allowed. Each unsaved wound becomes D3 wounds.
+
+Note: During the events known as the Storm of Chaos, Ghal Maraz is wielded by the Exalted of Sigmar; Valten. If Valten is in the same army as Karl Franz, the Emperor must be armed with his Runefang.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="5875-9d97-4496-1c66" name="Athandin" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4863-df4f-55fe-9e49" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6113-c827-de3d-7de9" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="5530-78fa-9e27-350d" name="Athandin" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">9</characteristic>
+                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+                <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+                <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+                <characteristic name="I" typeId="b418-0e30-644f-1435">5</characteristic>
+                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">2</characteristic>
+                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="b2e2-9afd-24d7-2bfd" name="Athandin" hidden="false">
+              <description>In battle, Althandin counts as a monster and his profile is given above. Althandin wears ithilmar barding, giving him an Armour saving throw of 5+ with no reduction in Movement.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="8bf7-ea68-9d16-a16c" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="510.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0b46-be2c-f32a-b8d0" name="Emperor Karl Franz" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="ae6a-17d2-c5a9-23a9" name="Karl Franz" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">5</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">5</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">5</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">3</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">10</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="c01e-e30d-6f67-8f51" name="Leader of Men" hidden="false">
+          <description>The presence and unflinching courage of the Emperor greatly raise the morale of his soldiers, inspiring the humblest of fighters to mighty acts of heroism. The Emperor is Immune to Panic.
+
+All friendly units within 18&quot; of the Emperor can always use his Leadership instead of their own (this replaces his normal General ability of passing on his Leadership within 12&quot;). In addition, all units using Karl Franz&apos;s Leadership can re-roll failed Psychology tests (remember that Break tests are not Psychology tests).</description>
+        </rule>
+        <rule id="d01a-d5b6-aaef-1f5a" name="The Reiksguard" hidden="false">
+          <description>Karl Franz is protected by the knights of the Reiksguard and he commands the entire order. To represent this, up to half the Knightly Orders units in Karl Franz&apos;s army may be upgraded to Inner Circle, and Greatswords may be taken as a Core choice to represent Reiksguard Knights on foot.</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="bf82-8ea2-d89e-0872" name="Heroes" hidden="false" targetId="5694-61f3-6913-6154" primary="false"/>
+        <categoryLink id="1788-ca7b-62aa-531a" name="New CategoryLink" hidden="false" targetId="623e-5f3d-d939-9b51" primary="true"/>
+        <categoryLink id="e67b-5aa6-fdb9-e91f" name="Special Character" hidden="false" targetId="b91d-d3b1-8b46-6d52" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="fb16-13ab-6822-51cb" name="Full Plate Armour" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ddf3-d0e5-8419-9228" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6290-ea48-c673-86a1" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="75c5-575d-f6ee-a1c4" name="Deathclaw" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5976-6cf6-9885-db62" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6051-ae43-736e-9834" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="074b-bccc-67c3-08aa" name="Deathclaw" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">6</characteristic>
+                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+                <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
+                <characteristic name="T" typeId="16d7-9f22-06d8-8427">5</characteristic>
+                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">4</characteristic>
+                <characteristic name="I" typeId="b418-0e30-644f-1435">5</characteristic>
+                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">4</characteristic>
+                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">8</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="f05b-0f3d-9a5f-ece4" name="Deathclaw" hidden="false">
+              <description>So strong is the bond developed from many years of war and adventure between the Emperor and his beloved Griffon, that Deathclaw automatically passes the Leadership test he needs to take if Karl Franz falls. In addition, Deathclaw will hate the character/unit that kills Karl Franz.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="225.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c1b6-633c-2973-014f" name="Silver Seal" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="695c-4cef-15e2-72d6" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="383d-44c4-0808-fc01" type="min"/>
+          </constraints>
+          <rules>
+            <rule id="a241-fa42-737c-35a6" name="Silver Seal" hidden="false">
+              <description>Gives a 4+ Ward save and Magic Resistance (3) to the Emperor and his mount. In addition, enemies suffer a -1 penalty on their rolls to hit the Emperor and his mount, with both close combat and shooting attacks.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="afd3-fe7b-f6f2-88f3" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="b88c-159a-2e6e-b10f">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e7c-0e79-c64b-cebd" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc91-969d-23a2-70d1" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="6cdb-7c36-dbf2-0b97" name="Ghal Maraz" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="99ae-40ac-02ca-ec85" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <rules>
+                <rule id="4f30-4a9b-10a2-dc9f" name="Ghal Maraz" hidden="false">
+                  <description>The Hammer of Sigmar grants its wielder + 2 Attacks. Any hits wound automatically and no Armour saves are allowed. Each unsaved wound becomes D3 wounds.
+
+Note: During the events known as the Storm of Chaos, Ghal Maraz is wielded by the Exalted of Sigmar; Valten. If Valten is in the same army as Karl Franz, the Emperor must be armed with his Runefang.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="180.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b88c-159a-2e6e-b10f" name="Reikland Runefang" hidden="false" collective="false" import="true" type="upgrade">
+              <rules>
+                <rule id="97c9-ddc5-7ca0-82c6" name="Runefang" hidden="false">
+                  <description>All hits wound automatically. No armour saves allowed.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="100.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="b3af-663d-6f4a-5831" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="04a4-f65b-23e0-5227" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="440.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+      </costs>
     </selectionEntry>
   </selectionEntries>
   <rules>
@@ -3162,6 +3958,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </profiles>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="99a0-580c-b1be-b2fb" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
@@ -3174,11 +3971,13 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </modifiers>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="d277-52b6-5abf-69af" name="Spearmen (Detachment)" hidden="false" collective="false" import="true" type="unit">
@@ -3207,6 +4006,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </profiles>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="4d85-1cff-425e-36a8" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
@@ -3219,11 +4019,13 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </modifiers>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="cf82-a314-a988-b1b2" name="Swordsmen (Detachment)" hidden="false" collective="false" import="true" type="unit">
@@ -3252,11 +4054,13 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </profiles>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="7.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="665c-56a9-1f86-b76d" name="Handgunners (Detachment)" hidden="false" collective="false" import="true" type="unit">
@@ -3285,11 +4089,13 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </profiles>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="aebe-dda2-f8c9-1fc7" name="Free Companies (Detachment)" hidden="false" collective="false" import="true" type="unit">
@@ -3318,6 +4124,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </profiles>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="5.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="d2fa-2265-f228-166e" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
@@ -3330,11 +4137,13 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </modifiers>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="2bdd-ce0f-3d97-18ea" name="Archers (Detachment)" hidden="false" collective="false" import="true" type="unit">
@@ -3363,11 +4172,13 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </profiles>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="aecc-540a-16fc-6948" name="Crossbowmen (Detachment)" hidden="false" collective="false" import="true" type="unit">
@@ -3396,11 +4207,13 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </profiles>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="286b-5a20-afaf-b95d" name="Pegasus" hidden="false" collective="false" import="true" type="upgrade">
@@ -3427,6 +4240,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3334-a46c-987b-454d" name="Griffon" hidden="false" collective="false" import="true" type="upgrade">
@@ -3455,6 +4269,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="200.0"/>
+        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -3502,6 +4317,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="100.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="aad4-f3fa-9710-2518" name="The Mace of Helstrum" hidden="false" collective="false" import="true" type="upgrade">
@@ -3518,6 +4334,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="65.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="8f9f-00cc-d144-f5ad" name="Sword of Fate" hidden="false" collective="false" import="true" type="upgrade">
@@ -3534,6 +4351,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="a6c3-c305-43e2-44d7" name="Sword of Sigismund" hidden="false" collective="false" import="true" type="upgrade">
@@ -3550,6 +4368,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="c16e-103c-7c3a-1453" name="Sword of Righteous Steel" hidden="false" collective="false" import="true" type="upgrade">
@@ -3566,6 +4385,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="45.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="274f-c984-a82e-5dfb" name="Sword of Power" hidden="false" collective="false" import="true" type="upgrade">
@@ -3582,6 +4402,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="40.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="6b97-b757-cd5a-c636" name="Hammer of Judgement" hidden="false" collective="false" import="true" type="upgrade">
@@ -3598,6 +4419,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b4c9-0fd7-c5ac-f3f9" name="Dragon Bow" hidden="false" collective="false" import="true" type="upgrade">
@@ -3614,6 +4436,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="84d1-9a7d-4656-ee97" name="Sword of Justice" hidden="false" collective="false" import="true" type="upgrade">
@@ -3630,6 +4453,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="6f55-df9d-3033-eedf" name="Wyrmslayer Sword" hidden="false" collective="false" import="true" type="upgrade">
@@ -3646,6 +4470,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3675,6 +4500,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="60.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="c430-45bc-67a5-ee3a" name="Jade Amulet" hidden="false" collective="false" import="true" type="upgrade">
@@ -3691,6 +4517,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="2d35-dd8b-a308-f95c" name="Holy Relic" hidden="false" collective="false" import="true" type="upgrade">
@@ -3707,6 +4534,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="45.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="2ef5-dd56-0c74-0459" name="The White Cloak" hidden="false" collective="false" import="true" type="upgrade">
@@ -3723,6 +4551,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="fd1d-9084-0bbb-a372" name="Sigil of Sigmar" hidden="false" collective="false" import="true" type="upgrade">
@@ -3739,6 +4568,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="91f8-d619-025c-9ac8" name="The Crimson Amulet" hidden="false" collective="false" import="true" type="upgrade">
@@ -3755,6 +4585,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3799,6 +4630,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0879-fbb0-9497-096a" name="Shield of the Gorgon" hidden="false" collective="false" import="true" type="upgrade">
@@ -3829,6 +4661,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="93ee-3007-055f-e071" name="Armour of Meteoric Iron" hidden="false" collective="false" import="true" type="upgrade">
@@ -3852,6 +4685,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="20f4-8f3e-6263-f945" name="Armour of Tarnus" hidden="false" collective="false" import="true" type="upgrade">
@@ -3868,6 +4702,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="ddf8-7dc9-3892-4e53" name="Dawn Armour" hidden="false" collective="false" import="true" type="upgrade">
@@ -3891,6 +4726,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="40.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="322d-579b-93fb-c182" name="Helm of the Skavenslayer" hidden="false" collective="false" import="true" type="upgrade">
@@ -3911,6 +4747,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </rules>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e4d3-85d8-c3d4-488e" name="The Gilded Armour" hidden="false" collective="false" import="true" type="upgrade">
@@ -3934,6 +4771,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -3986,6 +4824,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="b2b8-b242-3497-45d2" name="Grey Wand" hidden="false" collective="false" import="true" type="upgrade">
@@ -4003,6 +4842,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="7728-4840-aa13-d7a0" name="Luckstone" hidden="false" collective="false" import="true" type="upgrade">
@@ -4020,6 +4860,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="98e5-f6b1-a08d-b6de" name="Rod of Power" hidden="false" collective="false" import="true" type="upgrade">
@@ -4037,6 +4878,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="45.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="9772-6fe7-27e6-ced3" name="Seal of Destruction" hidden="false" collective="false" import="true" type="upgrade">
@@ -4054,6 +4896,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="f49f-131f-6a75-f518" name="Wizard&apos;s Staff" hidden="false" collective="false" import="true" type="upgrade">
@@ -4071,6 +4914,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="15.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -4121,6 +4965,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="70.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e564-637b-26dd-6370" name="Rod of Command" hidden="false" collective="false" import="true" type="upgrade">
@@ -4137,6 +4982,7 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="8ef9-1e1c-5449-61f0" name="The Silver Horn" hidden="false" collective="false" import="true" type="upgrade">
@@ -4155,6 +5001,7 @@ All friendly units that are fleeing anywhere on the battlefield will rally immed
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="45.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0dea-385e-b8d4-b48f" name="The Orb Of Thunder" hidden="false" collective="false" import="true" type="upgrade">
@@ -4173,6 +5020,7 @@ When the Orb of Thunder spell is in play, no flying creatures on the battlefield
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="40.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b5d3-807b-53ca-79ca" name="Aldred&apos;s Casket of Sorcery" hidden="false" collective="false" import="true" type="upgrade">
@@ -4191,6 +5039,7 @@ The bearer can cast the captured spell in his own Magic phase by releasing it fr
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="20f9-92db-3bad-6811" name="Icon of Magnus" hidden="false" collective="false" import="true" type="upgrade">
@@ -4207,6 +5056,7 @@ The bearer can cast the captured spell in his own Magic phase by releasing it fr
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="1ef4-0526-2e9e-ec6c" name="Ring of Volans" hidden="false" collective="false" import="true" type="upgrade">
@@ -4223,6 +5073,7 @@ The bearer can cast the captured spell in his own Magic phase by releasing it fr
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="0086-2c9e-6be2-3a3e" name="Doomfire Ring" hidden="false" collective="false" import="true" type="upgrade">
@@ -4241,6 +5092,7 @@ A flaming magic missile spurts from the Ring in a straight line up to 18” long
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="a1f1-6961-4252-79ba" name="Van Horstmann&apos;s Speculum" hidden="false" collective="false" import="true" type="upgrade">
@@ -4257,6 +5109,7 @@ A flaming magic missile spurts from the Ring in a straight line up to 18” long
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -4280,6 +5133,7 @@ A flaming magic missile spurts from the Ring in a straight line up to 18” long
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="100.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="f4d1-5488-1b07-9c0f" name="Banner of Sigismund" hidden="false" collective="false" import="true" type="upgrade">
@@ -4296,6 +5150,7 @@ A flaming magic missile spurts from the Ring in a straight line up to 18” long
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="60.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="5908-c52b-930f-20ce" name="Banner of Ulric" hidden="false" collective="false" import="true" type="upgrade">
@@ -4314,6 +5169,7 @@ If a unit wishes to charge Knights carrying this banner, it must take a Leadersh
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="73de-da3a-d67e-7de1" name="Griffon Standard" hidden="false" collective="false" import="true" type="upgrade">
@@ -4332,6 +5188,7 @@ The unit carrying the Griffon Standard will never pursue a fleeing enemy but wil
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="f0aa-8a15-e02e-140a" name="Banner of Valour" hidden="false" collective="false" import="true" type="upgrade">
@@ -4348,6 +5205,7 @@ The unit carrying the Griffon Standard will never pursue a fleeing enemy but wil
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="40.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="ce8a-1733-9dc4-eb41" name="Standard of Arcane Warding" hidden="false" collective="false" import="true" type="upgrade">
@@ -4364,6 +5222,7 @@ The unit carrying the Griffon Standard will never pursue a fleeing enemy but wil
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="40.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="7e1a-197d-f696-2ddb" name="Steel Standard" hidden="false" collective="false" import="true" type="upgrade">
@@ -4380,6 +5239,7 @@ The unit carrying the Griffon Standard will never pursue a fleeing enemy but wil
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="e246-fddd-2684-dc29" name="Banner of Duty" hidden="false" collective="false" import="true" type="upgrade">
@@ -4396,6 +5256,7 @@ The unit carrying the Griffon Standard will never pursue a fleeing enemy but wil
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
+            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
