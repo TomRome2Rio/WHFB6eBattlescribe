@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="05b9-5022-67cd-4fd3" name="Bretonnians" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="13" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="05b9-5022-67cd-4fd3" name="Bretonnians" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="ff93-67ff-9b17-d51d" name="Grail Vow" hidden="false">
       <rules>
@@ -27,7 +27,7 @@ Characters with the Questing Vow cannot use a mundane or magical lance.</descrip
         </rule>
       </rules>
     </categoryEntry>
-    <categoryEntry id="a2c2-bcd9-405d-eed7" name="Knights" hidden="false"/>
+    <categoryEntry id="a2c2-bcd9-405d-eed7" name="Knights" hidden="true"/>
     <categoryEntry id="2a2e-dec8-0103-dddd" name="Virtue of Audacity" hidden="true"/>
     <categoryEntry id="9081-37c4-141d-49d5" name="Virtue of the Ideal" hidden="true"/>
     <categoryEntry id="f63e-3392-d3de-e61b" name="Virtue of Knightly Temper" hidden="true"/>
@@ -40,7 +40,7 @@ Characters with the Questing Vow cannot use a mundane or magical lance.</descrip
     <categoryEntry id="bfbc-5bc3-2b40-014c" name="Virtue of the Joust" hidden="true"/>
     <categoryEntry id="6f6b-4fd9-6302-4d00" name="Virtue of Noble Disdain" hidden="true"/>
     <categoryEntry id="81e6-0a1a-58ed-060b" name="Virtue of Discipline" hidden="true"/>
-    <categoryEntry id="6425-ed2c-c2a2-1de5" name="Virtue of Confidence" hidden="true"/>
+    <categoryEntry id="6425-ed2c-c2a2-1de5" name="Virtue of Confidence" hidden="false"/>
     <categoryEntry id="0dae-bfd2-f3f8-2e3a" name="Virtue of Purity" hidden="true"/>
     <categoryEntry id="3028-8738-97e3-72b3" name="Pegasus General" hidden="true"/>
   </categoryEntries>
@@ -1012,7 +1012,7 @@ Characters with the Questing Vow cannot use a mundane or magical lance.</descrip
       <modifiers>
         <modifier type="set" field="2523-bb71-3b87-0db6" value="-1.0">
           <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3028-8738-97e3-72b3" type="equalTo"/>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="3028-8738-97e3-72b3" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>

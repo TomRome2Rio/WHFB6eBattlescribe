@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d9da-11c6-1a8c-4472" name="Lizardmen" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="9" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d9da-11c6-1a8c-4472" name="Lizardmen" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>WIP Lizardmen. TODO: Add unit profiles &amp; item descriptions</readme>
   <categoryEntries>
     <categoryEntry id="361c-7d6f-fc45-5312" name="Skink" hidden="false"/>
@@ -141,7 +141,15 @@ If the Slann is slain, the opponent gains an additional 200 victory points.</des
             <constraint field="eaa7-6800-e651-8bea" scope="parent" value="100.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="9521-0d3b-c6bc-eb9d" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink id="9aee-cb0c-dca6-ee58" name="Battle Standard Bearer" hidden="false" collective="false" import="true" targetId="eca1-46d6-8778-847f" type="selectionEntry"/>
+        <entryLink id="9aee-cb0c-dca6-ee58" name="Battle Standard Bearer" hidden="false" collective="false" import="true" targetId="eca1-46d6-8778-847f" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cf7b-798c-9b94-df74" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
         <entryLink id="cd90-e71c-6d06-e0d1" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry"/>
         <entryLink id="a595-c096-9f48-5b6f" name="Magic Banners" hidden="true" collective="false" import="true" targetId="3bb4-18fb-e523-2a43" type="selectionEntryGroup">
           <modifiers>
@@ -649,13 +657,12 @@ If the Slann is slain, the opponent gains an additional 200 victory points.</des
             <entryLink id="846c-224a-4ae2-231c" name="Blessed Mark of the Old Ones" hidden="false" collective="false" import="true" targetId="84af-0ea6-fc9e-39dc" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="fe79-c4e0-7460-7728" name="Lore of Magic" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="fe79-c4e0-7460-7728" name="Lore of Magic" hidden="false" collective="false" import="true" defaultSelectionEntryId="73ff-e5b9-0bf1-1f9e">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="326d-189e-74b2-b941" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b183-f8f9-8790-01cc" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="dd5d-d4ff-3587-4bbf" name="Lore of Beasts" hidden="false" collective="false" import="true" targetId="afbd-2b69-4e54-2863" type="selectionEntry"/>
             <entryLink id="73ff-e5b9-0bf1-1f9e" name="Lore of Heavens" hidden="false" collective="false" import="true" targetId="22d4-14a2-c884-9120" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
