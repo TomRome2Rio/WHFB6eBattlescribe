@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7bb5-70b8-0122-944c" name="Wood Elves" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7bb5-70b8-0122-944c" name="Wood Elves" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="4f0e-c683-4011-68a9" name="Magic Bow" hidden="true"/>
     <categoryEntry id="3fee-c6b4-de1c-b33e" name="Magic Arrows" hidden="false"/>
     <categoryEntry id="4e5e-34a5-a6a4-3a71" name="Wood Elf" hidden="false"/>
     <categoryEntry id="0e69-01d6-06fc-1f34" name="Forest Spirit" hidden="false"/>
     <categoryEntry id="6a3b-4039-2a09-aa1c" name="Highborn General" hidden="true"/>
+    <categoryEntry id="79fe-9f48-0ec9-f9e2" name="Drycha General" hidden="true"/>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="6f97-17a2-0f2d-9db6" name="Wood Elf Highborn" hidden="false" collective="false" import="true" type="model">
@@ -655,21 +656,30 @@
       <entryLinks>
         <entryLink id="f51f-6248-9f02-0d9a" name="Spites of Athel Loren" hidden="false" collective="false" import="true" targetId="bfcf-2a85-0407-3d34" type="selectionEntryGroup"/>
         <entryLink id="b3f4-cf77-b897-0cdf" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry"/>
-        <entryLink id="696c-14f3-416b-6956" name="Lore of Magic" hidden="true" collective="false" import="true" targetId="13d1-704e-dcfc-01ad" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b8da-1603-10a9-e948" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="65.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6de6-e166-ef29-6057" name="Glade Guard" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="79fe-9f48-0ec9-f9e2" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="695e-26aa-a10e-f20a" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="4a3f-84d1-0495-6ecb"/>
+            <modifier type="remove" field="category" value="62d3-efc6-6c2c-634e"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <profiles>
         <profile id="48c4-be4f-e691-8319" name="Glade Guard" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
@@ -700,6 +710,9 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cb85-a773-3d95-99b6" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f1c-9d42-7cfa-de75" type="min"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="2fe1-ad0b-6ae6-ed7c" name="Glade Guard" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -770,6 +783,9 @@
           </constraints>
         </entryLink>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="134a-221c-fbef-fb57" name="Scouts" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -778,7 +794,23 @@
             <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6de6-e166-ef29-6057" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="79fe-9f48-0ec9-f9e2" type="equalTo"/>
+          </conditions>
+        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="695e-26aa-a10e-f20a" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="4a3f-84d1-0495-6ecb"/>
+            <modifier type="remove" field="category" value="62d3-efc6-6c2c-634e"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <constraints>
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ab74-f6e9-179f-dcbc" type="max"/>
       </constraints>
@@ -811,6 +843,9 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4b1-c2de-1b18-aec1" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="99cb-69f1-fe18-737e" type="min"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="ca7d-f48b-5e2f-2e85" name="Scouts" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -867,8 +902,18 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="a3b8-12e5-0bac-e82d" name="Glade Riders" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="79fe-9f48-0ec9-f9e2" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="3762-8c95-61d9-a64c" name="Glade Rider" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
@@ -898,6 +943,9 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab9d-a5fe-9973-b099" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f51-dcf6-f5cf-e04f" type="min"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="7b6c-9c2d-01fa-f353" name="Glade Riders" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -913,6 +961,9 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1eac-e516-48ae-0d76" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b52-de34-7ab1-4c34" type="min"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -960,8 +1011,18 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="740b-6b4a-821a-29e5" name="Eternal Guard" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="79fe-9f48-0ec9-f9e2" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <modifierGroups>
         <modifierGroup>
           <conditions>
@@ -1006,6 +1067,9 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1195-ff3c-15c5-44f6" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df89-fecb-3c69-8fb5" type="min"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="6a1b-693f-335f-c4f5" name="Eternal Guard" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -1076,6 +1140,9 @@
           </constraints>
         </entryLink>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="a86a-e7f7-0b6a-1bdb" name="Dryads" hidden="false" collective="false" import="true" type="unit">
       <profiles>
@@ -1142,8 +1209,18 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="1370-2013-e669-dd38" name="Wardancer Troupe" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="79fe-9f48-0ec9-f9e2" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="b179-a19b-4629-a1c1" name="Wardancer" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
@@ -1178,6 +1255,9 @@
           <infoLinks>
             <infoLink id="02ee-ac6d-7af0-ff81" name="Wardancer Weapons" hidden="false" targetId="e732-9c3b-5044-1c5b" type="rule"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="9363-ac53-6c24-6fd5" name="Wardancers" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -1226,6 +1306,9 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="0d73-238e-14ec-1ebd" name="Tree Kin" hidden="false" collective="false" import="true" type="unit">
       <profiles>
@@ -1297,8 +1380,26 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="3915-145f-c2b5-484c" name="Wild Riders of Kurnous" hidden="false" collective="false" import="true" type="unit">
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="695e-26aa-a10e-f20a" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="remove" field="category" value="4a3f-84d1-0495-6ecb"/>
+            <modifier type="set-primary" field="category" value="62d3-efc6-6c2c-634e"/>
+            <modifier type="set" field="9f53-0706-d3ce-e937" value="1.0"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9f53-0706-d3ce-e937" type="min"/>
+      </constraints>
       <profiles>
         <profile id="0e84-ee97-bf04-da4e" name="Wild Rider" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
@@ -1336,6 +1437,9 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abcd-1206-bfb4-3a6a" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3675-44e9-4897-7ed7" type="min"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="6d77-8941-c744-dd4f" name="Wild Riders" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -1350,6 +1454,9 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2e85-9c02-3880-70c9" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d579-45d0-37f3-ee10" type="min"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1368,6 +1475,9 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6793-5328-026f-c0ae" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0611-51bb-312b-848a" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="0a4a-3925-0f2d-9de3" name="Wild Hunter" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -1409,8 +1519,18 @@
           </constraints>
         </entryLink>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="7b4b-bd7e-ac31-6c6d" name="Warhawk Riders" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="79fe-9f48-0ec9-f9e2" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="d38d-8442-8b75-b0c6" name="Warhawk" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
@@ -1468,6 +1588,9 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="663e-4c64-eb26-6995" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e14b-c52c-cb74-6a27" type="min"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="21d0-2ebd-cc26-8ba2" name="Warhawk Riders" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -1483,6 +1606,9 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="69c6-91f2-4e36-d69b" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="69f8-9ebf-77b1-4174" type="min"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1514,8 +1640,23 @@ They are affected by spells, etc, that would affect cavalry.</description>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="c9e5-e1df-2cca-98e2" name="Waywatchers" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="695e-26aa-a10e-f20a" type="atLeast"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="79fe-9f48-0ec9-f9e2" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="cf2e-a3c4-28f3-bbf5" name="Waywatcher" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
@@ -1547,6 +1688,9 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="38ac-343a-20c8-4379" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="817a-96ba-35ca-2c65" type="min"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="46c9-fa51-c49a-1de5" name="Waywatchers" hidden="false" collective="false" import="true" type="model">
           <constraints>
@@ -1562,6 +1706,9 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d8df-0ee5-a8a7-5dd1" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f9b3-222d-9212-2aab" type="min"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1601,6 +1748,9 @@ They are affected by spells, etc, that would affect cavalry.</description>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="173c-4905-cb51-83dc" name="Treeman" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -1641,6 +1791,13 @@ They are affected by spells, etc, that would affect cavalry.</description>
       </costs>
     </selectionEntry>
     <selectionEntry id="5666-f7cf-2909-4a8b" name="Great Eagle" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="79fe-9f48-0ec9-f9e2" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="a524-8c22-d3ce-efbd" name="Great Eagle" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
@@ -1666,34 +1823,369 @@ They are affected by spells, etc, that would affect cavalry.</description>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="695e-26aa-a10e-f20a" name="Orion, the King in the Woods" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="1eae-0104-8962-7751" name="Orion" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">9</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">8</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">5</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">5</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">6</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">9</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">6</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">10</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="950c-148f-907d-3017" name="Spirit of Kurnous" hidden="false">
+          <description>Orion is Unbreakable. However, if he is beaten in combat, his essence will begin to fade. If Orion is beaten in combat, then for each point of combat resolution he loses by he also loses one wound. If Orion is within 6&quot; of a wood the number of wounds he loses is reduced by one (so, if he loses the combat by one and is within 6&quot; of a wood, he does not lose any wounds).</description>
+        </rule>
+        <rule id="8ecc-af94-c651-17f3" name="The Wild Hunt" hidden="false">
+          <description>In an army led by Orion, Wild Riders of Kurnous are a Core choice. An army led by Orion must include at least one unit of Wild Riders. In addition, in an army led by Orion, Glade Guard and Scouts count as Special units, and Waywatchers may not be taken at all.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="4b70-114b-84c4-a99e" name="Forest Spirit" hidden="false" targetId="fbc1-98db-5307-258b" type="infoGroup"/>
+        <infoLink id="b26f-d36b-0723-8de1" name="Terror" hidden="false" targetId="3767-0d81-4db9-cda7" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="4858-6e0f-1bee-04ca" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false"/>
+        <categoryLink id="0f6b-dac2-457c-7271" name="Heroes" hidden="false" targetId="5694-61f3-6913-6154" primary="false"/>
+        <categoryLink id="7164-c433-1334-fdef" name="New CategoryLink" hidden="false" targetId="623e-5f3d-d939-9b51" primary="true"/>
+        <categoryLink id="ff96-1c53-2a66-dcf0" name="Special Character" hidden="false" targetId="b91d-d3b1-8b46-6d52" primary="false"/>
+        <categoryLink id="9001-dae1-7481-2d9c" name="Forest Spirit" hidden="false" targetId="0e69-01d6-06fc-1f34" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="d65c-acd5-b7c3-cfbf" name="Horn of the Wild Hunt" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64ff-ef1a-2d45-800d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd95-238d-9330-eab2" type="min"/>
+          </constraints>
+          <rules>
+            <rule id="036c-62e4-db90-ad58" name="Horn of the Wild Hunt" hidden="false">
+              <description>One use only. The first time Orion declares a charge, he sounds the Horn of the Wild Hunt. All enemies within 18&quot; of him (before he starts his charge move) must take a Panic test.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry id="4435-a149-3780-fbcd" name="Hounds of the Hunt" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4622-14f8-3e5d-974a" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e264-88e1-193f-6add" name="Hound" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">9</characteristic>
+                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+                <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+                <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
+                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">6</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="9049-a021-60d0-7fc2" name="Hounds of the Hunt" hidden="false">
+              <description>Orion may be accompanied by up to two Hounds, at the cost of +15 points each. If he has any Hounds, then he may not join another unit. These Hounds have the Forest Spirit and Spirit of Kurnous special rules. If Orion is accompanied by his Hounds and suffers wounds as a result of being beaten in combat, the Wood Elf player may allocate a single wound onto each Hound, rather than Orion. A D6 must be rolled for each shooting attack directed at Orion. On a 1-4, Orion himself is struck. On the roll of a 5 or a 6, then one of the Hounds is struck.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="15.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d1d7-6e4d-59cb-2822" name="Spear of Kurnous" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a357-20b3-ba8f-25fc" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cf3e-4a68-7e20-01b0" type="min"/>
+          </constraints>
+          <rules>
+            <rule id="b18a-6aed-c344-4a45" name="Spear of Kurnous" hidden="false">
+              <description>Such is the power of Orion that when he charges into combat with the Spear of Kurnous, he adds +2 to his Strength.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry id="76e0-e4b1-68c1-03df" name="The Hawk&apos;s Talon" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b71f-f604-695f-69c8" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0608-8e69-9b8c-09c6" type="min"/>
+          </constraints>
+          <rules>
+            <rule id="f870-bfd5-0996-58e4" name="The Hawk&apos;s Talon" hidden="false">
+              <description>This is treated as a longbow that has a Strength of 6 and can penetrate ranks in the same manner as a bolt thrower. In addition, each unsaved wound caused by the Hawk&apos;s Talon becomes D3 wounds rather than 1. Orion does not suffer a -1 to hit penalty for moving and shooting.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry id="948c-b4dd-da0b-67b9" name="Cloak of Isha" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9546-e777-d3b2-b3fa" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c22-f94b-df55-3dde" type="min"/>
+          </constraints>
+          <rules>
+            <rule id="b54a-3527-3600-784b" name="Cloak of Isha" hidden="false">
+              <description>The Cloak of Isha adds two Dispel dice to the Wood Elf Dispel dice pool.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="039b-cbec-2902-09dc" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="63bc-7e0a-7921-a452" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="575.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="aac0-3850-5c85-ca47" name="Drycha" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="add" field="category" value="79fe-9f48-0ec9-f9e2">
+          <conditions>
+            <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cf7b-798c-9b94-df74" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="a853-285e-420d-bb43" name="Drycha" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">5</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">7</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">4</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">8</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">5</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">8</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="e748-d96d-bbf1-0914" name="Fanatical" hidden="false">
+          <description>Like many driven individuals, Drycha dreads being slain with her work unfinished and will fight all the harder if death seeks to claim her. For each wound Drycha suffers, she gains an additional attack for the remainder of the game.</description>
+        </rule>
+        <rule id="3404-1f5b-7368-98e0" name="Eternal Rage" hidden="false">
+          <description>Drycha is filled with deep and abiding loathing of all non-forest spirits. Accordingly, she may re-roll all failed &apos;to hit&apos; rolls in close combat.</description>
+        </rule>
+        <rule id="a273-9bde-4194-d8cb" name="Spirit-Walker" hidden="false">
+          <description>If Drycha is in a forest or other similar terrain feature during the Remaining Moves phase of any Wood Elf turn, she, and any unit she has joined, may instantly be removed from the table and replaced within another forest or similar terrain feature, facing any direction. Neither she nor her unit may move further that turn.</description>
+        </rule>
+        <rule id="82ce-36bb-6816-ecdf" name="Tree Singing" hidden="false">
+          <description>She may cast the Tree Singing spell twice each turn, at a Bound Spell level of 3, in exactly the same manner as a Treeman Ancient.</description>
+        </rule>
+        <rule id="c1e2-1fa1-f75f-4ca7" name="Drycha&apos;s Army" hidden="false">
+          <description>Given Drycha&apos;s almost pathological hatred of outsiders, any army led by her may not include any models that do not have the Forest Spirit special rule. In addition, any units in the army do not have to be deployed at the start of the battle. Choose as many or as few as you wish to be held back in this way. At the start of the Remaining Moves phase of turn 2 onwards, Drycha may attempt to draw the spirits of these beings into a forest on the battlefield. A unit is awakened on the dice roll of a 4+. An awakened unit must be placed anywhere on the battlefield that is completely within a wood or forest, and may move as normal on the turn it appears - though as it appears in the Remaining Moves phase, it cannot charge on the turn it arrives. If she fails to awaken a unit in this way she can try again in a subsequent turn. There is no limit to the amount of units that Drycha can awaken in this way in a single turn, though any awakened units that cannot be deployed (if there are no sufficient woods, for example) must be kept to one side and rolled for again in future turns. Note that Drycha must be deployed at the start of the game.</description>
+        </rule>
+        <rule id="e463-bc6a-81a7-276a" name="Branchwraith" hidden="false">
+          <description>Drycha is one of the oldest Dryads in Athel Loren: she is a Forest Spirit.</description>
+        </rule>
+        <rule id="6bf6-fa1d-42c3-8c41" name="Spites" hidden="false">
+          <description>Drycha is accompanied by a Blight of Terrors and two Clusters of Radiants she generates two additional Dispel dice and causes terror.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="fa25-f84c-4a0e-d432" name="Forest Spirit" hidden="false" targetId="fbc1-98db-5307-258b" type="infoGroup"/>
+        <infoLink id="25bc-95a6-d949-60ef" name="Fear" hidden="false" targetId="03be-3e56-1332-bf56" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="821d-397a-f8b4-82d8" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false"/>
+        <categoryLink id="1174-02c2-6087-10b0" name="New CategoryLink" hidden="false" targetId="623e-5f3d-d939-9b51" primary="true"/>
+        <categoryLink id="7f1d-c3db-81a1-3434" name="Special Character" hidden="false" targetId="b91d-d3b1-8b46-6d52" primary="false"/>
+        <categoryLink id="9f4a-9de2-b227-b2e1" name="Wizard" hidden="false" targetId="eb46-88d4-eb41-2549" primary="false"/>
+        <categoryLink id="7c7f-b835-5858-edac" name="Forest Spirit" hidden="false" targetId="0e69-01d6-06fc-1f34" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="af5a-e089-a2d4-c664" name="Level 2 Wizard" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="28c3-0488-b801-c363" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5edd-6867-168a-61f3" type="max"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="d594-5501-ef80-68fd" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="575.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="c372-b15c-d5e4-8cf6" name="Arahan and Naestra" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="4d2a-5e07-6870-e7ab" name="Arahan" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">5</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">6</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">6</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">7</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">3</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">9</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="8283-5e98-ec36-438e" name="Naestra" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">5</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">6</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">6</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">7</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">3</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">9</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="cece-628e-f89d-073e" name="Sister-Twins" hidden="false">
+          <description>If either Arahan or Naestra is slain, do not remove the model from play unless the other sister is killed in the same phase. If either sister is still alive at the end of a phase, both are restored to their starting number of Wounds. In the event of a challenge, both sisters must fight.</description>
+        </rule>
+        <rule id="600d-6b51-e968-65d8" name="Masters of the Wild" hidden="false">
+          <description>For shooting, any shots that would normally hit the rider are split between Arahan and Naestra (ie, when riding a monster, the rider is normally hit on the roll of a 5+). For each hit that hits a rider, roll a further dice - on a 1-3 Arahan is struck, on a 4-6 Naestra is struck. Also, if their mount is slain, they will form into a skirmishing unit consisting of the two of them. If both sisters are slain, their mount will always react as if it had rolled a 5 or 6 on the Monster Reaction table.</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="2529-82c3-dedf-c46d" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false"/>
+        <categoryLink id="e0c8-2a80-81fa-a56c" name="New CategoryLink" hidden="false" targetId="623e-5f3d-d939-9b51" primary="true"/>
+        <categoryLink id="b60d-44df-6c5c-0c9a" name="Special Character" hidden="false" targetId="b91d-d3b1-8b46-6d52" primary="false"/>
+        <categoryLink id="f568-726c-3fde-ac87" name="Wood Elf" hidden="false" targetId="4e5e-34a5-a6a4-3a71" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="609f-ea68-0a77-2068" name="Bow of Naestra" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d344-ea0d-af7d-7872" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aff0-00c5-be2e-a51a" type="min"/>
+          </constraints>
+          <rules>
+            <rule id="2659-8a69-5577-647d" name="Bow of Naestra" hidden="false">
+              <description>Naestra&apos;s longbow does not deal any damage, but any unit hit by her arrows must take a Strength test at the start of the following Movement phase (using the lowest value, if there is more than one) - if it fails the test, it may not move that turn. Naestra may shoot at a different target to Arahan (and Ceithin-Har if he is present) if she wishes.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry id="bb42-c442-bf42-99ca" name="Bow of Arahan" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d9ed-051f-9d86-8292" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9e92-9430-7379-413a" type="min"/>
+          </constraints>
+          <rules>
+            <rule id="e4df-c99f-ffc5-7dad" name="Bow of Arahan" hidden="false">
+              <description>If Arahan&apos;s longbow shot hits, place the small template over the target (subject to normal targeting restrictions) and resolve it as you would for a stone thrower, with the exceptions that hits are resolved at Strength of 3 and Armour Saves are allowed as normal. Arahan may shoot at a different target to Naestra (and Ceithin-Har if he is present) if she wishes.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="c87d-c78a-7c1b-72fd" name="Mount" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3bff-d424-b910-970d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b0d-8f91-5edf-d837" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="864a-82d9-ecdf-3d46" name="Gwindalor (Great Eagle)" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="dcb9-0dc4-3c39-ab28" name="Gwindalor" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                  <characteristics>
+                    <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">2</characteristic>
+                    <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">5</characteristic>
+                    <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+                    <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+                    <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+                    <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+                    <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
+                    <characteristic name="A" typeId="fa03-f9a3-8117-98dd">2</characteristic>
+                    <characteristic name="Ld" typeId="bbad-d421-400b-87c1">8</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink id="9077-a2e1-c81c-9fed" name="Fly" hidden="false" targetId="87db-2d4c-3fa6-6a26" type="rule"/>
+              </infoLinks>
+              <categoryLinks>
+                <categoryLink id="d617-cbb0-e9c7-079e" name="Mount" hidden="false" targetId="de79-e832-4f30-ac18" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e3a4-a0cf-13fb-220f" name="Ceithin-Har (Forest Dragon)" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="438e-44d1-5f42-b809" name="Ceithin-Har" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                  <characteristics>
+                    <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+                    <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">6</characteristic>
+                    <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+                    <characteristic name="S" typeId="0c58-1252-962d-8fcc">6</characteristic>
+                    <characteristic name="T" typeId="16d7-9f22-06d8-8427">6</characteristic>
+                    <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">6</characteristic>
+                    <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                    <characteristic name="A" typeId="fa03-f9a3-8117-98dd">5</characteristic>
+                    <characteristic name="Ld" typeId="bbad-d421-400b-87c1">8</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="3a52-cd83-f20e-b4cd" name="Poison Breath" hidden="false">
+                  <description>Armour is of little use against the soporific fumes exhaled by the Dragons of Athel Loren. Their Breath Weapon has a Strength of 2 and an Armour Save modifier of -3.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="54cd-3443-61ce-55b0" name="Large Target" hidden="false" targetId="01c3-c8c6-431f-1c2b" type="rule"/>
+                <infoLink id="2507-363e-a6fe-4779" name="Scaly Skin" hidden="false" targetId="7eca-56b9-d1c7-c7c8" type="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value=" (3+)"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink id="9a3d-6d7f-c049-8306" name="Terror" hidden="false" targetId="3767-0d81-4db9-cda7" type="rule"/>
+                <infoLink id="57af-9cc5-82ee-6289" name="Fly" hidden="false" targetId="87db-2d4c-3fa6-6a26" type="rule"/>
+              </infoLinks>
+              <categoryLinks>
+                <categoryLink id="622b-2d82-a832-7d0f" name="Mount" hidden="false" targetId="de79-e832-4f30-ac18" primary="false"/>
+                <categoryLink id="6edf-41ff-ec18-38f2" name="Heroes" hidden="false" targetId="5694-61f3-6913-6154" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="320.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="1067-8569-e315-8336" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="275.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <rules>
     <rule id="af7d-f482-98f2-f418" name="Forest Walkers" hidden="false">
       <description>All models in the Wood Elf army (except flyers using their flying movement) may ignore movement penalties for moving through woods.</description>
     </rule>
+    <rule id="cbb9-4bb9-178f-c735" name="Asrai Archery" hidden="false">
+      <description>Wood Elf longbows (including magical longbows) do not suffer the -1 to hit penalty for moving and shooting.</description>
+    </rule>
   </rules>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="bfcf-2a85-0407-3d34" name="Spites of Athel Loren" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="faae-337d-038f-7fdc" value="-1.0">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78ef-f0b5-03fa-9425" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="faae-337d-038f-7fdc" type="max"/>
-      </constraints>
       <selectionEntries>
         <selectionEntry id="d192-3298-d746-b77b" name="A Blight of Terrors" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="816c-a06e-cc8d-a9c1" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c33f-316d-6f3d-af2b" type="max"/>
           </constraints>
+          <rules>
+            <rule id="469a-93e6-2c5d-f482" name="A Blight of Terrors" hidden="false">
+              <description>A model with a Blight of Terrors causes terror.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
           </costs>
@@ -1703,6 +2195,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f53c-35d4-99bb-fbbe" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9552-0430-8318-4b3b" type="max"/>
           </constraints>
+          <rules>
+            <rule id="330d-5e5c-1472-2a83" name="A Befuddlement of Mischiefs" hidden="false">
+              <description>Bound Spell. Power Level 3. The Mischiefs are treated like a magic missile spell that has a range of 18&quot;. It causes the targeted unit to become subject to Stupidity in its next turn. Those units that are Immune to Psychology are immune to the effects of this spell.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
           </costs>
@@ -1712,6 +2209,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6132-0ae9-517c-6e1d" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73a7-7958-6e76-ef54" type="max"/>
           </constraints>
+          <rules>
+            <rule id="a721-f4f1-2d29-400e" name="A Murder of Spites" hidden="false">
+              <description>The model gains +D6 attacks in close combat. These are worked out at the bearer&apos;s WS, and have an Initiative of 4 and a Strength of 2. In addition, these attacks count as magical, and are Poisoned Attacks.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
           </costs>
@@ -1721,6 +2223,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c7e4-8802-4fb8-760a" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d738-c58b-d47f-dee9" type="max"/>
           </constraints>
+          <rules>
+            <rule id="ead0-770d-58b9-c738" name="A Muster of Malevolents" hidden="false">
+              <description>A muster counts as a ranged weapon that may be used in addition to any ranged weapon that the model carries. It has a range of 6&quot;, and unleashes D6 Strength 2 shots. The model counts as being a single unit Strength 1 model on foot for line of sight for this attack, and it may target a different unit than any other ranged attack made by the character. These shots always hit on a 4+ and count as magical and Poisoned Attacks. A model with Malevolents may stand and shoot with them (in addition to any other ranged weapon the model may have), even if the charging unit is outside the model&apos;s line of sight, or it would not normally be allowed to stand and shoot because the enemy is within half its charge range. So long as the model has a chance to be contacted by the enemy unit, the character may still stand and shoot.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
           </costs>
@@ -1730,6 +2237,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7610-75d1-cb70-5366" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f490-ceae-78c7-f7f2" type="max"/>
           </constraints>
+          <rules>
+            <rule id="2ace-b1ac-6821-69cd" name="An Annoyance of Netlings" hidden="false">
+              <description>In a challenge, any enemy attempting to strike a character with an Annoyance of Netlings will only hit on 6s.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
           </costs>
@@ -1739,6 +2251,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2db0-1a49-3b74-9fad" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="875d-c012-0c76-7772" type="max"/>
           </constraints>
+          <rules>
+            <rule id="07e0-f5c7-c4c1-36f4" name="A Resplendence of Luminescents" hidden="false">
+              <description>All attacks made by a character with a Resplendence of Luminescents are magical, as are those of any unit that they join.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
           </costs>
@@ -1748,15 +2265,37 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f033-7963-4644-36b0" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1eb6-c75a-0581-207f" type="max"/>
           </constraints>
+          <rules>
+            <rule id="6231-2ac7-4290-b516" name="A Lamentation of Despairs" hidden="false">
+              <description>Bound Spell. Power Level 3. One use only. Any model on the board may be targeted. The targeted model must pass a Leadership test, or else suffer D3 automatic wounds that cannot be saved by armour or Ward Saves and cannot be regenerated.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1e23-406b-d51f-a3e1" name="A Cluster of Radiants" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="1e23-406b-d51f-a3e1" name="A Cluster of Radiants" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="78ef-f0b5-03fa-9425" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d234-2be5-79f0-8a4c" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="598b-a3ef-5caa-a6d1" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e26-df93-ace6-930c" type="max"/>
           </constraints>
+          <rules>
+            <rule id="5c3d-a835-335f-5db8" name="A Cluster of Radiants" hidden="false">
+              <description>Treemen Ancients and Branchwraiths only. A character with Radiants may add one extra dice to their Dispel pool in their opponent&apos;s Magic phase.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
           </costs>
@@ -1795,7 +2334,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
       </constraints>
       <entryLinks>
         <entryLink id="59d3-b2ef-622a-3c5f" name="Heirlooms of Athel Loren" hidden="false" collective="false" import="true" targetId="847a-fdde-9f96-06aa" type="selectionEntryGroup"/>
-        <entryLink id="13e7-ee36-3ddb-7edc" name="Spites of Athel Loren" hidden="false" collective="false" import="true" targetId="bfcf-2a85-0407-3d34" type="selectionEntryGroup"/>
+        <entryLink id="13e7-ee36-3ddb-7edc" name="Spites of Athel Loren" hidden="false" collective="false" import="true" targetId="bfcf-2a85-0407-3d34" type="selectionEntryGroup">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2d1-9ed1-4b51-efcf" type="max"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="847a-fdde-9f96-06aa" name="Heirlooms of Athel Loren" hidden="false" collective="false" import="true">
@@ -1823,6 +2366,7 @@ They are affected by spells, etc, that would affect cavalry.</description>
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2dda-69a2-c29f-776b" type="equalTo"/>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="6afe-22f1-f402-bd5b" type="equalTo"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1837,6 +2381,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9d23-111f-518d-1ebc" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="792f-a680-3711-d764" type="max"/>
           </constraints>
+          <rules>
+            <rule id="5514-ed74-f4fb-71af" name="The Oaken Armour" hidden="false">
+              <description>Counts as light armour (6+ Armour Save) that can be combined with other equipment as normal. The Oaken Armour gives the wearer the Regeneration ability.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="955f-6aa2-e482-b499" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
           </categoryLinks>
@@ -1849,6 +2398,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="37df-017d-de61-185b" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7c65-4f96-1531-c4ed" type="max"/>
           </constraints>
+          <rules>
+            <rule id="504f-d749-c3df-91ea" name="Railarian&apos;s Mantle" hidden="false">
+              <description>Counts as light armour (6+ Armour Save) that can be combined with other equipment as normal. If the wearer is within 6&quot; of a Wood he receives a 4+ Ward Save.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="968e-9134-54ba-4884" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
           </categoryLinks>
@@ -1861,6 +2415,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1889-cb79-ff68-63e0" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6a7e-ebc8-06c1-de64" type="max"/>
           </constraints>
+          <rules>
+            <rule id="2317-a43f-813e-d03b" name="Armour of the Fey" hidden="false">
+              <description>Counts as light armour (6+ Armour Save)that can be combined with other equipment as normal. Against any magical close combat attacks, the wearer receives a 4+ Ward Save.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="6dad-cdb5-b8d8-4f9e" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
           </categoryLinks>
@@ -1873,6 +2432,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ae94-4908-c064-ba81" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5607-94bc-c133-8f0f" type="max"/>
           </constraints>
+          <rules>
+            <rule id="3892-447c-8e2c-cc89" name="Helm of the Hunt" hidden="false">
+              <description>This helm confers a 6+ Armour Save that can be combined with other equipment as normal (including normal armour and a shield). When the character charges he receives +1 Attack and +1 Weapon Skill for that round of combat.</description>
+            </rule>
+          </rules>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
           </costs>
@@ -1889,6 +2453,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="12aa-f636-8057-8d09" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fc8a-8566-f279-8c1f" type="max"/>
           </constraints>
+          <rules>
+            <rule id="f0b9-04ed-7929-e936" name="Briarsheath" hidden="false">
+              <description>Characters on foot only. Counts as light armour (6+ Armour Save) that can be combined with other equipment as normal. Enemies wishing to target the model wearing the Briarsheath with a shooting attack suffer an additional -1 to hit penalty. This is increased to -2 if the wearer is within a wood.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="4334-f83f-2a04-34a4" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
           </categoryLinks>
@@ -1921,6 +2490,7 @@ They are affected by spells, etc, that would affect cavalry.</description>
                 <conditionGroup type="or">
                   <conditions>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2dda-69a2-c29f-776b" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="623e-5f3d-d939-9b51" type="notInstanceOf"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1930,6 +2500,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6824-b57e-53c6-ac01" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4030-ee66-8fb4-bcc4" type="max"/>
           </constraints>
+          <rules>
+            <rule id="4f18-cfb6-ba10-93c1" name="The Spirit Sword" hidden="false">
+              <description>Hits by the Spirit Sword wound automatically. Any enemy that suffers one or more unsaved wounds from the Spirit Sword must roll a D6 and add their Leadership - the wielder does the same. For each point the wielder wins by, his opponent loses an additional wound, with no Armour Saves or Ward Saves allowed. For each point his opponent wins by, the wielder loses a wound, with no Armour Saves or Ward Saves allowed.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="b4c3-6ed2-fb90-21c4" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -1953,6 +2528,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4773-9582-38ee-b388" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e211-4de4-5e81-e220" type="max"/>
           </constraints>
+          <rules>
+            <rule id="1b0f-8950-11a8-a203" name="Daith&apos;s Reaper" hidden="false">
+              <description>The wielder of this weapon may re-roll any failed hits in close combat. In addition, any foe wounded by this blade must re-roll any successful Armour Saves.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="e7cb-782b-0387-ab21" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -1976,6 +2556,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4749-0572-b4fb-946a" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0fd6-4e88-d6b7-ff5b" type="max"/>
           </constraints>
+          <rules>
+            <rule id="0bbf-e47b-183d-d36d" name="The Bow of Loren" hidden="false">
+              <description>This longbow allows the bearer to shoot as many times as they have Attacks on their profile. The bearer does not suffer -1 for multiple shots.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="6dac-e8b1-8f9e-71e0" name="Magic Bow" hidden="false" targetId="4f0e-c683-4011-68a9" primary="false"/>
           </categoryLinks>
@@ -1995,6 +2580,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9e24-c838-eff7-7b53" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bb1f-baee-3622-be83" type="max"/>
           </constraints>
+          <rules>
+            <rule id="5a01-5ffb-cc29-afb3" name="The Blades of Loec" hidden="false">
+              <description>Wardancer character only. Wardancer Weapons. The wielder can re-roll any failed rolls to wound. May be used in conjuction with the Shadow Dances of Loec.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="d441-da35-e3a2-1971" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -2018,6 +2608,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0d3d-0904-8d60-f023" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c433-de76-3898-1262" type="max"/>
           </constraints>
+          <rules>
+            <rule id="5896-83e2-5c93-01bb" name="The Dawnspear" hidden="false">
+              <description>Counts as a spear. If the wielder causes an unsaved wound on an enemy, then that model and any other models in the unit that have not yet attacked suffer -1 to hit for that Combat phase.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="3c3e-d42f-da0e-ce4e" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -2041,6 +2636,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9a37-80c4-b2af-6c90" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2897-c67d-c9ea-3c70" type="max"/>
           </constraints>
+          <rules>
+            <rule id="5060-a7d7-0240-4956" name="The Spear of Twilight" hidden="false">
+              <description>This spear confers the Killing Blow ability on the wielder.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="4e85-72d3-27c4-97e2" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -2064,6 +2664,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9091-4e13-13bc-560b" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2f91-b689-6646-3dbc" type="max"/>
           </constraints>
+          <rules>
+            <rule id="76bf-c311-e45c-d3ef" name="The Callach&apos;s Claw" hidden="false">
+              <description>Any unit suffering one or more unsaved wounds from this blade suffer an additional -1 penalty to their Leadership for the remainder of the Combat phase.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="fa95-027c-c13e-a53c" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -2087,6 +2692,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="03b8-eafb-2a6d-7b99" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fd89-4388-961a-970e" type="max"/>
           </constraints>
+          <rules>
+            <rule id="d60b-1149-77f2-25c2" name="The Hunter&apos;s Talon" hidden="false">
+              <description>If firing non-magical arrows the wielder of this longbow may target any model it can see (including a character that could normally not be targeted because it is in a unit or not the closest target), but if this special ability is used, will suffer an additional -1 to hit penalty. Note that the normal-1 penalty for shooting at a single man-sized model does not apply and the target cannot benefit from the &quot;Look Out, Sir!&quot; rule. The shooter may always choose a different target to the unit he is with.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="f262-a49c-989f-6e53" name="Magic Bow" hidden="false" targetId="4f0e-c683-4011-68a9" primary="false"/>
           </categoryLinks>
@@ -2110,6 +2720,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="42c7-5d94-f2a9-fca1" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0f5d-0328-6e7f-8d36" type="max"/>
           </constraints>
+          <rules>
+            <rule id="3c3e-d088-2971-598f" name="The Sword of a Thousand Winters" hidden="false">
+              <description>Characters and Monsters must take a Toughness test for each unsaved wound they suffer from this blade - their Strength, Initiative and Attacks are reduced by 1 (to a minimum of 1) for each test they fail.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="8f2e-998a-260b-91e3" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -2133,6 +2748,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="eee3-006a-c387-bdae" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5e87-fc41-3f28-6692" type="max"/>
           </constraints>
+          <rules>
+            <rule id="b58c-2317-68e8-c192" name="Rageth&apos;s Wildfire Blades" hidden="false">
+              <description>Counts as two hand weapons. Any attacks made with these weapons count as Flaming.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="3bba-a1e6-b306-719e" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
@@ -2156,6 +2776,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a539-7fc3-1eca-d021" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2f39-4553-d6d1-56cd" type="max"/>
           </constraints>
+          <rules>
+            <rule id="cde3-47b4-4bed-29cc" name="Asyendi&apos;s Bane" hidden="false">
+              <description>The wielder of this longbow may re-roll all missed shooting attacks. However, if after this re-roll the shot still misses, then the bearer suffers a Strength 3 hit.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="a67d-6abb-5b09-2535" name="Magic Bow" hidden="false" targetId="4f0e-c683-4011-68a9" primary="false"/>
           </categoryLinks>
@@ -2229,6 +2854,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a2ba-ba49-c887-f798" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="acf7-c17b-4fb9-6d39" type="max"/>
           </constraints>
+          <rules>
+            <rule id="ec23-978d-9771-8165" name="Wraithstone" hidden="false">
+              <description>All enemy units within 6&quot; of the bearer of this stone suffer a -1 penalty to their Leadership.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="a4d9-04b7-c0b4-8dd2" name="Enchanted Item" hidden="false" targetId="d8eb-f296-d241-3c6d" primary="false"/>
           </categoryLinks>
@@ -2241,6 +2871,14 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8779-15dd-d340-64af" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7782-9c62-20f7-5a3d" type="max"/>
           </constraints>
+          <rules>
+            <rule id="efdb-2aa6-fcfb-b778" name="Hagbane Arrows" hidden="false">
+              <description>Magic arrows. A model that loses one or more wounds from Hagbane arrows in any Shooting phase must take a Toughness test at the end of the phase. If the test is failed, the target is slain regardless of how many wounds it has left, ignoring Armour Saves and Ward Saves.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="f48a-0360-a29b-804f" name="Magic Arrows" hidden="false" targetId="5334-072a-d5f4-0ffd" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="2265-d782-0983-3c31" name="Enchanted Item" hidden="false" targetId="d8eb-f296-d241-3c6d" primary="false"/>
             <categoryLink id="c8c0-213d-f7c6-4b31" name="Magic Arrows" hidden="false" targetId="3fee-c6b4-de1c-b33e" primary="false"/>
@@ -2254,6 +2892,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="90b7-e11a-67b5-3405" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="71df-a6aa-09b5-ef5d" type="max"/>
           </constraints>
+          <rules>
+            <rule id="cff3-061a-e946-a092" name="Moonstone of the Hidden Ways" hidden="false">
+              <description>One use only. If the character and any unit they have joined is wholly within a wood at the end of the Move phase, the character and unit may be removed from the table and replaced anywhere that is also wholly within a wood, facing in any direction and in any formation.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="22c2-d8ff-0a34-07d2" name="Enchanted Item" hidden="false" targetId="d8eb-f296-d241-3c6d" primary="false"/>
           </categoryLinks>
@@ -2266,6 +2909,14 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c75d-ba2d-cdd3-367f" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b8f0-44c9-698b-a887" type="max"/>
           </constraints>
+          <rules>
+            <rule id="d63d-3384-7028-76bd" name="Hail of Doom Arrow" hidden="false">
+              <description>One use only. Magic arrow. When fired, the arrow splits into 3D6 magical Strength 4 arrows. Roll to hit for each arrow. If this is used with a magic bow, then any effects of the magic bow are ignored for this shot.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="095d-272b-ae77-9ff6" name="Magic Arrows" hidden="false" targetId="5334-072a-d5f4-0ffd" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="c00e-7d72-1915-8e80" name="Enchanted Item" hidden="false" targetId="d8eb-f296-d241-3c6d" primary="false"/>
             <categoryLink id="4c36-9af6-b0e3-e840" name="Magic Arrows" hidden="false" targetId="3fee-c6b4-de1c-b33e" primary="false"/>
@@ -2279,6 +2930,14 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1ef0-378c-97a4-47d6" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f31f-77dc-52b3-714c" type="max"/>
           </constraints>
+          <rules>
+            <rule id="921c-9d62-e81a-c69c" name="Starfire Arrows" hidden="false">
+              <description>Magic arrows. Any unit that suffers one or more casualties from Starfire Arrows must take a Panic test, regardless of the number of casualties caused.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="62b2-85bb-0a53-d961" name="Magic Arrows" hidden="false" targetId="5334-072a-d5f4-0ffd" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="b6d0-379b-1985-57c4" name="Enchanted Item" hidden="false" targetId="d8eb-f296-d241-3c6d" primary="false"/>
             <categoryLink id="e2bc-34a6-26af-e82e" name="Magic Arrows" hidden="false" targetId="3fee-c6b4-de1c-b33e" primary="false"/>
@@ -2292,6 +2951,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f446-027a-df6d-7d51" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1581-c13b-a0a4-15ec" type="max"/>
           </constraints>
+          <rules>
+            <rule id="f5d9-82ad-e4c6-14af" name="The Horn of the Asrai" hidden="false">
+              <description>One use only. Can be used at the beginning of any enemy turn. When used, all enemies able to charge the bearer of this item must take a Leadership test. If they fail, they must charge the bearer (charge reactions, Psychology tests, etc. are taken as normal).</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="6cd5-40e0-7e31-80fd" name="Enchanted Item" hidden="false" targetId="d8eb-f296-d241-3c6d" primary="false"/>
           </categoryLinks>
@@ -2304,6 +2968,14 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="cf3d-d756-2b43-456c" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8964-68c2-f664-f9bf" type="max"/>
           </constraints>
+          <rules>
+            <rule id="eee2-f0ba-247d-e1c2" name="Arcane Bodkins" hidden="false">
+              <description>Magic arrows. No Armour Saves are allowed against Arcane Bodkins.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="bff8-1ca1-e429-27e4" name="Magic Arrows" hidden="false" targetId="5334-072a-d5f4-0ffd" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="46a0-686c-b4a9-91d4" name="Enchanted Item" hidden="false" targetId="d8eb-f296-d241-3c6d" primary="false"/>
             <categoryLink id="3429-6c72-e784-02ed" name="Magic Arrows" hidden="false" targetId="3fee-c6b4-de1c-b33e" primary="false"/>
@@ -2317,6 +2989,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5020-72ba-9ee6-f26b" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="13c3-2932-2b5a-73cd" type="max"/>
           </constraints>
+          <rules>
+            <rule id="a7f9-f0f0-2274-5297" name="Elynett&apos;s Brooch" hidden="false">
+              <description>The wearer, and any unit they join, may re-roll failed Psychology tests.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="7903-1592-e3be-a634" name="Enchanted Item" hidden="false" targetId="d8eb-f296-d241-3c6d" primary="false"/>
           </categoryLinks>
@@ -2329,6 +3006,14 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="79ad-4871-94d9-54e1" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bf9f-ef9e-cfa1-c69f" type="max"/>
           </constraints>
+          <rules>
+            <rule id="50e2-f188-2bb1-cf2f" name="Dragontooth Arrows" hidden="false">
+              <description>Magic arrows. Any model wounded by Dragontooth Arrows suffers from the rules for Stupidity for the rest of the game - even if they are normally Immune to Psychology.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="5a21-674b-929d-7d5f" name="Magic Arrows" hidden="false" targetId="5334-072a-d5f4-0ffd" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="a7d1-fa92-359b-32a6" name="Enchanted Item" hidden="false" targetId="d8eb-f296-d241-3c6d" primary="false"/>
             <categoryLink id="ca9f-fc78-f523-6afe" name="Magic Arrows" hidden="false" targetId="3fee-c6b4-de1c-b33e" primary="false"/>
@@ -2342,6 +3027,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d157-d66e-924b-7c93" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="da0d-7322-3d20-205b" type="max"/>
           </constraints>
+          <rules>
+            <rule id="4a0b-5091-55cd-1c86" name="Gwytherc&apos;s Horn" hidden="false">
+              <description>One use only. At the start of any of the bearer&apos;s turns the horn may be blown. The bearer and any unit joined are Immune to Psychology until the beginning of the bearer&apos;s next turn.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="22ef-d283-e218-298f" name="Enchanted Item" hidden="false" targetId="d8eb-f296-d241-3c6d" primary="false"/>
           </categoryLinks>
@@ -2357,10 +3047,22 @@ They are affected by spells, etc, that would affect cavalry.</description>
       </constraints>
       <selectionEntries>
         <selectionEntry id="52ed-9d11-f967-8392" name="The Rhymer&apos;s Harp" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="623e-5f3d-d939-9b51" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="77e2-cc83-624a-a51a" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8c3f-a32b-ce2c-539c" type="max"/>
           </constraints>
+          <rules>
+            <rule id="4888-d274-d6be-de2b" name="The Rhymer&apos;s Harp" hidden="false">
+              <description>This item bestows a 5+ Ward Save on the bearer, their mount, and any unit they join. In addition, the bearer, their mount, and any unit they join may move through all kinds of difficult terrain without penalty.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="38a4-6056-9b46-bc36" name="Talisman" hidden="false" targetId="d777-f2f1-e0db-8e8e" primary="false"/>
           </categoryLinks>
@@ -2373,6 +3075,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e1bb-b75f-7bd0-21af" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="06fa-0627-c7bf-7027" type="max"/>
           </constraints>
+          <rules>
+            <rule id="7b4c-9dab-4622-da76" name="Amaranthine Brooch" hidden="false">
+              <description>Grants the bearer a 3+ Ward Save that cannot be used against magical attacks.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="f861-54e0-c215-c2b8" name="Talisman" hidden="false" targetId="d777-f2f1-e0db-8e8e" primary="false"/>
           </categoryLinks>
@@ -2392,6 +3099,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="caa7-ef82-4735-2978" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cdc5-edb1-8918-0ce2" type="max"/>
           </constraints>
+          <rules>
+            <rule id="224d-411e-3edc-aeda" name="Amber Pendant" hidden="false">
+              <description>Characters on foot only. Any enemy models in base contact with the bearer of the Amber Pendant automatically strike last - even if they charged or have an ability that would allow them to normally strike first.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="2a61-a9db-d831-3c78" name="Talisman" hidden="false" targetId="d777-f2f1-e0db-8e8e" primary="false"/>
           </categoryLinks>
@@ -2404,6 +3116,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="88db-7d7b-3595-4379" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5b2a-ddf5-7dea-471e" type="max"/>
           </constraints>
+          <rules>
+            <rule id="4bf4-8594-4d3a-d299" name="Stone of the Crystal Mere" hidden="false">
+              <description>The bearer of the stone gains a 3+ Ward Save, as does any creature ridden by the bearer. However, if this Ward Save is ever failed, then the stone shatters and the Ward Save is lost for the rest of the game.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="f438-ca95-2ac1-fa53" name="Talisman" hidden="false" targetId="d777-f2f1-e0db-8e8e" primary="false"/>
           </categoryLinks>
@@ -2416,6 +3133,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="bfbd-90f5-5746-f008" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7dba-f1f3-e6d4-c9b7" type="max"/>
           </constraints>
+          <rules>
+            <rule id="67fc-7c47-fd74-db78" name="Glamourweave" hidden="false">
+              <description>The Glamourweave conveys a 4+ Ward Save against shooting attacks and magic missiles. In addition, any model attempting to strike the bearer in close combat must first pass a Leadership test. If they fail, they require 6s to hit the bearer during that Combat phase.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="ffe9-9418-902c-b877" name="Talisman" hidden="false" targetId="d777-f2f1-e0db-8e8e" primary="false"/>
           </categoryLinks>
@@ -2428,6 +3150,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="61bf-4d80-e739-1a50" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="acbc-bf12-fc07-6d1f" type="max"/>
           </constraints>
+          <rules>
+            <rule id="cd09-5c54-4342-35ce" name="Stone of Rebirth" hidden="false">
+              <description>One use only. When the wearer is reduced to one Wound this item bestows a 2+ Ward Save.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="caa1-19a5-567a-2e38" name="Talisman" hidden="false" targetId="d777-f2f1-e0db-8e8e" primary="false"/>
           </categoryLinks>
@@ -2440,6 +3167,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9c9f-7d10-c6b7-574b" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fc76-bcdf-61f8-2e55" type="max"/>
           </constraints>
+          <rules>
+            <rule id="8856-8244-858f-334c" name="The Fimbulwinter Shard" hidden="false">
+              <description>Opponents suffer a -1 to hit the bearer and his mount in close combat. Any creatures with the Forest Spirit special rule suffer from Stupidity while the bearer is within 6&quot;.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="7125-b886-a78d-185d" name="Talisman" hidden="false" targetId="d777-f2f1-e0db-8e8e" primary="false"/>
           </categoryLinks>
@@ -2452,6 +3184,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9a4e-2454-9856-0caa" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0d6f-57da-6d93-1916" type="max"/>
           </constraints>
+          <rules>
+            <rule id="c0ce-5d9d-e4ec-beb5" name="Merciw&apos;s Locus" hidden="false">
+              <description>The bearer of this magic item receives no Strength bonuses from magical or non-magical weapons. However, any model wishing to strike the model that bears Merciw&apos;s Locus also receives no Strength bonuses from magical or non-magical weapons.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="c16e-f424-b11d-b5e1" name="Talisman" hidden="false" targetId="d777-f2f1-e0db-8e8e" primary="false"/>
           </categoryLinks>
@@ -2481,6 +3218,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="311c-eb9e-f834-1aa2" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a677-1d12-a2a4-fade" type="max"/>
           </constraints>
+          <rules>
+            <rule id="20b6-3547-e53d-eed1" name="The Royal Standard of Ariel" hidden="false">
+              <description>The enchantment that Ariel has woven into this banner causes the bearer, and any unit he joins, to cause fear. In addition, any friendly unit within 12&quot; of this banner receives Magic Resistance (1).</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="af0a-5c61-b02e-ef2d" name="Magic Banner" hidden="false" targetId="daeb-6ab0-83b2-8bf3" primary="false"/>
           </categoryLinks>
@@ -2500,6 +3242,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="72f4-4695-7f33-3f8e" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9d67-3afa-0e4f-9322" type="max"/>
           </constraints>
+          <rules>
+            <rule id="50be-a876-8bb9-1731" name="Gaemrath - the Banner of Midwinter" hidden="false">
+              <description>One use only. Declare the banner&apos;s use at the beginning of the Movement phase, before declaring charges. The unit may not move or march but becomes Unbreakable until the start of the next player turn. This ability may be used if the unit is already engaged in close combat, but cannot be used if the unit is fleeing or skirmishing.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="5575-4446-f55e-14e9" name="Magic Banner" hidden="false" targetId="daeb-6ab0-83b2-8bf3" primary="false"/>
           </categoryLinks>
@@ -2519,6 +3266,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="eac4-7e1d-d882-6933" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2f27-6290-fd0e-883f" type="max"/>
           </constraints>
+          <rules>
+            <rule id="8da9-6de5-f63c-7b48" name="Faoghir - the Banner of Dwindling" hidden="false">
+              <description>Enemies that flee from the unit having been beaten in close combat roll one dice less than normal to determine the distance they flee.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="f230-7ad0-8dd3-bfc8" name="Magic Banner" hidden="false" targetId="daeb-6ab0-83b2-8bf3" primary="false"/>
           </categoryLinks>
@@ -2531,6 +3283,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="aa9b-c873-11ec-5ca9" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0e20-83fc-686a-2b5b" type="max"/>
           </constraints>
+          <rules>
+            <rule id="dd22-2c60-734e-0fb4" name="Saemrath - the Banner of Zenith" hidden="false">
+              <description>The distance at which enemy models are prevented from marching by this unit is increased from 8&quot; to 12&quot;.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="322a-a197-2a69-91ec" name="Magic Banner" hidden="false" targetId="daeb-6ab0-83b2-8bf3" primary="false"/>
           </categoryLinks>
@@ -2543,6 +3300,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c23d-e85d-f087-0d8b" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="57a2-eeac-f34f-0597" type="max"/>
           </constraints>
+          <rules>
+            <rule id="cf17-af0b-cef6-9e74" name="Aech - the Banner of Springtide" hidden="false">
+              <description>The unit may make a stand and shoot charge reaction even if the enemy charging them do so from within half their charge range.</description>
+            </rule>
+          </rules>
           <categoryLinks>
             <categoryLink id="aeb8-9f65-88a4-0405" name="Magic Banner" hidden="false" targetId="daeb-6ab0-83b2-8bf3" primary="false"/>
           </categoryLinks>
@@ -2570,10 +3332,22 @@ They are affected by spells, etc, that would affect cavalry.</description>
           </constraints>
           <selectionEntries>
             <selectionEntry id="dd3b-de88-4796-64ca" name="Wand of Wych Elm" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="623e-5f3d-d939-9b51" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="bd23-5f1b-f815-7450" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2118-902a-8693-b533" type="max"/>
               </constraints>
+              <rules>
+                <rule id="7db1-7629-1b42-cba7" name="Wand of Wych Elm" hidden="false">
+                  <description>This staff allows any Dispel attempt to be re-rolled.</description>
+                </rule>
+              </rules>
               <categoryLinks>
                 <categoryLink id="aa4d-9f28-dec6-ace6" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
               </categoryLinks>
@@ -2586,6 +3360,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f38d-d7f9-8ef0-2d3f" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ef6e-f189-e87d-477a" type="max"/>
               </constraints>
+              <rules>
+                <rule id="d4d4-b755-1e37-e56d" name="Calaingor&apos;s Stave" hidden="false">
+                  <description>If the bearer has the spell Tree Singing, then they may add 1&quot; to the distance they may move a forest if they successfully cast the spell (so, if successfully cast, they may move a forest D3 + 2&quot;). In addition, they may cast (and attempt to cast) the spell more than once per Magic phase.</description>
+                </rule>
+              </rules>
               <categoryLinks>
                 <categoryLink id="0090-2a73-39dd-d560" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
               </categoryLinks>
@@ -2598,6 +3377,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c2c7-2f72-b13a-e201" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4993-95c5-d872-067a" type="max"/>
               </constraints>
+              <rules>
+                <rule id="8756-c6d5-7160-e808" name="Divination Orb" hidden="false">
+                  <description>If an opponent uses more than three dice when casting any spell, the bearer of the Divination Orb may add an extra free Dispel dice into the attempt to dispel that spell.</description>
+                </rule>
+              </rules>
               <categoryLinks>
                 <categoryLink id="b1a2-90e9-04fb-d38b" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
               </categoryLinks>
@@ -2610,6 +3394,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8d2d-7e89-ee09-7044" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d26b-33a3-52d7-c813" type="max"/>
               </constraints>
+              <rules>
+                <rule id="a0e8-d83a-7091-0995" name="The Deepwood Sphere" hidden="false">
+                  <description>This item allows the mage to re-roll the dice when determining the effects of the Tree Singing spell (whether he is using it to move a wood or to inflict damage on an enemy within a wood). In addition, all enemy models wholly or partly within the same wood as the bearer take a single Strength 5 hit at the start of each Wood Elf Magic phase.</description>
+                </rule>
+              </rules>
               <categoryLinks>
                 <categoryLink id="7c3e-a68c-0f2d-e78e" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
               </categoryLinks>
@@ -2622,6 +3411,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f98b-df46-3361-b290" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a36b-f8b7-5f81-9b22" type="max"/>
               </constraints>
+              <rules>
+                <rule id="08f5-b37c-1a97-6a10" name="Ranu&apos;s Heartstone" hidden="false">
+                  <description>One use only. Once per game, the bearer of this item may re-roll one of the dice when casting a spell or making a Dispel attempt. This can be used to prevent a miscast or cause a spell to be cast with Irresistible Force.</description>
+                </rule>
+              </rules>
               <categoryLinks>
                 <categoryLink id="4d48-cb88-a507-4dbf" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
               </categoryLinks>
@@ -2671,6 +3465,24 @@ They are affected by spells, etc, that would affect cavalry.</description>
               </conditionGroups>
             </modifier>
           </modifiers>
+          <profiles>
+            <profile id="3293-9702-8fee-2f32" name="Great Stag" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">9</characteristic>
+                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">5</characteristic>
+                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+                <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
+                <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+                <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
+                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">2</characteristic>
+                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="b599-1765-9064-7e9d" name="Forest Spirit" hidden="false" targetId="fbc1-98db-5307-258b" type="infoGroup"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="dcca-a55a-ce8a-b6e0" name="Mount" hidden="false" targetId="de79-e832-4f30-ac18" primary="false"/>
           </categoryLinks>
@@ -2692,6 +3504,24 @@ They are affected by spells, etc, that would affect cavalry.</description>
               </conditionGroups>
             </modifier>
           </modifiers>
+          <profiles>
+            <profile id="165a-f8ae-5fee-960f" name="Great Eagle" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">2</characteristic>
+                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">5</characteristic>
+                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+                <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+                <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+                <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
+                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">2</characteristic>
+                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">8</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="8138-c51f-0f92-5950" name="Fly" hidden="false" targetId="87db-2d4c-3fa6-6a26" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="f185-dbff-c809-c873" name="Mount" hidden="false" targetId="de79-e832-4f30-ac18" primary="false"/>
           </categoryLinks>
@@ -2707,6 +3537,9 @@ They are affected by spells, etc, that would affect cavalry.</description>
               </conditions>
             </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink id="f54b-1e26-f3e6-9769" name="Elven Steed" hidden="false" targetId="d2a7-35c7-6594-f53c" type="profile"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="4bd3-ae3b-7137-736a" name="Mount" hidden="false" targetId="de79-e832-4f30-ac18" primary="false"/>
           </categoryLinks>
@@ -2727,8 +3560,39 @@ They are affected by spells, etc, that would affect cavalry.</description>
               </conditions>
             </modifier>
           </modifiers>
+          <profiles>
+            <profile id="2e3a-84cc-bd68-2061" name="Forest Dragon" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">6</characteristic>
+                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+                <characteristic name="S" typeId="0c58-1252-962d-8fcc">6</characteristic>
+                <characteristic name="T" typeId="16d7-9f22-06d8-8427">6</characteristic>
+                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">6</characteristic>
+                <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">5</characteristic>
+                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">8</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="9e96-8f2c-7ad4-66fe" name="Poison Breath" hidden="false">
+              <description>Armour is of little use against the soporific fumes exhaled by the Dragons of Athel Loren. Their Breath Weapon has a Strength of 2 and an Armour Save modifier of -3.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="bcfd-6806-7d7c-a423" name="Large Target" hidden="false" targetId="01c3-c8c6-431f-1c2b" type="rule"/>
+            <infoLink id="d8ed-1d6b-21f3-7b11" name="Scaly Skin" hidden="false" targetId="7eca-56b9-d1c7-c7c8" type="rule">
+              <modifiers>
+                <modifier type="append" field="name" value=" (3+)"/>
+              </modifiers>
+            </infoLink>
+            <infoLink id="137c-a0b1-00f2-de6e" name="Terror" hidden="false" targetId="3767-0d81-4db9-cda7" type="rule"/>
+            <infoLink id="be64-151c-92f7-c9c8" name="Fly" hidden="false" targetId="87db-2d4c-3fa6-6a26" type="rule"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="844e-1271-3f5e-db31" name="Mount" hidden="false" targetId="de79-e832-4f30-ac18" primary="false"/>
+            <categoryLink id="3fad-7157-7764-6067" name="Heroes" hidden="false" targetId="5694-61f3-6913-6154" primary="false"/>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="320.0"/>
@@ -2747,6 +3611,34 @@ They are affected by spells, etc, that would affect cavalry.</description>
               </conditionGroups>
             </modifier>
           </modifiers>
+          <profiles>
+            <profile id="b6c4-d34f-4bdc-4697" name="Unicorn" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">10</characteristic>
+                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">5</characteristic>
+                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+                <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+                <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+                <characteristic name="I" typeId="b418-0e30-644f-1435">5</characteristic>
+                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">2</characteristic>
+                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">8</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="05d3-f1f1-f130-5160" name="Impale" hidden="false">
+              <description>When a unicorn charges into combat it receives +2 to its Strength.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="7c9b-bd6b-7485-22ad" name="Magic Resistance" hidden="false" targetId="6e0c-4c98-a2c2-af0d" type="rule">
+              <modifiers>
+                <modifier type="append" field="name" value=" (2)"/>
+              </modifiers>
+            </infoLink>
+            <infoLink id="50c0-880c-21d1-b27d" name="Forest Spirit" hidden="false" targetId="fbc1-98db-5307-258b" type="infoGroup"/>
+          </infoLinks>
           <categoryLinks>
             <categoryLink id="9825-d1a7-d294-cde2" name="Mount" hidden="false" targetId="de79-e832-4f30-ac18" primary="false"/>
           </categoryLinks>
@@ -2771,6 +3663,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="79fe-9f48-0ec9-f9e2" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2803,6 +3700,11 @@ Wardancer characters may not wear any armour or be given magical weapons that ar
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="79fe-9f48-0ec9-f9e2" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <rules>
             <rule id="4316-a216-a1c8-09d0" name="Eternal Kindred" hidden="false">
@@ -2828,6 +3730,11 @@ Wardancer characters may not wear any armour or be given magical weapons that ar
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="79fe-9f48-0ec9-f9e2" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <rules>
             <rule id="4494-1bb5-f756-f77f" name="Alter Kindred" hidden="false">
@@ -2848,6 +3755,11 @@ Wardancer characters may not wear any armour or be given magical weapons that ar
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="79fe-9f48-0ec9-f9e2" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2875,7 +3787,15 @@ Wardancer characters may not wear any armour or be given magical weapons that ar
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="cce3-e45d-f726-cbbd" value="1.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="79fe-9f48-0ec9-f9e2" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cce3-e45d-f726-cbbd" type="min"/>
+          </constraints>
           <rules>
             <rule id="a966-eed4-894d-c6c2" name="Wild Rider Kindred" hidden="false">
               <description>The character carries a spear and wears light armour. They may not choose any additional weapons or armour, though they may choose a magic spear or a suit of magical light armour to replace the respective item if they wish. They benefit from the Talismanic Tattoos, Fury of Kurnous and Forest Spirit special rules (and so may join units of Forest spirits). However, they must ride an Elven Steed or Great Stag (chosen at additional cost from the army list).</description>
@@ -2902,6 +3822,11 @@ Wardancer characters may not wear any armour or be given magical weapons that ar
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="79fe-9f48-0ec9-f9e2" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <rules>
             <rule id="51e6-ab5f-aef8-e9db" name="Waywatcher Kindred" hidden="false">
@@ -2924,7 +3849,15 @@ Wardancer characters may not wear any armour or be given magical weapons that ar
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="notInstanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="3ea0-6c6d-6345-bf33" value="1.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="79fe-9f48-0ec9-f9e2" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ea0-6c6d-6345-bf33" type="min"/>
+          </constraints>
           <rules>
             <rule id="9621-edae-8a48-3151" name="Glamourweave Kindred" hidden="false">
               <description>This character benefits from the Forest Spirit special rules (and so may join units of Forest Spirits). However, they must ride an Elven Steed or a Unicorn (chosen at an additional cost from the army list).</description>
@@ -3012,6 +3945,9 @@ The sinuous movements of this dance distract and confuse the enemy, allowing the
     </rule>
     <rule id="2e86-6d3c-f3a9-992a" name="The Fury of Kurnous" hidden="false">
       <description>On any round of combat in which the Wild Riders did not charge they gain +1 Attack.</description>
+    </rule>
+    <rule id="5334-072a-d5f4-0ffd" name="Magic Arrows" hidden="false">
+      <description>The Wood Elves make use of magic arrows. Magic arrows may be fired by normal or magic bows, with any exceptions noted. These arrows are counted as magical, and it is assumed that the a character has enough arrows to last the entire battle, unless stated otherwise.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
