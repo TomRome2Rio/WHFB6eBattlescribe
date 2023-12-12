@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9534-aec7-1922-76f2" name="Orcs and Goblins" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="9534-aec7-1922-76f2" name="Orcs and Goblins" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="5b0c-07f2-6b72-7aa8" name="Orc" hidden="false"/>
     <categoryEntry id="2c47-226a-5465-6c16" name="Common Orc" hidden="false"/>
@@ -69,13 +69,6 @@
         <selectionEntryGroup id="0340-287a-8758-e41c" name="Equipment" hidden="false" collective="false" import="true">
           <selectionEntries>
             <selectionEntry id="e3e3-0a36-1c04-dc0c" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="90de-04d4-30aa-0e5f" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d8eb-f296-d241-3c6d" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="90de-04d4-30aa-0e5f" type="max"/>
               </constraints>
@@ -125,13 +118,6 @@
               </selectionEntries>
             </selectionEntryGroup>
             <selectionEntryGroup id="2d71-3b63-d8b5-6629" name="Armour" hidden="false" collective="false" import="true">
-              <modifiers>
-                <modifier type="set" field="6187-8a8d-e376-3e15" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="474f-778d-1cc1-686e" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6187-8a8d-e376-3e15" type="max"/>
               </constraints>
@@ -174,7 +160,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="8ebf-944e-6ab6-2dbd" name="Magic Items" hidden="false" collective="false" import="true" targetId="43e6-9ac3-a0a1-4271" type="selectionEntryGroup"/>
+        <entryLink id="8ebf-944e-6ab6-2dbd" name="Shiny Stuff" hidden="false" collective="false" import="true" targetId="43e6-9ac3-a0a1-4271" type="selectionEntryGroup"/>
         <entryLink id="225f-dafa-a6f3-5e0c" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry"/>
       </entryLinks>
       <costs>
@@ -250,11 +236,6 @@
           <selectionEntries>
             <selectionEntry id="1431-e1ed-6bc0-85f4" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="set" field="327e-be23-6dcb-7c31" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d8eb-f296-d241-3c6d" type="equalTo"/>
-                  </conditions>
-                </modifier>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
@@ -315,13 +296,6 @@
               </selectionEntries>
             </selectionEntryGroup>
             <selectionEntryGroup id="e0c2-7fb4-2263-1720" name="Armour" hidden="false" collective="false" import="true">
-              <modifiers>
-                <modifier type="set" field="6718-0bed-dbf1-edb8" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="474f-778d-1cc1-686e" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6718-0bed-dbf1-edb8" type="max"/>
               </constraints>
@@ -1207,13 +1181,6 @@
         <selectionEntryGroup id="b295-ac52-b55c-632a" name="Equipment" hidden="false" collective="false" import="true">
           <selectionEntries>
             <selectionEntry id="744e-f559-474a-a302" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="369d-57ce-ca79-fdcb" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d8eb-f296-d241-3c6d" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="369d-57ce-ca79-fdcb" type="max"/>
               </constraints>
@@ -1279,7 +1246,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="2663-1d6a-d2b4-7372" name="Magic Items" hidden="false" collective="false" import="true" targetId="43e6-9ac3-a0a1-4271" type="selectionEntryGroup"/>
+        <entryLink id="2663-1d6a-d2b4-7372" name="Shiny Stuff" hidden="false" collective="false" import="true" targetId="43e6-9ac3-a0a1-4271" type="selectionEntryGroup"/>
         <entryLink id="cc59-a8ef-532f-8d98" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry"/>
       </entryLinks>
       <costs>
@@ -1483,13 +1450,6 @@
         <selectionEntryGroup id="246b-4e74-18ad-e615" name="Equipment" hidden="false" collective="false" import="true">
           <selectionEntries>
             <selectionEntry id="42e0-454d-40a2-ba6f" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="e9e7-7ccc-5160-bbc3" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d8eb-f296-d241-3c6d" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e9e7-7ccc-5160-bbc3" type="max"/>
               </constraints>
@@ -1539,13 +1499,6 @@
               </selectionEntries>
             </selectionEntryGroup>
             <selectionEntryGroup id="dcbe-6174-25fc-6029" name="Armour" hidden="false" collective="false" import="true">
-              <modifiers>
-                <modifier type="set" field="a55a-b982-2db0-44e6" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="474f-778d-1cc1-686e" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a55a-b982-2db0-44e6" type="max"/>
               </constraints>
@@ -1582,7 +1535,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="8235-a54b-532b-de37" name="Magic Items" hidden="false" collective="false" import="true" targetId="43e6-9ac3-a0a1-4271" type="selectionEntryGroup"/>
+        <entryLink id="8235-a54b-532b-de37" name="Shiny Stuff" hidden="false" collective="false" import="true" targetId="43e6-9ac3-a0a1-4271" type="selectionEntryGroup"/>
         <entryLink id="caad-4081-63ea-03c3" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry"/>
       </entryLinks>
       <costs>
@@ -1633,13 +1586,6 @@
         <selectionEntryGroup id="b4fa-3155-6f28-37bd" name="Equipment" hidden="false" collective="false" import="true">
           <selectionEntries>
             <selectionEntry id="7110-d2fd-5c3d-87d7" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="08c2-4e09-f683-6ee0" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d8eb-f296-d241-3c6d" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="08c2-4e09-f683-6ee0" type="max"/>
               </constraints>
@@ -1677,13 +1623,6 @@
               </selectionEntries>
             </selectionEntryGroup>
             <selectionEntryGroup id="1d5e-9d0f-091a-dff6" name="Armour" hidden="false" collective="false" import="true">
-              <modifiers>
-                <modifier type="set" field="4e5a-d440-6d8a-3e70" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="474f-778d-1cc1-686e" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e5a-d440-6d8a-3e70" type="max"/>
               </constraints>
@@ -1699,7 +1638,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="7d35-75d5-cb99-961f" name="Magic Items" hidden="false" collective="false" import="true" targetId="43e6-9ac3-a0a1-4271" type="selectionEntryGroup"/>
+        <entryLink id="7d35-75d5-cb99-961f" name="Shiny Stuff" hidden="false" collective="false" import="true" targetId="43e6-9ac3-a0a1-4271" type="selectionEntryGroup"/>
         <entryLink id="5e39-99cc-32e9-e3f5" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry"/>
       </entryLinks>
       <costs>
@@ -1908,13 +1847,6 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="ff9c-d63f-4456-d6a5" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="8316-b027-4515-87cf" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="474f-778d-1cc1-686e" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8316-b027-4515-87cf" type="max"/>
               </constraints>
@@ -2487,11 +2419,6 @@
           <selectionEntries>
             <selectionEntry id="196f-208e-974b-c549" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="set" field="3362-f007-d9de-0724" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d8eb-f296-d241-3c6d" type="equalTo"/>
-                  </conditions>
-                </modifier>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
@@ -2540,13 +2467,6 @@
               </selectionEntries>
             </selectionEntryGroup>
             <selectionEntryGroup id="c2a8-a0b6-2bb7-d942" name="Armour" hidden="false" collective="false" import="true">
-              <modifiers>
-                <modifier type="set" field="72ac-64d4-ca39-df7b" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="474f-778d-1cc1-686e" type="atLeast"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="72ac-64d4-ca39-df7b" type="max"/>
               </constraints>
@@ -2562,7 +2482,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="8c13-1d17-b613-11ef" name="Magic Items" hidden="false" collective="false" import="true" targetId="43e6-9ac3-a0a1-4271" type="selectionEntryGroup"/>
+        <entryLink id="8c13-1d17-b613-11ef" name="Shiny Stuff" hidden="false" collective="false" import="true" targetId="43e6-9ac3-a0a1-4271" type="selectionEntryGroup"/>
         <entryLink id="2d07-2498-2ba9-b51b" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry"/>
         <entryLink id="cde0-bc22-ae7c-8dcb" name="Battle Standard Bearer" hidden="false" collective="false" import="true" targetId="eca1-46d6-8778-847f" type="selectionEntry"/>
       </entryLinks>
@@ -5634,7 +5554,7 @@ Treat the Prodder&apos;s blasts as bound spells with a power level of 3. Each bl
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="80.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="76b7-5cf9-c4e8-f79b" name="Goblin Wolf Chariot" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="76b7-5cf9-c4e8-f79b" name="Goblin Wolf Chariot" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -5715,13 +5635,16 @@ Treat the Prodder&apos;s blasts as bound spells with a power level of 3. Each bl
               </conditions>
             </modifier>
           </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e28-89ce-5ab2-aa4d" type="max"/>
+          </constraints>
           <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="2.0"/>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="3.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="40.0"/>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="60.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="ea63-08db-5ffb-2480" name="Big&apos;Uns" hidden="false" collective="false" import="true" type="upgrade">
@@ -6330,6 +6253,11 @@ The Orc player must decide that he&apos;s using the extra Attacks before he make
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e3a-c9c1-b00a-cf7b" type="instanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd2a-51cb-3c97-6e8c" type="max"/>
@@ -6354,6 +6282,11 @@ The Orc player must decide that he&apos;s using the extra Attacks before he make
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e3a-c9c1-b00a-cf7b" type="instanceOf"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="35d7-1e2b-98ec-32a0" type="max"/>
@@ -6374,6 +6307,13 @@ The Orc player must decide that he&apos;s using the extra Attacks before he make
       </selectionEntries>
       <entryLinks>
         <entryLink id="fb97-a2c9-ff8e-ff5c" name="Enchanted Shield" hidden="false" collective="false" import="true" targetId="4a2b-c497-93f2-c804" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <categoryLinks>
             <categoryLink id="778e-ec2d-6588-8535" name="Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
           </categoryLinks>
