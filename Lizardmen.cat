@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d9da-11c6-1a8c-4472" name="Lizardmen" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d9da-11c6-1a8c-4472" name="Lizardmen" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>WIP Lizardmen. TODO: Add unit profiles &amp; item descriptions</readme>
   <categoryEntries>
     <categoryEntry id="361c-7d6f-fc45-5312" name="Skink" hidden="false"/>
@@ -95,6 +95,13 @@ The Slann may select spells from multiple lores of magic by selecting a lore and
               </costs>
             </selectionEntry>
             <selectionEntry id="7d7a-d92a-2aba-136b" name="3rd Generation" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="05fe-7fb4-f1bf-0991" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <rules>
                 <rule id="ec33-8eab-222d-0b28" name="Third Generation" hidden="false">
                   <description>The Slann has +1 Wound (included in profile) and uses an additional Hero choice (so counts as a Lord and a Hero) 
@@ -113,6 +120,13 @@ If the Slann is slain, the opponent gains an additional 100 victory points.</des
               </costs>
             </selectionEntry>
             <selectionEntry id="c8f5-6371-bdd2-04b0" name="2nd Generation" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="05fe-7fb4-f1bf-0991" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <rules>
                 <rule id="126b-5b5f-e810-53a7" name="Second Generation" hidden="false">
                   <description>The Slann has +2 Wounds (included in profile) and uses an additional Hero and Rare choice (so counts as a Lord, a Hero and a Rare choice)
@@ -166,6 +180,13 @@ If the Slann is slain, the opponent gains an additional 200 victory points.</des
       </costs>
     </selectionEntry>
     <selectionEntry id="6f40-adfa-faec-40fa" name="Saurus Oldblood" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="05fe-7fb4-f1bf-0991" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="badf-fbff-6e0a-afa1" name="Saurus Oldblood" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
@@ -280,6 +301,7 @@ If the Slann is slain, the opponent gains an additional 200 victory points.</des
               <categoryLinks>
                 <categoryLink id="cb17-7823-5145-d5eb" name="Heroes" hidden="false" targetId="5694-61f3-6913-6154" primary="false"/>
                 <categoryLink id="15c0-ef68-919f-df3f" name="Mount" hidden="false" targetId="b1f9-5e8b-41ec-2c52" primary="false"/>
+                <categoryLink id="337d-a699-234f-3ac8" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false"/>
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="210.0"/>
@@ -534,15 +556,6 @@ If the Slann is slain, the opponent gains an additional 200 victory points.</des
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="8741-0d37-d911-2c95" name="Sacred Spawnings" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c50f-8870-d829-a553" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="0e16-2395-be5b-0c46" name="Blessed Spawning of Sotek" hidden="false" collective="false" import="true" targetId="cc97-8b89-47fa-c50e" type="selectionEntry"/>
-            <entryLink id="9122-dc6b-938e-6188" name="Blessed Mark of the Old Ones" hidden="false" collective="false" import="true" targetId="84af-0ea6-fc9e-39dc" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
         <selectionEntryGroup id="70d8-9f7f-4076-fcf4" name="Ranged Weapon" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0680-0824-a5d4-1d8c" type="max"/>
@@ -575,6 +588,23 @@ If the Slann is slain, the opponent gains an additional 200 victory points.</des
           <categoryLinks>
             <categoryLink id="a8f4-003d-4a05-0938" name="Rare" hidden="false" targetId="a3af-995e-0cf1-7091" primary="false"/>
           </categoryLinks>
+        </entryLink>
+        <entryLink id="fbad-4c4d-e5a0-3df0" name="Sacred Spawnings" hidden="false" collective="false" import="true" targetId="70dc-d8c6-65e7-b1b0" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="ed3d-5671-d694-f2d5" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9f55-4be0-3658-ffe5" type="atLeast"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e62d-bc0d-a05a-84c0" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed3d-5671-d694-f2d5" type="max"/>
+          </constraints>
         </entryLink>
       </entryLinks>
       <costs>
@@ -648,22 +678,80 @@ If the Slann is slain, the opponent gains an additional 200 victory points.</des
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="5096-6a85-343b-316b" name="Sacred Spawnings" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e8a3-f928-fe09-0c24" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="6b67-12e0-b29d-a430" name="Blessed Spawning of Sotek" hidden="false" collective="false" import="true" targetId="cc97-8b89-47fa-c50e" type="selectionEntry"/>
-            <entryLink id="846c-224a-4ae2-231c" name="Blessed Mark of the Old Ones" hidden="false" collective="false" import="true" targetId="84af-0ea6-fc9e-39dc" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
         <selectionEntryGroup id="fe79-c4e0-7460-7728" name="Lore of Magic" hidden="false" collective="false" import="true" defaultSelectionEntryId="73ff-e5b9-0bf1-1f9e">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="326d-189e-74b2-b941" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b183-f8f9-8790-01cc" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="73ff-e5b9-0bf1-1f9e" name="Lore of Heavens" hidden="false" collective="false" import="true" targetId="22d4-14a2-c884-9120" type="selectionEntry"/>
+            <entryLink id="73ff-e5b9-0bf1-1f9e" name="Lore of Heavens" hidden="false" collective="false" import="true" targetId="22d4-14a2-c884-9120" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9f55-4be0-3658-ffe5" type="atLeast"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e93d-8f1d-7101-9de9" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="913f-25ed-e03c-8957" name="Lore of Death" hidden="true" collective="false" import="true" targetId="adb8-37e0-7609-365b" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8195-8dc2-5381-4272" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="531a-6c85-8c05-7cb9" name="Lore of Fire" hidden="true" collective="false" import="true" targetId="aa12-5ee9-b575-c4a6" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ed95-2bdf-5b1a-abad" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="b20e-2b51-4765-e9f0" name="Lore of Beasts" hidden="true" collective="false" import="true" targetId="afbd-2b69-4e54-2863" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f825-b648-f1eb-50f3" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="bcda-4038-7664-3c9a" name="Lore of Shadow" hidden="true" collective="false" import="true" targetId="8704-072d-b3dd-84f5" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e62d-bc0d-a05a-84c0" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="d01e-daa9-f19e-5c12" name="Lore of Metal" hidden="true" collective="false" import="true" targetId="2030-7bd3-3f77-1594" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d00f-89fe-8bc6-1535" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink id="ca82-9870-8f44-921b" name="Lore of Light" hidden="true" collective="false" import="true" targetId="e33d-6dcc-3793-da4a" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b9b3-d232-5807-0ba5" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -682,6 +770,23 @@ If the Slann is slain, the opponent gains an additional 200 victory points.</des
             <categoryLink id="6b84-51d0-e951-72db" name="Rare" hidden="false" targetId="a3af-995e-0cf1-7091" primary="false"/>
           </categoryLinks>
         </entryLink>
+        <entryLink id="4458-04e1-ed58-3200" name="Sacred Spawnings" hidden="false" collective="false" import="true" targetId="70dc-d8c6-65e7-b1b0" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="fa44-d355-1c9e-ff74" value="2.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9f55-4be0-3658-ffe5" type="atLeast"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e62d-bc0d-a05a-84c0" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa44-d355-1c9e-ff74" type="max"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="65.0"/>
@@ -691,9 +796,14 @@ If the Slann is slain, the opponent gains an additional 200 victory points.</des
       <modifierGroups>
         <modifierGroup>
           <comment>Set category to Rare if 2 Sacred Spawnings</comment>
-          <conditions>
-            <condition field="selections" scope="self" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="8c1b-780f-6b5f-9d0e" type="greaterThan"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="8c1b-780f-6b5f-9d0e" type="greaterThan"/>
+                <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9f55-4be0-3658-ffe5" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
           <modifiers>
             <modifier type="remove" field="category" value="62d3-efc6-6c2c-634e"/>
             <modifier type="remove" field="category" value="4a3f-84d1-0495-6ecb"/>
@@ -704,24 +814,25 @@ If the Slann is slain, the opponent gains an additional 200 victory points.</des
           </modifiers>
         </modifierGroup>
         <modifierGroup>
-          <comment>Set category to Special if 1 Sacred Spawnings</comment>
-          <conditions>
-            <condition field="selections" scope="self" value="0.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" childId="8c1b-780f-6b5f-9d0e" type="equalTo"/>
-          </conditions>
-          <modifiers>
-            <modifier type="add" field="category" value="62d3-efc6-6c2c-634e"/>
-            <modifier type="remove" field="category" value="4a3f-84d1-0495-6ecb"/>
-            <modifier type="remove" field="category" value="a3af-995e-0cf1-7091"/>
-            <modifier type="set-primary" field="category" value="62d3-efc6-6c2c-634e"/>
-            <modifier type="unset-primary" field="category" value="a3af-995e-0cf1-7091"/>
-            <modifier type="unset-primary" field="category" value="4a3f-84d1-0495-6ecb"/>
-          </modifiers>
-        </modifierGroup>
-        <modifierGroup>
           <comment>Set Category to Core if 0 Sacred Spawnings</comment>
-          <conditions>
-            <condition field="selections" scope="self" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="8c1b-780f-6b5f-9d0e" type="equalTo"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="self" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="8c1b-780f-6b5f-9d0e" type="greaterThan"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9f55-4be0-3658-ffe5" type="atLeast"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9f55-4be0-3658-ffe5" type="equalTo"/>
+                    <condition field="selections" scope="self" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" childId="8c1b-780f-6b5f-9d0e" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
           <modifiers>
             <modifier type="remove" field="category" value="62d3-efc6-6c2c-634e"/>
             <modifier type="add" field="category" value="4a3f-84d1-0495-6ecb"/>
@@ -815,6 +926,13 @@ If the Slann is slain, the opponent gains an additional 200 victory points.</des
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="f021-dbfd-83f9-c58c" name="Sacred Spawnings" hidden="false" collective="false" import="true" targetId="70dc-d8c6-65e7-b1b0" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="05fe-7fb4-f1bf-0991" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="facf-d3f3-2860-aafb" type="max"/>
           </constraints>
@@ -864,6 +982,7 @@ If the Slann is slain, the opponent gains an additional 200 victory points.</des
       </infoLinks>
       <categoryLinks>
         <categoryLink id="9787-2e20-e1cc-3564" name="New CategoryLink" hidden="false" targetId="62d3-efc6-6c2c-634e" primary="true"/>
+        <categoryLink id="621c-0bd7-252f-8e73" name="Skink" hidden="false" targetId="361c-7d6f-fc45-5312" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="23cf-9716-7f9f-06e2" name="Skink" hidden="false" collective="false" import="true" type="model">
@@ -919,6 +1038,22 @@ If the Slann is slain, the opponent gains an additional 200 victory points.</des
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="cc75-0558-d7f5-8bb3" name="Sacred Spawnings" hidden="false" collective="false" import="true" targetId="70dc-d8c6-65e7-b1b0" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9f55-4be0-3658-ffe5" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e62d-bc0d-a05a-84c0" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
       </costs>
@@ -1087,6 +1222,13 @@ If the Slann is slain, the opponent gains an additional 200 victory points.</des
       </costs>
     </selectionEntry>
     <selectionEntry id="2225-48e5-1cdf-79f2" name="Saurus Cavalry" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="05fe-7fb4-f1bf-0991" type="atLeast"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="59d3-8376-6176-4ca3" name="Cold One Rider" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
           <characteristics>
@@ -1418,6 +1560,7 @@ On the roll of a Misfire, D3 of the Skink Handlers are removed as casualties and
       </infoLinks>
       <categoryLinks>
         <categoryLink id="becb-b6af-c944-3f70" name="New CategoryLink" hidden="false" targetId="a3af-995e-0cf1-7091" primary="true"/>
+        <categoryLink id="07d2-0a98-cdad-603c" name="Skink" hidden="false" targetId="361c-7d6f-fc45-5312" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="ab11-945e-7ad4-8458" name="Salamander &amp; 3 Skinks" hidden="false" collective="false" import="true" type="model">
@@ -1432,6 +1575,60 @@ On the roll of a Misfire, D3 of the Skink Handlers are removed as casualties and
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e471-be3c-87af-7412" name="Variant Army" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="93c7-5419-4ac2-9c0d" type="max"/>
+        <constraint field="selections" scope="e471-be3c-87af-7412" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1726-a70e-0250-001a" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="05fe-7fb4-f1bf-0991" name="Southlands Army" hidden="true" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2141-77a4-942b-00d4" type="max"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="9f55-4be0-3658-ffe5" name="Sacred Host" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="e471-be3c-87af-7412" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="05fe-7fb4-f1bf-0991" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ebe5-be9c-e443-a284" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="8195-8dc2-5381-4272" name="Sacred Host of Quetzl" hidden="false" collective="false" import="true" type="upgrade"/>
+            <selectionEntry id="ed95-2bdf-5b1a-abad" name="Sacred Host of Chotec" hidden="false" collective="false" import="true" type="upgrade"/>
+            <selectionEntry id="f825-b648-f1eb-50f3" name="Sacred Host of Sotek" hidden="false" collective="false" import="true" type="upgrade"/>
+            <selectionEntry id="e62d-bc0d-a05a-84c0" name="Sacred Host of Huanchi" hidden="false" collective="false" import="true" type="upgrade"/>
+            <selectionEntry id="e93d-8f1d-7101-9de9" name="Sacred Host of Tzunki" hidden="false" collective="false" import="true" type="upgrade"/>
+            <selectionEntry id="d00f-89fe-8bc6-1535" name="Sacred Host of Tlazcotl" hidden="false" collective="false" import="true" type="upgrade"/>
+            <selectionEntry id="b9b3-d232-5807-0ba5" name="Sacred Host of Tepok" hidden="false" collective="false" import="true" type="upgrade"/>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry id="203f-79ea-2634-9e7b" name="The Venerable Lord Kroak" hidden="true" collective="false" import="true" type="model">
+      <categoryLinks>
+        <categoryLink id="8597-d6b2-298c-f70a" name="Additional Hero Choice" hidden="false" targetId="4e99-ada4-8f3b-ed30" primary="false"/>
+        <categoryLink id="fb6c-dec8-f497-b3bd" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false"/>
+        <categoryLink id="691d-24f8-6419-e630" name="New CategoryLink" hidden="false" targetId="5694-61f3-6913-6154" primary="false"/>
+        <categoryLink id="c551-d4a8-2ea8-d09d" name="New CategoryLink" hidden="false" targetId="623e-5f3d-d939-9b51" primary="true"/>
+        <categoryLink id="3b5d-0aeb-63c6-94e6" name="Rare" hidden="false" targetId="a3af-995e-0cf1-7091" primary="false"/>
+        <categoryLink id="28e2-a871-d0c8-e0a4" name="Slaan Mage-Priest" hidden="false" targetId="7dc8-d1b2-a359-4a3e" primary="false"/>
+        <categoryLink id="2d60-9a20-9de1-ab96" name="Special Character" hidden="false" targetId="b91d-d3b1-8b46-6d52" primary="false"/>
+        <categoryLink id="426a-027d-e0ca-8922" name="Wizard" hidden="false" targetId="eb46-88d4-eb41-2549" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="40a7-3ce2-0ee7-9e2b" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="1225.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -1613,18 +1810,39 @@ As the Stegadon is a Large Target, it may shoot over normal sized units and inte
         <selectionEntry id="f0d3-b8a4-f9d1-e357" name="Blessed Spawning of Tzunki" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="eaa7-6800-e651-8bea" value="5.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="48f1-4778-a9db-cde7" type="instanceOf"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="361c-7d6f-fc45-5312" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="48f1-4778-a9db-cde7" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b1f9-5e8b-41ec-2c52" type="atLeast"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e93d-8f1d-7101-9de9" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="361c-7d6f-fc45-5312" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="6ac4-5e8e-7217-f8b2" value="1.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e93d-8f1d-7101-9de9" type="atLeast"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="265a-4867-6d6f-c117" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ac4-5e8e-7217-f8b2" type="min"/>
           </constraints>
           <rules>
             <rule id="fe04-1dba-c3bf-77bb" name="Blessed Spawning of Tzunki" hidden="false">
@@ -1650,9 +1868,20 @@ As the Stegadon is a Large Target, it may shoot over normal sized units and inte
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b1f9-5e8b-41ec-2c52" type="atLeast"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="361c-7d6f-fc45-5312" type="instanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="3db2-27a0-1d3a-77a6" value="1.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e62d-bc0d-a05a-84c0" type="atLeast"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8797-3b78-a587-38a0" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3db2-27a0-1d3a-77a6" type="min"/>
           </constraints>
           <rules>
             <rule id="7eba-546f-da8c-ba6e" name="Blessed Spawning of Huanchi" hidden="false">
@@ -1669,17 +1898,55 @@ As the Stegadon is a Large Target, it may shoot over normal sized units and inte
         <selectionEntry id="a3b1-8b60-7c68-8046" name="Blessed Spawning of Tepok" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="eaa7-6800-e651-8bea" value="20.0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="361c-7d6f-fc45-5312" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="48f1-4778-a9db-cde7" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b9b3-d232-5807-0ba5" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="361c-7d6f-fc45-5312" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="4f72-6436-1129-8afc" value="1.0">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="48f1-4778-a9db-cde7" type="instanceOf"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b9b3-d232-5807-0ba5" type="atLeast"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="61b4-7eff-8399-a7dc" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f72-6436-1129-8afc" type="min"/>
           </constraints>
           <rules>
             <rule id="ce0d-f98c-88e1-6951" name="Blessed Spawning of Tepok" hidden="false">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="361c-7d6f-fc45-5312" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <description>Adds +1 dice to the player&apos;s Dispel dice pool.</description>
+            </rule>
+            <rule id="019f-0d07-3fae-451e" name="Blessed Spawning of Tepok (Skink)" hidden="true">
+              <modifiers>
+                <modifier type="set" field="hidden" value="false">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="361c-7d6f-fc45-5312" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <description>Magic Resistance (1)</description>
             </rule>
           </rules>
           <categoryLinks>
@@ -1691,17 +1958,50 @@ As the Stegadon is a Large Target, it may shoot over normal sized units and inte
         </selectionEntry>
         <selectionEntry id="a811-4262-cc36-de55" name="Blessed Spawning of Quetzl" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="eaa7-6800-e651-8bea" value="15.0">
+            <modifier type="set" field="eaa7-6800-e651-8bea" value="5.0">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="48f1-4778-a9db-cde7" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="361c-7d6f-fc45-5312" type="instanceOf"/>
               </conditions>
+            </modifier>
+            <modifier type="set" field="7a8d-5dcf-821a-9836" value="1.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8195-8dc2-5381-4272" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="eaa7-6800-e651-8bea" value="15.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="48f1-4778-a9db-cde7" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="361c-7d6f-fc45-5312" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8195-8dc2-5381-4272" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="361c-7d6f-fc45-5312" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b98-6c36-df47-1a44" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a8d-5dcf-821a-9836" type="min"/>
           </constraints>
           <rules>
             <rule id="bff6-a0b2-d187-fbeb" name="Blessed Spawning of Quetzl" hidden="false">
+              <modifiers>
+                <modifier type="set" field="description" value="Skinks with the Sacred Spawning of Quetzl have a 6+ Scaly Skin save.">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="361c-7d6f-fc45-5312" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <description>Scaly Skin save is increased by +1.</description>
             </rule>
           </rules>
@@ -1717,6 +2017,11 @@ As the Stegadon is a Large Target, it may shoot over normal sized units and inte
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="48f1-4778-a9db-cde7" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="361c-7d6f-fc45-5312" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1736,8 +2041,31 @@ As the Stegadon is a Large Target, it may shoot over normal sized units and inte
           </costs>
         </selectionEntry>
         <selectionEntry id="e2d6-72ed-693c-1261" name="Blessed Spawning of Tlzazcotl" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d00f-89fe-8bc6-1535" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="361c-7d6f-fc45-5312" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="3fe2-ad2b-948d-c1f9" value="1.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d00f-89fe-8bc6-1535" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="eaa7-6800-e651-8bea" value="15.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="361c-7d6f-fc45-5312" type="instanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="085c-315e-7acc-9696" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3fe2-ad2b-948d-c1f9" type="min"/>
           </constraints>
           <rules>
             <rule id="64d5-8ddb-06d5-d691" name="Blessed Spawning of Tlzazcotl" hidden="false">
@@ -1755,13 +2083,39 @@ Note that Carnosaur will still be subject to Blood-Frenzy, and Cold Ones will st
         <selectionEntry id="f280-88af-b9c0-110e" name="Blessed Spawning of Chotec" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="eaa7-6800-e651-8bea" value="15.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="48f1-4778-a9db-cde7" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="361c-7d6f-fc45-5312" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ed95-2bdf-5b1a-abad" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="361c-7d6f-fc45-5312" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="5c45-bbec-473d-0cea" value="1.0">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="48f1-4778-a9db-cde7" type="instanceOf"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="ed95-2bdf-5b1a-abad" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="eaa7-6800-e651-8bea" value="5.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="361c-7d6f-fc45-5312" type="instanceOf"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="63ff-dffd-1d82-a94c" type="max"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c45-bbec-473d-0cea" type="min"/>
           </constraints>
           <rules>
             <rule id="3888-1561-1eb0-1c50" name="Blessed Spawning of Chotec" hidden="false">
@@ -1778,6 +2132,38 @@ Note that Carnosaur will still be subject to Blood-Frenzy, and Cold Ones will st
       </selectionEntries>
       <entryLinks>
         <entryLink id="8c99-c582-6556-59a9" name="Blessed Spawning of Sotek" hidden="false" collective="false" import="true" targetId="cc97-8b89-47fa-c50e" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="9714-11fa-0975-0e27" value="1.0">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f825-b648-f1eb-50f3" type="atLeast"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f825-b648-f1eb-50f3" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="361c-7d6f-fc45-5312" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="48f1-4778-a9db-cde7" type="notInstanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="eaa7-6800-e651-8bea" value="10.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="361c-7d6f-fc45-5312" type="instanceOf"/>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f825-b648-f1eb-50f3" type="atLeast"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9714-11fa-0975-0e27" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f087-6ba0-dd81-efa8" type="max"/>
+          </constraints>
           <rules>
             <rule id="61eb-5521-dd2e-f0d4" name="Blessed Spawning of Sotek" hidden="false">
               <description>When the unit/character charges, they get +1 Attack for that round of combat.</description>
@@ -1785,6 +2171,9 @@ Note that Carnosaur will still be subject to Blood-Frenzy, and Cold Ones will st
           </rules>
         </entryLink>
         <entryLink id="bf00-6986-2e83-f9da" name="Blessed Mark of the Old Ones" hidden="false" collective="false" import="true" targetId="84af-0ea6-fc9e-39dc" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c7ce-d56a-5b9c-78de" type="max"/>
+          </constraints>
           <rules>
             <rule id="8ca1-e736-c877-c89a" name="Blessed Mark of the Old Ones" hidden="false">
               <description>The character may re-roll a total of D3 (roll at the start of the game) single D6&apos;s per game. Each re-roll entitles the player to take a single D6 of his own that directly affects the character (including one of the dice rolled as part of a 2D6, 3D6 etc) and roll it again. This can potentially cause Irresistable Force or avoid a Miscast. Remember that you cannot re-roll a dice more than once.</description>
