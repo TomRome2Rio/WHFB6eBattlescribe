@@ -445,7 +445,7 @@ If the Slann is slain, the opponent gains an additional 200 victory points.</des
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c77-3c23-59b8-a9a5" type="max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="37.0"/>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="23.0"/>
           </costs>
         </entryLink>
         <entryLink id="77af-9cbe-59fb-2955" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry"/>
@@ -1587,6 +1587,9 @@ On the roll of a Misfire, D3 of the Skink Handlers are removed as casualties and
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2141-77a4-942b-00d4" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1602,16 +1605,47 @@ On the roll of a Misfire, D3 of the Skink Handlers are removed as casualties and
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ebe5-be9c-e443-a284" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="8195-8dc2-5381-4272" name="Sacred Host of Quetzl" hidden="false" collective="false" import="true" type="upgrade"/>
-            <selectionEntry id="ed95-2bdf-5b1a-abad" name="Sacred Host of Chotec" hidden="false" collective="false" import="true" type="upgrade"/>
-            <selectionEntry id="f825-b648-f1eb-50f3" name="Sacred Host of Sotek" hidden="false" collective="false" import="true" type="upgrade"/>
-            <selectionEntry id="e62d-bc0d-a05a-84c0" name="Sacred Host of Huanchi" hidden="false" collective="false" import="true" type="upgrade"/>
-            <selectionEntry id="e93d-8f1d-7101-9de9" name="Sacred Host of Tzunki" hidden="false" collective="false" import="true" type="upgrade"/>
-            <selectionEntry id="d00f-89fe-8bc6-1535" name="Sacred Host of Tlazcotl" hidden="false" collective="false" import="true" type="upgrade"/>
-            <selectionEntry id="b9b3-d232-5807-0ba5" name="Sacred Host of Tepok" hidden="false" collective="false" import="true" type="upgrade"/>
+            <selectionEntry id="8195-8dc2-5381-4272" name="Sacred Host of Quetzl" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ed95-2bdf-5b1a-abad" name="Sacred Host of Chotec" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f825-b648-f1eb-50f3" name="Sacred Host of Sotek" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e62d-bc0d-a05a-84c0" name="Sacred Host of Huanchi" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e93d-8f1d-7101-9de9" name="Sacred Host of Tzunki" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="d00f-89fe-8bc6-1535" name="Sacred Host of Tlazcotl" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b9b3-d232-5807-0ba5" name="Sacred Host of Tepok" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="203f-79ea-2634-9e7b" name="The Venerable Lord Kroak" hidden="true" collective="false" import="true" type="model">
       <categoryLinks>
