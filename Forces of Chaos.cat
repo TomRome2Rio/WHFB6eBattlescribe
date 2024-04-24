@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="fd0d-5697-0f21-8aac" name="Forces of Chaos" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fd0d-5697-0f21-8aac" name="Forces of Chaos" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="e8a8-d83e-c60c-3ad0" name="Hordes of Chaos"/>
     <publication id="dc3a-2511-d23a-deb3" name="Beasts of Chaos"/>
@@ -3541,7 +3541,7 @@
       <modifierGroups>
         <modifierGroup>
           <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="10a2-db75-efdb-8057" type="equalTo"/>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="10a2-db75-efdb-8057" type="equalTo"/>
           </conditions>
           <modifiers>
             <modifier type="set-primary" field="category" value="62d3-efc6-6c2c-634e"/>
@@ -3771,7 +3771,7 @@
       <modifierGroups>
         <modifierGroup>
           <conditions>
-            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="10a2-db75-efdb-8057" type="equalTo"/>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="10a2-db75-efdb-8057" type="equalTo"/>
           </conditions>
           <modifiers>
             <modifier type="set-primary" field="category" value="62d3-efc6-6c2c-634e"/>
@@ -3791,7 +3791,8 @@
       <selectionEntries>
         <selectionEntry id="c974-dd57-cef0-8733" name="Furies" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="733c-214a-8be8-e898" type="min"/>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="733c-214a-8be8-e898" type="min"/>
+            <constraint field="selections" scope="parent" value="20.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f94-f874-b5ce-5bfa" type="max"/>
           </constraints>
           <profiles>
             <profile id="d388-6898-5251-9aad" name="Fury" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
@@ -5184,8 +5185,6 @@ They use cavalry rules for spears.</description>
     </selectionEntry>
     <selectionEntry id="600c-95ea-fcdc-cda6" name="Filters" hidden="false" collective="false" import="true" type="upgrade">
       <categoryLinks>
-        <categoryLink id="5456-0a52-0f05-8840" name="New CategoryLink" hidden="false" targetId="bdfa-6d6e-a1bf-5d03" primary="false"/>
-        <categoryLink id="f427-8155-c96c-7720" name="New CategoryLink" hidden="false" targetId="bdfa-6d6e-a1bf-5d03" primary="true"/>
         <categoryLink id="ac5f-ee64-6867-477b" name="Filter" hidden="false" targetId="ef67-38cf-70b1-8a05" primary="false"/>
       </categoryLinks>
       <selectionEntries>
@@ -5221,6 +5220,14 @@ They use cavalry rules for spears.</description>
             <categoryLink id="e8cb-3bba-29c3-1d28" name="Hide Mortals" hidden="false" targetId="a1ef-6866-5c70-daa1" primary="false"/>
             <categoryLink id="2757-7d6e-4c37-c41f" name="Filter" hidden="false" targetId="ef67-38cf-70b1-8a05" primary="false"/>
           </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e669-5178-c77c-941a" name="Hide Special Characters" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aba1-8ff4-0804-1463" type="max"/>
+          </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
           </costs>
@@ -5302,6 +5309,268 @@ In addition, whenever the Giant attacks roll a D6. If this roll matches the spec
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="205.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e18e-4aae-d0cb-84f5" name="Mounted Daemonettes" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b3d3-6fdf-9ce5-a52f" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="61c2-2ac6-3e32-d264" type="equalTo"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="95e9-cc71-bb44-5b45" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="90af-588e-073c-cec9" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="10a2-db75-efdb-8057" type="equalTo"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="62d3-efc6-6c2c-634e"/>
+            <modifier type="remove" field="category" value="4a3f-84d1-0495-6ecb"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <rules>
+        <rule id="6f72-b60c-92e6-90d6" name="Swift Steed" hidden="false">
+          <description>Mounted Daemonettes count as Fast Cavalry. In addition, because of its preternatural dexterity, the mount always strikes first in close combat even agaisnt a charging enemy. If an opponent has the same ability, resolve the strikes in Initiative order - if these are the same, roll a D6 to see who strikes first.
+Note this ability applies only to the mount, not to the Daemonette rider.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="39ff-8284-f76f-fc4e" name="Daemonic" hidden="false" targetId="1d2a-5ef7-5722-e7d5" type="infoGroup"/>
+        <infoLink id="b131-10b1-95f7-9ffa" name="Aura of Slaanesh" hidden="false" targetId="1998-c72e-fcd7-7491" type="rule"/>
+        <infoLink id="bf56-2e0e-3da9-118e" name="Poisoned Attacks" hidden="false" targetId="d168-689e-84dd-9b7e" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value=" (Mount)"/>
+          </modifiers>
+        </infoLink>
+        <infoLink id="04a7-c9a1-870b-1eb6" name="Fast Cavalry" hidden="false" targetId="ab75-c6ec-0411-c924" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="ef3f-d3c8-e9ec-80ae" name="New CategoryLink" hidden="false" targetId="4a3f-84d1-0495-6ecb" primary="true"/>
+        <categoryLink id="a49b-85fb-9b47-6371" name="Daemon" hidden="false" targetId="c2a4-c683-aba9-9f52" primary="false"/>
+        <categoryLink id="c974-1998-d713-2f59" name="Mark of Slaanesh (Non-character)" hidden="false" targetId="3996-4d51-b06b-4308" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="9e85-21fb-76c3-76ef" name="Mounted Daemonettes" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f3d4-9291-c4f1-6e29" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="84eb-c5b8-31bd-2029" name="Daemonette" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">5</characteristic>
+                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+                <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+                <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                <characteristic name="I" typeId="b418-0e30-644f-1435">5</characteristic>
+                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">2</characteristic>
+                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">8</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="0413-464b-3e93-fa7e" name="Steed of Slaanesh" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">10</characteristic>
+                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+                <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                <characteristic name="I" typeId="b418-0e30-644f-1435">5</characteristic>
+                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">8</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6478-2ab2-762c-cd50" name="Gorthor the Beastlord" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="add" field="category" value="3363-3219-a7df-7d95">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a61-9b9e-0b56-e6ce" type="equalTo"/>
+                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f06a-aa77-bbc7-43ca" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0892-e336-b753-9d89" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e669-5178-c77c-941a" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1d37-dfc3-e172-ecc3" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="6885-6fd8-25c8-8257" name="Tuskgor" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">7</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">-</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">-</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">-</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">2</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="896f-a23e-85ee-63ed" name="Bagrar the Tamer" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">-</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">-</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">-</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">2</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="c3a6-a194-6049-83bd" name="Gorthor the Beastlord" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">5</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">7</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">6</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">4</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">9</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="53d1-c9a9-13ec-b6e5" name="Chariot" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">-</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">-</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">-</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">5</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">4</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">-</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">-</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="1522-8ec1-1f4e-4624" name="Ambush" hidden="false" targetId="042e-ac58-600d-b7f6" type="rule"/>
+        <infoLink id="8cef-1381-fb80-52e5" name="Raiders" hidden="false" targetId="ca5f-978e-65f9-0564" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="d187-1a0a-6fa4-8733" name="New CategoryLink" hidden="false" targetId="623e-5f3d-d939-9b51" primary="true"/>
+        <categoryLink id="7f81-4a3a-e4a2-3ab9" name="Beast" hidden="false" targetId="e96f-4863-8bc0-0266" primary="false"/>
+        <categoryLink id="2f7c-6533-9fc6-3c58" name="Heroes" hidden="false" targetId="5694-61f3-6913-6154" primary="false"/>
+        <categoryLink id="3194-bb65-05f8-2f55" name="Special Character" hidden="false" targetId="b91d-d3b1-8b46-6d52" primary="false"/>
+        <categoryLink id="5b32-a2b7-3247-4abe" name="Grants Extra Rare Choice" hidden="false" targetId="9236-407c-ba73-9b10" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="03ef-3678-73b5-e248" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b560-1572-16f5-417b" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="463.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e438-ecce-db4f-b8ee" name="Khazrak One-Eye" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="add" field="category" value="3363-3219-a7df-7d95">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a61-9b9e-0b56-e6ce" type="equalTo"/>
+                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f06a-aa77-bbc7-43ca" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0892-e336-b753-9d89" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e669-5178-c77c-941a" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="a339-cfc2-c6a7-7335" value="0.0">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6478-2ab2-762c-cd50" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a339-cfc2-c6a7-7335" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="1644-a9cc-f8f6-fbc8" name="Khazrak One-Eye" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">5</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">7</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">1</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">6</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">4</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">8</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="80e7-cfdf-c0ae-6154" name="Ambush" hidden="false" targetId="042e-ac58-600d-b7f6" type="rule"/>
+        <infoLink id="72ea-e57b-219e-a6cd" name="Raiders" hidden="false" targetId="ca5f-978e-65f9-0564" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="cdb7-55a2-fd45-90ec" name="New CategoryLink" hidden="false" targetId="623e-5f3d-d939-9b51" primary="true"/>
+        <categoryLink id="e4b7-6360-80d7-dbaa" name="Beast" hidden="false" targetId="e96f-4863-8bc0-0266" primary="false"/>
+        <categoryLink id="85d5-1676-b30e-8c35" name="Heroes" hidden="false" targetId="5694-61f3-6913-6154" primary="false"/>
+        <categoryLink id="5968-9787-ed21-89b6" name="Special Character" hidden="false" targetId="b91d-d3b1-8b46-6d52" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="051b-5a71-2d64-5881" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4fad-114b-d075-1977" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="292.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -7981,7 +8250,7 @@ Against Castles, Empire Steam Tanks and in other situations where a wound roll i
                 <categoryLink id="c971-5857-c58e-505a" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
               </categoryLinks>
               <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="a332-168f-f04c-817f" name="Staff of Darkoath" hidden="true" collective="false" import="true" type="upgrade">

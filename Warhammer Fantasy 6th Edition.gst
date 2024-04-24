@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="4ca8-2035-2f87-1bd7" name="WHFB 6th Edition" revision="17" battleScribeVersion="2.03" authorName="Tom Clare" authorContact="" authorUrl="" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="4ca8-2035-2f87-1bd7" name="WHFB 6th Edition" revision="18" battleScribeVersion="2.03" authorName="Tom Clare" authorContact="" authorUrl="" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="d9e7-add3-773e-ffab" name="BRB"/>
   </publications>
@@ -53,6 +53,7 @@
       </constraints>
     </categoryEntry>
     <categoryEntry id="0daf-8d53-eadf-d10f" name="Additional Lord Choice" hidden="false"/>
+    <categoryEntry id="9236-407c-ba73-9b10" name="Grants Extra Rare Choice" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="5f75-906f-4d23-7a30" name="Warhammer Fantasy 6th Edition" hidden="false">
@@ -199,28 +200,29 @@
                 <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="2000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="lessThan"/>
               </conditions>
             </modifier>
+            <modifier type="increment" field="abcb-d080-e34a-9d53" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9236-407c-ba73-9b10" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
           </modifiers>
           <modifierGroups>
             <modifierGroup>
+              <conditions>
+                <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
+              </conditions>
               <modifiers>
-                <modifier type="set" field="abcb-d080-e34a-9d53" value="0.0">
-                  <conditions>
-                    <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
-                  </conditions>
-                </modifier>
+                <modifier type="decrement" field="abcb-d080-e34a-9d53" value="1.0"/>
                 <modifier type="increment" field="abcb-d080-e34a-9d53" value="1.0">
                   <repeats>
                     <repeat field="limit::eaa7-6800-e651-8bea" scope="roster" value="1000.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
-                  <conditions>
-                    <condition field="limit::eaa7-6800-e651-8bea" scope="roster" value="1999.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" type="greaterThan"/>
-                  </conditions>
                 </modifier>
               </modifiers>
             </modifierGroup>
           </modifierGroups>
           <constraints>
-            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abcb-d080-e34a-9d53" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abcb-d080-e34a-9d53" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="1821-b8e0-2aa1-b805" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false">
@@ -257,6 +259,11 @@
               <conditions>
                 <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="05b9-5022-67cd-4fd3" type="instanceOf"/>
               </conditions>
+            </modifier>
+            <modifier type="decrement" field="562f-9770-dc82-1b05" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="4e99-ada4-8f3b-ed30" repeats="1" roundUp="false"/>
+              </repeats>
             </modifier>
           </modifiers>
           <constraints>
