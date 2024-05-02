@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="fd0d-5697-0f21-8aac" name="Forces of Chaos" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="18" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fd0d-5697-0f21-8aac" name="Forces of Chaos" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="e8a8-d83e-c60c-3ad0" name="Hordes of Chaos"/>
     <publication id="dc3a-2511-d23a-deb3" name="Beasts of Chaos"/>
@@ -1071,7 +1071,6 @@
         <entryLink id="62a8-4b55-83fb-e23e" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry"/>
         <entryLink id="ccc6-7c66-8cac-449a" name="Mark of Chaos (Doombull)" hidden="false" collective="false" import="true" targetId="0d46-4edb-b580-087a" type="selectionEntryGroup"/>
         <entryLink id="1a34-6ca7-03ee-0473" name="Magic Items" hidden="false" collective="false" import="true" targetId="853b-1be3-fdb2-0588" type="selectionEntryGroup"/>
-        <entryLink id="ba3a-939e-5745-41e2" name="Mount" hidden="false" collective="false" import="true" targetId="1a97-e87a-c1df-2331" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="180.0"/>
@@ -3255,7 +3254,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="16.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="08f6-d0bf-15fb-3ff0" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
@@ -4760,7 +4759,7 @@ They use cavalry rules for spears.</description>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c54a-bf6f-2954-d5aa" type="max"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="14.0"/>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="7976-5032-6877-be5e" name="Champion" hidden="false" collective="false" import="true" type="upgrade">
@@ -4768,7 +4767,7 @@ They use cavalry rules for spears.</description>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4bcb-c91f-5b41-4da9" type="max"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="14.0"/>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -5571,6 +5570,26 @@ Note this ability applies only to the mount, not to the Daemonette rider.</descr
       </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="292.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="013b-a34a-c705-6c06" name="Hellcannon" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="aac0-5a64-060e-85bb" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="78e2-42ed-eaf2-5744" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="b9c5-9af9-63d6-fcaf" name="Mortal" hidden="false" targetId="a72e-11bf-6b23-95a6" primary="false"/>
+        <categoryLink id="5da9-6a8a-9347-554b" name="New CategoryLink" hidden="false" targetId="a3af-995e-0cf1-7091" primary="true"/>
+        <categoryLink id="d14c-3649-cd7b-51a2" name="Additional Rare Choice" hidden="false" targetId="1c0b-2b0f-459f-d6f9" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="270.0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>
@@ -8371,6 +8390,11 @@ Against Castles, Empire Steam Tanks and in other situations where a wound roll i
       <selectionEntries>
         <selectionEntry id="c481-f002-9b28-3831" name="The Beast Banner" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8ef9-e7b1-e3ee-d3b9" type="instanceOf"/>
+              </conditions>
+            </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e96f-4863-8bc0-0266" type="notInstanceOf"/>

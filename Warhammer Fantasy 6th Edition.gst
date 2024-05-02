@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="4ca8-2035-2f87-1bd7" name="WHFB 6th Edition" revision="18" battleScribeVersion="2.03" authorName="Tom Clare" authorContact="" authorUrl="" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="4ca8-2035-2f87-1bd7" name="WHFB 6th Edition" revision="19" battleScribeVersion="2.03" authorName="Tom Clare" authorContact="" authorUrl="" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="d9e7-add3-773e-ffab" name="BRB"/>
   </publications>
@@ -54,6 +54,7 @@
     </categoryEntry>
     <categoryEntry id="0daf-8d53-eadf-d10f" name="Additional Lord Choice" hidden="false"/>
     <categoryEntry id="9236-407c-ba73-9b10" name="Grants Extra Rare Choice" hidden="false"/>
+    <categoryEntry id="1c0b-2b0f-459f-d6f9" name="Additional Rare Choice" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="5f75-906f-4d23-7a30" name="Warhammer Fantasy 6th Edition" hidden="false">
@@ -203,6 +204,11 @@
             <modifier type="increment" field="abcb-d080-e34a-9d53" value="1.0">
               <repeats>
                 <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9236-407c-ba73-9b10" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" field="abcb-d080-e34a-9d53" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1c0b-2b0f-459f-d6f9" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
