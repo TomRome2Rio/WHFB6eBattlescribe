@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="fd0d-5697-0f21-8aac" name="Forces of Chaos" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fd0d-5697-0f21-8aac" name="Forces of Chaos" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="e8a8-d83e-c60c-3ad0" name="Hordes of Chaos"/>
     <publication id="dc3a-2511-d23a-deb3" name="Beasts of Chaos"/>
@@ -113,6 +113,7 @@
     <categoryEntry id="90af-588e-073c-cec9" name="Hide Daemons" hidden="false"/>
     <categoryEntry id="a1ef-6866-5c70-daa1" name="Hide Mortals" hidden="false"/>
     <categoryEntry id="13a7-254f-3909-eab2" name="Shield" hidden="true"/>
+    <categoryEntry id="b131-2b22-26f6-bcfb" name="Chosen" hidden="false"/>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="b5b7-0447-4117-ed00" name="Beastlord" hidden="false" collective="false" import="true" type="model">
@@ -461,7 +462,6 @@
         <entryLink id="9b29-746e-56ee-b464" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry"/>
         <entryLink id="a988-76b3-7fd6-f3e0" name="Magic Items" hidden="false" collective="false" import="true" targetId="853b-1be3-fdb2-0588" type="selectionEntryGroup"/>
         <entryLink id="8810-7718-219b-2468" name="Mark of Chaos (Hero)" hidden="false" collective="false" import="true" targetId="f467-747b-0ded-2668" type="selectionEntryGroup"/>
-        <entryLink id="ac7a-5a14-57d3-2874" name="Mount" hidden="false" collective="false" import="true" targetId="1a97-e87a-c1df-2331" type="selectionEntryGroup"/>
         <entryLink id="b055-7d24-70b8-8fe0" name="Battle Standard Bearer" hidden="false" collective="false" import="true" targetId="eca1-46d6-8778-847f" type="selectionEntry"/>
         <entryLink id="1802-7a39-1a12-10c3" name="Magic Banners" hidden="false" collective="false" import="true" targetId="ab32-5c68-ca03-d323" type="selectionEntryGroup">
           <modifiers>
@@ -2543,6 +2543,9 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="992a-02e7-eec1-ad5f" type="max"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6a45-d421-4096-fefd" type="max"/>
           </constraints>
+          <categoryLinks>
+            <categoryLink id="d5d2-2320-8d67-fcb4" name="Chosen" hidden="false" targetId="b131-2b22-26f6-bcfb" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
           </costs>
@@ -2947,14 +2950,14 @@
           <selectionEntries>
             <selectionEntry id="72ba-9125-595c-34e4" name="Javelins" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
+                <modifier type="increment" field="eaa7-6800-e651-8bea" value="4.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
               <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="4.0"/>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="b996-2f8d-af9e-5613" name="Throwing Axes" hidden="false" collective="false" import="true" type="upgrade">
@@ -2988,6 +2991,11 @@
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="a1ef-6866-5c70-daa1" type="equalTo"/>
           </conditions>
         </modifier>
+        <modifier type="set" field="b6e3-cf56-072a-ea41" value="1.0">
+          <conditions>
+            <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="428b-2d0d-828a-2553" type="atLeast"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <modifierGroups>
         <modifierGroup>
@@ -3000,6 +3008,9 @@
           </modifiers>
         </modifierGroup>
       </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b6e3-cf56-072a-ea41" type="min"/>
+      </constraints>
       <categoryLinks>
         <categoryLink id="48a8-e7bf-d37e-6869" name="New CategoryLink" hidden="false" targetId="4a3f-84d1-0495-6ecb" primary="true"/>
         <categoryLink id="a96e-ced2-f1a9-8d7c" name="Mortal" hidden="false" targetId="a72e-11bf-6b23-95a6" primary="false"/>
@@ -3070,16 +3081,25 @@
         </selectionEntry>
         <selectionEntry id="b0dc-8b8a-7ee3-496d" name="Chosen" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="eaa7-6800-e651-8bea" value="12.0">
+            <modifier type="increment" field="eaa7-6800-e651-8bea" value="12.0">
               <repeats>
                 <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
+            <modifier type="set" field="3315-c5f3-001d-3005" value="1.0">
+              <conditions>
+                <condition field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="428b-2d0d-828a-2553" type="atLeast"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3315-c5f3-001d-3005" type="max"/>
+            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="3315-c5f3-001d-3005" type="min"/>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a754-4e5e-9278-8c5a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a5b2-288c-81a5-54b4" type="max"/>
           </constraints>
+          <categoryLinks>
+            <categoryLink id="e5b3-0ee2-5561-7379" name="Chosen" hidden="false" targetId="b131-2b22-26f6-bcfb" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
           </costs>
@@ -5592,6 +5612,184 @@ Note this ability applies only to the mount, not to the Daemonette rider.</descr
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="270.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="428b-2d0d-828a-2553" name="Archaon the Everchosen" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e669-5178-c77c-941a" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="25cd-4846-e3a3-6f69" name="Archaon" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">9</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">5</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">5</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">4</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">7</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">5</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">10</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="9e21-a28e-5b64-67fa" name="New CategoryLink" hidden="false" targetId="623e-5f3d-d939-9b51" primary="true"/>
+        <categoryLink id="4f86-f62e-db75-f346" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false"/>
+        <categoryLink id="c160-7269-c102-4fea" name="Mortal" hidden="false" targetId="a72e-11bf-6b23-95a6" primary="false"/>
+        <categoryLink id="bfd5-376e-c298-e32d" name="Unidivided General" hidden="false" targetId="3363-3219-a7df-7d95" primary="false"/>
+        <categoryLink id="a499-04c2-afe0-3678" name="Tzeentch General" hidden="false" targetId="61c2-2ac6-3e32-d264" primary="false"/>
+        <categoryLink id="491a-7531-acd5-27a0" name="Slaanesh General" hidden="false" targetId="6cd1-d9fd-b2d0-e341" primary="false"/>
+        <categoryLink id="398b-3894-d6a0-7c0f" name="Khorne General" hidden="false" targetId="b3d3-6fdf-9ce5-a52f" primary="false"/>
+        <categoryLink id="f97d-7a84-dc5f-41d0" name="Mark of Tzeentch (Character)" hidden="false" targetId="19d9-f7ab-4148-310e" primary="false"/>
+        <categoryLink id="8a21-7c9d-753e-ad99" name="Mark of Slaanesh (Character)" hidden="false" targetId="58f1-832c-9935-797b" primary="false"/>
+        <categoryLink id="3a2b-83ae-2eda-c6de" name="Mark of Nurgle (Character)" hidden="false" targetId="8c83-a348-a664-eebe" primary="false"/>
+        <categoryLink id="c0de-f310-1745-9083" name="Mark of Khorne (Character)" hidden="false" targetId="b901-28a6-ed61-a2be" primary="false"/>
+        <categoryLink id="5da5-e49a-0a9d-f06d" name="Mark of Chaos Undivided" hidden="false" targetId="f06a-aa77-bbc7-43ca" primary="false"/>
+        <categoryLink id="2d5a-5ef4-4edb-e9b0" name="Wizard" hidden="false" targetId="eb46-88d4-eb41-2549" primary="false"/>
+        <categoryLink id="c6ca-8b23-1172-384f" name="Special Character" hidden="false" targetId="b91d-d3b1-8b46-6d52" primary="false"/>
+        <categoryLink id="340c-0531-6ac8-a617" name="Mortal General" hidden="false" targetId="aac0-5a64-060e-85bb" primary="false"/>
+        <categoryLink id="bf7a-5f89-877b-b464" name="Nurgle General" hidden="false" targetId="95e9-cc71-bb44-5b45" primary="false"/>
+        <categoryLink id="43c0-0c9d-fe7c-b175" name="Two Additional Hero Choices" hidden="false" targetId="9dc5-bbce-5738-84e8" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="4ebd-d30e-ece6-c358" name="The Crown of Domination" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee99-1429-ac06-918b" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b8ce-0636-7e50-6e94" type="min"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="6556-86da-69c6-47e4" name="Shield" hidden="false" targetId="13a7-254f-3909-eab2" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="e2f7-c862-8f9a-7d41" name="The Armour of Morkar" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0160-eb41-6f4b-fcd9" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="901c-f8a8-e377-7ddc" type="min"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="0a3e-da86-8053-3208" name="Shield" hidden="false" targetId="13a7-254f-3909-eab2" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="197b-19e2-3eed-dab4" name="The Eye of Sheerian" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d00-1438-83c0-7bf6" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ded-8e36-e255-f5f6" type="min"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="cfe4-ed8b-1645-fb48" name="Shield" hidden="false" targetId="13a7-254f-3909-eab2" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b69b-0509-5aac-0abb" name="Dorghar" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f653-3a2a-7a55-29e4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="78b5-d046-022d-bd0a" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="ae0b-ad3f-0b0c-2f3b" name="Dorghar" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">8</characteristic>
+                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+                <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
+                <characteristic name="T" typeId="16d7-9f22-06d8-8427">5</characteristic>
+                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+                <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">3</characteristic>
+                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">9</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <categoryLinks>
+            <categoryLink id="f272-f7be-efb4-7683" name="Shield" hidden="false" targetId="13a7-254f-3909-eab2" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="70.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="43d0-7540-ec1c-7bc6" name="The Slayer of Kings" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6809-1a73-accc-673e" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b060-1ccb-d98b-2c19" type="min"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="c962-8cb0-f1bc-5a6d" name="Shield" hidden="false" targetId="13a7-254f-3909-eab2" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="f22c-34a2-91b2-d9a3" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f94e-363e-4ab8-cb2a" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="785.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2286-2259-2ffb-c319" name="Galrauch, First of the Chaos Dragons" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e669-5178-c77c-941a" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink id="4d56-8ffb-04b0-9b22" name="Additional Hero Choice" hidden="false" targetId="4e99-ada4-8f3b-ed30" primary="false"/>
+        <categoryLink id="d519-e62a-20e1-3711" name="Additional Rare Choice" hidden="false" targetId="1c0b-2b0f-459f-d6f9" primary="false"/>
+        <categoryLink id="57c2-7db0-4a8d-04b2" name="New CategoryLink" hidden="false" targetId="623e-5f3d-d939-9b51" primary="true"/>
+        <categoryLink id="5e9f-4646-1865-3c39" name="Wizard" hidden="false" targetId="eb46-88d4-eb41-2549" primary="false"/>
+        <categoryLink id="8f33-a695-bf2a-fd50" name="Special Character" hidden="false" targetId="b91d-d3b1-8b46-6d52" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="dbf1-6a70-8001-1a1c" name="Tzeentch&apos;s Will" hidden="false" collective="false" import="true" targetId="a5d3-fe46-0650-d7f8" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="eaa7-6800-e651-8bea" value="0.0"/>
+            <modifier type="set" field="hidden" value="false"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="15d1-663b-dcd3-6f67" type="min"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="331a-b18b-86e4-d0fe" name="Spell Destroyer" hidden="false" collective="false" import="true" targetId="105d-58b5-6a3a-9f68" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="eaa7-6800-e651-8bea" value="0.0"/>
+            <modifier type="set" field="hidden" value="false"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="364a-9354-9b08-331d" type="min"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="90f0-a027-c466-ead6" name="Master of Sorcery" hidden="false" collective="false" import="true" targetId="1271-203b-acdd-0d11" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="eaa7-6800-e651-8bea" value="0.0"/>
+            <modifier type="set" field="hidden" value="false"/>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="081a-e30a-1a8e-3f6a" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="696.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="b069-5fa3-7466-abe0" name="Tuskgor Chariot" hidden="false" collective="false" import="true" targetId="2e26-3352-03bc-0ea1" type="selectionEntry">
@@ -6642,11 +6840,29 @@ Note this ability applies only to the mount, not to the Daemonette rider.</descr
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd1-d9fd-b2d0-e341" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="61c2-2ac6-3e32-d264" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="95e9-cc71-bb44-5b45" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="428b-2d0d-828a-2553" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd1-d9fd-b2d0-e341" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="61c2-2ac6-3e32-d264" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="95e9-cc71-bb44-5b45" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="428b-2d0d-828a-2553" type="atLeast"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a53-24c8-1143-6595" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b131-2b22-26f6-bcfb" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -6671,11 +6887,29 @@ Note this ability applies only to the mount, not to the Daemonette rider.</descr
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd1-d9fd-b2d0-e341" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b3d3-6fdf-9ce5-a52f" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="95e9-cc71-bb44-5b45" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="428b-2d0d-828a-2553" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd1-d9fd-b2d0-e341" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b3d3-6fdf-9ce5-a52f" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="95e9-cc71-bb44-5b45" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="428b-2d0d-828a-2553" type="atLeast"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a53-24c8-1143-6595" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b131-2b22-26f6-bcfb" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -6697,11 +6931,29 @@ Note this ability applies only to the mount, not to the Daemonette rider.</descr
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd1-d9fd-b2d0-e341" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="61c2-2ac6-3e32-d264" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b3d3-6fdf-9ce5-a52f" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="428b-2d0d-828a-2553" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6cd1-d9fd-b2d0-e341" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="61c2-2ac6-3e32-d264" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b3d3-6fdf-9ce5-a52f" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="428b-2d0d-828a-2553" type="atLeast"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a53-24c8-1143-6595" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b131-2b22-26f6-bcfb" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -6726,11 +6978,29 @@ Note this ability applies only to the mount, not to the Daemonette rider.</descr
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b3d3-6fdf-9ce5-a52f" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="61c2-2ac6-3e32-d264" type="equalTo"/>
-                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="95e9-cc71-bb44-5b45" type="equalTo"/>
+                    <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="428b-2d0d-828a-2553" type="equalTo"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b3d3-6fdf-9ce5-a52f" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="61c2-2ac6-3e32-d264" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="95e9-cc71-bb44-5b45" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="428b-2d0d-828a-2553" type="atLeast"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7a53-24c8-1143-6595" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b131-2b22-26f6-bcfb" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -7060,16 +7330,9 @@ Against Castles, Empire Steam Tanks and in other situations where a wound roll i
         <selectionEntry id="8e22-bf68-0d56-d02b" name="Chaos Daemon Sword" publicationId="e8a8-d83e-c60c-3ad0" page="50" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b901-28a6-ed61-a2be" type="equalTo"/>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8c83-a348-a664-eebe" type="equalTo"/>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="58f1-832c-9935-797b" type="equalTo"/>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="19d9-f7ab-4148-310e" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f06a-aa77-bbc7-43ca" type="equalTo"/>
+              </conditions>
             </modifier>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -8612,6 +8875,13 @@ Against Castles, Empire Steam Tanks and in other situations where a wound roll i
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="ac79-03e5-8182-09db" name="Magic Armour" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="increment" field="2e43-24c6-ff9a-43e1" value="1.0">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a2b-c497-93f2-c804" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2e43-24c6-ff9a-43e1" type="max"/>
       </constraints>
@@ -8753,6 +9023,11 @@ A model may wear Chaos Armour and still cast spells.</description>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b901-28a6-ed61-a2be" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -9224,6 +9499,18 @@ Roll a D6 every time a spell is cast at the bearer of the Spelleater Shield and 
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6cc2-6138-4cf2-a899" name="Spell Breaker" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d9d2-eb60-46ec-825c" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a35-2b6c-1f92-42fa" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="9d21-4d7d-2070-c229" name="Daemonic Gift" hidden="false" targetId="d855-0137-fb0f-b91c" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>

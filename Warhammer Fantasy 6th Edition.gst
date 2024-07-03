@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="4ca8-2035-2f87-1bd7" name="WHFB 6th Edition" revision="19" battleScribeVersion="2.03" authorName="Tom Clare" authorContact="" authorUrl="" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="4ca8-2035-2f87-1bd7" name="WHFB 6th Edition" revision="20" battleScribeVersion="2.03" authorName="Tom Clare" authorContact="" authorUrl="" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="d9e7-add3-773e-ffab" name="BRB"/>
   </publications>
@@ -38,7 +38,7 @@
     <categoryEntry id="eb46-88d4-eb41-2549" name="Wizard" hidden="false"/>
     <categoryEntry id="1a61-9b9e-0b56-e6ce" name="General" hidden="false"/>
     <categoryEntry id="4c58-0153-f37e-9905" name="Magic Shield" hidden="false"/>
-    <categoryEntry id="4e99-ada4-8f3b-ed30" name="Additional Hero Choice" hidden="false"/>
+    <categoryEntry id="4e99-ada4-8f3b-ed30" name="Additional Hero Choice" hidden="true"/>
     <categoryEntry id="fcd6-2f77-ca6e-7b24" name="Chariot" hidden="false">
       <infoLinks>
         <infoLink id="be5e-b2e5-9cda-69f1" name="Chariot" hidden="false" targetId="4bb1-dfab-2824-bad1" type="rule"/>
@@ -52,9 +52,10 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bf1d-6d71-81aa-e3ca" type="max"/>
       </constraints>
     </categoryEntry>
-    <categoryEntry id="0daf-8d53-eadf-d10f" name="Additional Lord Choice" hidden="false"/>
+    <categoryEntry id="0daf-8d53-eadf-d10f" name="Additional Lord Choice" hidden="true"/>
     <categoryEntry id="9236-407c-ba73-9b10" name="Grants Extra Rare Choice" hidden="false"/>
-    <categoryEntry id="1c0b-2b0f-459f-d6f9" name="Additional Rare Choice" hidden="false"/>
+    <categoryEntry id="1c0b-2b0f-459f-d6f9" name="Additional Rare Choice" hidden="true"/>
+    <categoryEntry id="9dc5-bbce-5738-84e8" name="Two Additional Hero Choices" hidden="true"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="5f75-906f-4d23-7a30" name="Warhammer Fantasy 6th Edition" hidden="false">
@@ -132,6 +133,11 @@
               <conditions>
                 <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="05b9-5022-67cd-4fd3" type="instanceOf"/>
               </conditions>
+            </modifier>
+            <modifier type="decrement" field="75f4-2d2a-d6a1-e901" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9dc5-bbce-5738-84e8" repeats="1" roundUp="false"/>
+              </repeats>
             </modifier>
           </modifiers>
           <constraints>
@@ -269,6 +275,11 @@
             <modifier type="decrement" field="562f-9770-dc82-1b05" value="1.0">
               <repeats>
                 <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="4e99-ada4-8f3b-ed30" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" field="562f-9770-dc82-1b05" value="2.0">
+              <repeats>
+                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" childId="9dc5-bbce-5738-84e8" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
