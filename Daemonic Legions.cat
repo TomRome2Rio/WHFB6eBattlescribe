@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7010-abfa-dde5-6873" name="Daemonic Legions" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7010-abfa-dde5-6873" name="Daemonic Legions" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="37ff-905c-0f6b-9742" name="Mark of Chaos Undivided" hidden="false"/>
     <categoryEntry id="452e-f479-2264-b39d" name="Mark of Tzeentch" hidden="false"/>
@@ -467,56 +467,6 @@ See Storm of Chaos page 26. for spell details.</description>
     </selectionEntry>
     <selectionEntry id="1bce-e4f1-92e4-d6db" name="Daemonic Herald" hidden="false" collective="false" import="true" type="model">
       <modifiers>
-        <modifier type="add" field="category" value="5606-1572-ec11-b708">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a61-9b9e-0b56-e6ce" type="equalTo"/>
-                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a118-92a9-7582-c1ef" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="add" field="category" value="6b81-04bb-b606-ee37">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a61-9b9e-0b56-e6ce" type="equalTo"/>
-                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="37ff-905c-0f6b-9742" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="add" field="category" value="df7a-a4b0-9c52-9a3d">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a61-9b9e-0b56-e6ce" type="equalTo"/>
-                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="8d11-f141-8867-8848" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="add" field="category" value="81dd-d757-ee31-a317">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a61-9b9e-0b56-e6ce" type="equalTo"/>
-                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="452e-f479-2264-b39d" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="add" field="category" value="ba23-900e-08ae-0144">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a61-9b9e-0b56-e6ce" type="equalTo"/>
-                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="58a6-a2a7-c285-97aa" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="add" field="category" value="eb46-88d4-eb41-2549">
           <conditions>
             <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="452e-f479-2264-b39d" type="equalTo"/>
@@ -743,15 +693,6 @@ See Storm of Chaos page 26. for spell details.</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="491f-96fd-e807-a4be" name="General" hidden="false" collective="false" import="true" targetId="cf7b-798c-9b94-df74" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0693-0cba-29e1-5484" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
         <entryLink id="e5a8-b848-f201-3b6f" name="Mark of Chaos" hidden="false" collective="false" import="true" targetId="fb29-7c90-0ebe-a56e" type="selectionEntryGroup"/>
         <entryLink id="335d-c8c7-c3ad-a30c" name="Daemonic Gifts" hidden="false" collective="false" import="true" targetId="3827-ea1e-7704-864a" type="selectionEntryGroup"/>
       </entryLinks>
@@ -2335,7 +2276,6 @@ See Storm of Chaos page 26. for spell details.</description>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d79-0f18-f42d-96e9" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6bbd-0b05-1a63-9862" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="40.0"/>
@@ -2351,7 +2291,6 @@ See Storm of Chaos page 26. for spell details.</description>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bce8-d72c-c95f-513c" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="795b-8a84-e5ce-a2a9" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="45.0"/>
@@ -2360,7 +2299,6 @@ See Storm of Chaos page 26. for spell details.</description>
         <selectionEntry id="bcd3-784a-8734-0d39" name="Soul Hunger" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3875-1f1e-6bcc-3c88" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="06d5-db23-fbf6-1335" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
@@ -2369,7 +2307,6 @@ See Storm of Chaos page 26. for spell details.</description>
         <selectionEntry id="bf01-cd27-5e03-c128" name="Spell Breaker" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1da3-59b2-27dd-9fb7" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2f43-796b-3ec2-2c1e" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
@@ -2378,7 +2315,6 @@ See Storm of Chaos page 26. for spell details.</description>
         <selectionEntry id="f4a2-dcc5-2748-1555" name="Diabolic Splendour" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d836-24cf-0089-28ab" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5829-cb64-cd00-9b70" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
@@ -2399,7 +2335,6 @@ See Storm of Chaos page 26. for spell details.</description>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c3b-965e-cb1f-522c" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6fe1-987e-17e3-e8ba" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="40.0"/>
@@ -2415,7 +2350,6 @@ See Storm of Chaos page 26. for spell details.</description>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6fe9-e015-2080-2811" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="660f-d5ea-1617-2712" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
@@ -2436,7 +2370,6 @@ See Storm of Chaos page 26. for spell details.</description>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="efbe-dfdf-3593-10a3" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5307-c566-4f97-6a48" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
@@ -2452,7 +2385,6 @@ See Storm of Chaos page 26. for spell details.</description>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="92e8-09cf-2600-9bbb" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="308b-7186-f54e-cd60" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
@@ -2468,7 +2400,6 @@ See Storm of Chaos page 26. for spell details.</description>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba63-8da0-61b6-55b5" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="173a-a1c3-5418-363a" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
@@ -2489,7 +2420,6 @@ See Storm of Chaos page 26. for spell details.</description>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="55e3-0c54-cdcb-cfad" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0040-8476-66e7-d33b" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="75.0"/>
@@ -2510,7 +2440,6 @@ See Storm of Chaos page 26. for spell details.</description>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2788-dd4c-7dee-44a5" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f6b0-3537-354d-f56f" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
@@ -2526,7 +2455,6 @@ See Storm of Chaos page 26. for spell details.</description>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5639-1cf8-5bc6-c575" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1fd8-7dc0-d513-0122" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="15.0"/>
@@ -2542,7 +2470,6 @@ See Storm of Chaos page 26. for spell details.</description>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="96e5-3cbe-6e77-a910" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c9ee-5dfd-04fe-d16e" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
@@ -2563,7 +2490,6 @@ See Storm of Chaos page 26. for spell details.</description>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a300-dbbe-fd6a-24e3" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ccb0-104f-4e7d-ee47" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="c29a-2e3a-35b2-8354" name="Cloud of Flies" hidden="false" targetId="ee13-4ea7-37a5-af07" type="rule"/>
@@ -2587,7 +2513,6 @@ See Storm of Chaos page 26. for spell details.</description>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1674-7d3c-67e9-a737" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8cf6-00c7-ba60-290f" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
@@ -2608,7 +2533,6 @@ See Storm of Chaos page 26. for spell details.</description>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="056c-83c6-15a4-8ca1" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="41f0-0437-63b5-a72f" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="15.0"/>
@@ -2629,7 +2553,6 @@ See Storm of Chaos page 26. for spell details.</description>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="caf4-521c-5d13-8740" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1e37-9dea-7a0c-9db1" type="max"/>
           </constraints>
           <infoLinks>
             <infoLink id="3838-bf56-847e-cf89" name="Aura of Slaanesh" hidden="false" targetId="1783-01fe-723e-a7f4" type="rule"/>
@@ -2653,7 +2576,6 @@ See Storm of Chaos page 26. for spell details.</description>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="708d-d427-1211-fb97" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6f54-43b1-a3bb-49c1" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
@@ -2669,7 +2591,6 @@ See Storm of Chaos page 26. for spell details.</description>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1d14-163b-bb37-60f0" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e8b6-df08-a7d7-4979" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
