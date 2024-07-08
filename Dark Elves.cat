@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b151-7d1c-4a96-e0d0" name="Dark Elves" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b151-7d1c-4a96-e0d0" name="Dark Elves" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="21" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7b32-9394-e778-467c" name="Poison" hidden="false"/>
     <categoryEntry id="16df-2ebd-e4f7-9984" name="Artifacts and Skills" hidden="false"/>
@@ -2366,10 +2366,16 @@ If Malus is in base contact with a friendly model and not in contact with the en
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c1d6-f307-3b35-23ce" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="0a79-e367-198c-8303" name="Aspiring Champion of Chaos" hidden="false" collective="false" import="true" type="model">
       <modifiers>
@@ -3154,6 +3160,9 @@ If the Spawn&apos;s movement is sufficient to take it into an enemy unit then it
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c1e-38fa-e936-b9a6" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb5e-a2c0-2809-9d60" type="min"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="b727-c408-7c47-b70d" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
           <categoryLinks>
@@ -3567,6 +3576,9 @@ Certain characters may ride in a chariot. They replace one of the crew, and the 
           <description>A unit or model with the Mark of Slaanesh is Immune to Psychology</description>
         </rule>
       </rules>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="6ff0-9c47-e6c7-7007" name="Rapturous Standard" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
@@ -3875,6 +3887,24 @@ Once per Magic phase, the wielder may unleash the power of the Wand. This automa
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="129d-8941-08f9-1c6e" name="Divine Eye" publicationId="2c29-8521-dcc7-5337" page="11" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a71-deb5-f562-48e3" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f312-2f11-8c45-cf74" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="26f5-db6e-846c-0bda" name="Divine Eye" hidden="false">
+              <description>Enemy Scouts units may not deploy within 12&quot; of the bearer (this includes Scouts with additional deployment rules such as Chameleon Skinks).
+In addition, at the start of each of their turns the character may activate the Divine Eye. The eye will look into every enemy unit within 12&quot;. Your opponent must reveal the number of magic items in each affected unit (although he does not have to revveal what they are or who specifically is carrying them).</description>
+            </rule>
+          </rules>
+          <categoryLinks>
+            <categoryLink id="2e55-fe40-93d3-ec84" name="Enchanted Item" hidden="false" targetId="d8eb-f296-d241-3c6d" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -4283,6 +4313,23 @@ Once per Magic phase, the wielder may unleash the power of the Wand. This automa
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="45.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="b92f-eceb-bbde-000c" name="Mystic Shield of Light" publicationId="2c29-8521-dcc7-5337" page="11" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7276-10a9-b844-3fa3" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0dfc-ff62-6afe-ee7b" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="2e54-1a06-895f-a458" name="Mystic Shield of Light" hidden="false">
+              <description>5+ Ward save. In addition, if the Ward save is successful against a close combat attack, the model that struck the character is stunned and reduced to WS1 euntil the end of the Close Combat phase.</description>
+            </rule>
+          </rules>
+          <categoryLinks>
+            <categoryLink id="ba09-2786-d980-8fef" name="Talisman" hidden="false" targetId="d777-f2f1-e0db-8e8e" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="40.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="ba11-3877-f4ca-954f" name="Talisman of Protection" hidden="false" collective="false" import="true" targetId="0187-c1bd-3c63-16b4" type="selectionEntry"/>
@@ -4509,6 +4556,30 @@ Once per Magic phase, the wielder may unleash the power of the Wand. This automa
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="897e-145c-d800-de58" name="Gauntlet of Power" publicationId="2c29-8521-dcc7-5337" page="11" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="623e-5f3d-d939-9b51" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae2b-d651-8149-1666" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a17f-7b8e-f4d5-aa39" type="max"/>
+          </constraints>
+          <rules>
+            <rule id="92ca-d771-12e1-0d5e" name="Gauntlet of Power" hidden="false">
+              <description>The character becomes Strength 8 and enemy models may not make armour saves against blows struck by the Gauntlet. A character armed with the Gauntlet of Power strikes last (see page 89 of Warhammer).</description>
+            </rule>
+          </rules>
+          <categoryLinks>
+            <categoryLink id="b165-a8e7-a2b6-b9c9" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="60.0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="389f-a25c-1b00-fc59" name="Biting Blade" hidden="false" collective="false" import="true" targetId="3c3e-b471-60a2-bcb5" type="selectionEntry"/>
@@ -4607,6 +4678,9 @@ Once per Magic phase, the wielder may unleash the power of the Wand. This automa
               </constraints>
             </entryLink>
           </entryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
