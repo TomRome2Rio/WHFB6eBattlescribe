@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="dfb1-1789-5d68-be54" name="Skaven" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="14" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="dfb1-1789-5d68-be54" name="Skaven" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="4f5c-498c-bd84-7e28" name="Clan Eshin" hidden="false"/>
     <categoryEntry id="befb-92ec-0667-152b" name="Clan Pestilens" hidden="false"/>
@@ -2815,9 +2815,6 @@ D6	Result
       </costs>
     </selectionEntry>
     <selectionEntry id="bd6c-f165-431e-1aff" name="Greater Clan Army" hidden="false" collective="false" import="true" type="upgrade">
-      <categoryLinks>
-        <categoryLink id="f47c-d223-03a8-bbed" name="New CategoryLink" hidden="false" targetId="bdfa-6d6e-a1bf-5d03" primary="true"/>
-      </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="cb58-9bc5-a593-3444" name="Greater Clan" hidden="false" collective="false" import="true">
           <constraints>
@@ -2832,28 +2829,43 @@ D6	Result
                 <categoryLink id="b0d8-36c4-95f9-4352" name="Clan Army" hidden="false" targetId="83a6-ad30-93a8-77de" primary="false"/>
                 <categoryLink id="4c75-8722-c9e8-d226" name="Clan Eshin Army" hidden="false" targetId="14af-7635-4d72-436a" primary="false"/>
               </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="ef32-43fe-3714-ef3e" name="Clan Moulder" hidden="false" collective="false" import="true" type="upgrade">
               <categoryLinks>
                 <categoryLink id="207b-876b-89c8-a087" name="Clan Army" hidden="false" targetId="83a6-ad30-93a8-77de" primary="false"/>
                 <categoryLink id="b426-3fd3-f03b-ff6d" name="Clan Moulder Army" hidden="false" targetId="3490-18aa-b4bf-e44b" primary="false"/>
               </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="db15-6e5b-d5b8-0d0c" name="Clan Pestilens" hidden="false" collective="false" import="true" type="upgrade">
               <categoryLinks>
                 <categoryLink id="e26f-c15b-4e4c-0835" name="Clan Army" hidden="false" targetId="83a6-ad30-93a8-77de" primary="false"/>
                 <categoryLink id="ac8c-70d5-88c9-1cc4" name="Clan Pestilens Army" hidden="false" targetId="0dad-5154-d71e-e498" primary="false"/>
               </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="c664-4de9-6323-2fdc" name="Clan Skyre" hidden="false" collective="false" import="true" type="upgrade">
               <categoryLinks>
                 <categoryLink id="30d5-0250-e9a4-e2b2" name="Clan Army" hidden="false" targetId="83a6-ad30-93a8-77de" primary="false"/>
                 <categoryLink id="038c-89d7-7cee-78dc" name="Clan Skyre Army" hidden="false" targetId="b952-4dd2-bd93-a3b8" primary="false"/>
               </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="3b12-e5cb-04a8-3a4b" name="Master Assassin" hidden="true" collective="false" import="true" type="model">
       <modifiers>
@@ -2988,6 +3000,9 @@ Other units can only use his Leadership if he is not hidden.</description>
           <infoLinks>
             <infoLink id="ffe4-d0da-568f-9827" name="Warplock Pistol" hidden="false" targetId="93bd-451c-66d5-2ded" type="rule"/>
           </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="864d-47d1-b3d8-2a9f" name="Supercharged Warp-Power Accumulator" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -2999,6 +3014,9 @@ Other units can only use his Leadership if he is not hidden.</description>
               <description>This improved generator creates one extra Power dice in each Magic phase of the controlling player. The dice is added to the player&apos;s pool.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="4869-c7ef-f996-5fdb" name="Upgraded Warp-Energy Condenser" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -3010,6 +3028,9 @@ Other units can only use his Leadership if he is not hidden.</description>
               <description>This allows the bearer to cast the Warp Lightning spell with one dice more than he is normally allowed.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="d71d-2530-0672-e481" name="Warp-blades" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -3023,6 +3044,9 @@ Other units can only use his Leadership if he is not hidden.</description>
 Warp-blades are Warpstone Weapons.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -4166,13 +4190,6 @@ D6	Result
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="cf53-3bdb-d347-a8ed" name="Unique Arcane Items" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="58da-8d70-4e6d-0e6a" value="0.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f775-63f2-a2cf-48c4" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="58da-8d70-4e6d-0e6a" type="max"/>
           </constraints>
@@ -4224,12 +4241,12 @@ Roll a D6 every time it is used. On a 1 the Storm Daemon runs out of power and c
           </selectionEntries>
           <entryLinks>
             <entryLink id="1ff1-e03c-f799-ef43" name="Staff of Sorcery" hidden="false" collective="false" import="true" targetId="0871-b449-88b1-0a33" type="selectionEntry"/>
+            <entryLink id="64cb-c2f2-ef54-3b13" name="Power Stone" hidden="false" collective="false" import="true" targetId="2be9-2fdd-98db-e42c" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="9115-07c3-043e-e775" name="Dispel Scroll" hidden="false" collective="false" import="true" targetId="52c3-25b3-e386-3449" type="selectionEntry"/>
-        <entryLink id="fd8b-adf1-da20-60ca" name="Power Stone" hidden="false" collective="false" import="true" targetId="f775-63f2-a2cf-48c4" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="58e4-eb72-c1a7-a8e0" name="Magic Banners" hidden="false" collective="false" import="true">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b151-7d1c-4a96-e0d0" name="Dark Elves" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="21" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b151-7d1c-4a96-e0d0" name="Dark Elves" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7b32-9394-e778-467c" name="Poison" hidden="false"/>
     <categoryEntry id="16df-2ebd-e4f7-9984" name="Artifacts and Skills" hidden="false"/>
@@ -4670,21 +4670,10 @@ In addition, at the start of each of their turns the character may activate the 
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="15.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="037f-c17e-e930-4615" name="Power Stone" hidden="false" collective="false" import="true" type="upgrade">
-          <entryLinks>
-            <entryLink id="2eff-4ba5-860b-54af" name="Power Stone" hidden="false" collective="false" import="true" targetId="f775-63f2-a2cf-48c4" type="selectionEntry">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f967-e578-f133-227a" type="min"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink id="fab3-1278-3a65-2147" name="Staff of Sorcery" hidden="false" collective="false" import="true" targetId="0871-b449-88b1-0a33" type="selectionEntry"/>
+        <entryLink id="d159-bee1-5fc7-bb51" name="Power Stone" hidden="false" collective="false" import="true" targetId="2be9-2fdd-98db-e42c" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="b10a-831e-bb41-5335" name="Mount" hidden="false" collective="false" import="true">

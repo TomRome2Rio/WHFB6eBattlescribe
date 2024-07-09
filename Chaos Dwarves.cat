@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7236-6609-8f2a-760a" name="Chaos Dwarves" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="10" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7236-6609-8f2a-760a" name="Chaos Dwarves" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="d1fa-39bb-985e-3662" name="Bull Centaur Lord" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -892,13 +892,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="b361-56db-d89f-fd13" name="Hobgoblins" hidden="false" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="name" value="Hobgoblin Wolf Riders">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ff46-2aee-a5bc-3841" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <categoryLinks>
         <categoryLink id="4c30-a9df-550e-0bae" name="Core" hidden="false" targetId="62d3-efc6-6c2c-634e" primary="true"/>
       </categoryLinks>
@@ -924,24 +917,6 @@
           </profiles>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="2.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="ff46-2aee-a5bc-3841" name="Wolves" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="increment" field="eaa7-6800-e651-8bea" value="9.0">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7c91-23b0-f9da-b9d3" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="3bff-aa00-1b82-5742" name="Wolf" hidden="false" targetId="c448-20ab-59a1-3761" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -987,7 +962,7 @@
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3413-2dd6-6139-a51b" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e8de-4cae-800d-0186" type="max"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
@@ -1112,7 +1087,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="2.0"/>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="5.0"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -1780,6 +1755,99 @@
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="8450-f815-d10f-9115" name="Hobgoblin Wolf Riders" hidden="false" collective="false" import="true" type="unit">
+      <infoLinks>
+        <infoLink id="5445-ed1d-0e7a-3f69" name="Fast Cavalry" hidden="false" targetId="ab75-c6ec-0411-c924" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="1177-2dfb-d961-677d" name="Core" hidden="false" targetId="62d3-efc6-6c2c-634e" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="9a1d-259c-4c02-a648" name="Hobgoblin Wolf Rider" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="87d7-b680-5ccc-c724" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="67e7-5fb9-3292-c70f" name="Hobgoblin" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                <characteristic name="I" typeId="b418-0e30-644f-1435">2</characteristic>
+                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">6</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="3fb0-0b12-1643-a153" name="Wolf" hidden="false" targetId="c448-20ab-59a1-3761" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="11.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="1828-f81a-75ec-1351" name="Equipment" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="597e-e458-6750-cf59" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b392-13d1-29e6-fa6a" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6f50-5216-e773-e953" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a7fb-2c73-cebb-f778" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="29a3-2d7c-ef80-5695" name="Bows" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="eaa7-6800-e651-8bea" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec38-41c2-7ad8-9879" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="dec4-d6fb-b516-23ec" name="Command" hidden="false" collective="false" import="true" targetId="2a69-3432-96ec-bae9" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="e80d-19d8-0ac7-72af" name="Magic Weapons" hidden="false" collective="false" import="true">
@@ -1858,6 +1926,11 @@
         <modifier type="set" field="71ae-7f9f-5dc4-0f4b" value="0.0">
           <conditions>
             <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="daeb-6ab0-83b2-8bf3" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2055,36 +2128,24 @@
     </selectionEntryGroup>
     <selectionEntryGroup id="69c7-c0c4-cc09-76d5" name="Arcane Items" hidden="false" collective="false" import="true">
       <selectionEntryGroups>
-        <selectionEntryGroup id="2287-f139-2188-0f62" name="Non-Unique Items" hidden="false" collective="false" import="true">
-          <entryLinks>
-            <entryLink id="4586-e8f1-2479-fe33" name="Dispel Scroll" hidden="false" collective="false" import="true" targetId="52c3-25b3-e386-3449" type="selectionEntry"/>
-            <entryLink id="2cec-f061-f7ff-4ef1" name="Power Stone" hidden="false" collective="false" import="true" targetId="f775-63f2-a2cf-48c4" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="507b-4206-dd16-23d8" name="Unique Items" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="96a1-f893-f313-2b96" value="0.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2cec-f061-f7ff-4ef1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <selectionEntryGroup id="dee7-6f1c-b4bc-0f1a" name="Arcane Items" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="96a1-f893-f313-2b96" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c23-7765-9d11-172a" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="6e84-63f5-d041-754b" name="Chalice of Darkness" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="3877-6895-e379-bcda" name="Chalice of Darkness" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3044-eb62-2187-5b95" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fbc7-d0f3-dbe6-d25b" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="37f7-97eb-f8d8-9d74" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2994-c874-42ed-5a41" type="max"/>
               </constraints>
               <rules>
-                <rule id="4a4b-bcdc-4599-01d5" name="Chalice of Darkness" hidden="false">
+                <rule id="1548-e51f-4ebd-2e8f" name="Chalice of Darkness" hidden="false">
                   <description>You may choose to roll a D3 at the start of either player&apos;s Magic phase. Remove this many dice from both player&apos;s magic pools.</description>
                 </rule>
               </rules>
               <categoryLinks>
-                <categoryLink id="0601-7cd3-7d7e-425f" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
+                <categoryLink id="ce22-fa7e-616e-f5a4" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
+                <categoryLink id="11c2-1c32-25a5-a9bc" name="Non-Scroll Arcane Item" hidden="false" targetId="182a-f76f-634c-e9be" primary="false"/>
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
@@ -2092,14 +2153,21 @@
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="076f-4053-cc92-7efe" name="Staff of Sorcery" hidden="false" collective="false" import="true" targetId="0871-b449-88b1-0a33" type="selectionEntry">
+            <entryLink id="052f-f29a-578f-bd7c" name="Staff of Sorcery" hidden="false" collective="false" import="true" targetId="0871-b449-88b1-0a33" type="selectionEntry">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ddc2-e40b-17ba-3b5a" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="36be-bf0c-0122-c66e" type="max"/>
               </constraints>
+              <categoryLinks>
+                <categoryLink id="4216-20d7-a4ff-8482" name="Non-Scroll Arcane Item" hidden="false" targetId="182a-f76f-634c-e9be" primary="false"/>
+              </categoryLinks>
             </entryLink>
+            <entryLink id="67bb-4744-20ff-a866" name="Power Stone" hidden="false" collective="false" import="true" targetId="2be9-2fdd-98db-e42c" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="9b64-d52a-2a7a-f581" name="Dispel Scroll" hidden="false" collective="false" import="true" targetId="52c3-25b3-e386-3449" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="2a69-3432-96ec-bae9" name="Command" hidden="false" collective="false" import="true">
       <selectionEntries>

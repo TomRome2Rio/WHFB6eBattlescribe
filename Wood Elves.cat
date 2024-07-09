@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7bb5-70b8-0122-944c" name="Wood Elves" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7bb5-70b8-0122-944c" name="Wood Elves" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="4f0e-c683-4011-68a9" name="Magic Bow" hidden="true"/>
     <categoryEntry id="3fee-c6b4-de1c-b33e" name="Magic Arrows" hidden="false"/>
@@ -1869,6 +1869,9 @@ They are affected by spells, etc, that would affect cavalry.</description>
               <description>One use only. The first time Orion declares a charge, he sounds the Horn of the Wild Hunt. All enemies within 18&quot; of him (before he starts his charge move) must take a Panic test.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="4435-a149-3780-fbcd" name="Hounds of the Hunt" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1908,6 +1911,9 @@ They are affected by spells, etc, that would affect cavalry.</description>
               <description>Such is the power of Orion that when he charges into combat with the Spear of Kurnous, he adds +2 to his Strength.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="76e0-e4b1-68c1-03df" name="The Hawk&apos;s Talon" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1919,6 +1925,9 @@ They are affected by spells, etc, that would affect cavalry.</description>
               <description>This is treated as a longbow that has a Strength of 6 and can penetrate ranks in the same manner as a bolt thrower. In addition, each unsaved wound caused by the Hawk&apos;s Talon becomes D3 wounds rather than 1. Orion does not suffer a -1 to hit penalty for moving and shooting.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="948c-b4dd-da0b-67b9" name="Cloak of Isha" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1930,6 +1939,9 @@ They are affected by spells, etc, that would affect cavalry.</description>
               <description>The Cloak of Isha adds two Dispel dice to the Wood Elf Dispel dice pool.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -2006,6 +2018,9 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="28c3-0488-b801-c363" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5edd-6867-168a-61f3" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -2069,6 +2084,9 @@ They are affected by spells, etc, that would affect cavalry.</description>
               <description>Naestra&apos;s longbow does not deal any damage, but any unit hit by her arrows must take a Strength test at the start of the following Movement phase (using the lowest value, if there is more than one) - if it fails the test, it may not move that turn. Naestra may shoot at a different target to Arahan (and Ceithin-Har if he is present) if she wishes.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="bb42-c442-bf42-99ca" name="Bow of Arahan" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -2080,6 +2098,9 @@ They are affected by spells, etc, that would affect cavalry.</description>
               <description>If Arahan&apos;s longbow shot hits, place the small template over the target (subject to normal targeting restrictions) and resolve it as you would for a stone thrower, with the exceptions that hits are resolved at Strength of 3 and Armour Saves are allowed as normal. Arahan may shoot at a different target to Naestra (and Ceithin-Har if he is present) if she wishes.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -3320,13 +3341,6 @@ They are affected by spells, etc, that would affect cavalry.</description>
     <selectionEntryGroup id="caa0-388d-03f9-1ab9" name="Arcane Items" hidden="false" collective="false" import="true">
       <selectionEntryGroups>
         <selectionEntryGroup id="ad0e-14b5-e42e-330c" name="Unique Arcane Items" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="a339-490f-f5ac-0e31" value="0.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f775-63f2-a2cf-48c4" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a339-490f-f5ac-0e31" type="max"/>
           </constraints>
@@ -3426,12 +3440,12 @@ They are affected by spells, etc, that would affect cavalry.</description>
           </selectionEntries>
           <entryLinks>
             <entryLink id="fa2b-5a02-1a13-72e5" name="Staff of Sorcery" hidden="false" collective="false" import="true" targetId="0871-b449-88b1-0a33" type="selectionEntry"/>
+            <entryLink id="f205-9e62-e5a8-a48c" name="Power Stone" hidden="false" collective="false" import="true" targetId="2be9-2fdd-98db-e42c" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="ce67-0a1c-6b36-8960" name="Dispel Scroll" hidden="false" collective="false" import="true" targetId="52c3-25b3-e386-3449" type="selectionEntry"/>
-        <entryLink id="f729-f8ea-c674-6ff5" name="Power Stone" hidden="false" collective="false" import="true" targetId="f775-63f2-a2cf-48c4" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="f326-2af2-3864-5bc4" name="Mount" hidden="false" collective="false" import="true">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d9da-11c6-1a8c-4472" name="Lizardmen" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="17" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d9da-11c6-1a8c-4472" name="Lizardmen" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>WIP Lizardmen. TODO: Add unit profiles &amp; item descriptions</readme>
   <categoryEntries>
     <categoryEntry id="361c-7d6f-fc45-5312" name="Skink" hidden="false"/>
@@ -2743,7 +2743,7 @@ This may be used with the exact same effects as a Dispel Scroll. In addition, al
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="e610-49a6-7d2c-5072" name="Power Stone" hidden="false" collective="false" import="true" targetId="f775-63f2-a2cf-48c4" type="selectionEntry"/>
+        <entryLink id="e610-49a6-7d2c-5072" name="Power Stone" hidden="false" collective="false" import="true" targetId="2be9-2fdd-98db-e42c" type="selectionEntry"/>
         <entryLink id="7308-8b91-9003-9f6b" name="Staff of Sorcery" hidden="false" collective="false" import="true" targetId="0871-b449-88b1-0a33" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>

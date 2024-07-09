@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2ed9-b2d4-eb7d-a2c4" name="High Elves" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="21" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2ed9-b2d4-eb7d-a2c4" name="High Elves" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="3f17-868d-fac0-4c8d" name="First Among Equals" hidden="false">
       <constraints>
@@ -3067,6 +3067,9 @@ are immune to this effect also.</description>
       </modifiers>
       <selectionEntryGroups>
         <selectionEntryGroup id="8cc6-a539-18fe-d868" name="Unique Items" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2751-5df9-1004-0ad9" type="max"/>
+          </constraints>
           <selectionEntries>
             <selectionEntry id="0641-11c8-7a29-398f" name="Book of Hoeth" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -3194,6 +3197,30 @@ are immune to this effect also.</description>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
               </costs>
             </selectionEntry>
+            <selectionEntry id="bad1-10b0-b865-eb15" name="Power Stone" hidden="false" collective="false" import="true" type="upgrade">
+              <selectionEntries>
+                <selectionEntry id="c104-a378-49d9-57d3" name="Power Stone" publicationId="d9e7-add3-773e-ffab" hidden="false" collective="false" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e9f1-3140-6055-3962" type="min"/>
+                  </constraints>
+                  <rules>
+                    <rule id="f3c3-b3ca-6200-f8be" name="Power Stone" hidden="false">
+                      <description>One use only. +2 dice to cast a spell.</description>
+                    </rule>
+                  </rules>
+                  <categoryLinks>
+                    <categoryLink id="1a97-2081-1301-7937" name="New CategoryLink" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="true"/>
+                    <categoryLink id="484a-51b4-661d-9104" name="Scroll" hidden="false" targetId="06f3-5988-1d55-db7c" primary="false"/>
+                  </categoryLinks>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
           <entryLinks>
             <entryLink id="1d09-52dc-bf0a-9f79" name="Staff of Sorcery" hidden="false" collective="false" import="true" targetId="0871-b449-88b1-0a33" type="selectionEntry">
@@ -3209,19 +3236,6 @@ are immune to this effect also.</description>
           <modifiers>
             <modifier type="set" field="eaa7-6800-e651-8bea" value="20.0"/>
           </modifiers>
-        </entryLink>
-        <entryLink id="c339-0564-d178-52be" name="Power Stone" hidden="false" collective="false" import="true" targetId="f775-63f2-a2cf-48c4" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="eaa7-6800-e651-8bea" value="20.0"/>
-            <modifier type="set" field="7b0b-5626-47a4-2e99" value="0.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="8cc6-a539-18fe-d868" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b0b-5626-47a4-2e99" type="max"/>
-          </constraints>
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="4b41-6842-9db5-f563" name="Tomb Kings" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="4b41-6842-9db5-f563" name="Tomb Kings" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7d0c-5562-269f-0795" name="Tomb King General" hidden="false"/>
     <categoryEntry id="80b7-5608-88c2-552c" name="Settra&apos;s Army" hidden="false">
@@ -1274,6 +1274,9 @@
               <description>Settra always strikes first in close combat, even if charged. If an enemy also has the ability to strikes first, then they strike in normal Initiative order. If this is also equal, roll a dice to see who strikes first (re-roll ties). Keep track of the number of hits Settra scores with his weapon. After his attacks have been resolved, any enemy unit in base contact with Settra must take a Leadership test, with a negative modifier equal to the number of hits caused by Settra. If the test is passed. the enemy avert their gaze and suffer no ill effects. If the enemy fail the test then they are reduced to Weapon Skill 1 for the remainder of that combat round. If they roll double or more than their modified Leadership value then in addition to being reduced to Weapon Skill 1, the unit suffers D6 Strength 4 hits (distributed as shooting hits). For example, if Settra hits a unit with Leadership 7 three times, a Leadership test of 4 or less is no effect, a roll of 5 to 7 reduces them to Weapon Skill 1, and a roll of 8 or more means they also suffer hits.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="c8ba-a6e0-99b9-3f9d" name="The Chariot of the Gods" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1289,6 +1292,9 @@
             <categoryLink id="8cd9-6165-6e3f-ca14" name="Chariot" hidden="false" targetId="fcd6-2f77-ca6e-7b24" primary="false"/>
             <categoryLink id="ea37-c771-08ba-aae7" name="Mount" hidden="false" targetId="de79-e832-4f30-ac18" primary="false"/>
           </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="0d36-22f2-2920-24de" name="The Armour of Golden Magnificence" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1300,6 +1306,9 @@
               <description>Settra has a 2+ Armour saving throw. This saving throw is never modified to worse than a 4+, even if hit by an attack that normally allows no Armour save (such as a cannonball).</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="95e6-f84a-aa80-8be1" name="The Crown of Nehekhara" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -1311,6 +1320,9 @@
               <description>This crown carries with it the blessing of all the gods and goddesses of Nehekhara, and is topped with a golden cobra that rears and spits whenever enemies are near. Settra and his chariot benefit from a 4+ Ward save. In addition, Settra causes terror.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -1380,6 +1392,9 @@ The Queen moves with the swiftness of a striking asp, and will always strikes fi
               <description>Bound Spell, Power Level 5. The staff contains a Bound magic missile with a range of 24&quot;, causing 2D6 Strength 4 hits. If a unit takes any wounds from the staff, it may not move in its next Movement phase.</description>
             </rule>
           </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -2045,19 +2060,13 @@ The Queen moves with the swiftness of a striking asp, and will always strikes fi
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="7193-6340-1398-62fe" name="Power Stones" hidden="false" collective="false" import="true">
-          <entryLinks>
-            <entryLink id="9d43-45b7-8eb4-71a1" name="Power Stone" hidden="false" collective="false" import="true" targetId="f775-63f2-a2cf-48c4" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="809a-ae9e-cd54-3683" name="Staff of Sorcery" hidden="false" collective="false" import="true" targetId="0871-b449-88b1-0a33" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="62a7-e906-b842-bab6" type="max"/>
           </constraints>
         </entryLink>
+        <entryLink id="bf54-4887-d85d-20fb" name="Power Stone" hidden="false" collective="false" import="true" targetId="2be9-2fdd-98db-e42c" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="d138-06a5-100e-15b8" name="Magic Weapon" hidden="false" collective="false" import="true">

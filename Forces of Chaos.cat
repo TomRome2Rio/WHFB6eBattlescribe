@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="fd0d-5697-0f21-8aac" name="Forces of Chaos" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="20" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fd0d-5697-0f21-8aac" name="Forces of Chaos" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="e8a8-d83e-c60c-3ad0" name="Hordes of Chaos"/>
     <publication id="dc3a-2511-d23a-deb3" name="Beasts of Chaos"/>
@@ -8462,179 +8462,6 @@ Against Castles, Empire Steam Tanks and in other situations where a wound roll i
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="3080-b5a0-31cf-2098" name="Arcane Items" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="notInstanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="6204-7125-bcc5-383b" name="Arcane Item" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="a693-21e5-a296-9c18" value="0.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f775-63f2-a2cf-48c4" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a693-21e5-a296-9c18" type="max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="4db8-1f35-1f2f-839f" name="The Plague Chalice" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2ce0-15bd-f592-7cb0" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8497-8d9d-6408-fe51" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="edd2-198e-b233-ba63" type="max"/>
-              </constraints>
-              <categoryLinks>
-                <categoryLink id="3d63-f91b-be5e-d911" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
-              </categoryLinks>
-              <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="fc5e-1cfe-238b-6869" name="The Goretooth" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e96f-4863-8bc0-0266" type="notInstanceOf"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="916e-ba0e-b22e-d21d" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e21-fe1f-33e9-7c47" type="max"/>
-              </constraints>
-              <categoryLinks>
-                <categoryLink id="c971-5857-c58e-505a" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
-              </categoryLinks>
-              <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="a332-168f-f04c-817f" name="Staff of Darkoath" hidden="true" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="false">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4c3c-1abc-5f52-c225" type="instanceOf"/>
-                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d0e-264e-202e-4c42" type="instanceOf"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c179-7a91-a2a3-72bf" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0048-909a-3cfb-6d9f" type="max"/>
-              </constraints>
-              <categoryLinks>
-                <categoryLink id="5b01-e31f-9d3b-ea79" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
-              </categoryLinks>
-              <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="695d-74cc-c16a-be4e" name="Staff of Change" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="623e-5f3d-d939-9b51" type="notInstanceOf"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" field="hidden" value="true">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="19d9-f7ab-4148-310e" type="equalTo"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="300d-9b9c-0118-9a0f" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d868-ea3f-7e3a-db59" type="max"/>
-              </constraints>
-              <categoryLinks>
-                <categoryLink id="5b5b-ecdc-4932-e5a2" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
-              </categoryLinks>
-              <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="65.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="7927-d49e-15a1-f665" name="Skull of Katam" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="50b4-23bd-b3ce-b166" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="61d9-5daf-a647-a905" type="max"/>
-              </constraints>
-              <categoryLinks>
-                <categoryLink id="01a0-11c5-2baa-44f5" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
-              </categoryLinks>
-              <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="6bd7-bdba-04f8-a1c5" name="Power Familiar" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9522-0ad4-4e96-325e" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6916-7211-a3f3-2b9d" type="max"/>
-              </constraints>
-              <categoryLinks>
-                <categoryLink id="78af-3e22-55b7-7e62" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
-              </categoryLinks>
-              <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="4b26-7b86-f69d-5f3f" name="Warrior Familiar" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d93-b363-ce2a-e996" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="91cb-441d-a020-37b2" type="max"/>
-              </constraints>
-              <categoryLinks>
-                <categoryLink id="ba3e-f605-96b3-8f72" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
-              </categoryLinks>
-              <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="2bb2-aa82-49bd-d4bd" name="Spell Familiar" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fef1-0bb2-c94d-f574" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0fe9-390e-13c3-2f08" type="max"/>
-              </constraints>
-              <categoryLinks>
-                <categoryLink id="cd9e-0e7d-71bc-f1e2" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
-              </categoryLinks>
-              <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="15.0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <entryLinks>
-            <entryLink id="868f-ef5d-b2ba-1726" name="Staff of Sorcery" hidden="false" collective="false" import="true" targetId="0871-b449-88b1-0a33" type="selectionEntry"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="7d9e-dd1c-12c9-a3e0" name="Power Stone" hidden="false" collective="false" import="true" targetId="f775-63f2-a2cf-48c4" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="301e-900c-2b11-af3c" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
-    </selectionEntryGroup>
     <selectionEntryGroup id="ab32-5c68-ca03-d323" name="Magic Banners" hidden="false" collective="false" import="true">
       <selectionEntries>
         <selectionEntry id="c481-f002-9b28-3831" name="The Beast Banner" hidden="false" collective="false" import="true" type="upgrade">
@@ -9262,7 +9089,7 @@ Roll a D6 every time a spell is cast at the bearer of the Spelleater Shield and 
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="f21c-912e-a22c-6f26" name="Arcane Items" hidden="false" collective="false" import="true" targetId="3080-b5a0-31cf-2098" type="selectionEntryGroup">
+        <entryLink id="f21c-912e-a22c-6f26" name="Arcane Item" hidden="false" collective="false" import="true" targetId="e727-2111-8e6f-b3f6" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -10190,6 +10017,158 @@ Roll a D6 every time a spell is cast at the bearer of the Spelleater Shield and 
           </costs>
         </selectionEntry>
       </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="e727-2111-8e6f-b3f6" name="Arcane Items" hidden="false" collective="false" import="true">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="notInstanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3fd7-701b-50bf-acc4" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="75c4-b0d8-8cb3-0b2b" name="The Plague Chalice" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2ce0-15bd-f592-7cb0" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9a83-b951-33a5-efc4" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f54f-347b-c4d6-60c9" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="2397-7267-5fee-6237" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6557-d663-7fa5-eb92" name="The Goretooth" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e96f-4863-8bc0-0266" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5294-4208-6a2b-884f" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b54-09c1-b389-e416" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="c5e8-2619-4bf7-b523" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="c26d-e917-ed0f-fbc4" name="Staff of Darkoath" hidden="true" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4c3c-1abc-5f52-c225" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d0e-264e-202e-4c42" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8450-0a84-3d69-3244" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="edce-3d87-6643-0aef" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="23ec-273e-d33a-ae41" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2d5f-be30-64ad-f884" name="Staff of Change" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="623e-5f3d-d939-9b51" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="19d9-f7ab-4148-310e" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8313-2e73-025f-1775" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af13-0407-79c1-ad88" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="7d12-d4dc-3244-8bdd" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="65.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d92c-03e7-0e06-5d94" name="Skull of Katam" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4b71-a7ad-d6e5-b1cd" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3408-9ddf-b36c-8cf5" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="126d-74aa-245e-a0bf" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6c6b-f5e4-176f-0420" name="Power Familiar" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6dba-c23a-4dc6-7c97" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5161-d771-1208-4f95" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="b0b6-f6a1-6964-0910" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="3314-5ac8-3a9d-826c" name="Warrior Familiar" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f3b0-d6a8-8490-c63a" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9242-5fd2-a05c-b12f" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="f5e9-f55b-a9d8-9a2d" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a234-37cf-bfb7-01a7" name="Spell Familiar" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="525c-87b3-9c30-a767" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b946-045a-92ef-3bcc" type="max"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink id="8391-d045-d247-b271" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="15.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="6e86-e77a-a7e9-7eff" name="Staff of Sorcery" hidden="false" collective="false" import="true" targetId="0871-b449-88b1-0a33" type="selectionEntry"/>
+        <entryLink id="b8ff-004a-cd52-64c0" name="Power Stone" hidden="false" collective="false" import="true" targetId="2be9-2fdd-98db-e42c" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>

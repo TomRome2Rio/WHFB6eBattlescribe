@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9534-aec7-1922-76f2" name="Orcs and Goblins" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="19" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="9534-aec7-1922-76f2" name="Orcs and Goblins" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="5b0c-07f2-6b72-7aa8" name="Orc" hidden="false"/>
     <categoryEntry id="2c47-226a-5465-6c16" name="Common Orc" hidden="false"/>
@@ -6911,17 +6911,9 @@ At the beginning of your first turn the character and the unit he is with drinks
         <selectionEntryGroup id="2287-f139-2188-0f62" name="Non-Unique Items" hidden="false" collective="false" import="true">
           <entryLinks>
             <entryLink id="4586-e8f1-2479-fe33" name="Dispel Scroll" hidden="false" collective="false" import="true" targetId="52c3-25b3-e386-3449" type="selectionEntry"/>
-            <entryLink id="2cec-f061-f7ff-4ef1" name="Power Stone" hidden="false" collective="false" import="true" targetId="f775-63f2-a2cf-48c4" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="507b-4206-dd16-23d8" name="Unique Items" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="96a1-f893-f313-2b96" value="0.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2cec-f061-f7ff-4ef1" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="96a1-f893-f313-2b96" type="max"/>
           </constraints>
@@ -7025,6 +7017,7 @@ At the beginning of your first turn the character and the unit he is with drinks
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ddc2-e40b-17ba-3b5a" type="max"/>
               </constraints>
             </entryLink>
+            <entryLink id="e6f8-603d-cfcd-71dd" name="Power Stone" hidden="false" collective="false" import="true" targetId="2be9-2fdd-98db-e42c" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c2c0-45b3-040e-fe0f" name="Vampire Counts" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="12" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c2c0-45b3-040e-fe0f" name="Vampire Counts" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7d18-159a-be52-079b" name="Vampire" hidden="false"/>
     <categoryEntry id="72bd-3327-881f-a995" name="Von Carstein" hidden="false"/>
@@ -180,9 +180,6 @@
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5426-b1a5-66b7-6c1f" type="min"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8651-ef8c-8568-1097" type="max"/>
       </constraints>
-      <categoryLinks>
-        <categoryLink id="4cb0-25dc-3c1a-dcdc" name="New CategoryLink" hidden="false" targetId="bdfa-6d6e-a1bf-5d03" primary="true"/>
-      </categoryLinks>
       <entryLinks>
         <entryLink id="a0ca-8c38-30ae-0a6a" name="Bloodline" hidden="false" collective="false" import="true" targetId="00f4-d396-77ce-250a" type="selectionEntryGroup"/>
       </entryLinks>
@@ -2813,13 +2810,6 @@ Cannot choose any mundane weapons or armour.</description>
       </modifiers>
       <selectionEntryGroups>
         <selectionEntryGroup id="3532-9661-a00b-ab05" name="Unique Arcane Item" hidden="false" collective="false" import="true">
-          <modifiers>
-            <modifier type="set" field="edb4-eef0-049f-f046" value="0.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f775-63f2-a2cf-48c4" type="greaterThan"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="edb4-eef0-049f-f046" type="max"/>
           </constraints>
@@ -2935,11 +2925,11 @@ Cannot choose any mundane weapons or armour.</description>
           </selectionEntries>
           <entryLinks>
             <entryLink id="963e-9700-9dec-c93f" name="Staff of Sorcery" hidden="false" collective="false" import="true" targetId="0871-b449-88b1-0a33" type="selectionEntry"/>
+            <entryLink id="45ef-fc2d-101f-3ae3" name="Power Stone" hidden="false" collective="false" import="true" targetId="2be9-2fdd-98db-e42c" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="9a69-171a-c532-b832" name="Power Stone" hidden="false" collective="false" import="true" targetId="f775-63f2-a2cf-48c4" type="selectionEntry"/>
         <entryLink id="6b8f-7021-7d6c-6ec6" name="Dispel Scroll" hidden="false" collective="false" import="true" targetId="52c3-25b3-e386-3449" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>

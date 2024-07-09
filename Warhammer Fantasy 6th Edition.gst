@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="4ca8-2035-2f87-1bd7" name="WHFB 6th Edition" revision="21" battleScribeVersion="2.03" authorName="Tom Clare" authorContact="" authorUrl="" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="4ca8-2035-2f87-1bd7" name="WHFB 6th Edition" revision="22" battleScribeVersion="2.03" authorName="Tom Clare" authorContact="" authorUrl="" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="d9e7-add3-773e-ffab" name="BRB"/>
     <publication id="2c29-8521-dcc7-5337" name="Warhammer Chronicles 2003"/>
@@ -58,6 +58,7 @@
     <categoryEntry id="9236-407c-ba73-9b10" name="Grants Extra Rare Choice" hidden="false"/>
     <categoryEntry id="1c0b-2b0f-459f-d6f9" name="Additional Rare Choice" hidden="true"/>
     <categoryEntry id="9dc5-bbce-5738-84e8" name="Two Additional Hero Choices" hidden="true"/>
+    <categoryEntry id="182a-f76f-634c-e9be" name="Non-Scroll Arcane Item" hidden="true"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="5f75-906f-4d23-7a30" name="Warhammer Fantasy 6th Edition" hidden="false">
@@ -307,20 +308,6 @@
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f775-63f2-a2cf-48c4" name="Power Stone" publicationId="d9e7-add3-773e-ffab" hidden="false" collective="false" import="true" type="upgrade">
-      <rules>
-        <rule id="0765-3612-9dfd-3f96" name="Power Stone" hidden="false">
-          <description>One use only. +2 dice to cast a spell.</description>
-        </rule>
-      </rules>
-      <categoryLinks>
-        <categoryLink id="cc5a-a200-a9d6-dfc9" name="New CategoryLink" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="true"/>
-        <categoryLink id="239b-dc35-9e1e-a60f" name="Scroll" hidden="false" targetId="06f3-5988-1d55-db7c" primary="false"/>
-      </categoryLinks>
-      <costs>
-        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="0871-b449-88b1-0a33" name="Staff of Sorcery" publicationId="d9e7-add3-773e-ffab" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8fa7-8516-0b40-fada" type="max"/>
@@ -528,6 +515,37 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="22d4-14a2-c884-9120" name="Lore of Heavens" hidden="false" collective="false" import="true" type="upgrade">
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2be9-2fdd-98db-e42c" name="Power Stone" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="name" value="Power Stones">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9ec3-a95d-7f38-2724" type="greaterThan"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry id="9ec3-a95d-7f38-2724" name="Power Stone" publicationId="d9e7-add3-773e-ffab" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ecc0-34de-0ec6-d085" type="min"/>
+          </constraints>
+          <rules>
+            <rule id="7dfc-6602-3a7b-ce1e" name="Power Stone" hidden="false">
+              <description>One use only. +2 dice to cast a spell.</description>
+            </rule>
+          </rules>
+          <categoryLinks>
+            <categoryLink id="6a50-773c-76d7-d572" name="New CategoryLink" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="true"/>
+            <categoryLink id="ba9e-f6c7-61ae-dd1c" name="Scroll" hidden="false" targetId="06f3-5988-1d55-db7c" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
       </costs>

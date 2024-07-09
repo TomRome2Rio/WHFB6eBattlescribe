@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f49f-f614-5cfb-004a" name="The Empire" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="21" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="f49f-f614-5cfb-004a" name="The Empire" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>TODO: enforce maximum detachment unit sizes</readme>
   <costTypes>
     <costType id="fada-3781-5bbe-4625" name=" Hull Points" defaultCostLimit="-1.0" hidden="false"/>
@@ -4947,25 +4947,15 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
                 <categoryLink id="942d-d95c-19e5-2ac7" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
               </categoryLinks>
             </entryLink>
+            <entryLink id="1b38-74f7-c774-fcfc" name="Power Stone" hidden="false" collective="false" import="true" targetId="2be9-2fdd-98db-e42c" type="selectionEntry">
+              <categoryLinks>
+                <categoryLink id="a8b5-d66b-fc09-3e27" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
+              </categoryLinks>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="6031-15c6-88f8-16f1" name="Power Stone" hidden="false" collective="false" import="true" targetId="f775-63f2-a2cf-48c4" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="999b-7aa7-174d-5c1c" value="0.0">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="d0c2-836f-3e6f-6544" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="999b-7aa7-174d-5c1c" type="max"/>
-          </constraints>
-          <categoryLinks>
-            <categoryLink id="5827-3c2b-b704-e21f" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
-          </categoryLinks>
-        </entryLink>
         <entryLink id="1d77-22b6-c3b8-93ba" name="Dispel Scroll" hidden="false" collective="false" import="true" targetId="52c3-25b3-e386-3449" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
