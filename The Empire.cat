@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f49f-f614-5cfb-004a" name="The Empire" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
-  <readme>TODO: enforce maximum detachment unit sizes</readme>
+<catalogue id="f49f-f614-5cfb-004a" name="The Empire" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <readme></readme>
   <costTypes>
     <costType id="fada-3781-5bbe-4625" name=" Hull Points" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -42,6 +42,7 @@
         <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a1f-4b24-a8c2-192f" type="max"/>
       </constraints>
     </categoryEntry>
+    <categoryEntry id="b1e7-c274-e193-e55b" name="Parent Unit Model" hidden="true"/>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="b426-6114-c692-9f29" name="Elector Count" hidden="false" collective="false" import="true" type="unit">
@@ -1503,9 +1504,364 @@ When firing his own missile weapon, an Engineer can always choose a different ta
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="130e-0cbe-afc2-dc20" name="Detachments" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd23-1ccb-6297-73ca" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="fffc-2a41-0dcc-f1eb" name="Archers (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="a248-b680-20c4-428c" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="f637-16b0-56d4-fabf" name="Archers" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="6e1a-4228-02e6-5136" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="451a-81e4-648e-29ae" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4518-afe7-fb75-4fc4" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e1a-4228-02e6-5136" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="8c5d-4012-9f80-f86c" name="Archer" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c93d-ff2a-ec6c-580e" name="Crossbowmen (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="e421-7664-537e-ae1e" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="7864-dc4a-f775-7055" name="Crossbowmen" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="6930-b946-0274-8fc8" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="451a-81e4-648e-29ae" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df98-7dd6-7246-833d" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6930-b946-0274-8fc8" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="e490-e71c-0767-0609" name="Crossbowman" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="7de6-ccfc-b4d1-7dcb" name="Free Companies (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="3d4e-c53d-cda1-43f4" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="10d1-3ffe-30fa-7575" name="Free Company" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="6c0e-f5de-08b0-6b90" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="451a-81e4-648e-29ae" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e10b-7a91-1494-cb02" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c0e-f5de-08b0-6b90" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="5e6c-2e32-c022-c310" name="Free Company" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="5.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="adc4-9d4d-13c3-7fa5" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="96b1-0461-a931-c549" type="max"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c81c-25b5-f28b-2f4c" name="Halberdiers (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="6379-5e5b-24e1-ec2b" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="2b79-46fb-16b5-bb75" name="Halberdiers" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="30c4-de67-264d-cf5c" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="451a-81e4-648e-29ae" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d43e-98a2-5c50-b2d7" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="30c4-de67-264d-cf5c" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="6c10-f8c7-6c85-9e9a" name="Halberdier" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="88cb-820d-6e0e-e150" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab14-be20-fb24-59e0" type="max"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="cd07-d218-e15c-f597" name="Handgunners (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="3acc-9305-09f0-dc0b" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="cd4e-bdd6-d77d-63fa" name="Handgunners" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="5d39-2872-4ef4-00dc" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="451a-81e4-648e-29ae" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4746-ee82-5855-75d1" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d39-2872-4ef4-00dc" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="eaa3-5091-8f72-1e28" name="Handgunner" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3352-17ad-0104-92da" name="Spearmen (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="1392-a54d-ca5b-27d9" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="e342-dd0a-f8d3-ce5b" name="Spearmen" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="1b9e-7843-b2ab-288c" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="451a-81e4-648e-29ae" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fabe-85b3-c994-9c41" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b9e-7843-b2ab-288c" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="0e48-7ed7-45f5-d3ed" name="Spearman" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="170e-c7ee-0141-b3ac" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="35bd-02b9-647b-89f5" type="max"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="9fdc-fbab-1818-deb4" name="Swordsmen (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="7433-280b-41b6-935d" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="1c38-2154-2360-62a5" name="Swordsmen" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="d8b8-94f0-c6e4-e01c" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="451a-81e4-648e-29ae" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3975-e899-e8da-97e1" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d8b8-94f0-c6e4-e01c" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="266a-2027-cfa1-a5e0" name="Swordsman" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="7.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="2ec6-a362-95e4-44a2" name="Detachments" hidden="false" collective="false" import="true" targetId="81b4-20ee-7577-bd54" type="selectionEntryGroup"/>
         <entryLink id="49db-f8a9-e861-253a" name="Magic Banners" hidden="true" collective="false" import="true" targetId="1b26-a492-5ba0-560b" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
@@ -1636,9 +1992,364 @@ When firing his own missile weapon, an Engineer can always choose a different ta
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="9c68-0a88-9fd7-7e72" name="Detachments" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b9b2-86d2-e82d-0720" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="4cb7-3ee8-3221-43e7" name="Archers (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="4eaf-0392-25bc-b89b" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="be1f-9b30-a6be-76a1" name="Archers" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="12c4-cfbc-7b11-81e4" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="44ca-62b2-5cee-273b" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="11bb-1155-3a74-d144" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="12c4-cfbc-7b11-81e4" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="244b-9cbd-7c5e-ca55" name="Archer" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="dc40-e4af-55f8-efef" name="Crossbowmen (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="eadd-a313-6d09-c2fb" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="6c09-9422-13c5-543e" name="Crossbowmen" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="f676-271a-3fe1-c47c" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="44ca-62b2-5cee-273b" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6849-71df-fd0d-49b3" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f676-271a-3fe1-c47c" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="c880-814d-f5cf-909a" name="Crossbowman" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="12ed-ce0e-32a7-7bc1" name="Free Companies (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="83ee-6c70-4fc7-8f6c" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="2af2-03f6-8349-63e6" name="Free Company" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="1944-a92f-deef-2903" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="44ca-62b2-5cee-273b" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bfec-4455-08b6-7a11" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1944-a92f-deef-2903" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="f3e3-3d74-4299-1f02" name="Free Company" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="5.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="9124-29b2-9f57-2b6f" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6613-80fe-113d-34e8" type="max"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e580-305d-ac93-1cca" name="Halberdiers (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="c61f-bdff-61c4-5b25" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="6ea4-1f52-4ec9-54e9" name="Halberdiers" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="1c95-c3b2-9607-f3b9" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="44ca-62b2-5cee-273b" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="06d0-f071-d486-9548" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c95-c3b2-9607-f3b9" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="9bba-b69a-3706-5593" name="Halberdier" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="bb52-8132-e780-b562" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a9b-7767-8909-beff" type="max"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0d8e-8045-10dd-f644" name="Handgunners (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="13c0-8e91-1cec-a387" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="29a5-3ff4-fb64-c49a" name="Handgunners" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="73dd-4a85-ba2b-05df" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="44ca-62b2-5cee-273b" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="afb0-adc5-70cf-e78c" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73dd-4a85-ba2b-05df" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="c3ef-a41e-d33b-5fa5" name="Handgunner" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2835-b291-3797-a636" name="Spearmen (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="fba7-c79e-c347-f230" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="a55a-6c3b-37d2-807b" name="Spearmen" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="9175-8c8a-bf07-2dbd" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="44ca-62b2-5cee-273b" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="246e-4e81-4171-c26b" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9175-8c8a-bf07-2dbd" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="0a8b-0097-f3ad-6efd" name="Spearman" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="80f7-f733-2b8d-3341" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1374-caf5-1455-fa25" type="max"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="fe9c-0945-7d47-1655" name="Swordsmen (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="e057-eab1-a108-c5f6" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="b32b-5d86-54e0-b591" name="Swordsmen" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="f2d0-dd82-2ec2-e747" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="44ca-62b2-5cee-273b" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d5ea-9587-239c-2b6b" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f2d0-dd82-2ec2-e747" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="21ed-4177-bcb6-9723" name="Swordsman" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="7.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="32c3-64ca-d466-ecba" name="Detachments" hidden="false" collective="false" import="true" targetId="81b4-20ee-7577-bd54" type="selectionEntryGroup"/>
         <entryLink id="e35e-bdad-046c-63a1" name="Magic Banners" hidden="true" collective="false" import="true" targetId="1b26-a492-5ba0-560b" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
@@ -1716,6 +2427,9 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               </characteristics>
             </profile>
           </profiles>
+          <categoryLinks>
+            <categoryLink id="392e-f4ec-af1a-50d2" name="Parent Unit Model" hidden="false" targetId="b1e7-c274-e193-e55b" primary="false"/>
+          </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
             <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
@@ -1785,9 +2499,364 @@ When firing his own missile weapon, an Engineer can always choose a different ta
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="7ad5-a22b-3bca-e30c" name="Detachments" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c25-3e10-0cf5-52ff" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="2088-b55f-8051-5787" name="Archers (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="6f53-f1c3-ddc1-1800" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="fde1-d91c-b6f0-cdc9" name="Archers" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="38a3-7e72-5413-5675" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="74cf-603b-5092-6d06" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a076-b560-eb11-7417" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="38a3-7e72-5413-5675" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="b5b1-6a1a-670c-0bab" name="Archer" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="d624-6781-1743-11b5" name="Crossbowmen (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="5428-46a6-81b0-fa5c" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="4aa2-2494-b5a0-2598" name="Crossbowmen" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="914f-a497-7f1d-d25c" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="74cf-603b-5092-6d06" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0076-e7f9-76fb-7530" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="914f-a497-7f1d-d25c" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="f2e0-24a7-d96f-fc71" name="Crossbowman" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b1fa-4259-a5f8-7b6d" name="Free Companies (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="a26f-c98c-47d1-073b" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="e89f-eb21-7fa8-eccb" name="Free Company" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="d760-8e83-93b9-1adc" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="74cf-603b-5092-6d06" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="032e-c266-e541-f98f" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d760-8e83-93b9-1adc" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="005c-281c-b5f4-818d" name="Free Company" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="5.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="c9c5-c588-0abb-d50d" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f2a4-49d4-d915-a4b9" type="max"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f8d6-2b91-2025-4591" name="Halberdiers (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="b22a-20f0-3e9e-4238" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="8aba-e673-3faa-a372" name="Halberdiers" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="e002-c5da-5e22-876c" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="74cf-603b-5092-6d06" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce7a-7ee9-eda2-a51e" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e002-c5da-5e22-876c" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="2fd2-e442-2d0a-c13f" name="Halberdier" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="f1af-aa90-3186-1469" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="47de-c54a-e06a-87dd" type="max"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b5f2-b694-fa5b-ec71" name="Handgunners (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="e6f9-163b-0c43-d995" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="1022-9051-45a0-170e" name="Handgunners" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="6788-bc8c-8aff-9527" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="74cf-603b-5092-6d06" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b5cf-6411-bfea-6970" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6788-bc8c-8aff-9527" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="5cc1-d31e-cad6-f437" name="Handgunner" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="69f1-3748-1478-d42e" name="Spearmen (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="8273-7b83-429f-1688" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="b5f9-22cb-6e52-84a6" name="Spearmen" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="6ad3-8a2a-ed44-cf77" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="74cf-603b-5092-6d06" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="591c-8ab6-bfd8-8f01" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ad3-8a2a-ed44-cf77" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="4e34-a05a-9126-c682" name="Spearman" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="0f43-c736-0b79-ef68" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5168-e39b-5838-3b1f" type="max"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="08d6-994c-cc5e-f37d" name="Swordsmen (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="5f86-6f84-338f-3f5a" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="a7d2-3095-1784-5806" name="Swordsmen" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="6077-b7b2-31c9-085e" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="74cf-603b-5092-6d06" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3514-c4b2-9f41-6776" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6077-b7b2-31c9-085e" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="afdb-2baf-5613-d7c1" name="Swordsman" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="7.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="0f53-4ff8-229c-acbd" name="Detachments" hidden="false" collective="false" import="true" targetId="81b4-20ee-7577-bd54" type="selectionEntryGroup"/>
         <entryLink id="20e4-98b6-16a8-8daf" name="Magic Banners" hidden="true" collective="false" import="true" targetId="1b26-a492-5ba0-560b" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
@@ -1934,9 +3003,364 @@ When firing his own missile weapon, an Engineer can always choose a different ta
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="8dfe-df39-a7a3-3f78" name="Detachments" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e77e-a069-f57b-efd1" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="1556-0f51-4d66-3211" name="Archers (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="c1e5-2c92-fec3-ad7f" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="9aa4-6c42-e2a1-9718" name="Archers" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="173e-45ed-94e8-d4b8" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="c9c6-a136-b075-ccc5" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2715-64cd-33e9-5df7" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="173e-45ed-94e8-d4b8" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="f023-b465-f641-7823" name="Archer" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c001-d01e-f43c-920f" name="Crossbowmen (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="ec8e-6203-ea3d-b365" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="da4f-c49a-430c-f265" name="Crossbowmen" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="a3db-961a-9137-93ea" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="c9c6-a136-b075-ccc5" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="70ed-ff24-13cb-5ebf" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a3db-961a-9137-93ea" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="a480-bed0-7793-5fff" name="Crossbowman" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2a57-4d7c-af0e-41f4" name="Free Companies (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="f161-defe-c5c2-7a12" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="c73a-50a0-cec6-7b24" name="Free Company" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="733b-00c2-5be8-e3f0" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="c9c6-a136-b075-ccc5" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="062c-9a42-b063-6def" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="733b-00c2-5be8-e3f0" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="0b58-69ab-147d-c5df" name="Free Company" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="5.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="4c3a-543e-29a0-7e77" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="099c-b8eb-0a74-9efd" type="max"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="77b6-4e1d-99fb-08a1" name="Halberdiers (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="021d-9136-4765-912e" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="0301-7bcd-c978-31e8" name="Halberdiers" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="81d5-6fde-1b84-7259" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="c9c6-a136-b075-ccc5" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e436-2973-f66e-e9ff" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="81d5-6fde-1b84-7259" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="601d-bca2-5631-cb1a" name="Halberdier" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="f2fa-86be-bdb7-2c99" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="90c1-8199-f3f4-6143" type="max"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e223-20ae-d8ec-6d0a" name="Handgunners (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="9a89-217c-532b-5519" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="d534-e287-3098-085f" name="Handgunners" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="d289-7cf4-e1e8-1422" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="c9c6-a136-b075-ccc5" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a7e7-9492-2d5c-cafb" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d289-7cf4-e1e8-1422" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="1fe6-df50-3b93-c3d3" name="Handgunner" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3501-f03d-cd93-b41f" name="Spearmen (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="8e1b-c3d0-a7f5-74b4" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="11de-40d8-f86d-ffa1" name="Spearmen" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="2bc0-1745-d818-51ec" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="c9c6-a136-b075-ccc5" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="769f-1dfc-db0b-3775" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2bc0-1745-d818-51ec" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="3c06-4b2a-55e3-0acd" name="Spearman" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="cd39-d3f3-1277-b17e" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5079-afef-af20-348a" type="max"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ece4-3637-afa5-19e7" name="Swordsmen (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="2657-2969-968e-7cf1" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="abe3-d395-1faa-5c4c" name="Swordsmen" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="9729-42d8-be2c-fae9" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="c9c6-a136-b075-ccc5" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b80c-f945-f7e2-a65a" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9729-42d8-be2c-fae9" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="0a10-8639-f2a9-3898" name="Swordsman" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="7.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="7986-0dc0-27da-1241" name="Detachments" hidden="false" collective="false" import="true" targetId="81b4-20ee-7577-bd54" type="selectionEntryGroup"/>
         <entryLink id="8a86-f172-cf68-100a" name="Magic Banners" hidden="true" collective="false" import="true" targetId="1b26-a492-5ba0-560b" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
@@ -2106,13 +3530,6 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="64db-3e0c-243d-e129" type="max"/>
               </constraints>
-              <entryLinks>
-                <entryLink id="07ec-6073-f7d8-a096" name="Magic Banners" hidden="false" collective="false" import="true" targetId="1b26-a492-5ba0-560b" type="selectionEntryGroup">
-                  <constraints>
-                    <constraint field="eaa7-6800-e651-8bea" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="45cd-dd0c-36de-5f1b" type="max"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="16.0"/>
                 <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
@@ -2155,6 +3572,20 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="35b7-1d64-33ec-7578" name="Magic Banners" hidden="false" collective="false" import="true" targetId="1b26-a492-5ba0-560b" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b99d-f7f5-48c1-76b5" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="eaa7-6800-e651-8bea" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2bf3-0b8d-1a5d-a214" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
         <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
@@ -2295,13 +3726,6 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0dbc-a0e2-f5f0-5943" type="max"/>
               </constraints>
-              <entryLinks>
-                <entryLink id="359b-a137-1fee-ed10" name="Magic Banners" hidden="false" collective="false" import="true" targetId="1b26-a492-5ba0-560b" type="selectionEntryGroup">
-                  <constraints>
-                    <constraint field="eaa7-6800-e651-8bea" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ddae-2234-05bc-5560" type="max"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="16.0"/>
                 <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
@@ -2344,6 +3768,20 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="2cb4-1e65-5ed8-3208" name="Magic Banners" hidden="false" collective="false" import="true" targetId="1b26-a492-5ba0-560b" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cf08-c95a-c00e-d862" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="eaa7-6800-e651-8bea" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7019-8d4b-99d9-8a2b" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
         <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
@@ -2456,13 +3894,6 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f749-6a94-b8ab-d371" type="max"/>
               </constraints>
-              <entryLinks>
-                <entryLink id="7fce-9014-9222-42e6" name="Magic Banners" hidden="false" collective="false" import="true" targetId="1b26-a492-5ba0-560b" type="selectionEntryGroup">
-                  <constraints>
-                    <constraint field="eaa7-6800-e651-8bea" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="30ca-1c27-4dfb-9274" type="max"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="12.0"/>
                 <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
@@ -2494,9 +3925,376 @@ When firing his own missile weapon, an Engineer can always choose a different ta
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup id="2508-f083-3ecf-c54a" name="Detachments" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b9f7-eedc-cca5-c31a" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="5374-c002-1b47-3e46" name="Archers (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="da87-228a-b496-98b3" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="ab13-3748-1671-7d50" name="Archers" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="e2b9-9a48-bfdd-7876" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="cb6f-6324-38cd-2f80" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c086-8fd1-af46-82d9" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e2b9-9a48-bfdd-7876" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="b290-cc9e-adb8-7c20" name="Archer" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="48c3-4df2-8757-7f5a" name="Crossbowmen (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="f2c5-cc00-79aa-f11b" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="b157-b280-e4f6-f33e" name="Crossbowmen" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="9dba-be7c-bac2-6a00" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="cb6f-6324-38cd-2f80" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dcfb-45cc-1cb0-a356" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9dba-be7c-bac2-6a00" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="488a-a42d-b04f-15ac" name="Crossbowman" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="bc83-5f8d-ddf1-5ddc" name="Free Companies (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="400a-8a53-4871-aee1" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="51b5-843a-d6b0-3413" name="Free Company" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="2d12-1839-eef1-d4b5" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="cb6f-6324-38cd-2f80" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="44bc-8996-9f08-abbd" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d12-1839-eef1-d4b5" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="9e86-24b9-84c2-2e17" name="Free Company" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="5.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="9426-2afb-99bf-4632" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aca2-d326-e01e-3276" type="max"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ecd9-ee87-1607-bf77" name="Halberdiers (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="c675-504e-3148-fa51" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="0490-3ad2-f0df-6bac" name="Halberdiers" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="8733-c82d-b4b1-aaf2" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="cb6f-6324-38cd-2f80" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff31-2588-2684-850a" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8733-c82d-b4b1-aaf2" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="0a35-0715-ca1e-0621" name="Halberdier" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="9889-617b-a3dc-f39a" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9147-4f28-3817-e353" type="max"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="89cc-e531-d6ad-97bf" name="Handgunners (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="891c-9c15-9709-a98d" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="5477-0a6f-75bd-9b47" name="Handgunners" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="da90-85a6-1321-76a3" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="cb6f-6324-38cd-2f80" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73db-590e-44ff-93ef" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da90-85a6-1321-76a3" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="0c7b-c305-c638-b44c" name="Handgunner" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ec05-5693-55f1-1ada" name="Spearmen (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="8927-cda2-0916-88de" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="b7da-bf92-4513-cbbb" name="Spearmen" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="9f42-a48b-7f56-6d3f" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="cb6f-6324-38cd-2f80" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e22-2664-ff9f-cf10" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f42-a48b-7f56-6d3f" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="6dbc-7654-646e-afae" name="Spearman" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="57d2-d5f5-983b-b16c" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
+                  <modifiers>
+                    <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d55-ecf1-bde1-f4c8" type="max"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e97c-1abb-a211-2c59" name="Swordsmen (Detachment)" hidden="false" collective="false" import="true" type="unit">
+              <categoryLinks>
+                <categoryLink id="1a93-1127-57e7-d61e" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
+              </categoryLinks>
+              <selectionEntries>
+                <selectionEntry id="5bfa-a1f8-a724-b411" name="Swordsmen" hidden="false" collective="false" import="true" type="model">
+                  <modifiers>
+                    <modifier type="increment" field="d6cc-e3df-753c-9a78" value="1.0">
+                      <repeats>
+                        <repeat field="selections" scope="cb6f-6324-38cd-2f80" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d72f-cf8a-f9ce-0cec" type="min"/>
+                    <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6cc-e3df-753c-9a78" type="max"/>
+                  </constraints>
+                  <profiles>
+                    <profile id="650c-bf1e-92d5-4c53" name="Swordsman" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                      <characteristics>
+                        <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                        <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+                        <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                        <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                        <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                        <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                        <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
+                        <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                        <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="7.0"/>
+                    <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="89c3-3256-5a24-c010" name="Detachments" hidden="false" collective="false" import="true" targetId="81b4-20ee-7577-bd54" type="selectionEntryGroup"/>
+        <entryLink id="2ddf-916e-b6dd-aff3" name="Magic Banners" hidden="false" collective="false" import="true" targetId="1b26-a492-5ba0-560b" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="661d-8d8d-76e5-b8a5" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="eaa7-6800-e651-8bea" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a41d-27f7-1d7d-3f58" type="max"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
@@ -3242,7 +5040,7 @@ Only then is the total score and its effects worked out. Including Miscasts and 
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="450.0"/>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="400.0"/>
         <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
       </costs>
     </selectionEntry>
@@ -3937,290 +5735,6 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
     </rule>
   </rules>
   <sharedSelectionEntries>
-    <selectionEntry id="1ad6-c268-a944-8421" name="Halberdiers (Detachment)" hidden="false" collective="false" import="true" type="unit">
-      <categoryLinks>
-        <categoryLink id="b5d5-f54a-8323-c63c" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="6000-98df-299b-25a2" name="Halberdiers" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c10e-a5ae-9cdb-9854" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="aa57-5c89-bce5-a02e" name="Halberdier" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
-              <characteristics>
-                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
-                <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
-                <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
-                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-                <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
-                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
-            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="99a0-580c-b1be-b2fb" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
-            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <costs>
-        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
-        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="d277-52b6-5abf-69af" name="Spearmen (Detachment)" hidden="false" collective="false" import="true" type="unit">
-      <categoryLinks>
-        <categoryLink id="1fc3-6fda-f80e-c0aa" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="c200-5324-a192-7989" name="Spearmen" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5454-4a05-2846-9aa9" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="0751-1c68-04b9-0604" name="Spearman" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
-              <characteristics>
-                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
-                <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
-                <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
-                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-                <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
-                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
-            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="4d85-1cff-425e-36a8" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
-            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <costs>
-        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
-        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="cf82-a314-a988-b1b2" name="Swordsmen (Detachment)" hidden="false" collective="false" import="true" type="unit">
-      <categoryLinks>
-        <categoryLink id="3678-f407-0811-1b7f" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="c32e-de4c-b39c-64b9" name="Swordsmen" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8878-7404-11da-180d" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="5d1b-3635-7c38-cbb5" name="Swordsman" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
-              <characteristics>
-                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
-                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
-                <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
-                <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
-                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-                <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
-                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="7.0"/>
-            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <costs>
-        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
-        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="665c-56a9-1f86-b76d" name="Handgunners (Detachment)" hidden="false" collective="false" import="true" type="unit">
-      <categoryLinks>
-        <categoryLink id="f9f3-4ea2-9034-7706" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="66bb-c43c-7e93-1aa9" name="Handgunners" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a22d-8a9a-fe31-2e0b" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="bc21-1999-f676-357d" name="Handgunner" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
-              <characteristics>
-                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
-                <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
-                <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
-                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-                <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
-                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
-            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <costs>
-        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
-        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="aebe-dda2-f8c9-1fc7" name="Free Companies (Detachment)" hidden="false" collective="false" import="true" type="unit">
-      <categoryLinks>
-        <categoryLink id="1308-94a3-5291-a5c2" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="689c-8f39-d7ff-c159" name="Free Company" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f0e7-47fa-d086-19c3" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="1bd5-e5cf-accd-f7c0" name="Free Company" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
-              <characteristics>
-                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
-                <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
-                <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
-                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-                <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
-                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="5.0"/>
-            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="d2fa-2265-f228-166e" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
-              <repeats>
-                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
-            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <costs>
-        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
-        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="2bdd-ce0f-3d97-18ea" name="Archers (Detachment)" hidden="false" collective="false" import="true" type="unit">
-      <categoryLinks>
-        <categoryLink id="f83f-a584-986b-46c3" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="3949-ad93-1af2-a588" name="Archers" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe1a-aecb-8f8c-e7fc" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="1aa1-df1a-2510-38f4" name="Archer" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
-              <characteristics>
-                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
-                <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
-                <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
-                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-                <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
-                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
-            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <costs>
-        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
-        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="aecc-540a-16fc-6948" name="Crossbowmen (Detachment)" hidden="false" collective="false" import="true" type="unit">
-      <categoryLinks>
-        <categoryLink id="8b4b-9a35-7a4b-c260" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="6aac-c373-ebf0-b1d8" name="Crossbowmen" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4541-a91a-49cd-6df6" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="c2f6-e0c6-ada6-446e" name="Crossbowman" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
-              <characteristics>
-                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
-                <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
-                <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
-                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-                <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
-                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
-            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <costs>
-        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
-        <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="286b-5a20-afaf-b95d" name="Pegasus" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
         <profile id="8976-105e-30d7-fb5d" name="Pegasus" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
@@ -4326,6 +5840,13 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
           </costs>
         </selectionEntry>
         <selectionEntry id="aad4-f3fa-9710-2518" name="The Mace of Helstrum" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="623e-5f3d-d939-9b51" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="c89f-205e-551b-d67e" type="max"/>
           </constraints>
@@ -4923,6 +6444,13 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
               </costs>
             </selectionEntry>
             <selectionEntry id="414f-298a-3a26-855f" name="Hexstaff" publicationId="2c29-8521-dcc7-5337" page="11" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="623e-5f3d-d939-9b51" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="9370-539e-9c2c-bd87" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="42e0-d961-5577-2743" type="max"/>
@@ -4965,6 +6493,13 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
       </constraints>
       <selectionEntries>
         <selectionEntry id="c56a-ce6c-03bb-4895" name="Laurels of Victory" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="623e-5f3d-d939-9b51" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="94f6-718b-36c2-3d80" type="max"/>
           </constraints>
@@ -5133,6 +6668,13 @@ A flaming magic missile spurts from the Ring in a straight line up to 18” long
       </constraints>
       <selectionEntries>
         <selectionEntry id="919a-c74a-b5a9-9bdc" name="Imperial Banner" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="6c8f-19ed-bc08-bb2d" type="max"/>
           </constraints>
@@ -5150,6 +6692,13 @@ A flaming magic missile spurts from the Ring in a straight line up to 18” long
           </costs>
         </selectionEntry>
         <selectionEntry id="f4d1-5488-1b07-9c0f" name="Banner of Sigismund" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="7611-e7c0-fd58-5432" type="max"/>
           </constraints>
@@ -5167,6 +6716,13 @@ A flaming magic missile spurts from the Ring in a straight line up to 18” long
           </costs>
         </selectionEntry>
         <selectionEntry id="5908-c52b-930f-20ce" name="Banner of Ulric" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6f2a-3fc2-6a0a-d560" type="notInstanceOf"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="e76f-f160-f4c2-c5f5" type="max"/>
           </constraints>
@@ -5275,31 +6831,6 @@ The unit carrying the Griffon Standard will never pursue a fleeing enemy but wil
       </selectionEntries>
       <entryLinks>
         <entryLink id="a0be-3b64-d0bf-c142" name="War Banner" hidden="false" collective="false" import="true" targetId="862d-4fba-1966-3f2f" type="selectionEntry"/>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="81b4-20ee-7577-bd54" name="Detachments" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec38-d14d-b3a5-7cb4" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="35b2-fd7c-f06e-ae2f" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="cfda-01cd-eefa-fac0" name="Halberdiers (Detachment)" hidden="false" collective="false" import="true" targetId="1ad6-c268-a944-8421" type="selectionEntry">
-          <categoryLinks>
-            <categoryLink id="d36e-1102-ec30-a0c2" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
-          </categoryLinks>
-        </entryLink>
-        <entryLink id="631b-2a67-6e4e-46c1" name="Spearmen (Detachment)" hidden="false" collective="false" import="true" targetId="d277-52b6-5abf-69af" type="selectionEntry">
-          <categoryLinks>
-            <categoryLink id="273f-dc96-2c80-bbed" name="Support Unit" hidden="false" targetId="b085-c03b-b9e3-0b6a" primary="false"/>
-          </categoryLinks>
-        </entryLink>
-        <entryLink id="c54d-b086-02e5-f0ca" name="Archers (Detachment)" hidden="false" collective="false" import="true" targetId="2bdd-ce0f-3d97-18ea" type="selectionEntry"/>
-        <entryLink id="693c-cebc-c45a-0537" name="Crossbowmen (Detachment)" hidden="false" collective="false" import="true" targetId="aecc-540a-16fc-6948" type="selectionEntry"/>
-        <entryLink id="d67a-f0c3-4dba-e3c9" name="Free Companies (Detachment)" hidden="false" collective="false" import="true" targetId="aebe-dda2-f8c9-1fc7" type="selectionEntry"/>
-        <entryLink id="2df5-2fec-f8a4-0ef8" name="Handgunners (Detachment)" hidden="false" collective="false" import="true" targetId="665c-56a9-1f86-b76d" type="selectionEntry"/>
-        <entryLink id="3286-94cb-fcd7-afee" name="Swordsmen (Detachment)" hidden="false" collective="false" import="true" targetId="cf82-a314-a988-b1b2" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
