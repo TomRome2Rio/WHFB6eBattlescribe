@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f49f-f614-5cfb-004a" name="The Empire" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
-  <readme></readme>
+<catalogue id="f49f-f614-5cfb-004a" name="The Empire" revision="10" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <costTypes>
     <costType id="fada-3781-5bbe-4625" name=" Hull Points" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -6862,4 +6861,7 @@ The unit carrying the Griffon Standard will never pursue a fleeing enemy but wil
       </characteristics>
     </profile>
   </sharedProfiles>
+  <catalogueLinks>
+    <catalogueLink id="3181-fe87-76fe-9509" name="Dogs of War" targetId="3604-800a-4012-5da6" type="catalogue" importRootEntries="true"/>
+  </catalogueLinks>
 </catalogue>

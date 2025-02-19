@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="fd0d-5697-0f21-8aac" name="Forces of Chaos" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="fd0d-5697-0f21-8aac" name="Forces of Chaos" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="e8a8-d83e-c60c-3ad0" name="Hordes of Chaos"/>
     <publication id="dc3a-2511-d23a-deb3" name="Beasts of Chaos"/>
@@ -5580,7 +5580,7 @@ Note this ability applies only to the mount, not to the Daemonette rider.</descr
     </selectionEntry>
     <selectionEntry id="013b-a34a-c705-6c06" name="Hellcannon" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="set" field="hidden" value="true">
+        <modifier type="set" field="78e2-42ed-eaf2-5744" value="0.0">
           <conditions>
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="aac0-5a64-060e-85bb" type="equalTo"/>
           </conditions>
@@ -8688,15 +8688,8 @@ Against Castles, Empire Steam Tanks and in other situations where a wound roll i
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="ac79-03e5-8182-09db" name="Magic Armour" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="increment" field="2e43-24c6-ff9a-43e1" value="1.0">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a2b-c497-93f2-c804" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2e43-24c6-ff9a-43e1" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2e43-24c6-ff9a-43e1" type="max"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="6f5c-482a-e143-1746" name="Pelt of the Dark Young" hidden="false" collective="false" import="true" type="upgrade">
@@ -8843,6 +8836,11 @@ A model may wear Chaos Armour and still cast spells.</description>
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b901-28a6-ed61-a2be" type="equalTo"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="8433-2c45-871d-e698" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4a2b-c497-93f2-c804" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8433-2c45-871d-e698" type="max"/>
@@ -8881,6 +8879,11 @@ Roll a D6 every time a spell is cast at the bearer of the Spelleater Shield and 
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="854b-145b-3be4-a9e5" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4a2b-c497-93f2-c804" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -8977,6 +8980,11 @@ Roll a D6 every time a spell is cast at the bearer of the Spelleater Shield and 
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="d497-51a4-b169-781e" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4a2b-c497-93f2-c804" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d497-51a4-b169-781e" type="max"/>
@@ -9024,29 +9032,6 @@ Roll a D6 every time a spell is cast at the bearer of the Spelleater Shield and 
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="2369-6603-44d6-6ae7" name="Enchanted Shield" hidden="false" collective="false" import="true" targetId="4a2b-c497-93f2-c804" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4c3c-1abc-5f52-c225" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d0e-264e-202e-4c42" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1db4-7ac0-050f-d454" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c6de-d7dc-79ae-a5b8" type="instanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="853b-1be3-fdb2-0588" name="Magic Items" hidden="false" collective="false" import="true">
       <modifiers>
@@ -9120,6 +9105,30 @@ Roll a D6 every time a spell is cast at the bearer of the Spelleater Shield and 
               </conditionGroups>
             </modifier>
           </modifiers>
+        </entryLink>
+        <entryLink id="bb34-e5bc-570f-eff0" name="Enchanted Shield" hidden="false" collective="false" import="true" targetId="4a2b-c497-93f2-c804" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4c3c-1abc-5f52-c225" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1d0e-264e-202e-4c42" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1db4-7ac0-050f-d454" type="instanceOf"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c6de-d7dc-79ae-a5b8" type="instanceOf"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="db05-f9b9-bc3b-946e" type="max"/>
+          </constraints>
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>
@@ -10208,4 +10217,7 @@ If a Doombull is with a non-Minotaur unit, then it&apos;s norrmal pursuit rate i
   <sharedInfoGroups>
     <infoGroup id="1d2a-5ef7-5722-e7d5" name="Daemonic" hidden="false"/>
   </sharedInfoGroups>
+  <catalogueLinks>
+    <catalogueLink id="41b3-4d15-b0a9-7493" name="Dogs of War" targetId="3604-800a-4012-5da6" type="catalogue" importRootEntries="true"/>
+  </catalogueLinks>
 </catalogue>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7bb5-70b8-0122-944c" name="Wood Elves" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7bb5-70b8-0122-944c" name="Wood Elves" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="4f0e-c683-4011-68a9" name="Magic Bow" hidden="true"/>
     <categoryEntry id="3fee-c6b4-de1c-b33e" name="Magic Arrows" hidden="false"/>
@@ -3999,4 +3999,7 @@ Forest Spirits are Immune to Psychology.</description>
       </infoLinks>
     </infoGroup>
   </sharedInfoGroups>
+  <catalogueLinks>
+    <catalogueLink id="dfe4-1532-35fd-d588" name="Dogs of War" targetId="3604-800a-4012-5da6" type="catalogue" importRootEntries="true"/>
+  </catalogueLinks>
 </catalogue>

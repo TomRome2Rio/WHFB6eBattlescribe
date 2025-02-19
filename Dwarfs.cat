@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c189-c206-4913-5be6" name="Dwarfs" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="15" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="c189-c206-4913-5be6" name="Dwarfs" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="e0a8-8253-1a27-7620" name="Engineering Rune" hidden="false">
       <rules>
@@ -716,6 +716,9 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="261c-1d2e-0b0e-8dad" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="5ab3-2120-8728-4b30" name="Great Weapons" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -728,6 +731,9 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="45d0-6ef9-7fae-1aaf" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -765,7 +771,11 @@ When firing his own missile weapon, an Engineer can always choose a different ta
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c25b-813a-63d4-b608" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="80d2-52cb-9f52-96a7" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade"/>
+            <selectionEntry id="80d2-52cb-9f52-96a7" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
             <selectionEntry id="8070-d2e7-0dc1-caea" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
@@ -774,10 +784,16 @@ When firing his own missile weapon, an Engineer can always choose a different ta
                   </repeats>
                 </modifier>
               </modifiers>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="1189-e137-24c5-0bfb" name="Crossbowmen" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
@@ -818,18 +834,27 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a09-3ce4-c5fd-e168" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="de73-049e-1d7a-4f63" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e440-3c78-1d46-f135" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7600-ec17-c424-574c" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="b066-fc0b-4492-2ac3" name="Crossbows" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f63-31a1-1d6f-8797" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="149b-adc0-abd8-3b71" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -862,6 +887,9 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="6a25-a106-284c-2d0f" name="Thunderers" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
@@ -902,18 +930,27 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e53-191e-dc8f-7524" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="c87d-0de2-803d-cac2" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="54a7-dd16-e0fc-095f" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d0f3-f8e9-cf2f-81a6" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="4196-88b7-f9b1-bb08" name="Dwarf Handguns" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c72c-b6e9-9af5-87ca" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="933d-d095-75fe-a3b6" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -942,7 +979,11 @@ When firing his own missile weapon, an Engineer can always choose a different ta
               <selectionEntryGroups>
                 <selectionEntryGroup id="5e52-e4bf-bec2-1b95" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="f80f-532b-76b4-f397">
                   <selectionEntries>
-                    <selectionEntry id="f80f-532b-76b4-f397" name="Dwarf Handgun" hidden="false" collective="false" import="true" type="upgrade"/>
+                    <selectionEntry id="f80f-532b-76b4-f397" name="Dwarf Handgun" hidden="false" collective="false" import="true" type="upgrade">
+                      <costs>
+                        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                      </costs>
+                    </selectionEntry>
                     <selectionEntry id="f053-2df6-b058-5251" name="Brace of Pistols" hidden="false" collective="false" import="true" type="upgrade">
                       <costs>
                         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="2.0"/>
@@ -958,6 +999,9 @@ When firing his own missile weapon, an Engineer can always choose a different ta
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="f143-a54b-8c0e-fce7" name="Miners" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -1005,12 +1049,18 @@ In the Movement phase of the turn when they arrive, Miners can enter the battlef
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9bab-ae47-fa4a-47c2" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b3b-0f2c-3d24-1dff" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="0db3-716e-a131-c870" name="Great Weapons" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9382-0643-732f-613b" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="737b-7bf5-7bc6-64cc" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1043,6 +1093,9 @@ In the Movement phase of the turn when they arrive, Miners can enter the battlef
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="82ac-af5e-8d50-b3f5" name="Rangers" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -1089,12 +1142,18 @@ In the Movement phase of the turn when they arrive, Miners can enter the battlef
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac3e-6669-287e-fcc6" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9417-e9a5-50f8-6b00" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="1ef3-46c6-ee77-169b" name="Great Weapons" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3662-385e-d884-caaa" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7fc0-dd46-9429-37f2" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="6c10-ae61-3497-7875" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -1107,6 +1166,9 @@ In the Movement phase of the turn when they arrive, Miners can enter the battlef
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="049e-6411-e944-1d63" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1151,6 +1213,9 @@ In the Movement phase of the turn when they arrive, Miners can enter the battlef
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f14-7dd4-1493-9bf1" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="9a3a-542c-3b33-b333" name="Throwing Axes" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
@@ -1163,10 +1228,16 @@ In the Movement phase of the turn when they arrive, Miners can enter the battlef
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb64-c44d-9ec9-b474" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="04c4-f4f5-3475-1128" name="Hammerers" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -1212,12 +1283,18 @@ In the Movement phase of the turn when they arrive, Miners can enter the battlef
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b21-aa3a-353c-df00" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7662-cc77-a34c-a1fe" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="aeb7-4c78-bd0c-bd45" name="Great Weapons" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f4bf-5667-d315-768d" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e0f8-6d07-1a3d-1f37" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="bbda-d691-bc6f-dd39" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
@@ -1230,6 +1307,9 @@ In the Movement phase of the turn when they arrive, Miners can enter the battlef
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="778c-e5ed-2207-78dd" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1276,6 +1356,9 @@ In the Movement phase of the turn when they arrive, Miners can enter the battlef
           </constraints>
         </entryLink>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="3b90-87d2-6c42-d7c8" name="Longbeards" hidden="false" collective="false" import="true" type="unit">
       <rules>
@@ -1315,18 +1398,27 @@ In the Movement phase of the turn when they arrive, Miners can enter the battlef
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a93d-d47d-4418-9b39" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="75af-5a1e-f438-083d" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="9d4f-c3b7-abf3-ab57" name="Great Weapons" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c41-9bfe-ec4a-e450" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff46-ac16-1ad6-c598" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="7fc5-ea36-80f6-77fa" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="99ea-f8be-2a70-5d1a" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aeeb-5057-acd2-c2d2" type="min"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1373,6 +1465,9 @@ In the Movement phase of the turn when they arrive, Miners can enter the battlef
           </constraints>
         </entryLink>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="6d80-3f12-4527-f1ce" name="Slayers" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -1412,6 +1507,9 @@ In the Movement phase of the turn when they arrive, Miners can enter the battlef
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="afa1-6adc-e4a9-57b4" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e94f-3967-3c6a-62cc" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1466,6 +1564,9 @@ In the Movement phase of the turn when they arrive, Miners can enter the battlef
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="4dc5-91af-027b-2974" name="Ironbreakers" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
@@ -1500,12 +1601,18 @@ In the Movement phase of the turn when they arrive, Miners can enter the battlef
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9031-a4b4-94ab-7f1b" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="39e0-e921-afdb-dfa4" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="2769-b386-8379-5a08" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a347-0fe5-829e-963c" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3940-2593-72a1-8f85" type="min"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1552,6 +1659,9 @@ In the Movement phase of the turn when they arrive, Miners can enter the battlef
           </constraints>
         </entryLink>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="46ce-a57e-a621-be2e" name="Cannon" hidden="false" collective="false" import="true" type="unit">
       <profiles>
@@ -1594,6 +1704,9 @@ In the Movement phase of the turn when they arrive, Miners can enter the battlef
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8fad-1730-cd0c-ad7b" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b14-b847-5b0d-4a85" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -1653,6 +1766,9 @@ In the Movement phase of the turn when they arrive, Miners can enter the battlef
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b7a9-3b14-ae5c-9891" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cade-a2a0-e715-c5d9" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
@@ -1663,6 +1779,9 @@ In the Movement phase of the turn when they arrive, Miners can enter the battlef
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="9787-02a0-321c-45c0" name="Stone Thrower" hidden="false" collective="false" import="true" type="unit">
       <profiles>
@@ -1705,6 +1824,9 @@ In the Movement phase of the turn when they arrive, Miners can enter the battlef
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7159-da1e-104a-b817" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a1d-e3fe-4ceb-ccd8" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -1787,6 +1909,9 @@ The Flame Cannon requires a full crew of three Dwarfs to work it properly: to pu
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8178-93ff-600b-6c91" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be8c-5979-541c-b4a6" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -1918,6 +2043,9 @@ The Organ Gun requires a full crew of three Dwarfs to work it properly. If one c
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e36d-2821-b556-3e19" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f91-391c-4bb5-d4e2" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -3416,4 +3544,7 @@ The clang of hammer on rune reverberates across the battlefield, causing the gro
       <description>Each Runelord and Runesmith adds 1 extra dice to the Dispel pool.</description>
     </rule>
   </sharedRules>
+  <catalogueLinks>
+    <catalogueLink id="72d6-54f2-3b40-90bd" name="Dogs of War" targetId="3604-800a-4012-5da6" type="catalogue" importRootEntries="true"/>
+  </catalogueLinks>
 </catalogue>
