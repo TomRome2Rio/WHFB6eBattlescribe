@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="dfb1-1789-5d68-be54" name="Skaven" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="dfb1-1789-5d68-be54" name="Skaven" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="4f5c-498c-bd84-7e28" name="Clan Eshin" hidden="false"/>
     <categoryEntry id="befb-92ec-0667-152b" name="Clan Pestilens" hidden="false"/>
@@ -1545,7 +1545,7 @@ Remember that you use the best Leadership in the unit to take Leadership tests, 
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="55c2-c48b-4382-d621" type="max"/>
           </constraints>
           <profiles>
-            <profile id="fb82-504f-425c-2f65" name="Rat Swarm" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+            <profile id="fb82-504f-425c-2f65" name="Poisoned Wind Globadier" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
               <characteristics>
                 <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">5</characteristic>
                 <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
@@ -1555,7 +1555,7 @@ Remember that you use the best Leadership in the unit to take Leadership tests, 
                 <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
                 <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
                 <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">8</characteristic>
+                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">5</characteristic>
               </characteristics>
             </profile>
           </profiles>
