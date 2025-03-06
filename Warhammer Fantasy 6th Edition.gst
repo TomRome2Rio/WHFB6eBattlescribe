@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="4ca8-2035-2f87-1bd7" name="WHFB 6th Edition" revision="23" battleScribeVersion="2.03" authorName="Tom Clare" authorContact="" authorUrl="" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="4ca8-2035-2f87-1bd7" name="WHFB 6th Edition" revision="24" battleScribeVersion="2.03" authorName="Tom Clare" authorContact="" authorUrl="" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="d9e7-add3-773e-ffab" name="BRB"/>
     <publication id="2c29-8521-dcc7-5337" name="Warhammer Chronicles 2003"/>
@@ -520,34 +520,16 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="2be9-2fdd-98db-e42c" name="Power Stone" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="name" value="Power Stones">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9ec3-a95d-7f38-2724" type="greaterThan"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <selectionEntries>
-        <selectionEntry id="9ec3-a95d-7f38-2724" name="Power Stone" publicationId="d9e7-add3-773e-ffab" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ecc0-34de-0ec6-d085" type="min"/>
-          </constraints>
-          <rules>
-            <rule id="7dfc-6602-3a7b-ce1e" name="Power Stone" hidden="false">
-              <description>One use only. +2 dice to cast a spell.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="6a50-773c-76d7-d572" name="New CategoryLink" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="true"/>
-            <categoryLink id="ba9e-f6c7-61ae-dd1c" name="Scroll" hidden="false" targetId="06f3-5988-1d55-db7c" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+      <rules>
+        <rule id="130f-0831-64a4-4e02" name="Power Stone" hidden="false">
+          <description>One use only. +2 dice to cast a spell.</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="7af5-93e3-7411-71f3" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
+      </categoryLinks>
       <costs>
-        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -609,6 +591,11 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="469b-afc2-4a50-5910" name="Power Stones" hidden="false" collective="false" import="true">
+      <entryLinks>
+        <entryLink id="78a6-2490-21c8-f77b" name="Power Stone" hidden="false" collective="false" import="true" targetId="2be9-2fdd-98db-e42c" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
