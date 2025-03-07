@@ -2,6 +2,7 @@
 <catalogue id="9817-5d62-aa33-69f5" name="Ogre Kingdoms" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="5fa5-4b26-a63e-0bef" name="Big Name" hidden="false"/>
+    <categoryEntry id="a123-ef4a-523b-4159" name="Has Thiefstones" hidden="false"/>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="fed4-7c2f-34b4-722d" name="Show Dogs of War Ogres" hidden="false" collective="false" import="true" type="upgrade">
@@ -3113,9 +3114,6 @@ In a challenge, a Tyrant choosing to use this special attack does not use a temp
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="495f-0b22-17b3-e5fd" name="Gnoblar Thiefstones" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5e93-4670-5b1e-5fc1" type="max"/>
-          </constraints>
           <selectionEntries>
             <selectionEntry id="1493-1803-a573-8be1" name="Gnoblar Thiefstone" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
