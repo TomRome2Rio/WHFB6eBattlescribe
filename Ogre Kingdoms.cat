@@ -148,6 +148,7 @@
         <entryLink id="56b3-38a8-e29d-07f0" name="Ogre Club" hidden="false" collective="false" import="true" targetId="7497-8e4d-3871-da38" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b19a-1ed7-bda5-8727" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="98c1-d4f8-bcb9-5149" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="e140-ae7d-99c9-df2a" name="Magic Items &amp; Big Names" hidden="false" collective="false" import="true" targetId="126e-80ea-4283-b638" type="selectionEntryGroup"/>
@@ -381,6 +382,7 @@
         <entryLink id="85b6-43e9-8c93-d185" name="Ogre Club" hidden="false" collective="false" import="true" targetId="7497-8e4d-3871-da38" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="efe4-68f2-f03a-3d33" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1741-7bc5-9f32-f273" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="25c9-2139-a42f-97c7" name="Magic Items &amp; Big Names" hidden="false" collective="false" import="true" targetId="126e-80ea-4283-b638" type="selectionEntryGroup"/>
@@ -504,6 +506,7 @@ The harpoon launcher is fired exactly as a bolt thrower with a Strength of 5, pe
         <entryLink id="08b9-4899-473b-efea" name="Ogre Club" hidden="false" collective="false" import="true" targetId="7497-8e4d-3871-da38" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c410-9ebe-5418-e43c" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dec1-cf73-699a-56cb" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="b282-935d-a1a6-5c44" name="Magic Items &amp; Big Names" hidden="false" collective="false" import="true" targetId="126e-80ea-4283-b638" type="selectionEntryGroup"/>
@@ -745,6 +748,7 @@ The harpoon launcher is fired exactly as a bolt thrower with a Strength of 5, pe
         <entryLink id="0ec8-4e61-fe81-61f5" name="Ogre Club" hidden="false" collective="false" import="true" targetId="7497-8e4d-3871-da38" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51d8-78c8-cea1-14a7" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eed5-78a6-cb6e-eb40" type="max"/>
           </constraints>
         </entryLink>
         <entryLink id="897d-16e3-c4ed-9e0f" name="Lookout-Gnoblar" hidden="true" collective="false" import="true" targetId="000c-0e95-43b6-9cf6" type="selectionEntry">
@@ -1241,6 +1245,14 @@ Armour Piercing, Multiple Shots (Artillery Dice)</description>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="e78a-2000-adfd-767e" name="Ogre Club" hidden="false" collective="false" import="true" targetId="7497-8e4d-3871-da38" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0346-a36e-2e44-5f67" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0da3-1302-ba65-3730" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
       </costs>
@@ -2024,6 +2036,7 @@ Enemies firing at units of Rhinoxen comprising of Rhinox and Bull Rhinox must no
         <entryLink id="f383-42b2-d7e0-e771" name="Ogre Club" hidden="false" collective="false" import="true" targetId="7497-8e4d-3871-da38" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f68b-8abd-3e62-5c27" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b26c-25ca-cb8a-4b1a" type="max"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -2117,6 +2130,9 @@ Models killed | Effect on Skrag | Effect on Gorgers
           </conditions>
         </modifier>
       </modifiers>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="e55d-0cec-0b01-59ef" name="Gorgers" hidden="false" collective="false" import="true" type="model">
       <modifiers>
@@ -2189,6 +2205,9 @@ In the Remaining Moves phase of the turn when it arrives, the Gorger can enter t
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry id="7b2a-db07-185e-2514" name="Greasus Goldtooth" hidden="false" collective="false" import="true" type="model">
       <modifiers>
@@ -2261,6 +2280,9 @@ In the Remaining Moves phase of the turn when it arrives, the Gorger can enter t
           <categoryLinks>
             <categoryLink id="2099-0a87-8e58-9904" name="Enchanted Item" hidden="false" targetId="d8eb-f296-d241-3c6d" primary="false"/>
           </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry id="fd34-31e5-0f97-be30" name="The Scepter of the Titans" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -2275,6 +2297,9 @@ In the Remaining Moves phase of the turn when it arrives, the Gorger can enter t
           <categoryLinks>
             <categoryLink id="575f-57d8-290a-5a59" name="Magic Weapon" hidden="false" targetId="e6e5-cff5-9987-d563" primary="false"/>
           </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -2329,9 +2354,6 @@ Note: Luck-Gnoblars are represented on the character model they accompany; they 
       </costs>
     </selectionEntry>
     <selectionEntry id="7497-8e4d-3871-da38" name="Ogre Club" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9df9-03ca-a64f-0edc" type="max"/>
-      </constraints>
       <infoLinks>
         <infoLink id="8144-41a5-3a09-c79c" name="Ogre Club" hidden="false" targetId="b4af-56a2-4f5a-5dc2" type="rule"/>
       </infoLinks>
