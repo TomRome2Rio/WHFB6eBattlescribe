@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9817-5d62-aa33-69f5" name="Ogre Kingdoms" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="9817-5d62-aa33-69f5" name="Ogre Kingdoms" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="5fa5-4b26-a63e-0bef" name="Big Name" hidden="false"/>
   </categoryEntries>
@@ -1570,45 +1570,24 @@ D6 | Effect
           </constraints>
           <selectionEntries>
             <selectionEntry id="176c-90fa-9ed9-519b" name="Brace of Handguns" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="eaa7-6800-e651-8bea" value="6.0">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
               <infoLinks>
                 <infoLink id="a4ea-00c2-34ca-e762" name="Brace of Handguns" hidden="false" targetId="841b-fb55-b7e7-859e" type="rule"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="d233-5467-d979-c223" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="eaa7-6800-e651-8bea" value="6.0">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
               <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
               </costs>
             </selectionEntry>
             <selectionEntry id="ef9f-0bf2-258f-6ef0" name="Cathayan Longsword" hidden="false" collective="false" import="true" type="upgrade">
-              <modifiers>
-                <modifier type="increment" field="eaa7-6800-e651-8bea" value="6.0">
-                  <repeats>
-                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
               <infoLinks>
                 <infoLink id="4e2b-385a-741b-ce13" name="Cathayan Longsword" hidden="false" targetId="ce27-8bc8-6f2f-6ead" type="rule"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1825,7 +1804,8 @@ In the Remaining Moves phase of the turn when it arrives, the Gorger can enter t
       </constraints>
       <rules>
         <rule id="66ca-801c-d42e-455a" name="Armour Save (4+)" hidden="false">
-          <description>Rhinox Riders are cavalry and wear light armour. Combined with the thick hide of the Rhinox, this gives them a 4+ Armour Save</description>
+          <description>Rhinox Riders are cavalry and wear light armour. Combined with the thick hide of the Rhinox, this gives them a 4+ Armour Save
+This is improved to a 3+ save if they are equipped with heavy armour.</description>
         </rule>
         <rule id="0b75-f1c4-2fa7-a323" name="Unit Strength" hidden="false">
           <description>Each Rhinox Rider has Unit Strength 4.
@@ -1925,6 +1905,11 @@ They may not wheel more than once in any given turn (they still get a &apos;free
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e522-2d83-27ee-8afa" type="max"/>
           </constraints>
+          <rules>
+            <rule id="9f8a-d45f-5a9d-9848" name="Ironfists (Rhinox Riders)" hidden="false">
+              <description>Ogre Rhinox Riders may benefit from the Armour Save granted by an ironfist in close combat as normal, but may not use it to gain +1 Attack.</description>
+            </rule>
+          </rules>
           <infoLinks>
             <infoLink id="a3aa-3e90-5a5d-9641" name="Ironfist" hidden="false" targetId="6844-87f6-d50d-9a40" type="rule"/>
           </infoLinks>
@@ -2015,6 +2000,31 @@ Enemies firing at units of Rhinoxen comprising of Rhinox and Bull Rhinox must no
               </rules>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="45.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="fa0b-fee7-872b-7293" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="fbdb-47ba-4360-432f">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d7f-6cb2-2b99-5e90" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8326-bcff-5762-adf9" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="fbdb-47ba-4360-432f" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3359-a163-ebd8-f117" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="eaa7-6800-e651-8bea" value="6.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
