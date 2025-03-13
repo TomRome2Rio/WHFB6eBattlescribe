@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b151-7d1c-4a96-e0d0" name="Dark Elves" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b151-7d1c-4a96-e0d0" name="Dark Elves" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7b32-9394-e778-467c" name="Poison" hidden="false"/>
     <categoryEntry id="16df-2ebd-e4f7-9984" name="Artifacts and Skills" hidden="false"/>
@@ -1757,25 +1757,27 @@ In hand-to-hand combat the guardians are assembled in front of the Cauldron in t
             <characteristic name="Ld" typeId="bbad-d421-400b-87c1">8</characteristic>
           </characteristics>
         </profile>
-        <profile id="66e7-ab69-2310-ca3c" name="War Hydra" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
-          <characteristics>
-            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
-            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
-            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
-            <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
-            <characteristic name="T" typeId="16d7-9f22-06d8-8427">5</characteristic>
-            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">6</characteristic>
-            <characteristic name="I" typeId="b418-0e30-644f-1435">2</characteristic>
-            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">5</characteristic>
-            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">6</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <rules>
         <rule id="fd30-7799-7693-a323" name="Breathe Fire" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="cde5-6078-a0cf-8fe1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <description>The heads of the War Hydra can breathe fire in the Shooting phase. Use the teardrop-shaped template to determine which troops are hit, exactly like any other breath weapon. Hits are resolved at Strength 3, and are flaming attacks.</description>
         </rule>
-        <rule id="3bef-b803-841c-bab6" name="Scaly Skin (4+)" hidden="false"/>
+        <rule id="3bef-b803-841c-bab6" name="Scaly Skin (4+)" hidden="false">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="self" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cde5-6078-a0cf-8fe1" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </rule>
         <rule id="4daf-01a8-5998-1881" name="Controlled" hidden="false">
           <description>Each War Hydra is driven into battle by two Beastmaster Apprentices who direct it with lashes and long-tined goads. The two Apprentices must remain within 1&quot; of the War Hydra at all times. If the Apprentices are killed, the War Hydra must make a Monster Reaction test just like a ridden monster which loses its rider. A Beastmaster on foot may join the unit (replacing a lose Apprentice if you wish), but once the Hydra has taken a Monster Reaction test it always operates as an independent model. No other model may join a Hydra/Apprentice unit.
 
@@ -1803,6 +1805,178 @@ In close combat, the War Hydra and any surviving Apprentices are arranged just l
           </costs>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="e579-e0ad-7e8e-b099" name="Variant War Hydra" hidden="false" collective="false" import="true" defaultSelectionEntryId="5516-c521-6016-da25">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="db6c-9412-de69-0faf" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8280-8054-4515-60ca" type="min"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="cde5-6078-a0cf-8fe1" name="Royal War Hydra" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="3b20-5305-011b-153a" name="Royal War Hydra" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                  <characteristics>
+                    <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+                    <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+                    <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+                    <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
+                    <characteristic name="T" typeId="16d7-9f22-06d8-8427">5</characteristic>
+                    <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">6</characteristic>
+                    <characteristic name="I" typeId="b418-0e30-644f-1435">2</characteristic>
+                    <characteristic name="A" typeId="fa03-f9a3-8117-98dd">5</characteristic>
+                    <characteristic name="Ld" typeId="bbad-d421-400b-87c1">6</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="6a44-d9e9-4c3f-22e5" name="Scaly Skin (3+)" hidden="false">
+                  <description>+1 armour save from bony protrusions. The Royal Hydra has an armour save of 3+</description>
+                </rule>
+                <rule id="17fd-354f-4528-a6ce" name="Acid Breath" hidden="false">
+                  <description>Counts as a S2 Breath Weapon that ignores armour</description>
+                </rule>
+                <rule id="d0c8-172b-30fd-e187" name="Splashback" hidden="false">
+                  <description>Any unsaved wounds in close combat cause a S2 hit (no armour save) against the attacker, as its acid blood spills forth. </description>
+                </rule>
+                <rule id="c4c7-30d5-ab67-8929" name="Mentally Scarred" hidden="false">
+                  <description>The transformation these Hydras undergo is quite traumatic. When faced with great pain, there is a chance the Royal Hydra may go catatonic. When it is reduced to 3 wounds or less, the Hydra becomes subject to Stupidity for the remainder of the game. Test each turn, as described on page 82 of the Warhammer rulebook, but you may use the Beastmaster&apos;s Leadership value since they have been specially chosen for their ability to &apos;inspre&apos; the Hydra to continue fighting.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e10e-41eb-da1c-c226" name="Spellthirster" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="1a90-63e8-2b62-6da1" value="0.0">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f2c3-676c-734c-1c33" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="744f-95ac-3d48-0848" type="equalTo"/>
+                        <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4a98-663c-685c-ef2c" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1a90-63e8-2b62-6da1" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="970e-80cc-7ef6-9b17" name="Spellthirster" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                  <characteristics>
+                    <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+                    <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                    <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+                    <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+                    <characteristic name="T" typeId="16d7-9f22-06d8-8427">5</characteristic>
+                    <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">6</characteristic>
+                    <characteristic name="I" typeId="b418-0e30-644f-1435">2</characteristic>
+                    <characteristic name="A" typeId="fa03-f9a3-8117-98dd">4</characteristic>
+                    <characteristic name="Ld" typeId="bbad-d421-400b-87c1">6</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="785d-e67a-bd3d-5cd5" name="Daerlythe&apos;s Aura" hidden="false">
+                  <description>A legacy from their sire, all Spellthirster Hydras have Magical Resistance (2). In addition, nearby units gain a diminished measure of this protection. Dark Elf units within 6&quot; count as having Magical Resistance (1). Such was the power of Morathi&apos;s incantation that any High Magic spells dispelled with the aid of Daerlythe&apos;s Aura are destroyed on a further result of 4+.</description>
+                </rule>
+                <rule id="fbe2-dfc6-c403-939a" name="Physically Weakened" hidden="false">
+                  <description>Daerlythe&apos;s fighting prowess was reduced as an unfortunate side effect of Morathi&apos;s spell. This has also been passed onto his offspring. See profile.</description>
+                </rule>
+                <rule id="22d3-059c-3023-0944" name="Chosen of the Convents" hidden="false">
+                  <description>Spellthirsters are so rare, and so strongly linked to the Dark Arts, that they may only be used by Dark Elf armies which contain at least a level 2 Sorceress.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5516-c521-6016-da25" name="(None)" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="0180-64a2-274a-197c" name="War Hydra" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                  <characteristics>
+                    <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+                    <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+                    <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+                    <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
+                    <characteristic name="T" typeId="16d7-9f22-06d8-8427">5</characteristic>
+                    <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">6</characteristic>
+                    <characteristic name="I" typeId="b418-0e30-644f-1435">2</characteristic>
+                    <characteristic name="A" typeId="fa03-f9a3-8117-98dd">5</characteristic>
+                    <characteristic name="Ld" typeId="bbad-d421-400b-87c1">6</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry id="d5ac-3d68-b26c-c8ba" name="Veteran War Hydra" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="1161-d3df-5a67-b4e8" name="Veteran War Hydra" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                  <characteristics>
+                    <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+                    <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+                    <characteristic name="BS" typeId="22c7-799b-e07c-f32c">0</characteristic>
+                    <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
+                    <characteristic name="T" typeId="16d7-9f22-06d8-8427">5</characteristic>
+                    <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">6</characteristic>
+                    <characteristic name="I" typeId="b418-0e30-644f-1435">2</characteristic>
+                    <characteristic name="A" typeId="fa03-f9a3-8117-98dd">5</characteristic>
+                    <characteristic name="Ld" typeId="bbad-d421-400b-87c1">6</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule id="bc23-e5e9-8470-b3fb" name="Veteran" hidden="false">
+                  <description>Roll a D6 at the beginning of each game to determine what special ability your War Hydra has!
+
+1. Fetch!
+After both armies are set up, nominate one enemy character model (Lord or Hero). The Hydra will focus all its attentions on bringing that character&apos;s limp form back to his general. 
+
+It will always move as far as possible directly towards that character - charging if it can. It may ignore the usual shooting rules and may choose that character as a target if it is in range of the Hydra&apos;s breath weapon. 
+
+If the Hydra declares a charge against that character it may add a D6&quot; to its charge distance - this represents the Hydra&apos;s bloodthirsty enthusiasm.
+
+In close combat, if the character is in a unit the Hydra will effectively issue a challenge (with a loud roar, and by bowling all others aside!) All usual rules for challenges apply, so if it is declined the Hydra can fight the unit as normal. If the character is mounted on a monster, the Hydra will ignore the mount, although its handlers are free to allocate attacks as they wish.
+ 
+The Hydra also gets +1S and +1A in close combat against the chosen character.
+
+2. Escort
+The Beastmasters have trained this Hydra to restrain its killing instincts and act in a defensive role. 
+Before the battle, nominate one friendly Dark Elf unit for the Hydra to guard. For the rest of the game, as long as it isn&apos;t engaged in close combat, the Hydra must stay within 6&quot; of the unit wherever possible. It may charge an enemy unit even if this move takes it beyond the 6&quot;, but as soon as it is no longer engaged it must move to within the 6&quot; distance as soon as possible. As this would probably take it too far out of position, the Hydra will alsways attempt to restraun from pursuing a fleeing enemy. It may add +1 to its Leadership for these tests (remember that you get to use the Beastmasters&apos; Leadership too!)
+
+If the War Hydra is within 6&quot; of the escorted unit when the enemy declares a charge against them, the Hydra may immediately make a normal move (before the chargers). If, after this special move, your opponent is unable to charge the target unit then they may decide to either stop the charge, in which case they do nothing for the remainder of the turn, or charge the Hydra instead, using all of the normal rules.
+
+3. Battle Lover
+Always among the first to engage the enemy, this Hydra bounds forward towards the foe at the first opportunity - often against his handlers&apos; wishes.
+You must make a free 2D6&quot; move with the Hydra and its Beastmasters after all troops have been set up (including Scouts), but before the battle begins. This move must be made directly towards the nearest visible enemy. This will often leave it exposed and vulnerable, but a wily General should be able to use this to his advantage...
+
+4. Chameleon Skinned
+Among its many trophies, this particular Hydra has been bathed in magical oils. Once in contact with the scales on the Hydra&apos;s skin, the oil reacts and causes the Hydra&apos;s skin to shimmer and blend in with its surroundings.
+Enemy missile weapons suffer -1 to hit penalty when shooting at the Hydra and its Beastmasters. 
+When an opponent shoots a war machine that uses an Artillery dice, the Dark Elf player may roll an Artillery Dice of his own. The Dark Elf player may (but doesn&apos;t have to) choose this extra dice in place of the one rolled by the opponent. This represents how difficult it is for war machine crews to discern the Hydra&apos;s exact location. 
+If the Dark Elf player rolls a Misfire, the war machine crew manages to get a clear view of the Hydra for a moment, and their own dice roll is used.
+
+5. Bloodthirsty!
+This Hydra has seen so much was that it now has trouble differentiating between friend and foe. It is unpredictable and always looking for the taste of blood. Whenever possible, the Hydra will always march towards he closest enemy unit, and must always charge the closest chargeable unit, friend or foe - so irritable is this great beast, that it won&apos;t tolerate the presence of anyone but its handlers.
+In other words, keep your troops out of its way!
+To represent its love of killing, the Hydra gets an extra D6 Attacks on the turn it charges. 
+These Hydras are often a liability on the battlefield, and have to be used carefully. Even so, some Dark Elf generals can&apos;t resist the carnage.
+
+6. Khaine Smiles Upon You!
+You may choose the type of Veteran Hydra that joins your forces for this battle.</description>
+                </rule>
+                <rule id="901d-62f1-464e-63e2" name="Accustomed to Battle" hidden="false">
+                  <description>All Veteran Hydras are so familiar wit their handlers, and so accustomed to battle that they will often continue to fight even if their Beastmasters are killed. All Veteran Hydras therefore add +1 to their Leadership when taking Monster Reaction tests.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="220.0"/>
       </costs>
@@ -3130,11 +3304,16 @@ If the Spawn&apos;s movement is sufficient to take it into an enemy unit then it
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="368e-f201-5462-cd48" name="Druchii Annointed" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="368e-f201-5462-cd48" name="Druchii Annointed" hidden="true" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="add" field="category" value="eb46-88d4-eb41-2549">
           <conditions>
             <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a1e6-9626-9e3a-7407" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="false">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5281-4012-b516-7873" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -3275,14 +3454,14 @@ If the Spawn&apos;s movement is sufficient to take it into an enemy unit then it
             <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5281-4012-b516-7873" type="equalTo"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="5168-a8c7-08e1-9997" value="0.0">
+        <modifier type="set" field="5168-a8c7-08e1-9997" value="1.0">
           <conditions>
-            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5281-4012-b516-7873" type="equalTo"/>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5281-4012-b516-7873" type="greaterThan"/>
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5168-a8c7-08e1-9997" type="min"/>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5168-a8c7-08e1-9997" type="min"/>
       </constraints>
       <infoLinks>
         <infoLink id="bc74-afa7-f5be-8dfd" name="Soporific Musk" hidden="false" targetId="066f-b738-b6a8-4a2d" type="rule"/>
@@ -3946,117 +4125,135 @@ In addition, at the start of each of their turns the character may activate the 
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b1d-2826-7f8c-810f" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="93f9-0dd2-238b-f19a" name="Shield of Ghrond" hidden="false" collective="false" import="true" type="upgrade">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="4dc0-9798-dcb2-6f8f" name="Armour" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c26b-16a1-a7c7-9be4" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="73b4-e5e4-ad5b-186d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="86da-fd50-71d2-582a" type="max"/>
           </constraints>
-          <rules>
-            <rule id="7b4f-a867-5e06-a30b" name="Shield of Ghrond" hidden="false">
-              <description>The Shield of Ghrond is treated like a normal shield. and in addition any hits the character suffers will be resolved with -1 Strength.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="5d46-fb2f-430a-2736" name="Magic Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="18b2-d8e2-0cb5-98d3" name="Armour of Living Death" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="623e-5f3d-d939-9b51" type="notInstanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+          <selectionEntries>
+            <selectionEntry id="954f-cfec-69dd-07f1" name="Blood Armour" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="972d-ed55-cb13-d50b" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c7d3-c43b-2350-43ec" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="a017-a60c-6f5e-10bf" name="Blood Armour" hidden="false">
+                  <description>Blood Armour is treated as a suit of normal heavy armour (5+ save) and can be combined with other armour as normal. For every unsaved wound the wearer inflicts, their save is improved by 1 point (to 4+ then 3+, etc) up to a maximum total save of 1+.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="017d-79a9-198e-62f7" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="69ec-4f2a-160c-2867" name="Armour of Living Death" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="623e-5f3d-d939-9b51" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8190-5d27-52f4-6869" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3703-46e2-6d23-2db1" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="3080-c050-985f-94c8" name="Armour of Living Death" hidden="false">
+                  <description>The Armour of Living Death counts as heavy armour, giving a 5 + Armour save, which can be combined with other armour as normal. In addition. the model has +1 Toughness and +1 Wound.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="151f-e2e5-da3a-327f" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="100.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="004e-5fe1-621f-e622" name="Armour of Eternal Servitude" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="623e-5f3d-d939-9b51" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="71cf-0883-85e3-f03c" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="392d-6d8a-6652-7d46" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="f859-68b1-ea40-c2da" name="Armour of Eternal Servitude" hidden="false">
+                  <description>This light armour gives a basic 6+ save, which can be combined with other armour as normal. In addition, the wearer can Regenerate.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="7157-6ead-4723-3f98" name="Regenerate" hidden="false" targetId="7c7c-8683-ae17-d576" type="rule"/>
+              </infoLinks>
+              <categoryLinks>
+                <categoryLink id="c775-f746-975f-e46c" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="60.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e32c-c740-dfb5-0ef1" name="Armour of Darkness" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="093f-a5b3-6972-9317" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8fbd-f7d1-fe06-4bff" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="1efa-dbae-8cf4-1b41" name="Armour of Darkness" hidden="false">
+                  <description>This armour includes a shield and gives a save of 2+ which cannot be improved in any way.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="9ee1-e075-3ea1-1931" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+                <categoryLink id="6b80-28b3-4840-5a22" name="Magic Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="9b5e-1e7f-ce13-d260" name="Shield" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="241a-d280-8185-ebd8" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae17-09ea-e779-4bc1" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6367-8ba0-217c-b4ec" type="max"/>
           </constraints>
-          <rules>
-            <rule id="4a86-606e-bcab-956c" name="Armour of Living Death" hidden="false">
-              <description>The Armour of Living Death counts as heavy armour, giving a 5 + Armour save, which can be combined with other armour as normal. In addition. the model has +1 Toughness and +1 Wound.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="9408-9270-26fb-6019" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="100.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e578-e735-fbe8-75a5" name="Blood Armour" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f061-4dfa-e1bb-a072" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d290-36bf-60fc-6483" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="918e-cb36-f67b-a67b" name="Blood Armour" hidden="false">
-              <description>Blood Armour is treated as a suit of normal heavy armour (5+ save) and can be combined with other armour as normal. For every unsaved wound the wearer inflicts, their save is improved by 1 point (to 4+ then 3+, etc) up to a maximum total save of 1+.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="40d6-ec72-064a-738f" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="49af-03d2-4d9b-3a7d" name="Armour of Darkness" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b64e-99c8-63fb-4a26" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e503-1ccd-e236-3ddb" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="6507-ae2b-2b14-f082" name="Armour of Darkness" hidden="false">
-              <description>This armour includes a shield and gives a save of 2+ which cannot be improved in any way.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="6000-e0cf-ca65-72ed" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-            <categoryLink id="8697-c00b-0401-d14d" name="Magic Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a46f-a575-0a0c-ae3c" name="Armour of Eternal Servitude" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="623e-5f3d-d939-9b51" type="notInstanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9f35-8290-ea15-5c57" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="eafc-3f7e-855e-3907" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="40eb-8066-f178-e456" name="Armour of Eternal Servitude" hidden="false">
-              <description>This light armour gives a basic 6+ save, which can be combined with other armour as normal. In addition, the wearer can Regenerate.</description>
-            </rule>
-          </rules>
-          <infoLinks>
-            <infoLink id="0193-d64a-3a47-c7a7" name="Regenerate" hidden="false" targetId="7c7c-8683-ae17-d576" type="rule"/>
-          </infoLinks>
-          <categoryLinks>
-            <categoryLink id="192d-068f-02d0-271e" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="60.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink id="5046-7432-c6fb-e752" name="Enchanted Shield" hidden="false" collective="false" import="true" targetId="4a2b-c497-93f2-c804" type="selectionEntry"/>
-      </entryLinks>
+          <selectionEntries>
+            <selectionEntry id="8874-7166-452b-ef19" name="Shield of Ghrond" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="bee3-a743-8b8e-b3d3" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4dc0-9798-dcb2-6f8f" type="atLeast"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bee3-a743-8b8e-b3d3" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5b97-6c31-009c-fc5d" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="7eba-164a-671c-b93f" name="Shield of Ghrond" hidden="false">
+                  <description>The Shield of Ghrond is treated like a normal shield. and in addition any hits the character suffers will be resolved with -1 Strength.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="12d2-989d-1941-09f7" name="Magic Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink id="ef84-c1b0-dd55-53e3" name="Enchanted Shield" hidden="false" collective="false" import="true" targetId="4a2b-c497-93f2-c804" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup id="321d-f172-1a1c-10ee" name="Magic Banners" hidden="false" collective="false" import="true">
       <constraints>
