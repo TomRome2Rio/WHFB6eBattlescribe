@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b151-7d1c-4a96-e0d0" name="Dark Elves" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b151-7d1c-4a96-e0d0" name="Dark Elves" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="7b32-9394-e778-467c" name="Poison" hidden="false"/>
     <categoryEntry id="16df-2ebd-e4f7-9984" name="Artifacts and Skills" hidden="false"/>
@@ -1909,6 +1909,9 @@ In close combat, the War Hydra and any surviving Apprentices are arranged just l
                   </characteristics>
                 </profile>
               </profiles>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry id="d5ac-3d68-b26c-c8ba" name="Veteran War Hydra" hidden="false" collective="false" import="true" type="upgrade">
               <profiles>
@@ -2556,6 +2559,11 @@ If Malus is in base contact with a friendly model and not in contact with the en
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5281-4012-b516-7873" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="eb46-88d4-eb41-2549">
+          <conditions>
+            <condition field="selections" scope="self" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2ede-aa56-702f-9bed" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -4120,9 +4128,14 @@ In addition, at the start of each of their turns the character may activate the 
     <selectionEntryGroup id="85e3-6177-986c-532e" name="Magic Armour" hidden="false" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
-          <conditions>
-            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="368e-f201-5462-cd48" type="notInstanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntryGroups>
@@ -5420,16 +5433,58 @@ Undead and Daemons are not affected by this additional penalty, nor are troops t
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8972-08fb-05c3-f8ff" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="2faa-1b45-a69d-8efb" name="Chalice of Chaos" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="2ede-aa56-702f-9bed" name="Book of Secrets" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1fa1-4096-0cab-bbb8" type="max"/>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f329-3ca2-8de2-ca01" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed57-9ab1-d659-301f" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d15e-5ad4-733a-9712" type="max"/>
               </constraints>
+              <rules>
+                <rule id="26ad-6467-119c-b18c" name="Book of Secrets" hidden="false">
+                  <description>Not models with the Mark of Khorne. Non-Sorcerers only. The bearer is a Level 1 Sorcerer and knows a random spell from the Lore of Fire, Shadow or Death (Chaos player&apos;s choice). If the bearer miscasts, roll twice on the Miscast Table and apply both results.</description>
+                </rule>
+              </rules>
               <categoryLinks>
-                <categoryLink id="586b-5ffa-df22-0b77" name="Enchanted Item" hidden="false" targetId="d8eb-f296-d241-3c6d" primary="false"/>
+                <categoryLink id="6464-c910-f161-8afe" name="Enchanted Item" hidden="false" targetId="d8eb-f296-d241-3c6d" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="40.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="1067-79f2-0357-df22" name="Chalice of Chaos" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a1d-70d8-190d-1484" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c6d3-d907-a010-6314" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="a695-3229-8318-9388" name="Chalice of Chaos" hidden="false">
+                  <description>One use only. The bearer becomes Daemonic and follows all of the rules outlined in the Bestiary section. If the bearer is the army&apos;s General, he must lead a daemonic army. Remember, a daemonic character cannot join non-daemonic units. At the start of the battle he must take a Toughness test (remember that rolls of 6 always fail). If the test is failed, the bearer reduces his Wounds and Toughness by -1.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="f207-2737-0dc7-7e26" name="Enchanted Item" hidden="false" targetId="d8eb-f296-d241-3c6d" primary="false"/>
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="9482-6c77-f64c-1618" name="Helm of Many Eyes" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="122f-9628-e662-9fa2" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="23eb-1c76-504e-7c1f" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="630b-fbc6-ffb9-641e" name="Helm of Many Eyes" hidden="false">
+                  <description>The wearer always strikes first in close combat, even if charged or armed with a weapon that normally strikes last. If any of the wearer&apos;s opponents also strike first, revert to normal Initiative. The character Is also subject to stupidity (even if Immune to Psychology) due to the random and conflicting images that confront him.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="ce61-cee9-126d-7aac" name="Stupidity" hidden="false" targetId="6c1b-2f0f-d172-01ca" type="rule"/>
+              </infoLinks>
+              <categoryLinks>
+                <categoryLink id="e14a-da3a-7ef5-af8d" name="Enchanted Item" hidden="false" targetId="d8eb-f296-d241-3c6d" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
