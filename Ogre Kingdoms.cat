@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9817-5d62-aa33-69f5" name="Ogre Kingdoms" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="9817-5d62-aa33-69f5" name="Ogre Kingdoms" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="5fa5-4b26-a63e-0bef" name="Big Name" hidden="false"/>
     <categoryEntry id="a123-ef4a-523b-4159" name="Has Thiefstones" hidden="false"/>
+    <categoryEntry id="1b26-6f3b-c04f-5fc1" name="Dogs of War Ogre" hidden="false">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9817-5d62-aa33-69f5" type="instanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </categoryEntry>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="fed4-7c2f-34b4-722d" name="Show Dogs of War Ogres" hidden="false" collective="false" import="true" type="upgrade">
@@ -625,6 +634,7 @@ The harpoon launcher is fired exactly as a bolt thrower with a Strength of 5, pe
       </infoLinks>
       <categoryLinks>
         <categoryLink id="c267-aa58-81af-a9c6" name="New CategoryLink" hidden="false" targetId="62d3-efc6-6c2c-634e" primary="true"/>
+        <categoryLink id="dd62-7bc3-67ed-78e2" name="Dogs of War Ogre" hidden="false" targetId="1b26-6f3b-c04f-5fc1" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="d3b4-31a7-b7b9-5043" name="Ogre Bulls" hidden="false" collective="false" import="true" type="model">
@@ -813,6 +823,7 @@ The harpoon launcher is fired exactly as a bolt thrower with a Strength of 5, pe
       </infoLinks>
       <categoryLinks>
         <categoryLink id="9329-9dde-7aed-2994" name="New CategoryLink" hidden="false" targetId="62d3-efc6-6c2c-634e" primary="true"/>
+        <categoryLink id="8cd5-c544-c35a-05a6" name="Dogs of War Ogre" hidden="false" targetId="1b26-6f3b-c04f-5fc1" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="7d9d-fd1a-210b-ce5f" name="Ironguts" hidden="false" collective="false" import="true" type="model">
@@ -1147,6 +1158,7 @@ The harpoon launcher is fired exactly as a bolt thrower with a Strength of 5, pe
       </infoLinks>
       <categoryLinks>
         <categoryLink id="ef5c-b477-fc24-6a19" name="New CategoryLink" hidden="false" targetId="4a3f-84d1-0495-6ecb" primary="true"/>
+        <categoryLink id="a0eb-46a3-f5e8-0869" name="Dogs of War Ogre" hidden="false" targetId="1b26-6f3b-c04f-5fc1" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="e47c-bada-13ea-07ae" name="Leadbelchers" hidden="false" collective="false" import="true" type="model">
@@ -1500,6 +1512,7 @@ D6 | Effect
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8b47-ad3c-f80a-ddec" name="New CategoryLink" hidden="false" targetId="a3af-995e-0cf1-7091" primary="true"/>
+        <categoryLink id="5387-5f54-08b8-c22b" name="Dogs of War Ogre" hidden="false" targetId="1b26-6f3b-c04f-5fc1" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="e968-2667-58d6-7dca" name="Maneaters" hidden="false" collective="false" import="true" type="model">
@@ -1856,6 +1869,7 @@ They may not wheel more than once in any given turn (they still get a &apos;free
       <categoryLinks>
         <categoryLink id="b48a-703c-0411-d1ef" name="New CategoryLink" hidden="false" targetId="a3af-995e-0cf1-7091" primary="true"/>
         <categoryLink id="bfd0-44f4-c8ec-6f81" name="Special" hidden="false" targetId="4a3f-84d1-0495-6ecb" primary="false"/>
+        <categoryLink id="051b-2c37-b432-632c" name="Dogs of War Ogre" hidden="false" targetId="1b26-6f3b-c04f-5fc1" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="7752-7b13-f960-2286" name="Rhinox Riders" hidden="false" collective="false" import="true" type="model">
@@ -2327,6 +2341,13 @@ In the Remaining Moves phase of the turn when it arrives, the Gorger can enter t
   </selectionEntries>
   <rules>
     <rule id="1bff-9870-e21b-c49e" name="The Brutish Horde" hidden="false">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9817-5d62-aa33-69f5" type="notInstanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <description>As an Ogre Kingdoms army will include a lot of units of large, multiple-Wound Ogres here are a few reminders and clarifications on the relevant rules:
 
 Single Ogres and Ogre characters move as monsters and have Unit Strength 3.
@@ -2336,6 +2357,13 @@ Ranked units containing champions and characters will need to keep track of woun
 Single Ogre characters cannot be picked out if they are within 5” of a friendly unit of five or more models, unless they are the closest viable target, just like normal sized models. Ogre characters cannot claim this benefit from Gnoblar Fighter or Gnoblar Trapper units.</description>
     </rule>
     <rule id="8831-401b-5bcd-8c6d" name="Nobody Likes a Gnoblar" hidden="false">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="9817-5d62-aa33-69f5" type="notInstanceOf"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <description>Ogre characters cannot join Gnoblar units of any sort.</description>
     </rule>
   </rules>
