@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7bb5-70b8-0122-944c" name="Wood Elves" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7bb5-70b8-0122-944c" name="Wood Elves" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="4f0e-c683-4011-68a9" name="Magic Bow" hidden="true"/>
     <categoryEntry id="3fee-c6b4-de1c-b33e" name="Magic Arrows" hidden="false"/>
@@ -3129,7 +3129,7 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <categoryLink id="2a61-a9db-d831-3c78" name="Talisman" hidden="false" targetId="d777-f2f1-e0db-8e8e" primary="false"/>
           </categoryLinks>
           <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="4406-0b53-dde6-6528" name="Stone of the Crystal Mere" hidden="false" collective="false" import="true" type="upgrade">
