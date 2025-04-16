@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9534-aec7-1922-76f2" name="Orcs and Goblins" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="9534-aec7-1922-76f2" name="Orcs and Goblins" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="5b0c-07f2-6b72-7aa8" name="Orc" hidden="false"/>
     <categoryEntry id="2c47-226a-5465-6c16" name="Common Orc" hidden="false"/>
@@ -19,6 +19,11 @@
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="-1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="bbd3-73ff-d936-5015" type="max"/>
+      </constraints>
+    </categoryEntry>
+    <categoryEntry id="e1f3-f1c7-a5a0-67ca" name="Big&apos;uns" hidden="false">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7c21-c11a-2acb-1894" type="max"/>
       </constraints>
     </categoryEntry>
   </categoryEntries>
@@ -509,26 +514,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="6fad-57cb-d877-0058" name="Big&apos;Uns" hidden="false" collective="false" import="true" targetId="ea63-08db-5ffb-2480" type="selectionEntry"/>
-        <entryLink id="cfed-1a88-bb7f-30f0" name="Magic Banners" hidden="true" collective="false" import="true" targetId="ab40-6121-a15b-38f3" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ea63-08db-5ffb-2480" type="equalTo"/>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9efe-5bc4-e8ac-1907" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="eaa7-6800-e651-8bea" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9bc6-d308-2b07-b2a9" type="max"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
       </costs>
@@ -2647,18 +2632,6 @@
           </constraints>
           <profiles>
             <profile id="77f3-1dd2-84c1-f2d4" name="Orc" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
-              <modifierGroups>
-                <modifierGroup>
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="6fad-57cb-d877-0058" type="equalTo"/>
-                  </conditions>
-                  <modifiers>
-                    <modifier type="set" field="d46f-1ae5-387f-4ac3" value="4"/>
-                    <modifier type="set" field="name" value="Big&apos;Un"/>
-                    <modifier type="set" field="0c58-1252-962d-8fcc" value="4"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
               <characteristics>
                 <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
                 <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
@@ -2769,32 +2742,6 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="88bb-efe4-31b1-a68d" name="Big&apos;Uns" hidden="false" collective="false" import="true" targetId="ea63-08db-5ffb-2480" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="019a-c58f-e3d2-df66" type="atLeast"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink id="7af2-6ee4-6bc3-4d5d" name="Magic Banners" hidden="true" collective="false" import="true" targetId="ab40-6121-a15b-38f3" type="selectionEntryGroup">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ea63-08db-5ffb-2480" type="equalTo"/>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="46b5-548b-8eca-4d30" type="equalTo"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="eaa7-6800-e651-8bea" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d77f-1f7d-17df-891c" type="max"/>
-          </constraints>
-        </entryLink>
         <entryLink id="1865-de1a-352e-2516" name="Magic Banners" hidden="true" collective="false" import="true" targetId="ab40-6121-a15b-38f3" type="selectionEntryGroup">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
@@ -2803,7 +2750,6 @@
                   <conditions>
                     <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8c7d-4a72-964c-acbc" type="atLeast"/>
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="46b5-548b-8eca-4d30" type="equalTo"/>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ea63-08db-5ffb-2480" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -3417,7 +3363,7 @@ When a Night Goblin unit containing Netters is shot at by missile weapons the pl
             </modifier>
             <modifier type="increment" field="04ee-0392-1957-6a4c" value="1.0">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ea63-08db-5ffb-2480" type="atLeast"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="defb-c68d-46f4-87a6" type="atLeast"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3426,7 +3372,6 @@ When a Night Goblin unit containing Netters is shot at by missile weapons the pl
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="04ee-0392-1957-6a4c" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink id="2873-368c-4cdd-a40b" name="Big&apos;Uns" hidden="false" collective="false" import="true" targetId="ea63-08db-5ffb-2480" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
@@ -3573,7 +3518,7 @@ When a Night Goblin unit containing Netters is shot at by missile weapons the pl
             </modifier>
             <modifier type="increment" field="a053-36af-785a-2dcf" value="1.0">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ea63-08db-5ffb-2480" type="atLeast"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="275f-6948-7017-b7a4" type="atLeast"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3582,7 +3527,6 @@ When a Night Goblin unit containing Netters is shot at by missile weapons the pl
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a053-36af-785a-2dcf" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink id="d931-da1f-174d-0559" name="Big&apos;Uns" hidden="false" collective="false" import="true" targetId="ea63-08db-5ffb-2480" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
@@ -5383,6 +5327,681 @@ Treat the Prodder&apos;s blasts as bound spells with a power level of 3. Each bl
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="205.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="2d80-7637-d2b1-e7b4" name="Orc Boyz Big&apos;Uns" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6f86-3beb-2b44-76af" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d586-40fa-107e-7228" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f666-6c65-5830-bb40" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2f51-e5be-78b6-4a3d" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="019a-c58f-e3d2-df66" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="2db3-ada3-01cf-f7e7" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="c602-4cb9-3011-327d" name="Animosity" hidden="false" targetId="2664-5dbe-5f13-be94" type="rule"/>
+        <infoLink id="e2ab-0c0d-6c3e-6658" name="Choppa" hidden="false" targetId="4df0-4df8-a8b2-611d" type="rule"/>
+        <infoLink id="fb4b-8bcc-c88b-354a" name="Ignore Goblin Panic" hidden="false" targetId="c3bd-5b38-8c9a-72ff" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="0afb-9835-d4b1-ad2d" name="New CategoryLink" hidden="false" targetId="62d3-efc6-6c2c-634e" primary="true"/>
+        <categoryLink id="d0a5-7604-03d4-aa31" name="Orc" hidden="false" targetId="5b0c-07f2-6b72-7aa8" primary="false"/>
+        <categoryLink id="7106-ccb7-c818-6673" name="Common Orc" hidden="false" targetId="2c47-226a-5465-6c16" primary="false"/>
+        <categoryLink id="0b1d-075a-5cd9-d19f" name="Big&apos;uns" hidden="false" targetId="e1f3-f1c7-a5a0-67ca" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="a631-57e2-d633-779a" name="Big&apos;un" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="increment" field="f033-546b-a278-b60e" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f9fd-e468-c4b8-e180" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f901-c128-a598-0bbc" type="min"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f033-546b-a278-b60e" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="70b9-eb71-6f9f-e9c1" name="Big&apos;un" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+                <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                <characteristic name="I" typeId="b418-0e30-644f-1435">2</characteristic>
+                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="7.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2eac-bed9-e4ba-c34c" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f2e-8a6d-2c5c-eead" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="a8d9-56b5-ff57-13a5" name="Equipment" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c74d-f11d-4f06-a507" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="116d-1663-d201-e0ad" name="Spears" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="eaa7-6800-e651-8bea" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="4ced-5f9d-6b99-3667" name="Additional Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="eaa7-6800-e651-8bea" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="d40f-84a2-fa40-622b" name="Command" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="5ec9-1da4-0453-b5d3" name="Orc Boss" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d0ec-66e2-a708-477f" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="32c2-22ff-5a90-43a4" name="Orc Boss" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                  <characteristics>
+                    <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                    <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+                    <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                    <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+                    <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+                    <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                    <characteristic name="I" typeId="b418-0e30-644f-1435">2</characteristic>
+                    <characteristic name="A" typeId="fa03-f9a3-8117-98dd">2</characteristic>
+                    <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="13.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f431-b4a4-a527-08d4" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e2f3-ed48-def1-07fd" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3e36-0718-2eb2-7a32" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec1a-599a-fd70-ad88" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="5.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="e6c7-ccf8-0ed0-f229" name="Magic Banners" hidden="true" collective="false" import="true" targetId="ab40-6121-a15b-38f3" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f431-b4a4-a527-08d4" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="eaa7-6800-e651-8bea" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="16ae-e6ad-bd3e-2c15" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6352-d1e9-2ca0-1478" name="Orc Boar Boyz Big&apos;uns" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6f86-3beb-2b44-76af" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="019a-c58f-e3d2-df66" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="d586-40fa-107e-7228" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8c7d-4a72-964c-acbc" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2f51-e5be-78b6-4a3d" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup>
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f666-6c65-5830-bb40" type="atLeast"/>
+          </conditions>
+          <modifiers>
+            <modifier type="set-primary" field="category" value="62d3-efc6-6c2c-634e"/>
+            <modifier type="remove" field="category" value="4a3f-84d1-0495-6ecb"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c011-25a7-3fcf-0bce" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="23d5-2940-9ec7-f335" name="Choppa" hidden="false" targetId="4df0-4df8-a8b2-611d" type="rule"/>
+        <infoLink id="14d2-27df-91ee-6db8" name="Ignore Goblin Panic" hidden="false" targetId="c3bd-5b38-8c9a-72ff" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="de55-f034-7b1c-5e66" name="New CategoryLink" hidden="false" targetId="4a3f-84d1-0495-6ecb" primary="true"/>
+        <categoryLink id="effb-2007-a5cf-b6ac" name="Orc" hidden="false" targetId="5b0c-07f2-6b72-7aa8" primary="false"/>
+        <categoryLink id="5000-059b-258a-2775" name="Common Orc" hidden="false" targetId="2c47-226a-5465-6c16" primary="false"/>
+        <categoryLink id="e5e8-53ac-bc5e-f314" name="Big&apos;uns" hidden="false" targetId="e1f3-f1c7-a5a0-67ca" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="fd0a-d836-caa0-c55b" name="Boar Boyz Big&apos;un" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="increment" field="8a29-9ee6-01fb-994b" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="855e-80a8-542a-d844" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e87-1ac7-76bf-ed8a" type="min"/>
+            <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="8a29-9ee6-01fb-994b" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="5411-7741-085e-0c05" name="Boar Boy Big&apos;un" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+                <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                <characteristic name="I" typeId="b418-0e30-644f-1435">2</characteristic>
+                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="3312-794a-85fc-26e0" name="Boar" hidden="false" targetId="da70-2b19-7a41-45cf" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="22.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="da38-f550-dc90-63a0" name="Command" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="b715-a024-dce7-88f2" name="Boar Boy Boss" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0355-492e-b2d8-b775" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="86f3-587b-b523-ec88" name="Boar Boy Boss" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                  <characteristics>
+                    <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                    <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+                    <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                    <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+                    <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+                    <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                    <characteristic name="I" typeId="b418-0e30-644f-1435">2</characteristic>
+                    <characteristic name="A" typeId="fa03-f9a3-8117-98dd">2</characteristic>
+                    <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="17.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="9379-1041-95c7-1265" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7486-b1c0-eef5-654e" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="14.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="832c-fd46-40c7-4eb3" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ef6-af68-5d61-c8f6" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="7.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="f874-17fa-3d47-3165" name="Magic Banners" hidden="true" collective="false" import="true" targetId="ab40-6121-a15b-38f3" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9600-ee94-57c5-3a1f" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="eaa7-6800-e651-8bea" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e898-d48e-598a-ae06" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bdda-1e48-1e66-0a82" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4305-4adc-c16f-726d" name="Savage Orc Big&apos;uns" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6f86-3beb-2b44-76af" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="019a-c58f-e3d2-df66" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8c7d-4a72-964c-acbc" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="f666-6c65-5830-bb40" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2f51-e5be-78b6-4a3d" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <infoLinks>
+        <infoLink id="02af-082a-4d90-402a" name="Animosity" hidden="false" targetId="2664-5dbe-5f13-be94" type="rule"/>
+        <infoLink id="7b5f-9046-8d99-f806" name="Choppa" hidden="false" targetId="4df0-4df8-a8b2-611d" type="rule"/>
+        <infoLink id="f92e-4565-ba95-9de9" name="Ignore Goblin Panic" hidden="false" targetId="c3bd-5b38-8c9a-72ff" type="rule"/>
+        <infoLink id="f06f-a8f7-547c-b2dd" name="Frenzy" hidden="false" targetId="a317-ad28-0409-0c8b" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="ab16-7132-a918-21b6" name="New CategoryLink" hidden="false" targetId="62d3-efc6-6c2c-634e" primary="true"/>
+        <categoryLink id="417d-9cd2-acfd-5b31" name="Savage Orc" hidden="false" targetId="c22d-3a76-3d92-7c87" primary="false"/>
+        <categoryLink id="7eb9-8503-3729-710c" name="Orc" hidden="false" targetId="5b0c-07f2-6b72-7aa8" primary="false"/>
+        <categoryLink id="0b55-2276-e669-6c28" name="Big&apos;uns" hidden="false" targetId="e1f3-f1c7-a5a0-67ca" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="f770-f3d9-e026-f781" name="Savage Orc Big&apos;un" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="increment" field="9e29-b333-380f-223c" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="34c5-f343-6495-2167" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9e29-b333-380f-223c" type="max"/>
+            <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f64d-58d0-1654-debc" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="a077-aab9-0ceb-0d7b" name="Savage Orc Big&apos;un" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+                <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                <characteristic name="I" typeId="b418-0e30-644f-1435">2</characteristic>
+                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="8.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="287c-ee2b-39e6-c9fe" name="Warpaint" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="856c-65af-28d3-72d6" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="36e7-7a2f-5fec-f366" name="Warpaint" hidden="false" targetId="f6ca-48ef-c11a-d591" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d1e7-46f9-4682-da0a" name="Shields" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d544-c132-b248-8d64" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="5f5e-7454-d493-e751" name="Equipment" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9902-6a59-2138-cd3d" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="52c2-855c-b850-126c" name="Spears" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="eaa7-6800-e651-8bea" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3495-8909-7ee7-41ba" name="Additional Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="eaa7-6800-e651-8bea" value="2.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6385-cab3-4121-da10" name="Bows" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="increment" field="eaa7-6800-e651-8bea" value="3.0">
+                  <repeats>
+                    <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="40e1-91a7-2066-d6f2" name="Command" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="f1f5-9c4d-f2d8-d603" name="Orc Boss" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7941-a467-ab7a-d6f1" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="0a44-a350-0e2b-0543" name="Orc Boss" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                  <characteristics>
+                    <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                    <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+                    <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                    <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+                    <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+                    <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                    <characteristic name="I" typeId="b418-0e30-644f-1435">2</characteristic>
+                    <characteristic name="A" typeId="fa03-f9a3-8117-98dd">2</characteristic>
+                    <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="13.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="d213-a8d0-d440-879e" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="10c6-6250-8fed-4dba" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="24f9-a6d4-72e6-e29e" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b2e-14f1-18fa-8364" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="5.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="e9d7-5e21-d1d8-74f0" name="Magic Banners" hidden="true" collective="false" import="true" targetId="ab40-6121-a15b-38f3" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d213-a8d0-d440-879e" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="eaa7-6800-e651-8bea" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="11c9-5296-3272-79a5" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1e93-2c88-bafa-106c" name="Savage Orc Boar Boyz Big&apos;uns" hidden="false" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="6f86-3beb-2b44-76af" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="019a-c58f-e3d2-df66" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8c7d-4a72-964c-acbc" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2f51-e5be-78b6-4a3d" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <infoLinks>
+        <infoLink id="b9bc-9ec4-b82b-dc3e" name="Choppa" hidden="false" targetId="4df0-4df8-a8b2-611d" type="rule"/>
+        <infoLink id="649c-ad05-21ab-6e42" name="Ignore Goblin Panic" hidden="false" targetId="c3bd-5b38-8c9a-72ff" type="rule"/>
+        <infoLink id="b56a-ae6a-f19a-7660" name="Frenzy" hidden="false" targetId="a317-ad28-0409-0c8b" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="2374-eacb-ad4b-0a8f" name="New CategoryLink" hidden="false" targetId="4a3f-84d1-0495-6ecb" primary="true"/>
+        <categoryLink id="7f0b-35e2-ca6e-a0ca" name="Orc" hidden="false" targetId="5b0c-07f2-6b72-7aa8" primary="false"/>
+        <categoryLink id="94e1-257b-8fcd-1093" name="Savage Orc" hidden="false" targetId="c22d-3a76-3d92-7c87" primary="false"/>
+        <categoryLink id="36e8-10ac-61dd-63f9" name="Big&apos;uns" hidden="false" targetId="e1f3-f1c7-a5a0-67ca" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="9d5f-ab7b-2896-e210" name="Savage Orc Boar Boyz Big&apos;uns" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="increment" field="1323-3f68-ce81-e31b" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0cc1-fbe9-d892-bcff" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1323-3f68-ce81-e31b" type="max"/>
+            <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9244-c621-dc7b-58ae" type="min"/>
+          </constraints>
+          <profiles>
+            <profile id="c56f-2c34-76cd-ffab" name="Savage Boar Boy Big&apos;un" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+                <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                <characteristic name="I" typeId="b418-0e30-644f-1435">2</characteristic>
+                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="ef0d-ffe5-5cba-d6aa" name="Boar" hidden="false" targetId="da70-2b19-7a41-45cf" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="21.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b781-e245-bbd7-9ef3" name="Spears" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e44-bfca-8185-1649" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="9db0-a4dc-3995-5580" name="Warpaint" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" field="eaa7-6800-e651-8bea" value="3.0">
+              <repeats>
+                <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9071-65bc-da71-366f" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="4fae-2ece-cba7-316e" name="Warpaint" hidden="false" targetId="f6ca-48ef-c11a-d591" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="6da8-ea24-d299-35c3" name="Command" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="067e-803d-d662-8270" name="Savage Boar Boy Boss" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b5c-f4f9-526c-2f9a" type="max"/>
+              </constraints>
+              <profiles>
+                <profile id="da31-bd7b-183d-34ad" name="Savage Boar Boy Boss" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+                  <characteristics>
+                    <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                    <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+                    <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                    <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+                    <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+                    <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                    <characteristic name="I" typeId="b418-0e30-644f-1435">2</characteristic>
+                    <characteristic name="A" typeId="fa03-f9a3-8117-98dd">2</characteristic>
+                    <characteristic name="Ld" typeId="bbad-d421-400b-87c1">7</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="17.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="888f-89b6-c1fa-d069" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="daeb-23a2-190e-5ebf" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="14.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6d30-202a-34a7-b0a0" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b5bd-79ac-43b1-bc77" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="7.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="3bca-faf8-ba98-1698" name="Magic Banners" hidden="true" collective="false" import="true" targetId="ab40-6121-a15b-38f3" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="888f-89b6-c1fa-d069" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="eaa7-6800-e651-8bea" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9d20-bb0b-eff1-b019" type="max"/>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7fe9-06f3-6142-4496" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink id="bcaa-1d84-338a-0fff" name="Orc Boar Chariot" hidden="false" collective="false" import="true" targetId="33d3-6502-4bd1-408f" type="selectionEntry"/>
@@ -5638,35 +6257,6 @@ Treat the Prodder&apos;s blasts as bound spells with a power level of 3. Each bl
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="60.0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="ea63-08db-5ffb-2480" name="Big&apos;Uns" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="increment" field="eaa7-6800-e651-8bea" value="2.0">
-          <repeats>
-            <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="increment" field="eaa7-6800-e651-8bea" value="2.0">
-          <repeats>
-            <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
-          </repeats>
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="bc30-b311-ad29-0e67" type="instanceOf"/>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3c13-eb36-3a5f-7e7a" type="instanceOf"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a1d2-9a48-f2de-cd07" type="max"/>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2209-28be-1bf9-9097" type="max"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8526-924c-8705-a4ef" name="Savage Orc Boar Chariot" hidden="true" collective="false" import="true" type="upgrade">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7bb5-70b8-0122-944c" name="Wood Elves" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7bb5-70b8-0122-944c" name="Wood Elves" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="4f0e-c683-4011-68a9" name="Magic Bow" hidden="true"/>
     <categoryEntry id="3fee-c6b4-de1c-b33e" name="Magic Arrows" hidden="false"/>
@@ -7,6 +7,7 @@
     <categoryEntry id="0e69-01d6-06fc-1f34" name="Forest Spirit" hidden="false"/>
     <categoryEntry id="6a3b-4039-2a09-aa1c" name="Highborn General" hidden="true"/>
     <categoryEntry id="79fe-9f48-0ec9-f9e2" name="Drycha General" hidden="true"/>
+    <categoryEntry id="b24f-a0f1-581b-e574" name="Magic Suit of Armour" hidden="true"/>
   </categoryEntries>
   <selectionEntries>
     <selectionEntry id="6f97-17a2-0f2d-9db6" name="Wood Elf Highborn" hidden="false" collective="false" import="true" type="model">
@@ -392,7 +393,11 @@
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="de42-d8bd-b0dc-5d73" type="equalTo"/>
               </conditions>
               <modifiers>
-                <modifier type="set" field="4be3-1097-a7ec-fcd0" value="1.0"/>
+                <modifier type="set" field="4be3-1097-a7ec-fcd0" value="1.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b24f-a0f1-581b-e574" type="equalTo"/>
+                  </conditions>
+                </modifier>
                 <modifier type="set" field="eaa7-6800-e651-8bea" value="0.0"/>
               </modifiers>
             </modifierGroup>
@@ -462,7 +467,11 @@
                     <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="de42-d8bd-b0dc-5d73" type="equalTo"/>
                   </conditions>
                   <modifiers>
-                    <modifier type="set" field="5b46-2e2b-33e7-1e70" value="1.0"/>
+                    <modifier type="set" field="5b46-2e2b-33e7-1e70" value="1.0">
+                      <conditions>
+                        <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e6e5-cff5-9987-d563" type="equalTo"/>
+                      </conditions>
+                    </modifier>
                     <modifier type="set" field="eaa7-6800-e651-8bea" value="0.0"/>
                   </modifiers>
                 </modifierGroup>
@@ -513,7 +522,7 @@
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -1714,14 +1723,6 @@ They are affected by spells, etc, that would affect cavalry.</description>
       <selectionEntryGroups>
         <selectionEntryGroup id="c7fc-4ec9-e2bb-6b4e" name="Command" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="fa06-02e0-a7bc-42d7" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ee6e-e628-49cb-a7b0" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="7.0"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry id="2e45-9141-01e3-5956" name="Shadow Sentinel" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a3d-7872-8191-bc51" type="max"/>
@@ -2409,6 +2410,7 @@ They are affected by spells, etc, that would affect cavalry.</description>
           </rules>
           <categoryLinks>
             <categoryLink id="955f-6aa2-e482-b499" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+            <categoryLink id="e91e-26a1-8688-1e2a" name="Magic Suit of Armour" hidden="false" targetId="b24f-a0f1-581b-e574" primary="false"/>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
@@ -2426,6 +2428,7 @@ They are affected by spells, etc, that would affect cavalry.</description>
           </rules>
           <categoryLinks>
             <categoryLink id="968e-9134-54ba-4884" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+            <categoryLink id="38c9-37d9-473d-7bdf" name="Magic Suit of Armour" hidden="false" targetId="b24f-a0f1-581b-e574" primary="false"/>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
@@ -2443,12 +2446,20 @@ They are affected by spells, etc, that would affect cavalry.</description>
           </rules>
           <categoryLinks>
             <categoryLink id="6dad-cdb5-b8d8-4f9e" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+            <categoryLink id="c0ce-6cc5-4212-5646" name="Magic Suit of Armour" hidden="false" targetId="b24f-a0f1-581b-e574" primary="false"/>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="a9da-7876-36e2-9f3d" name="Helm of the Hunt" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="de42-d8bd-b0dc-5d73" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ae94-4908-c064-ba81" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5607-94bc-c133-8f0f" type="max"/>
@@ -2495,6 +2506,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
               </conditions>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="de42-d8bd-b0dc-5d73" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </entryLink>
       </entryLinks>
@@ -2515,6 +2531,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="de42-d8bd-b0dc-5d73" type="equalTo"/>
+              </conditions>
             </modifier>
           </modifiers>
           <constraints>
@@ -2544,6 +2565,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="de42-d8bd-b0dc-5d73" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4773-9582-38ee-b388" type="max"/>
@@ -2572,6 +2598,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="de42-d8bd-b0dc-5d73" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4749-0572-b4fb-946a" type="max"/>
@@ -2594,6 +2625,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2dda-69a2-c29f-776b" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="de42-d8bd-b0dc-5d73" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2680,6 +2716,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="de42-d8bd-b0dc-5d73" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9091-4e13-13bc-560b" type="max"/>
@@ -2707,6 +2748,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="de42-d8bd-b0dc-5d73" type="equalTo"/>
+              </conditions>
             </modifier>
           </modifiers>
           <constraints>
@@ -2736,6 +2782,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="de42-d8bd-b0dc-5d73" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="42c7-5d94-f2a9-fca1" type="max"/>
@@ -2764,6 +2815,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="de42-d8bd-b0dc-5d73" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="eee3-006a-c387-bdae" type="max"/>
@@ -2791,6 +2847,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="de42-d8bd-b0dc-5d73" type="equalTo"/>
+              </conditions>
             </modifier>
           </modifiers>
           <constraints>
@@ -2822,6 +2883,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="de42-d8bd-b0dc-5d73" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </entryLink>
         <entryLink id="3245-150a-6bab-282a" name="Sword of Might" hidden="false" collective="false" import="true" targetId="3c1d-e820-ab6f-4ea1" type="selectionEntry">
@@ -2834,6 +2900,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="de42-d8bd-b0dc-5d73" type="equalTo"/>
+              </conditions>
             </modifier>
           </modifiers>
         </entryLink>
@@ -2848,6 +2919,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="de42-d8bd-b0dc-5d73" type="equalTo"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </entryLink>
         <entryLink id="7942-b542-a52e-89d2" name="Biting Blade" hidden="false" collective="false" import="true" targetId="3c3e-b471-60a2-bcb5" type="selectionEntry">
@@ -2860,6 +2936,11 @@ They are affected by spells, etc, that would affect cavalry.</description>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="set" field="hidden" value="true">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="de42-d8bd-b0dc-5d73" type="equalTo"/>
+              </conditions>
             </modifier>
           </modifiers>
         </entryLink>
@@ -3615,14 +3696,9 @@ They are affected by spells, etc, that would affect cavalry.</description>
         <selectionEntry id="2dc9-67fd-cee2-6c24" name="Unicorn" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="de42-d8bd-b0dc-5d73" type="equalTo"/>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="notInstanceOf"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1846-7475-4703-cf4d" type="equalTo"/>
+              </conditions>
             </modifier>
           </modifiers>
           <profiles>

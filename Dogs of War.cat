@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3604-800a-4012-5da6" name="Dogs of War" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3604-800a-4012-5da6" name="Dogs of War" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="5e7e-36e5-c0bf-c57c" name="Dogs of War" hidden="false"/>
     <categoryEntry id="c51c-ed7d-9669-006f" name="Regiment of Renown" hidden="false"/>
@@ -3643,6 +3643,344 @@ The mask, which represents the grimacing face of death, is the last thing Vesper
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry id="0577-dbcb-d52c-4ca8" name="Dark Emissary" publicationId="2c29-8521-dcc7-5337" page="14" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3604-800a-4012-5da6" type="notInstanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f49f-f614-5cfb-004a" type="notInstanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fd0d-5697-0f21-8aac" type="notInstanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4b41-6842-9db5-f563" type="notInstanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b151-7d1c-4a96-e0d0" type="notInstanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c2c0-45b3-040e-fe0f" type="notInstanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9534-aec7-1922-76f2" type="notInstanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c189-c206-4913-5be6" type="notInstanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="dfb1-1789-5d68-be54" type="notInstanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="05b9-5022-67cd-4fd3" type="notInstanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4d45-07cc-223b-b66e" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="90c8-b1e3-71fb-b1d1" name="Dark Emissary" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">3</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">3</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">3</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">8</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="9de6-b22b-a631-cc2f" name="The Spiral" hidden="false">
+          <description>The symbol of the Dark Master and a feared sign of damnation. Few enemies dare look upon it.
+5+ Ward Save.</description>
+        </rule>
+        <rule id="0a54-71dc-cf52-ca45" name="For Hire (Dark Emissary)" hidden="false">
+          <description>A Dark Emissary can be hired as a Dogs of War unit. They may be hired by Dark Elves, Skaven, Chaos (all types including armies with a daemonic general), Vampire Counts, Tomb Kings, Dwarfs, Empire, Bretonnia (this is an exception to the normal rule), Dogs of War and Orcs &amp; Goblins.
+
+A Dark Emissary costs 265 points and uses up both a Rare choice and a Hero choice.
+
+If fighting alongside a Dwarf army containing an Anvil of Doom, make two separate pools of Power dice in your own Magic phase: one pool to be used with the Anvil (D6+2 dice) and one to be used by the Emissary (two dice plus four for his Level). In your opponent&apos;s Magic phase, you can group all your Dispel dice into a single pool.</description>
+        </rule>
+        <rule id="c217-9856-5592-1715" name="Dark Emissary Spell List" hidden="false">
+          <description>Elemental Power (Signature Spell)
+Casting Value: 6+
+Fenbeasts are elemental creatures which thrive on the magic which suffuses the isle of Albion. This can be boosted by magical energy from the Truthsayer or Dark Emissary.
+
+As well as their normal spells, Truthsayers and Dark Emissaries also have the Elemental Power spell, which is only of use on Fenbeasts. Pick a single Fenbeast within 18&quot; of the caster. The Fenbeast immediately gains D3 Wounds, up to its starting value of 4.
+
+1. Bolt of Dark Light
+Casting Value: 7+
+The caster conjures the powers of the Dark Master and unleashes a deadly ray of pure dark energy.
+
+2. Betrayal in Death
+Casting Value: 7+
+Under the effect of this curse, enemy warriors who are mortally wounded are transformed into ghastly animated bodies and turn to attack their comrades.
+
+This spell can be cast on an enemy unit that is engaged in close combat and within 18&quot; of the caster. If successfully cast, models who fall casualty will attack their own side in a final spasm of unholy energy. The spell lasts until the start of the caster&apos;s next turn. Fight the combat as normal. Any model in the affected unit which is killed during the combat immediately makes one further attack against a member of his own unit before it is removed - this is regardless of whether the model has already fought or not. Models killed by their own comrades will not be affected, only those killed by the enemy. The warrior will drop any weapon he&apos;s carrying and attack with his bare hands in a zombie-like fashion, thus the attack is always resolved at the model&apos;s basic Strength. In the case of mounted models, models riding chariots or monsters and so forth, only riders strike. If the dying model has a choice of different friendly models to attack, the Dark Emissary may choose which. Casualties caused by this spell will affect that round&apos;s combat resolution.
+
+3. Nightmare
+Casting Value: 7+
+The perverse arts of the caster creates the illusion of the enemy&apos;s worst fears in front of their very eyes.
+
+This spell can be cast on an enemy unit visible to and within 24&quot; of the caster, and which is not engaged in close combat. If successfully cast, the unit immediately takes a Panic test. Units immune to panic are immune to the effect of this spell.
+
+4. Curse of the Dark Master
+Casting Value: 8+
+The heart of the enemy is grasped by icy tentacles of fear and doubt, that sap their strength and their will to fight.
+
+Remains in play. This can be cast on an enemy unit anywhere on the battlefield, even if engaged in close combat. If successfully cast, all models in the unit suffer a penalty of -1 to all their rolls to hit (both shooting and close combat attacks). Once cast, it remains in play until dispelled, or until the Wizard chooses to end it (which he can do at any time), attempts to cast another spell or is slain.
+
+5. Fog of Death
+Casting Value: 10+
+A mysterious fog rises from the ground, shrouding the entire battlefield. All fighting stops for a short time, while friend and foe alike are lost in the haze and sinister screams fill the air.
+
+Each enemy unit on the table suffers D6 Strength 3 hits, randomise hits as per missile hits. The Wizard has only a limited control over the nightmarish creatures he has summoned, so the casting player must roll a dice for each of his own units (excluding the Wizard himself or the unit he is with). On a 4-6 nothing happens, on a 1-3 the unit is affected by the spell exactly like an enemy unit.
+
+6. Coils of the Serpent
+Casting Value: 12+
+A writhing form snakes its way from the outstretched hands of the caster and wraps its coils around a single enemy warrior, crushing the life out of his body.
+
+This can be cast on a single unengaged enemy model within 12&quot; of the caster (you can even pick a character inside a unit, a war machine crew, or choose to hit the character or monster/chariot he is riding, etc). The victim must immediately take a Toughness test. If failed, the model is crushed to death (remember a roll of 6 is always a failure and models without a Toughness value fail only on a 6). No Armour saves or Ward saves are allowed.
+
+The Bolt is a magic missile with a range of up to 18&quot;. If successfully cast, it hits its target and causes D6 Strength 5 hits.</description>
+        </rule>
+        <rule id="6e63-03d3-348b-b0da" name="Level 4 Wizard" hidden="false">
+          <description>Dark Emissaries are Level 4 Wizards. They always use spells from the Dark Emissary spell list.</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="3d05-50fd-78aa-9616" name="New CategoryLink" hidden="false" targetId="5694-61f3-6913-6154" primary="true"/>
+        <categoryLink id="7ff3-289c-74bf-e9e0" name="Rare" hidden="false" targetId="a3af-995e-0cf1-7091" primary="false"/>
+        <categoryLink id="a574-9488-08c7-ec2d" name="Wizard" hidden="false" targetId="eb46-88d4-eb41-2549" primary="false"/>
+        <categoryLink id="bfaa-585e-5dde-8e6d" name="Regiment of Renown" hidden="false" targetId="c51c-ed7d-9669-006f" primary="false"/>
+        <categoryLink id="da08-8ebd-6379-f6a8" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false"/>
+        <categoryLink id="03f0-9347-8326-784f" name="Dogs of War" hidden="false" targetId="5e7e-36e5-c0bf-c57c" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="3216-9e9d-a356-6092" name="Staff of Darkness" page="" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="adbd-cc93-4806-b4fc" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b1b-7260-302b-a8fe" type="min"/>
+          </constraints>
+          <rules>
+            <rule id="6abe-86f9-cb42-d2a2" name="Staff of Darkness" hidden="false">
+              <description>+1 to cast spells.</description>
+            </rule>
+          </rules>
+          <categoryLinks>
+            <categoryLink id="972d-9ccf-adea-4184" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="265.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2489-a3b0-93fb-15f1" name="Truthsayer" publicationId="2c29-8521-dcc7-5337" page="15" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3604-800a-4012-5da6" type="notInstanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4b41-6842-9db5-f563" type="notInstanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="9534-aec7-1922-76f2" type="notInstanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="2ed9-b2d4-eb7d-a2c4" type="notInstanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="f49f-f614-5cfb-004a" type="notInstanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="05b9-5022-67cd-4fd3" type="notInstanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="d9da-11c6-1a8c-4472" type="notInstanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="c189-c206-4913-5be6" type="notInstanceOf"/>
+                <condition field="selections" scope="primary-catalogue" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7bb5-70b8-0122-944c" type="notInstanceOf"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="4d45-07cc-223b-b66e" type="equalTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="d478-c92e-9b56-43a7" name="Truthsayer" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+          <characteristics>
+            <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+            <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+            <characteristic name="BS" typeId="22c7-799b-e07c-f32c">3</characteristic>
+            <characteristic name="S" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="T" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="I" typeId="b418-0e30-644f-1435">4</characteristic>
+            <characteristic name="A" typeId="fa03-f9a3-8117-98dd">2</characteristic>
+            <characteristic name="Ld" typeId="bbad-d421-400b-87c1">9</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="3b4f-d515-95a2-a5b3" name="The Triskele" hidden="false">
+          <description>The magical symbol of their office, it also focuses positive energies onto Truthsayers, protecting them from harm.
+
+4+ Ward save.</description>
+        </rule>
+        <rule id="f59e-e12e-9a2d-a307" name="For Hire (Truthsayer)" hidden="false">
+          <description>A Truthsayer can be hired as a Dogs of War unit. They may be hired by Lizardmen, High Elves, Wood Elves, Dwarfs, Tomb Kings, Empire, Bretonnia (this is an exception to the normal rule), Dogs of War and Orcs &amp; Goblins.
+
+A Truthsayer costs 265 points and uses up both a Rare choice and a Hero choice.
+
+If fighting alongside a Dwarf army containing an Anvil of Doom make two separate pools of Power dice in your own Magic phase: one pool to be used with the Anvil (D6+2 dice) and one to be used by the Truthsayer (two dice plus three for his Level). In your opponent&apos;s Magic phase, you can group all your Dispel dice into a single pool.</description>
+        </rule>
+        <rule id="3a09-57ec-3385-511b" name="Truthsayer Spell List" hidden="false">
+          <description>Elemental Power (Signature Spell)
+Casting Value: 6+
+Fenbeasts are elemental creatures which thrive on the magic which suffuses the isle of Albion. This can be boosted by magical energy from the Truthsayer or Dark Emissary.
+
+As well as their normal spells, Truthsayers and Dark Emissaries also have the Elemental Power spell, which is only of use on Fenbeasts. Pick a single Fenbeast within 18&quot; of the caster. The Fenbeast immediately gains D3 Wounds, up to its starting value of 4.
+
+1. Wings of Fate
+Casting Value: 5+
+The Truthsayer conjures a flock of enchanted birds to attack his enemies.
+
+The flock is a magic missile with a range of up to 24&quot;. If successfully cast, the flock hits its target and causes 2D6 Strength 2 hits.
+
+2. Light of Battle
+Casting Value: 6+
+A chosen regiment of warriors is protected by a shimmering barrier that deflects enemy missiles and blows.
+
+This spell can be cast on one friendly unit anywhere on the battlefield, even if engaged in close combat. All models in the unit receive a 5+ Ward save until the beginning of the caster&apos;s next turn.
+
+3. Gift of Life
+Casting Value: 7+
+Dying warriors that are lying broken on the battlefield are granted a new chance, their bodies are healed of all wounds and their strength is returned to them.
+
+Each unit in the player&apos;s army is given back one model that has been removed as a casualty during the game. The model is placed back in its original unit, with its full complement of Wounds. The spell has no effect on units that have been destroyed or fled off the table. All characters, chariots and models with 4 or more Wounds on their profile who have been wounded get one lost Wound back. This spell has no effect on war machines (but it can restore a lost crew member).
+
+4. Blessing of Valour
+Casting Value: 8+
+The prayers of the Truthsayer are heeded in the heavens and his warriors are filled with the strength and skills of the gods of hunting and battle.
+
+Remains in play. This spell can be cast on a friendly unit which is anywhere on the battlefield, even if it is engaged in close combat. If successfully cast, all models that are in the unit get a bonus of +1 to all their rolls to hit (both shooting and close combat attacks). Once it is cast, the Blessing remains in play until it is dispelled, or until the Wizard chooses to end it (which he can do at any time), attempts to cast another spell or is slain.
+
+5. Boon of Courage
+Casting Value: 8+
+The warriors hear the commanding voice of the Truthsayer in their minds, calling upon their honour and bidding them to fight on, no matter how desperate their situation has become.
+
+This spell can be cast on one friendly unit anywhere on the battlefield, even if it is engaged in close combat. If successfully cast, the unit is Unbreakable until the beginning of the caster&apos;s next turn.
+
+If cast on a fleeing unit, the unit immediately rallies, regardless of how many models are left in it.
+
+6. Voice of Command
+Casting Value: 9+
+Hearing the booming voice of the Truthsayer, an enemy regiment suddenly stops in its tracks, doubt filling their minds, hesitation paralysing their limbs.
+
+This spell can be cast on any enemy unit on the table. The unit must immediately take a Leadership test. If the test is failed, the unit immediately loses all its fighting spirit. The affected unit cannot move in its next Movement phase (except if the unit is subject to some form of compulsory movement, such as fleeing, stupidity, etc). In addition, the unit cannot shoot in its next Shooting phase. This spell has no effect on models that are Immune to Psychology.</description>
+        </rule>
+        <rule id="9e89-884e-13a1-978f" name="Level 3 Wizard" hidden="false">
+          <description>Truthsayers are Level 3 Wizards. They always use spells from the Truthsayer spell list.</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="f792-554c-2457-a2c6" name="New CategoryLink" hidden="false" targetId="5694-61f3-6913-6154" primary="true"/>
+        <categoryLink id="45f4-d48b-65c5-6303" name="Rare" hidden="false" targetId="a3af-995e-0cf1-7091" primary="false"/>
+        <categoryLink id="20ba-ab91-7c33-3cd0" name="Wizard" hidden="false" targetId="eb46-88d4-eb41-2549" primary="false"/>
+        <categoryLink id="a934-99a4-0ab5-3b4e" name="Regiment of Renown" hidden="false" targetId="c51c-ed7d-9669-006f" primary="false"/>
+        <categoryLink id="4581-7aea-d602-c6f1" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false"/>
+        <categoryLink id="56ba-97df-f374-aaa8" name="Dogs of War" hidden="false" targetId="5e7e-36e5-c0bf-c57c" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="54e5-7d7c-883a-1e74" name="Staff of Light" page="" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="805f-6a5f-6de2-f832" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="14ac-255d-0cf3-bfc1" type="min"/>
+          </constraints>
+          <rules>
+            <rule id="c3dc-a4a3-59b5-853d" name="Staff of Light" hidden="false">
+              <description>This counts as a halberd. +1 to dispel attempts.</description>
+            </rule>
+          </rules>
+          <categoryLinks>
+            <categoryLink id="f27a-d016-c3be-8f35" name="Arcane Item" hidden="false" targetId="7cfd-b676-48e1-6eec" primary="false"/>
+          </categoryLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="265.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="2b11-37cb-26c9-aed7" name="Fenbeasts" publicationId="2c29-8521-dcc7-5337" page="16" hidden="true" collective="false" import="true" type="unit">
+      <modifiers>
+        <modifier type="set" field="hidden" value="false">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="2489-a3b0-93fb-15f1" type="atLeast"/>
+                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0577-dbcb-d52c-4ca8" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="0680-764c-f131-113d" type="max"/>
+      </constraints>
+      <rules>
+        <rule id="e552-fcd6-6396-8fec" name="For Hire (Fenbeasts)" hidden="false">
+          <description>Any army that includes a Truthsayer or Dark Emissary may field one or more Fenbeasts as Dogs of War. Up to 3 Fenbeasts may be included as a single Rare choice. No army may include more than 3 Fenbeasts.</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink id="eab9-f726-4d6d-2cc2" name="New CategoryLink" hidden="false" targetId="c51c-ed7d-9669-006f" primary="false"/>
+        <categoryLink id="a780-74eb-c204-ee5a" name="New CategoryLink" hidden="false" targetId="a3af-995e-0cf1-7091" primary="true"/>
+        <categoryLink id="9c24-02af-b65f-461f" name="Dogs of War" hidden="false" targetId="5e7e-36e5-c0bf-c57c" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="9f3e-649e-1135-548f" name="Fenbeast" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ccc-40b9-370a-d428" type="min"/>
+            <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d55-0caf-3898-4cf5" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="04cf-81e5-ffd8-3ddb" name="Fenbeast" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+                <characteristic name="WS" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                <characteristic name="BS" typeId="22c7-799b-e07c-f32c">-</characteristic>
+                <characteristic name="S" typeId="0c58-1252-962d-8fcc">5</characteristic>
+                <characteristic name="T" typeId="16d7-9f22-06d8-8427">5</characteristic>
+                <characteristic name="W" typeId="f9d0-a5b0-7e0b-a404">4</characteristic>
+                <characteristic name="I" typeId="b418-0e30-644f-1435">2</characteristic>
+                <characteristic name="A" typeId="fa03-f9a3-8117-98dd">3</characteristic>
+                <characteristic name="Ld" typeId="bbad-d421-400b-87c1">10</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="b1b8-4740-7a86-86ae" name="Fen-Walker" hidden="false">
+              <description>Fenbeasts are completely at home in marshes and bogs, able to move with effortless speed. For the purposes of movement, they treat fens, marshes, morasses and similarly swampy terrain as open ground.</description>
+            </rule>
+            <rule id="0e89-55cd-8040-9412" name="No Will" hidden="false">
+              <description>The Dark Emissary or Truthsayer controls the Fenbeast, if they should fall casualty then the magic that binds it to the world is released. If the Truthsayer or Dark Emissary in the army is slain, any Fenbeasts in the army immediately collapse and are removed.</description>
+            </rule>
+            <rule id="941a-3a84-4e06-1104" name="Single Model (Fenbeast)" hidden="false">
+              <description>Fenbeasts never form units and cannot be joined by characters - they always operate as units of one model with a Unit Strength of 4.</description>
+            </rule>
+            <rule id="9ed5-a70c-6182-0abe" name="Special Regenerate" hidden="false">
+              <description>Fenbeasts can tap into the energy of Albion through marshes and fens, rebuilding themselves from its substance. They have the Regeneration special rule when in marshes, fens, morasses, and similar swampy terrain features. Note that this does not include lakes, rivers or other types of pure&apos; water feature. They are vulnerable to magical attack, however, and so in addition to fire attacks they may not regenerate magically inflicted wounds (from spells, magic items, etc).</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="1802-bc04-7c57-d581" name="Fear" hidden="false" targetId="03be-3e56-1332-bf56" type="rule"/>
+            <infoLink id="7574-afc0-0a81-d7ff" name="Unbreakable" hidden="false" targetId="f6c9-ac44-1d7c-ed6e" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="85.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
+      </costs>
+    </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="9a9f-01c7-9394-383d" name="Command" hidden="false" collective="false" import="true">
@@ -3735,28 +4073,29 @@ The mask, which represents the grimacing face of death, is the last thing Vesper
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a8cc-64e2-2666-e70f" type="min"/>
               </constraints>
             </entryLink>
-            <entryLink id="7a7a-9a10-7043-565f" name="Power Stone" hidden="false" collective="false" import="true" targetId="2be9-2fdd-98db-e42c" type="selectionEntry">
-              <modifiers>
-                <modifier type="set" field="576f-11c2-3a9b-a1fe" value="0.0">
-                  <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="52c3-25b3-e386-3449" type="greaterThan"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="576f-11c2-3a9b-a1fe" type="max"/>
-              </constraints>
-            </entryLink>
             <entryLink id="07ef-68ca-bcc1-fe4e" name="Staff of Sorcery" hidden="false" collective="false" import="true" targetId="0871-b449-88b1-0a33" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="4be7-1968-afd0-9833" value="0.0">
                   <conditions>
-                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="52c3-25b3-e386-3449" type="greaterThan"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2be9-2fdd-98db-e42c" type="greaterThan"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4be7-1968-afd0-9833" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="95be-a809-bed4-3496" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="098e-69e3-6173-6412" name="Power Stones" hidden="false" collective="false" import="true" targetId="4707-962c-df84-6b66" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="e231-0104-018a-1c16" value="0.0">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0871-b449-88b1-0a33" type="greaterThan"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="-1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e231-0104-018a-1c16" type="max"/>
               </constraints>
             </entryLink>
           </entryLinks>
