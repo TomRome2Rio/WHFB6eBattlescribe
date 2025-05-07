@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7236-6609-8f2a-760a" name="Chaos Dwarves" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7236-6609-8f2a-760a" name="Chaos Dwarves" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="d1fa-39bb-985e-3662" name="Bull Centaur Lord" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -72,18 +72,6 @@
               </selectionEntries>
             </selectionEntryGroup>
             <selectionEntryGroup id="2e63-f18e-7940-23ba" name="Armour" hidden="false" collective="false" import="true">
-              <modifiers>
-                <modifier type="set" field="37ac-5b87-4367-141c" value="0.0">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cef1-6fa0-81e7-7965" type="atLeast"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="55c7-1aa2-6fe7-cfb7" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="37ac-5b87-4367-141c" type="max"/>
               </constraints>
@@ -426,18 +414,6 @@
               </selectionEntries>
             </selectionEntryGroup>
             <selectionEntryGroup id="7b6b-cb99-5e51-d031" name="Armour" hidden="false" collective="false" import="true">
-              <modifiers>
-                <modifier type="set" field="5e04-3ea2-607f-89b1" value="0.0">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cef1-6fa0-81e7-7965" type="atLeast"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="55c7-1aa2-6fe7-cfb7" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e04-3ea2-607f-89b1" type="max"/>
               </constraints>
@@ -617,18 +593,6 @@
               </selectionEntries>
             </selectionEntryGroup>
             <selectionEntryGroup id="941c-f858-8fbf-70be" name="Armour" hidden="false" collective="false" import="true">
-              <modifiers>
-                <modifier type="set" field="07da-e6b4-27fd-f0f2" value="0.0">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="cef1-6fa0-81e7-7965" type="atLeast"/>
-                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="55c7-1aa2-6fe7-cfb7" type="atLeast"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="07da-e6b4-27fd-f0f2" type="max"/>
               </constraints>
@@ -1923,58 +1887,71 @@
     </selectionEntryGroup>
     <selectionEntryGroup id="474f-778d-1cc1-686e" name="Magic Armour" hidden="false" collective="false" import="true">
       <modifiers>
-        <modifier type="set" field="71ae-7f9f-5dc4-0f4b" value="0.0">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="daeb-6ab0-83b2-8bf3" type="equalTo"/>
-          </conditions>
-        </modifier>
         <modifier type="set" field="hidden" value="true">
           <conditions>
             <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="71ae-7f9f-5dc4-0f4b" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="cef1-6fa0-81e7-7965" name="Armour of the Furnace" hidden="false" collective="false" import="true" type="upgrade">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="dc8c-1a56-2517-03bf" name="Magic Armour" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="168b-e179-d731-8e70" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="daeb-6ab0-83b2-8bf3" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="84dd-5ad5-967d-2dac" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="734f-5520-e98f-6af5" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="168b-e179-d731-8e70" type="max"/>
           </constraints>
-          <rules>
-            <rule id="f6ef-d9d0-d6d4-45e2" name="Armour of the Furnace" hidden="false">
-              <description>The wearer has a 4+ armour save and a 5+ ward save. The wearer and his mount are immune to fire based attacks and spells.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="3971-ba6c-a2c2-c6bf" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="45.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="55c7-1aa2-6fe7-cfb7" name="Armour of Gazrakh" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa29-ae69-d52a-d982" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="20b0-5d8b-b561-9821" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="58b5-6ada-c17b-aa95" name="Armour of Gazrakh" hidden="false">
-              <description>Gives the wearer a 1+ armour save that cannot be improved.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="f693-d9e7-57f6-c89e" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+          <selectionEntries>
+            <selectionEntry id="112e-6408-3abc-64e3" name="Armour of Gazrakh" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a2f-c853-91ba-39bb" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6d2-63bc-6f17-bdb6" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="3b86-40ca-9c8d-22a8" name="Armour of Gazrakh" hidden="false">
+                  <description>Gives the wearer a 1+ armour save that cannot be improved.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="6938-83f4-52e9-8ae7" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3155-8f8f-bddc-2792" name="Armour of the Furnace" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="56f0-ab54-ef12-40da" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4822-a724-cd81-c589" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="c32c-45dc-c59e-c366" name="Armour of the Furnace" hidden="false">
+                  <description>The wearer has a 4+ armour save and a 5+ ward save. The wearer and his mount are immune to fire based attacks and spells.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="bcb4-253a-35b0-b092" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="45.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="fb97-a2c9-ff8e-ff5c" name="Enchanted Shield" hidden="false" collective="false" import="true" targetId="4a2b-c497-93f2-c804" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" field="b573-d1b1-1c2c-7a16" value="0.0">
+              <conditions>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="daeb-6ab0-83b2-8bf3" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <categoryLinks>
             <categoryLink id="778e-ec2d-6588-8535" name="Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
           </categoryLinks>
@@ -2110,7 +2087,7 @@
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca1-46d6-8778-847f" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca1-46d6-8778-847f" type="lessThan"/>
               </conditions>
             </modifier>
           </modifiers>

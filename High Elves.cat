@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2ed9-b2d4-eb7d-a2c4" name="High Elves" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2ed9-b2d4-eb7d-a2c4" name="High Elves" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="3f17-868d-fac0-4c8d" name="First Among Equals" hidden="false">
       <constraints>
@@ -2280,197 +2280,220 @@ The Ring of Corin contains the Vaul&apos;s Unmaking spell.</description>
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="37ab-fcd3-1e06-fd7c" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="fcd5-3323-2342-e114" name="Armour of Protection" hidden="false" collective="false" import="true" type="upgrade">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="3a3c-6665-d83b-47d9" name="Magic Armour" hidden="false" collective="false" import="true">
           <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="48f1-4778-a9db-cde7" type="notInstanceOf"/>
-              </conditions>
+            <modifier type="set" field="282e-a7bd-192b-5e22" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e8a8-11f7-ddfe-3c85" type="greaterThan"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a2b-c497-93f2-c804" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1489-e4ed-282e-a5ec" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dbd8-76af-4e36-e193" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="282e-a7bd-192b-5e22" type="max"/>
           </constraints>
-          <rules>
-            <rule id="719f-f22c-525c-e369" name="Armour of Protection" hidden="false">
-              <description>Counts as light armour (armour save 6+) which can be combined with other equipment normally. If the-wearer fails his armour save he may make a 4+ Ward save.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="3ddb-a528-7a47-1873" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="40.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="cbb3-767a-b0da-7bf7" name="Armour of Stars" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="48f1-4778-a9db-cde7" type="notInstanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ac82-a978-2876-7bc9" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="32d5-689c-b2fc-24e6" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb6c-2bc0-4359-c253" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="81d2-71c4-38aa-b2ae" name="Armour of Stars" hidden="false">
-              <description>May only be worn by a model on foot. Counts as light armour (armour save 6+) which can be combined with other equipment normally. If the wearer suffers an unsaved wound then one of the gems will burst into brilliant white light as he is instantly teleported 3D6&quot; in a random direction.
+          <selectionEntries>
+            <selectionEntry id="cfa3-93cd-6107-046c" name="Shadow Armour" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ac82-a978-2876-7bc9" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f11a-14b4-88ad-a55d" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5599-467a-932f-d664" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="46bc-03d2-b253-af71" name="Shadow Armour" hidden="false">
+                  <description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. In addition, if the wearer is an independent character on foot then he is treated as having the Scout special rule. He may choose to deploy either at the same time as the other characters, or as a Scout (including setting up with a unit of Shadow Warriors).</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="fc65-ea8c-8554-30eb" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="4bda-cc24-6d15-4ae2" name="Helm of Fortune" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b255-290f-ab0d-feda" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c744-d98d-33f3-274f" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="8c99-4995-dec0-e517" name="Helm of Fortune" hidden="false">
+                  <description>This helm confers a 6+ armour save which can be combined with other equipment normally. The wearer may re-roll failed armour saves.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b85b-a6db-737f-7931" name="Armour of the Gods" publicationId="2c29-8521-dcc7-5337" page="11" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="48f1-4778-a9db-cde7" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ac82-a978-2876-7bc9" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6965-565c-7dd6-b96b" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6d56-643f-6997-6beb" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="6e02-33be-a5e7-c158" name="Armour of the Gods" publicationId="2c29-8521-dcc7-5337" page="11" hidden="false">
+                  <description>The Armour of the Gods can only be worn by characters on foot, and can&apos;t be combined with other armour. It confers a 3+ Armour save. It also adds +1 to the wearer&apos;s Strength characteristic.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="dcf2-ef5b-7a60-3b40" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0a8f-71f4-1ac1-6cce" name="Armour of Stars" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="48f1-4778-a9db-cde7" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ac82-a978-2876-7bc9" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7fe0-11e9-e5f6-d326" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc76-be64-be53-28c9" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="49b5-be71-ff8d-0125" name="Armour of Stars" hidden="false">
+                  <description>May only be worn by a model on foot. Counts as light armour (armour save 6+) which can be combined with other equipment normally. If the wearer suffers an unsaved wound then one of the gems will burst into brilliant white light as he is instantly teleported 3D6&quot; in a random direction.
 
 Note that this means that he can only suffer 1 unsaved wound in a round of close combat as he will be teleported away before the second can strike him. However, if he was struck by a Killing Blow or a weapon that does multiple wounds per hit (such as a cannon ball) then he would still suffer the instant death or multiplied wounds as normal before teleporting away.
 
 If the model is teleported into another model or impassable terrain then simply carry on moving it along in the same direction until it is 1&quot; beyond. If the model teleports off the table then treat it as having pursued off.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="869e-e233-4b6a-a522" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e35f-92bf-82a5-df19" name="Shadow Armour" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ac82-a978-2876-7bc9" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="74b7-08a8-43e5-7974" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b82c-7233-370c-f2c4" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="2093-c405-204b-ebca" name="Shadow Armour" hidden="false">
-              <description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. In addition, if the wearer is an independent character on foot then he is treated as having the Scout special rule. He may choose to deploy either at the same time as the other characters, or as a Scout (including setting up with a unit of Shadow Warriors).</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="5a44-66aa-e556-deb2" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="9daa-326f-6aa2-7457" name="Helm of Fortune" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c4dc-9f45-7155-f23a" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a47f-b17d-b139-0c0f" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="cb23-8fa4-b59a-92a3" name="Helm of Fortune" hidden="false">
-              <description>This helm confers a 6+ armour save which can be combined with other equipment normally. The wearer may re-roll failed armour saves.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="ef7a-3f56-cda3-8a54" name="Armour of Heroes" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f714-9b20-0696-6b84" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4eb9-14ff-d6f3-7a48" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="396a-1cd7-ac42-6081" name="Armour of Heroes" hidden="false">
-              <description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. In order to allocate close combat attacks against the wearer, an opponent must first pass a Leadership test. Test each Close Combat phase. If the test is failed, the enemy may attack another model in base contact instead. Models who are
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="1fe5-8007-cce3-9628" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ec34-ccaf-a407-b6b1" name="Armour of Protection" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="48f1-4778-a9db-cde7" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5fd6-589e-412c-e95c" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4322-897a-b324-983a" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="bb6a-fac5-dd29-77af" name="Armour of Protection" hidden="false">
+                  <description>Counts as light armour (armour save 6+) which can be combined with other equipment normally. If the-wearer fails his armour save he may make a 4+ Ward save.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="a20c-486b-bbdd-18d5" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="40.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="66ad-0315-55c2-7f46" name="Armour of Heroes" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c0b3-0786-e192-aec1" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="03f5-48e8-08a3-0721" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="2df5-1fa3-3d0f-4133" name="Armour of Heroes" hidden="false">
+                  <description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. In order to allocate close combat attacks against the wearer, an opponent must first pass a Leadership test. Test each Close Combat phase. If the test is failed, the enemy may attack another model in base contact instead. Models who are
 are immune to this effect also.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="bb72-e073-2a94-a7a0" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1cce-5ab2-c8f1-92aa" name="Golden Shield" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="48f1-4778-a9db-cde7" type="notInstanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="128c-6979-74df-4cb6" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="e8a8-11f7-ddfe-3c85" name="Magic Shield" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="172b-c08a-5724-5356" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c079-7a62-faf9-32ec" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0491-a246-d98a-6bd5" type="max"/>
           </constraints>
-          <rules>
-            <rule id="7750-b6c6-a621-44a7" name="Golden Shield" hidden="false">
-              <description>This shield confers a 6+ armour save which can be combined with other equipment normally. In addition, all attempts to hit the bearer in close combat suffer a penalty of -1.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="43a7-0d39-50e6-2dad" name="Magic Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3e60-5f41-9cc5-71af" name="Dragonscale Shield" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="06c1-2bed-19d6-5cfd" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6980-7004-506e-28ca" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="ce6e-c5ea-2de9-c35e" name="Dragonscale Shield" hidden="false">
-              <description>This shield confers a 5+ armour save which can be combined with other equipment normally. Also gives the bearer a 6+ Ward save.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="b594-4afb-78d4-e019" name="Magic Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="79e7-a6cd-b82e-1cde" name="Armour of the Gods" publicationId="2c29-8521-dcc7-5337" page="11" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="48f1-4778-a9db-cde7" type="notInstanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ac82-a978-2876-7bc9" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b3d-9aa4-c220-46f0" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="c26d-253c-ae76-8b94" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="0160-8922-6761-27ff" name="Armour of the Gods" publicationId="2c29-8521-dcc7-5337" page="11" hidden="false">
-              <description>The Armour of the Gods can only be worn by characters on foot, and can&apos;t be combined with other armour. It confers a 3+ Armour save. It also adds +1 to the wearer&apos;s Strength characteristic.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="b03c-92c7-607d-5e2e" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink id="fdc5-c546-4f2b-85ff" name="Enchanted Shield" hidden="false" collective="false" import="true" targetId="4a2b-c497-93f2-c804" type="selectionEntry"/>
-      </entryLinks>
+          <selectionEntries>
+            <selectionEntry id="8471-ee65-a1a4-cc10" name="Dragonscale Shield" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f640-265e-682f-94f3" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="173e-60eb-bbba-5a9a" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="0b14-8ea6-73fa-5ec0" name="Dragonscale Shield" hidden="false">
+                  <description>This shield confers a 5+ armour save which can be combined with other equipment normally. Also gives the bearer a 6+ Ward save.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="7072-4899-f3b5-e638" name="Magic Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c64f-6da2-5d11-5acc" name="Golden Shield" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="48f1-4778-a9db-cde7" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="6cb7-fc60-f533-989c" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f50-6526-3eec-fe41" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="d44b-0408-a0f5-b3a3" name="Golden Shield" hidden="false">
+                  <description>This shield confers a 6+ armour save which can be combined with other equipment normally. In addition, all attempts to hit the bearer in close combat suffer a penalty of -1.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="f879-4b19-708c-bd59" name="Magic Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink id="cf2f-d01a-c668-e545" name="Enchanted Shield" hidden="false" collective="false" import="true" targetId="4a2b-c497-93f2-c804" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup id="e1f5-9723-2df6-b167" name="Talismans" hidden="false" collective="false" import="true">
       <constraints>

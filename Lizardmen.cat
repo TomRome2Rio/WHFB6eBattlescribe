@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d9da-11c6-1a8c-4472" name="Lizardmen" revision="10" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="d9da-11c6-1a8c-4472" name="Lizardmen" revision="11" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>WIP Lizardmen. TODO: Add unit profiles &amp; item descriptions</readme>
   <categoryEntries>
     <categoryEntry id="361c-7d6f-fc45-5312" name="Skink" hidden="false"/>
@@ -2433,92 +2433,120 @@ Confers on the bearer the Killing Blow ability. In addition, the bearer causes F
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="a032-f17f-fbd7-c9d3" name="Magic Armour" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba14-88cb-1801-aac4" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="2821-b1c8-22ff-631e" name="Shield of the Mirrored Pool" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="0527-2678-c586-db08" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="b03a-33fe-f05e-2ac0" name="Shield of the Mirrored Pool" hidden="false">
-              <description>The shield confers a +1 Armour save like a normal shield. In addition, any magic missile that strikes the bearer or any unit he is with is deflected on the roll of a 4+ on a D6. If the spell is deflected, the results of the magic missile are resolved against the caster of the spell or the unit the character is with (following normal targeting rules). This in turn cannot be dispelled.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="71e4-70ea-c417-f573" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e75e-5c59-c058-9654" name="The Maiming Shield" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="9ad6-7947-eac4-0197" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="e0d0-0e3d-519a-94a2" name="The Maiming Shield" hidden="false">
-              <description>The shield conferrs a +1 Armour save like a normal shield. In addition, it confers +1 Attack to the model using it. This additional attack is worked out using the base Strength of the wielder, and counts as magical.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="b304-ff5f-b21a-dc98" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1392-d521-bf6a-d93a" name="Sacred Stegadon Helm" hidden="false" collective="false" import="true" type="upgrade">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="063b-c71b-e29e-da75" name="Magic Armour" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
                 <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="361c-7d6f-fc45-5312" type="notInstanceOf"/>
               </conditions>
             </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="e3fa-c6ae-1d54-92d1" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="dee0-738d-b0e3-159b" name="Sacred Stegadon Helm" hidden="false">
-              <description>Skink only.
-Confers +1 to the model&apos;s Armour save, which may be combined with other armour as normal. In addition, the helm adds +1 to the model&apos;s Leadership value.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="ac88-3060-7215-f569" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="40.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink id="8f28-953b-ae70-b8a7" name="Enchanted Shield" hidden="false" collective="false" import="true" targetId="4a2b-c497-93f2-c804" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
-              </conditions>
+            <modifier type="set" field="682d-0596-e12f-8d15" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4a2b-c497-93f2-c804" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="1a06-940e-8952-c181" type="greaterThan"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
-        </entryLink>
-      </entryLinks>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="682d-0596-e12f-8d15" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="1b93-835e-89ea-24af" name="Sacred Stegadon Helm" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="361c-7d6f-fc45-5312" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="9dd1-bdb6-2936-a4c1" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="60a4-0352-34a7-5100" name="Sacred Stegadon Helm" hidden="false">
+                  <description>Skink only.
+Confers +1 to the model&apos;s Armour save, which may be combined with other armour as normal. In addition, the helm adds +1 to the model&apos;s Leadership value.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="b365-3116-9873-cadc" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="40.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="1a06-940e-8952-c181" name="Magic Shield" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f6f4-780a-21e3-4f24" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="d2b2-1bbb-1feb-976c" name="The Maiming Shield" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="80f6-10db-1604-e2cf" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="ce75-b725-6423-206d" name="The Maiming Shield" hidden="false">
+                  <description>The shield conferrs a +1 Armour save like a normal shield. In addition, it confers +1 Attack to the model using it. This additional attack is worked out using the base Strength of the wielder, and counts as magical.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="5f19-47e0-2903-726f" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="996c-adc0-2d12-a53b" name="Shield of the Mirrored Pool" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="true" id="ed1e-a746-f0af-c978" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="a8ff-9a7b-22f7-1014" name="Shield of the Mirrored Pool" hidden="false">
+                  <description>The shield confers a +1 Armour save like a normal shield. In addition, any magic missile that strikes the bearer or any unit he is with is deflected on the roll of a 4+ on a D6. If the spell is deflected, the results of the magic missile are resolved against the caster of the spell or the unit the character is with (following normal targeting rules). This in turn cannot be dispelled.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="6f17-a5da-dfe8-a2a8" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink id="c9e2-f9b8-8bc8-83bb" name="Enchanted Shield" hidden="false" collective="false" import="true" targetId="4a2b-c497-93f2-c804" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup id="9fee-b270-03fc-fb7b" name="Enchanted Items" hidden="false" collective="false" import="true">
       <constraints>

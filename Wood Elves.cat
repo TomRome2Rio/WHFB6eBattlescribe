@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7bb5-70b8-0122-944c" name="Wood Elves" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="7bb5-70b8-0122-944c" name="Wood Elves" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="4f0e-c683-4011-68a9" name="Magic Bow" hidden="true"/>
     <categoryEntry id="3fee-c6b4-de1c-b33e" name="Magic Arrows" hidden="false"/>
@@ -2340,22 +2340,25 @@ They are affected by spells, etc, that would affect cavalry.</description>
             <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="623e-5f3d-d939-9b51" type="instanceOf"/>
           </conditions>
         </modifier>
-        <modifier type="set" field="b837-675a-2f76-7f52" value="0.0">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="daeb-6ab0-83b2-8bf3" type="equalTo"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
       </modifiers>
       <constraints>
         <constraint field="eaa7-6800-e651-8bea" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b837-675a-2f76-7f52" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="59d3-b2ef-622a-3c5f" name="Heirlooms of Athel Loren" hidden="false" collective="false" import="true" targetId="847a-fdde-9f96-06aa" type="selectionEntryGroup"/>
+        <entryLink id="59d3-b2ef-622a-3c5f" name="Heirlooms of Athel Loren" hidden="false" collective="false" import="true" targetId="847a-fdde-9f96-06aa" type="selectionEntryGroup">
+          <modifiers>
+            <modifier type="set" field="hidden" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="daeb-6ab0-83b2-8bf3" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
         <entryLink id="13e7-ee36-3ddb-7edc" name="Spites of Athel Loren" hidden="false" collective="false" import="true" targetId="bfcf-2a85-0407-3d34" type="selectionEntryGroup">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2d1-9ed1-4b51-efcf" type="max"/>
@@ -2394,110 +2397,114 @@ They are affected by spells, etc, that would affect cavalry.</description>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e93-073d-4cd2-b5a2" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="5f16-e6fc-f197-89eb" name="The Oaken Armour" hidden="false" collective="false" import="true" type="upgrade">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="2aca-b80e-f69f-cf2f" name="Magic Armour" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9d23-111f-518d-1ebc" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="792f-a680-3711-d764" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9144-e9d5-688e-6329" type="max"/>
           </constraints>
-          <rules>
-            <rule id="5514-ed74-f4fb-71af" name="The Oaken Armour" hidden="false">
-              <description>Counts as light armour (6+ Armour Save) that can be combined with other equipment as normal. The Oaken Armour gives the wearer the Regeneration ability.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="955f-6aa2-e482-b499" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-            <categoryLink id="e91e-26a1-8688-1e2a" name="Magic Suit of Armour" hidden="false" targetId="b24f-a0f1-581b-e574" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="06ce-2e9d-054f-1353" name="Railarian&apos;s Mantle" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="37df-017d-de61-185b" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7c65-4f96-1531-c4ed" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="504f-d749-c3df-91ea" name="Railarian&apos;s Mantle" hidden="false">
-              <description>Counts as light armour (6+ Armour Save) that can be combined with other equipment as normal. If the wearer is within 6&quot; of a Wood he receives a 4+ Ward Save.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="968e-9134-54ba-4884" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-            <categoryLink id="38c9-37d9-473d-7bdf" name="Magic Suit of Armour" hidden="false" targetId="b24f-a0f1-581b-e574" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="02be-731a-eca9-e13e" name="Armour of the Fey" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1889-cb79-ff68-63e0" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6a7e-ebc8-06c1-de64" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="2317-a43f-813e-d03b" name="Armour of the Fey" hidden="false">
-              <description>Counts as light armour (6+ Armour Save)that can be combined with other equipment as normal. Against any magical close combat attacks, the wearer receives a 4+ Ward Save.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="6dad-cdb5-b8d8-4f9e" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-            <categoryLink id="c0ce-6cc5-4212-5646" name="Magic Suit of Armour" hidden="false" targetId="b24f-a0f1-581b-e574" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a9da-7876-36e2-9f3d" name="Helm of the Hunt" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="de42-d8bd-b0dc-5d73" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="ae94-4908-c064-ba81" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5607-94bc-c133-8f0f" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="3892-447c-8e2c-cc89" name="Helm of the Hunt" hidden="false">
-              <description>This helm confers a 6+ Armour Save that can be combined with other equipment as normal (including normal armour and a shield). When the character charges he receives +1 Attack and +1 Weapon Skill for that round of combat.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="4e5f-ed0e-4bbf-6f25" name="Briarsheath" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f326-2af2-3864-5bc4" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="12aa-f636-8057-8d09" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fc8a-8566-f279-8c1f" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="f0b9-04ed-7929-e936" name="Briarsheath" hidden="false">
-              <description>Characters on foot only. Counts as light armour (6+ Armour Save) that can be combined with other equipment as normal. Enemies wishing to target the model wearing the Briarsheath with a shooting attack suffer an additional -1 to hit penalty. This is increased to -2 if the wearer is within a wood.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="4334-f83f-2a04-34a4" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="15.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+          <selectionEntries>
+            <selectionEntry id="2a81-ae51-975b-5f62" name="Armour of the Fey" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="34b7-9599-c210-6558" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a3e9-d376-6edc-dec8" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="ab7b-4804-59b4-9d15" name="Armour of the Fey" hidden="false">
+                  <description>Counts as light armour (6+ Armour Save)that can be combined with other equipment as normal. Against any magical close combat attacks, the wearer receives a 4+ Ward Save.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="0ada-997c-94e7-cfc8" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+                <categoryLink id="add4-6bfa-f913-1869" name="Magic Suit of Armour" hidden="false" targetId="b24f-a0f1-581b-e574" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="7d3d-e10c-7f41-e271" name="Briarsheath" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f326-2af2-3864-5bc4" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="68c4-9e80-f8b0-81cc" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4e69-f23b-a486-0f23" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="d256-6ddd-a46e-36e8" name="Briarsheath" hidden="false">
+                  <description>Characters on foot only. Counts as light armour (6+ Armour Save) that can be combined with other equipment as normal. Enemies wishing to target the model wearing the Briarsheath with a shooting attack suffer an additional -1 to hit penalty. This is increased to -2 if the wearer is within a wood.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="7234-4ec6-2ec0-0786" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="15.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="4c81-2013-d4e2-d040" name="Helm of the Hunt" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="de42-d8bd-b0dc-5d73" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="d655-8a6f-185b-ed6b" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="63cf-2bc5-7d39-cc1e" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="3fc2-6c8c-074b-df66" name="Helm of the Hunt" hidden="false">
+                  <description>This helm confers a 6+ Armour Save that can be combined with other equipment as normal (including normal armour and a shield). When the character charges he receives +1 Attack and +1 Weapon Skill for that round of combat.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="922d-94a3-a541-d7bd" name="Railarian&apos;s Mantle" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="713e-3c07-1b79-5335" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d18f-9ebd-fc3d-ddde" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="3735-3d52-aee1-663e" name="Railarian&apos;s Mantle" hidden="false">
+                  <description>Counts as light armour (6+ Armour Save) that can be combined with other equipment as normal. If the wearer is within 6&quot; of a Wood he receives a 4+ Ward Save.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="d556-9663-4e89-f639" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+                <categoryLink id="748f-180e-b6ec-44c2" name="Magic Suit of Armour" hidden="false" targetId="b24f-a0f1-581b-e574" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f4a3-bc76-ad44-8d84" name="The Oaken Armour" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="733e-1064-0fe6-888e" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2af5-c145-0476-a1f5" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="8a7f-be63-7ca7-f842" name="The Oaken Armour" hidden="false">
+                  <description>Counts as light armour (6+ Armour Save) that can be combined with other equipment as normal. The Oaken Armour gives the wearer the Regeneration ability.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="17d1-9a57-3179-bc7e" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+                <categoryLink id="a434-33c8-8dd1-607a" name="Magic Suit of Armour" hidden="false" targetId="b24f-a0f1-581b-e574" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="f928-7687-2e78-80fa" name="Enchanted Shield" hidden="false" collective="false" import="true" targetId="4a2b-c497-93f2-c804" type="selectionEntry">
           <modifiers>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="9534-aec7-1922-76f2" name="Orcs and Goblins" revision="8" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="9534-aec7-1922-76f2" name="Orcs and Goblins" revision="9" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="5b0c-07f2-6b72-7aa8" name="Orc" hidden="false"/>
     <categoryEntry id="2c47-226a-5465-6c16" name="Common Orc" hidden="false"/>
@@ -6660,248 +6660,276 @@ The Orc player must decide that he&apos;s using the extra Attacks before he make
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="474f-778d-1cc1-686e" name="Magic Armour" hidden="false" collective="false" import="true">
-      <modifiers>
-        <modifier type="set" field="71ae-7f9f-5dc4-0f4b" value="0.0">
-          <conditions>
-            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="daeb-6ab0-83b2-8bf3" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="71ae-7f9f-5dc4-0f4b" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="cef1-6fa0-81e7-7965" name="Armour of Mork" hidden="false" collective="false" import="true" type="upgrade">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="1c09-bd0e-7e4d-1d97" name="Magic Armour" hidden="false" collective="false" import="true">
           <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="30b8-45ea-6f2d-1b9f" type="equalTo"/>
-              </conditions>
+            <modifier type="set" field="1ff5-d25b-1455-39d7" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="4a2b-c497-93f2-c804" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9ab0-9f28-de56-5131" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" field="hidden" value="true">
+            <modifier type="set" field="1ff5-d25b-1455-39d7" value="0.0">
               <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e3a-c9c1-b00a-cf7b" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="daeb-6ab0-83b2-8bf3" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="84dd-5ad5-967d-2dac" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="734f-5520-e98f-6af5" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ff5-d25b-1455-39d7" type="max"/>
           </constraints>
-          <rules>
-            <rule id="f6ef-d9d0-d6d4-45e2" name="Armour of Mork" hidden="false">
-              <description>Counts as wearing Heavy Armour (5+ armour save) which may be combined with other equipment normally. The wearer and any unit he is with gain Magic Resistance (2).</description>
-            </rule>
-          </rules>
-          <infoLinks>
-            <infoLink id="0618-445c-752e-6cd0" name="Magic Resistance" hidden="false" targetId="6e0c-4c98-a2c2-af0d" type="rule"/>
-          </infoLinks>
-          <categoryLinks>
-            <categoryLink id="3971-ba6c-a2c2-c6bf" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="55c7-1aa2-6fe7-cfb7" name="Armour of Protectyness" hidden="false" collective="false" import="true" type="upgrade">
+          <selectionEntries>
+            <selectionEntry id="6b6e-5e12-fb74-e78d" name="Nobbla&apos;s &apos;Elmet" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="de62-fe62-a6df-d0f3" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="30b8-45ea-6f2d-1b9f" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b99-042d-6b5b-3554" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f9d8-7ba7-8927-ce2c" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="782c-05db-71e7-926f" name="Nobbla&apos;s &apos;Elmet" hidden="false">
+                  <description>Gives the wearer a 6+ armour save that may be worn in addition to normal armour. Also gives the wearer a 6+ ward save.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="b24f-0299-64b5-9ee4" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3194-7edd-fca8-a9b4" name="Drog&apos;s Dead &apos;Ard Armour" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5b0c-07f2-6b72-7aa8" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="30b8-45ea-6f2d-1b9f" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e3a-c9c1-b00a-cf7b" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4123-cd2a-a52a-b3d0" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2035-3a7d-d4c8-24e3" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="5f6d-2f37-8280-f75a" name="Drog&apos;s Dead &apos;Ard Armour" hidden="false">
+                  <description>Gives the wearer a 1+ armour save that cannot be improved.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="fd0e-0ec6-0297-9f45" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="55de-f9df-5538-00f3" name="Armour of Protectyness" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="30b8-45ea-6f2d-1b9f" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="623e-5f3d-d939-9b51" type="notInstanceOf"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e3a-c9c1-b00a-cf7b" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a5fb-67f2-4286-bd1b" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a9e3-db7f-7323-b0f7" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="cf0f-3ba8-f38d-7e3d" name="Armour of Protectyness" hidden="false">
+                  <description>Counts as wearing Heavy Armour (5+ save) which can be combined with other equipment normally. The wearer also discounts the first wound he suffers.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="5863-34f5-5920-3a34" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="60.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="d121-15f0-0e5e-57c3" name="Armour of Mork" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="30b8-45ea-6f2d-1b9f" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e3a-c9c1-b00a-cf7b" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f98-f86d-b28d-d786" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="533d-5ffe-5bdc-5de7" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="0f28-5fd1-6490-2317" name="Armour of Mork" hidden="false">
+                  <description>Counts as wearing Heavy Armour (5+ armour save) which may be combined with other equipment normally. The wearer and any unit he is with gain Magic Resistance (2).</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink id="6d84-8ff3-0866-a712" name="Magic Resistance" hidden="false" targetId="6e0c-4c98-a2c2-af0d" type="rule"/>
+              </infoLinks>
+              <categoryLinks>
+                <categoryLink id="5983-ba1a-d867-9568" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8700-f2ff-269d-7d44" name="Armour of Gork" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="30b8-45ea-6f2d-1b9f" type="equalTo"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e3a-c9c1-b00a-cf7b" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f8d3-74fd-4906-a255" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb73-cd73-91a9-a74e" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="b911-f6c8-49b0-a2c9" name="Armour of Gork" hidden="false">
+                  <description>Counts as wearing Heavy Armour (5+ save) which can be combined with other equipment normally. The wearer may re-roll failed armour saves.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="8939-9eb9-e433-0f83" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="9ab0-9f28-de56-5131" name="Magic Shield" hidden="false" collective="false" import="true">
           <modifiers>
-            <modifier type="set" field="hidden" value="true">
+            <modifier type="set" field="a2b7-7149-e690-51e4" value="0.0">
               <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="30b8-45ea-6f2d-1b9f" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="623e-5f3d-d939-9b51" type="notInstanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e3a-c9c1-b00a-cf7b" type="instanceOf"/>
+                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="daeb-6ab0-83b2-8bf3" type="equalTo"/>
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aa29-ae69-d52a-d982" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="20b0-5d8b-b561-9821" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2b7-7149-e690-51e4" type="max"/>
           </constraints>
-          <rules>
-            <rule id="58b5-6ada-c17b-aa95" name="Armour of Protectyness" hidden="false">
-              <description>Counts as wearing Heavy Armour (5+ save) which can be combined with other equipment normally. The wearer also discounts the first wound he suffers.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="f693-d9e7-57f6-c89e" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="60.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="11ac-ea10-8107-e01b" name="Armour of Gork" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="30b8-45ea-6f2d-1b9f" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e3a-c9c1-b00a-cf7b" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="20d4-dcaf-6da1-72b8" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e9d-40a3-3221-8441" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="96a6-b629-444a-de29" name="Armour of Gork" hidden="false">
-              <description>Counts as wearing Heavy Armour (5+ save) which can be combined with other equipment normally. The wearer may re-roll failed armour saves.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="400f-eb79-22bc-3d08" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="d277-2986-4e87-1d52" name="Drog&apos;s Dead &apos;Ard Armour" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="5b0c-07f2-6b72-7aa8" type="notInstanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="30b8-45ea-6f2d-1b9f" type="equalTo"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e3a-c9c1-b00a-cf7b" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6001-3195-329c-5245" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0034-35f5-6243-cd58" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="6d5a-1d63-ed71-d234" name="Drog&apos;s Dead &apos;Ard Armour" hidden="false">
-              <description>Gives the wearer a 1+ armour save that cannot be improved.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="263b-f645-58f5-30bd" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="97aa-9862-c33d-68c8" name="Nobbla&apos;s &apos;Elmet" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="de62-fe62-a6df-d0f3" type="notInstanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="30b8-45ea-6f2d-1b9f" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="41c5-f801-7b0f-4b6d" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab55-d7e3-866c-9199" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="2737-07a4-6af8-5787" name="Nobbla&apos;s &apos;Elmet" hidden="false">
-              <description>Gives the wearer a 6+ armour save that may be worn in addition to normal armour. Also gives the wearer a 6+ ward save.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="dc3c-9499-b905-af03" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="5392-9c18-0d3d-cf3d" name="Ironskin Shield" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e3a-c9c1-b00a-cf7b" type="instanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd2a-51cb-3c97-6e8c" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="906d-4b11-5999-b968" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="aab1-ec6f-0ac8-27bd" name="Ironskin Shield" hidden="false">
-              <description>Counts as a shield which can be combined with other equipment normally. Also gives the bearer a 4+ Ward save.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="7020-c57a-b69e-8fe9" name="Magic Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="ac9c-f722-0248-d620" name="Ugbrag&apos;s Lucky Shield" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e3a-c9c1-b00a-cf7b" type="instanceOf"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="35d7-1e2b-98ec-32a0" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d68-2f7c-67d4-6640" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="d818-a822-b47f-9bca" name="Ugbrag&apos;s Lucky Shield" hidden="false">
-              <description>Counts as a shield which can be combined with other equipment normally. The bearer discounts the first hit suffered in the battle.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="121e-f1c1-c1e2-ff1a" name="Magic Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink id="fb97-a2c9-ff8e-ff5c" name="Enchanted Shield" hidden="false" collective="false" import="true" targetId="4a2b-c497-93f2-c804" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <categoryLinks>
-            <categoryLink id="778e-ec2d-6588-8535" name="Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
-          </categoryLinks>
-        </entryLink>
-      </entryLinks>
+          <selectionEntries>
+            <selectionEntry id="20fd-54e6-02ce-30ef" name="Ugbrag&apos;s Lucky Shield" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e3a-c9c1-b00a-cf7b" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e0f-4494-b182-b463" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="89a2-fb03-a9f5-884f" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="4777-aeda-e0b4-5d7b" name="Ugbrag&apos;s Lucky Shield" hidden="false">
+                  <description>Counts as a shield which can be combined with other equipment normally. The bearer discounts the first hit suffered in the battle.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="ca5a-ec1b-06b0-aabb" name="Magic Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3258-6aa9-86f9-cfe1" name="Ironskin Shield" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="3e3a-c9c1-b00a-cf7b" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="35fc-e209-9bd0-780a" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e665-808b-0fdb-354b" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="12c6-7114-9833-d6e6" name="Ironskin Shield" hidden="false">
+                  <description>Counts as a shield which can be combined with other equipment normally. Also gives the bearer a 4+ Ward save.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="5db1-efa6-f114-36a3" name="Magic Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink id="ad14-a0f7-998f-5576" name="Enchanted Shield" hidden="false" collective="false" import="true" targetId="4a2b-c497-93f2-c804" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink id="e73b-de5a-9a0d-d026" name="Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup id="a4da-7559-570d-ae7b" name="Enchanted Items" hidden="false" collective="false" import="true">
       <modifiers>

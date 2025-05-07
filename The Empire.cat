@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="f49f-f614-5cfb-004a" name="The Empire" revision="10" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="22" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="f49f-f614-5cfb-004a" name="The Empire" revision="11" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <costTypes>
     <costType id="fada-3781-5bbe-4625" name=" Hull Points" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
@@ -6123,202 +6123,225 @@ In its own Movement phase a Detachment may make a supporting charge by hitting t
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="9d49-069e-8fe0-f75a" name="Magic Armour" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e40-b408-5642-ea4f" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="3941-68fb-a987-286e" name="Bronze Shield" hidden="false" collective="false" import="true" type="upgrade">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="513a-7344-dee4-53ad" name="Magic Armour" hidden="false" collective="false" import="true">
           <modifiers>
-            <modifier type="set" field="hidden" value="true">
+            <modifier type="set" field="27ce-f781-7a81-d12f" value="0.0">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
                   <conditions>
-                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="2a1b-86ae-121e-fa19" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4a2b-c497-93f2-c804" type="equalTo"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="7361-20f4-11a9-3fe1" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c676-7824-17b0-67e3" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="27ce-f781-7a81-d12f" type="max"/>
           </constraints>
-          <rules>
-            <rule id="e97f-a44f-b4f3-ba57" name="Bronze Shield" hidden="false">
-              <description>This shield gives a 6+ armour save which can he combined with other equipment normally. Also, the bearer ignores the first hit in the battle suffered from shooting or close combat.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="e4e3-98c3-e219-e2aa" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-            <categoryLink id="064b-d555-6acc-48eb" name="Magic Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
-            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="0879-fbb0-9497-096a" name="Shield of the Gorgon" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
+          <selectionEntries>
+            <selectionEntry id="e26f-e3ea-a0b8-2eef" name="Armour of Meteoric Iron" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
                   </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="ad57-a960-4b2e-43ac" type="max"/>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8dd5-68a4-ccc4-515e" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="f55b-7b2f-7857-753b" name="Shield of the Gorgon" hidden="false">
-              <description>This shield confers a 6+ armour save which can he combined with other equipment normally. The wearer can force one model in base contact to lose one Attack. In the case of models with different Attacks (eg. mounted models) the wearer chooses which Attack is lost. Special Attacks (like those of a Giant, impact hits and anything not included in the Attacks value on a model&apos;s profile) are not affected.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="4ebc-8306-edf3-ba75" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-            <categoryLink id="0ee6-d446-4e4b-1ac9" name="Magic Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
-            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="93ee-3007-055f-e071" name="Armour of Meteoric Iron" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="bdec-a2dc-89ec-e7ab" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="15a5-0357-88ad-d1ec" name="Armour of Meteoric Iron" hidden="false">
-              <description>This suit of armour gives the bearer a 1+ armour save which cannot be improved by any means.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="7a02-95d2-3705-2ebb" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
-            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="20f4-8f3e-6263-f945" name="Armour of Tarnus" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="a8cd-7605-fad0-428c" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="d683-8a74-81da-e2b2" name="Armour of Tarnus" hidden="false">
-              <description>Counts as light armour (armour save 6+) which can be combined with other equipment normally. If the wearer fails his armour save, he may make a 5+ Ward save. Wizards can wear this armour and cast spells.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="b111-3291-eb4f-c7b9" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
-            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="ddf8-7dc9-3892-4e53" name="Dawn Armour" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="76db-4261-3f84-3aea" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="2a1c-06d2-e525-bf61" name="Dawn Armour" hidden="false">
-              <description>Counts as full plate armour (armour save 4+) which can be combined with other equipment normally. In addition the model can re-roll any failed armour save.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="a8e3-db26-f0d1-2e37" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="40.0"/>
-            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="322d-579b-93fb-c182" name="Helm of the Skavenslayer" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="c3dd-7b2f-3a1c-5893" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="cc07-b720-c7f1-870b" name="Helm of the Skavenslayer" hidden="false">
-              <description>This helm confers a 6+ armour save which can be combined with other equipment normally (including normal armour and a shield). In addition, the wearer causes fear in all models in a Skaven army (except non-Skaven Dogs of War).</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
-            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e4d3-85d8-c3d4-488e" name="The Gilded Armour" hidden="false" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="0e14-c983-9a3c-39aa" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="2936-9df5-9961-3c97" name="The Gilded Armour" hidden="false">
-              <description>Counts as heavy armour (armour save 5+) which can he combined with other equipment normally. Models attacking the wearer in close combat must pass a Strength test before rolling to hit for every Attack directed at the target (ie. roll equal to or less than its Strength on a D6, a 6 always fails). If the test is failed the Attack is lost.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="c615-85d8-2556-d481" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
-            <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink id="405b-e0be-7f75-8cd0" name="Enchanted Shield" hidden="false" collective="false" import="true" targetId="4a2b-c497-93f2-c804" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="0236-63fc-2ff2-c719" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="ce19-7afc-7b96-f24c" name="Armour of Meteoric Iron" hidden="false">
+                  <description>This suit of armour gives the bearer a 1+ armour save which cannot be improved by any means.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="5c64-0eab-1b70-813e" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ec1e-15c9-d5ec-f609" name="Armour of Tarnus" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="3347-0a9f-baf7-937f" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="3a9b-f564-7d3b-12a8" name="Armour of Tarnus" hidden="false">
+                  <description>Counts as light armour (armour save 6+) which can be combined with other equipment normally. If the wearer fails his armour save, he may make a 5+ Ward save. Wizards can wear this armour and cast spells.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="f043-25db-da37-e6c6" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f776-b97a-44e3-0b8a" name="The Gilded Armour" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
                   <conditions>
                     <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
-                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
                   </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="6f71-63fa-cad0-f2a3" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="933f-2490-8751-ff07" name="The Gilded Armour" hidden="false">
+                  <description>Counts as heavy armour (armour save 5+) which can he combined with other equipment normally. Models attacking the wearer in close combat must pass a Strength test before rolling to hit for every Attack directed at the target (ie. roll equal to or less than its Strength on a D6, a 6 always fails). If the test is failed the Attack is lost.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="3f98-60c7-a716-a220" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="bf3b-00b3-bfb1-9ac3" name="Helm of the Skavenslayer" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="03df-41e3-309d-47ed" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="68e1-0c16-9cab-382a" name="Helm of the Skavenslayer" hidden="false">
+                  <description>This helm confers a 6+ armour save which can be combined with other equipment normally (including normal armour and a shield). In addition, the wearer causes fear in all models in a Skaven army (except non-Skaven Dogs of War).</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="20.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ea15-af2e-a015-cdf7" name="Dawn Armour" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditions>
+                    <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="2d47-1160-80e0-2de5" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="daba-2936-bbf1-3d59" name="Dawn Armour" hidden="false">
+                  <description>Counts as full plate armour (armour save 4+) which can be combined with other equipment normally. In addition the model can re-roll any failed armour save.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="6c13-1db6-d4f4-a4da" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="40.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="2a1b-86ae-121e-fa19" name="Magic Shield" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="19a1-3fcc-9476-42eb" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6c8-472d-d148-0b2d" type="max"/>
           </constraints>
-        </entryLink>
-      </entryLinks>
+          <selectionEntries>
+            <selectionEntry id="05f7-8498-32c1-559d" name="Bronze Shield" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="0162-bfe1-2ba5-3846" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73a3-a274-17b3-a069" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="9b50-56d1-8aeb-1c83" name="Bronze Shield" hidden="false">
+                  <description>This shield gives a 6+ armour save which can he combined with other equipment normally. Also, the bearer ignores the first hit in the battle suffered from shooting or close combat.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="1f1f-657e-8b41-024d" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+                <categoryLink id="4dca-95b0-ac4c-465c" name="Magic Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="49b6-acbe-02d3-b533" name="Shield of the Gorgon" hidden="false" collective="false" import="true" type="upgrade">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="4dd9-5d60-cbe2-9376" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b20e-eb18-68b0-dfbf" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="c67f-21bb-957f-9275" name="Shield of the Gorgon" hidden="false">
+                  <description>This shield confers a 6+ armour save which can he combined with other equipment normally. The wearer can force one model in base contact to lose one Attack. In the case of models with different Attacks (eg. mounted models) the wearer chooses which Attack is lost. Special Attacks (like those of a Giant, impact hits and anything not included in the Attacks value on a model&apos;s profile) are not affected.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="13c3-d533-81e4-4622" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+                <categoryLink id="3e96-cb57-14ad-f7ae" name="Magic Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
+                <cost name=" Hull Points" typeId="fada-3781-5bbe-4625" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink id="7204-b9f5-408d-c27a" name="Enchanted Shield" hidden="false" collective="false" import="true" targetId="4a2b-c497-93f2-c804" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" field="hidden" value="true">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition field="selections" scope="ancestor" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="eb46-88d4-eb41-2549" type="instanceOf"/>
+                        <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="eca1-46d6-8778-847f" type="equalTo"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="955b-8685-275f-ae71" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup id="1c4b-f20d-898c-33e4" name="Arcane Items" hidden="false" collective="false" import="true">
       <modifiers>

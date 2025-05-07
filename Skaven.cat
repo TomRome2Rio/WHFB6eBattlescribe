@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="dfb1-1789-5d68-be54" name="Skaven" revision="6" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="dfb1-1789-5d68-be54" name="Skaven" revision="7" battleScribeVersion="2.03" library="false" gameSystemId="4ca8-2035-2f87-1bd7" gameSystemRevision="25" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry id="4f5c-498c-bd84-7e28" name="Clan Eshin" hidden="false"/>
     <categoryEntry id="befb-92ec-0667-152b" name="Clan Pestilens" hidden="false"/>
@@ -3816,67 +3816,90 @@ Treble	The effect rolled on the chart does not apply and the Bell itself is dest
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f55-dbc9-3aac-9c4f" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="0614-ba22-3668-7bc3" name="Warpstone Armour" hidden="false" collective="false" import="true" type="upgrade">
+      <selectionEntryGroups>
+        <selectionEntryGroup id="91f4-b881-2789-b277" name="Magic Armour" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="set" field="0997-a3b6-d2dd-6aad" value="0.0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="481e-ac7c-12de-7c7b" type="equalTo"/>
+                    <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9b3f-4136-453a-7e9e" type="equalTo"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c1c-f027-628c-c3cb" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4928-9f90-2798-ac97" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0997-a3b6-d2dd-6aad" type="max"/>
           </constraints>
-          <rules>
-            <rule id="21ca-346c-b75d-3577" name="Warpstone Armour" hidden="false">
-              <description>Gives a 4+ armour save that can be combined with other armour as normal. For each successful armour save in close combat, the armour inflicts a Strength 4 hit against the enemy that struck the blow.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="c08b-da01-a7b9-9ee6" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2c16-714c-7510-a65c" name="Rust Armour" hidden="false" collective="false" import="true" type="upgrade">
+          <selectionEntries>
+            <selectionEntry id="a20c-9d96-8772-057d" name="Warpstone Armour" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c264-c700-c564-45fc" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="abd1-445f-3069-ec24" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="139b-3b10-4bf5-a230" name="Warpstone Armour" hidden="false">
+                  <description>Gives a 4+ armour save that can be combined with other armour as normal. For each successful armour save in close combat, the armour inflicts a Strength 4 hit against the enemy that struck the blow.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="5f74-cbae-1953-cab2" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="a916-540e-98a0-67af" name="Rust Armour" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="acb5-867f-e3de-ddbd" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f5a8-a1f6-ae85-0cdd" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="8645-d613-81cb-9ac0" name="Rust Armour" hidden="false">
+                  <description>Gives a 5+ armour save that can be combined with other armour as normal. In addition, if the wearer is wounded by a hit with a Strength sufficiently high to completely cancel his armour save (or a hit that does not allow armour saves at all, such as from a cannon ball), the wound is discounted but the armour falls to pieces and is destroyed.</description>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="5f70-35fa-8cf5-49f4" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="481e-ac7c-12de-7c7b" name="Magic Shield" hidden="false" collective="false" import="true">
           <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c9d-ba3b-740d-edf7" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="b186-9dd2-8f7f-181d" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a7b2-a18a-95b1-c0da" type="max"/>
           </constraints>
-          <rules>
-            <rule id="ce18-e592-a064-36f7" name="Rust Armour" hidden="false">
-              <description>Gives a 5+ armour save that can be combined with other armour as normal. In addition, if the wearer is wounded by a hit with a Strength sufficiently high to completely cancel his armour save (or a hit that does not allow armour saves at all, such as from a cannon ball), the wound is discounted but the armour falls to pieces and is destroyed.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="9e50-f832-1f05-1b2c" name="Magic Armour" hidden="false" targetId="2963-aff1-28ca-7634" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50.0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="95f0-1868-2d20-ffbf" name="Cautious Shield" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a49-8a86-d44d-d96d" type="max"/>
-            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="967e-40ef-d0d3-6392" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="8c90-bd08-f40c-4d7f" name="Cautious Shield" hidden="false">
-              <description>Gives a 6+ armour save that can be combined with other armour as normal. The bearer can force one model in base contact to lose 1 Attack (he can choose which Attack in the case of opponents with different Attacks, such as cavalry models).
+          <selectionEntries>
+            <selectionEntry id="1d20-b82a-ce2b-aab3" name="Cautious Shield" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3649-2e2e-c541-2d99" type="max"/>
+                <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e371-0f39-b39a-c202" type="max"/>
+              </constraints>
+              <rules>
+                <rule id="c724-7ae9-9c0b-524a" name="Cautious Shield" hidden="false">
+                  <description>Gives a 6+ armour save that can be combined with other armour as normal. The bearer can force one model in base contact to lose 1 Attack (he can choose which Attack in the case of opponents with different Attacks, such as cavalry models).
 
 In addition, the model can decide not to attack at all. but to wield the shield with two hands and concentrate on defence. If he decides to do this, the chosen enemy will lose 2 Attacks. The player must declare which way the shield will be used at the beginning of each Close Combat phase, before any side strikes blows.</description>
-            </rule>
-          </rules>
-          <categoryLinks>
-            <categoryLink id="66b9-ee99-6c66-6da8" name="Magic Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
-          </categoryLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink id="3747-ab75-1b7f-9295" name="Enchanted Shield" hidden="false" collective="false" import="true" targetId="4a2b-c497-93f2-c804" type="selectionEntry"/>
-      </entryLinks>
+                </rule>
+              </rules>
+              <categoryLinks>
+                <categoryLink id="e975-37b5-10d0-02c8" name="Magic Shield" hidden="false" targetId="4c58-0153-f37e-9905" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink id="9b3f-4136-453a-7e9e" name="Enchanted Shield" hidden="false" collective="false" import="true" targetId="4a2b-c497-93f2-c804" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup id="8fb5-1e36-4862-7d8f" name="Talismans" hidden="false" collective="false" import="true">
       <constraints>
